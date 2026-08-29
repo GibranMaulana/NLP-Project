@@ -7,6 +7,6 @@ functions/**/.build/
 functions/**/node_modules/
 
 # Graphify specific ignores
-graphify-out/cache/
-graphify-out/manifest.json
-graphify-out/cost.json
+graphify-out/**/cache/
+graphify-out/**/manifest.json
+graphify-out/**/cost.json
