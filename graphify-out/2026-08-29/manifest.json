@@ -1,0 +1,127 @@
+{
+  "/home/bammm/coding/nlp-project/cms/sanity.cli.ts": {
+    "mtime": 1787984365.4161744,
+    "ast_hash": "d3c5d4f1ea44d3c18333b8b9d88e8288",
+    "semantic_hash": "d3c5d4f1ea44d3c18333b8b9d88e8288"
+  },
+  "/home/bammm/coding/nlp-project/cms/sanity.config.ts": {
+    "mtime": 1787984365.4161744,
+    "ast_hash": "5734bc92dd8de4b930aedbfd3d414fcc",
+    "semantic_hash": "5734bc92dd8de4b930aedbfd3d414fcc"
+  },
+  "/home/bammm/coding/nlp-project/cms/eslint.config.mjs": {
+    "mtime": 1787984365.4161744,
+    "ast_hash": "4ffae5752140b5b99964e2317024940a",
+    "semantic_hash": "4ffae5752140b5b99964e2317024940a"
+  },
+  "/home/bammm/coding/nlp-project/cms/tsconfig.json": {
+    "mtime": 1787984363.6450894,
+    "ast_hash": "47eb80aaa437492770c9ca1cdf2cc365",
+    "semantic_hash": "47eb80aaa437492770c9ca1cdf2cc365"
+  },
+  "/home/bammm/coding/nlp-project/cms/package.json": {
+    "mtime": 1787984365.4161744,
+    "ast_hash": "0914997422a3a4a5f585e55f6aab3cd4",
+    "semantic_hash": "0914997422a3a4a5f585e55f6aab3cd4"
+  },
+  "/home/bammm/coding/nlp-project/cms/schemaTypes/index.ts": {
+    "mtime": 1787984363.6428132,
+    "ast_hash": "5eb9e22b7674d2fce99bfd3057bb0bd0",
+    "semantic_hash": "5eb9e22b7674d2fce99bfd3057bb0bd0"
+  },
+  "/home/bammm/coding/nlp-project/cms/.sanity/runtime/app.js": {
+    "mtime": 1787984986.960121,
+    "ast_hash": "177a39a0f7cd21e88f453a368961b964",
+    "semantic_hash": "177a39a0f7cd21e88f453a368961b964"
+  },
+  "/home/bammm/coding/nlp-project/frontend/eslint.config.mjs": {
+    "mtime": 1787981842.0098357,
+    "ast_hash": "dfa1f5f6a7037bf39dc510f30b180002",
+    "semantic_hash": "dfa1f5f6a7037bf39dc510f30b180002"
+  },
+  "/home/bammm/coding/nlp-project/frontend/next-env.d.ts": {
+    "mtime": 1787985094.6374702,
+    "ast_hash": "aa94238a90e7d04b7a47ecc3145ba6a0",
+    "semantic_hash": "aa94238a90e7d04b7a47ecc3145ba6a0"
+  },
+  "/home/bammm/coding/nlp-project/frontend/tsconfig.json": {
+    "mtime": 1787981842.0224507,
+    "ast_hash": "02fc19ad21338c2ab820a70136310db4",
+    "semantic_hash": "02fc19ad21338c2ab820a70136310db4"
+  },
+  "/home/bammm/coding/nlp-project/frontend/next.config.ts": {
+    "mtime": 1787981842.01029,
+    "ast_hash": "9b77af189a21a7a64e4bd7a426f64176",
+    "semantic_hash": "9b77af189a21a7a64e4bd7a426f64176"
+  },
+  "/home/bammm/coding/nlp-project/frontend/postcss.config.mjs": {
+    "mtime": 1787981842.0101628,
+    "ast_hash": "239f3ebf717465dc636818a1a619398d",
+    "semantic_hash": "239f3ebf717465dc636818a1a619398d"
+  },
+  "/home/bammm/coding/nlp-project/frontend/package.json": {
+    "mtime": 1787981842.0244129,
+    "ast_hash": "0fbf706ba10ba7c58c2382a612467acb",
+    "semantic_hash": "0fbf706ba10ba7c58c2382a612467acb"
+  },
+  "/home/bammm/coding/nlp-project/frontend/app/page.tsx": {
+    "mtime": 1787981842.0224507,
+    "ast_hash": "7960d56e7fc48ecd789e2fd32155fa90",
+    "semantic_hash": "7960d56e7fc48ecd789e2fd32155fa90"
+  },
+  "/home/bammm/coding/nlp-project/frontend/app/layout.tsx": {
+    "mtime": 1787981842.0104527,
+    "ast_hash": "70f839ece80281c576701dc08f055685",
+    "semantic_hash": "70f839ece80281c576701dc08f055685"
+  },
+  "/home/bammm/coding/nlp-project/cms/README.md": {
+    "mtime": 1787984363.641995,
+    "ast_hash": "5deb9c59ccfc3d5452c68082b03348e0",
+    "semantic_hash": "5deb9c59ccfc3d5452c68082b03348e0"
+  },
+  "/home/bammm/coding/nlp-project/cms/.sanity/runtime/index.html": {
+    "mtime": 1787984986.9567876,
+    "ast_hash": "49199394d0eb25d73089404842ed02cd",
+    "semantic_hash": "49199394d0eb25d73089404842ed02cd"
+  },
+  "/home/bammm/coding/nlp-project/frontend/AGENTS.md": {
+    "mtime": 1787981921.1986022,
+    "ast_hash": "01e8142356e15c3404e0d84c48187cd0",
+    "semantic_hash": "01e8142356e15c3404e0d84c48187cd0"
+  },
+  "/home/bammm/coding/nlp-project/frontend/CLAUDE.md": {
+    "mtime": 1787981921.1986022,
+    "ast_hash": "5c27369b226fcf2be8a6cfe52224e767",
+    "semantic_hash": "5c27369b226fcf2be8a6cfe52224e767"
+  },
+  "/home/bammm/coding/nlp-project/frontend/README.md": {
+    "mtime": 1787981842.0102324,
+    "ast_hash": "f15aaa42d5d299d091b1171097ea56ad",
+    "semantic_hash": "f15aaa42d5d299d091b1171097ea56ad"
+  },
+  "/home/bammm/coding/nlp-project/frontend/public/globe.svg": {
+    "mtime": 1787981842.0104527,
+    "ast_hash": "2aaafa6a49b6563925fe440891e32717",
+    "semantic_hash": "2aaafa6a49b6563925fe440891e32717"
+  },
+  "/home/bammm/coding/nlp-project/frontend/public/window.svg": {
+    "mtime": 1787981842.0224507,
+    "ast_hash": "a2760511c65806022ad20adf74370ff3",
+    "semantic_hash": "a2760511c65806022ad20adf74370ff3"
+  },
+  "/home/bammm/coding/nlp-project/frontend/public/next.svg": {
+    "mtime": 1787981842.0224507,
+    "ast_hash": "8e061864f388b47f33a1c3780831193e",
+    "semantic_hash": "8e061864f388b47f33a1c3780831193e"
+  },
+  "/home/bammm/coding/nlp-project/frontend/public/vercel.svg": {
+    "mtime": 1787981842.0223653,
+    "ast_hash": "c0af2f507b369b085b35ef4bbe3bcf1e",
+    "semantic_hash": "c0af2f507b369b085b35ef4bbe3bcf1e"
+  },
+  "/home/bammm/coding/nlp-project/frontend/public/file.svg": {
+    "mtime": 1787981842.0098357,
+    "ast_hash": "d09f95206c3fa0bb9bd9fefabfd0ea71",
+    "semantic_hash": "d09f95206c3fa0bb9bd9fefabfd0ea71"
+  }
+}
