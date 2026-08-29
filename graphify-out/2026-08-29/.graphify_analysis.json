@@ -74,6 +74,20 @@
       "frontend_package_version"
     ],
     "4": [
+      "cms_sanity_config_ts",
+      "cms_sanity_runtime_app_js",
+      "cms_schematypes_diagnosistype_ts",
+      "cms_schematypes_index_ts",
+      "cms_schematypes_replytype_ts",
+      "cms_schematypes_scenariotype_ts",
+      "cms_schematypes_stagetype_ts",
+      "schematypes_diagnosistype_diagnosis",
+      "schematypes_index_schematypes",
+      "schematypes_replytype_reply",
+      "schematypes_scenariotype_scenario",
+      "schematypes_stagetype_stage"
+    ],
+    "5": [
       "cms_eslint_config_mjs",
       "frontend_eslint_config_mjs",
       "frontend_package_devdependencies",
@@ -84,7 +98,18 @@
       "frontend_package_devdependencies_types_react",
       "frontend_package_devdependencies_typescript"
     ],
-    "5": [
+    "6": [
+      "cms_backend",
+      "frontend_agents_rules",
+      "frontend_app",
+      "frontend_claude_config",
+      "graphify_cli",
+      "graphify_out",
+      "mcp_config",
+      "readme_nlp_project",
+      "sanity_runtime_index"
+    ],
+    "7": [
       "cms_package_dependencies",
       "cms_package_dependencies_react",
       "cms_package_dependencies_react_dom",
@@ -92,7 +117,7 @@
       "cms_package_dependencies_sanity_vision",
       "cms_package_dependencies_styled_components"
     ],
-    "6": [
+    "8": [
       "cms_package_scripts",
       "cms_package_scripts_build",
       "cms_package_scripts_deploy",
@@ -100,40 +125,24 @@
       "cms_package_scripts_dev",
       "cms_package_scripts_start"
     ],
-    "7": [
-      "cms_readme",
-      "cms_sanity_studio",
-      "index_app_js",
-      "index_html",
-      "index_sanity_bridge",
-      "index_sanity_error_channel"
-    ],
-    "8": [
+    "9": [
       "app_layout_geistmono",
       "app_layout_geistsans",
       "app_layout_metadata",
       "app_layout_rootlayout",
       "frontend_app_layout_tsx"
     ],
-    "9": [
-      "agents_md",
-      "claude_md",
-      "frontend_nextjs_app",
-      "frontend_readme"
-    ],
     "10": [
-      "cms_sanity_config_ts",
-      "cms_sanity_runtime_app_js",
-      "cms_schematypes_index_ts",
-      "schematypes_index_schematypes"
-    ],
-    "11": [
       "app_page_home",
       "frontend_app_page_tsx"
     ],
-    "12": [
+    "11": [
       "frontend_postcss_config_config",
       "frontend_postcss_config_mjs"
+    ],
+    "12": [
+      "cms_schematypes_posttype_ts",
+      "schematypes_posttype_posttype"
     ],
     "13": [
       "cms_sanity_cli_ts"
@@ -150,13 +159,13 @@
     "1": 0.125,
     "2": 0.13333333333333333,
     "3": 0.15384615384615385,
-    "4": 0.2222222222222222,
-    "5": 0.3333333333333333,
-    "6": 0.3333333333333333,
+    "4": 0.24242424242424243,
+    "5": 0.2222222222222222,
+    "6": 0.25,
     "7": 0.3333333333333333,
-    "8": 0.4,
-    "9": 0.5,
-    "10": 0.6666666666666666,
+    "8": 0.3333333333333333,
+    "9": 0.4,
+    "10": 1.0,
     "11": 1.0,
     "12": 1.0,
     "13": 1.0,
@@ -190,9 +199,9 @@
       "degree": 5
     },
     {
-      "id": "index_html",
-      "label": "Sanity Runtime Index",
-      "degree": 4
+      "id": "readme_nlp_project",
+      "label": "NLP Project Development Guide",
+      "degree": 5
     },
     {
       "id": "cms_package_devdependencies_types_react",
@@ -200,58 +209,80 @@
       "degree": 2
     },
     {
+      "id": "schematypes_diagnosistype_diagnosis",
+      "label": "diagnosis",
+      "degree": 2
+    },
+    {
+      "id": "schematypes_replytype_reply",
+      "label": "reply",
+      "degree": 2
+    },
+    {
       "id": "schematypes_index_schematypes",
       "label": "schemaTypes",
-      "degree": 2
-    },
-    {
-      "id": "frontend_tsconfig_compileroptions_paths",
-      "label": "paths",
-      "degree": 2
-    },
-    {
-      "id": "cms_sanity_studio",
-      "label": "Sanity Content Studio",
       "degree": 2
     }
   ],
   "surprises": [
     {
-      "source": "Sanity Content Studio",
-      "target": "Sanity Runtime Index",
+      "source": "NLP Project Development Guide",
+      "target": "MCP Server Configuration",
+      "source_files": [
+        "README.md",
+        ".agents/mcp_config.json"
+      ],
+      "confidence": "EXTRACTED",
+      "relation": "references",
+      "why": "crosses file types (doc \u2194 code); connects across different repos/directories; peripheral node `MCP Server Configuration` unexpectedly reaches hub `NLP Project Development Guide`"
+    },
+    {
+      "source": "NLP Project Development Guide",
+      "target": "CMS (Sanity Studio)",
+      "source_files": [
+        "README.md",
+        "cms/README.md"
+      ],
+      "confidence": "EXTRACTED",
+      "relation": "references",
+      "why": "connects across different repos/directories; peripheral node `CMS (Sanity Studio)` unexpectedly reaches hub `NLP Project Development Guide`"
+    },
+    {
+      "source": "NLP Project Development Guide",
+      "target": "Frontend (Next.js)",
+      "source_files": [
+        "README.md",
+        "frontend/README.md"
+      ],
+      "confidence": "EXTRACTED",
+      "relation": "references",
+      "why": "connects across different repos/directories; peripheral node `Frontend (Next.js)` unexpectedly reaches hub `NLP Project Development Guide`"
+    },
+    {
+      "source": "Frontend (Next.js)",
+      "target": "Next.js Agent Rules",
+      "source_files": [
+        "frontend/README.md",
+        "frontend/AGENTS.md"
+      ],
+      "confidence": "INFERRED",
+      "relation": "references",
+      "why": "inferred connection - not explicitly stated in source"
+    },
+    {
+      "source": "CMS (Sanity Studio)",
+      "target": "Sanity Studio Runtime Index",
       "source_files": [
         "cms/README.md",
         "cms/.sanity/runtime/index.html"
       ],
       "confidence": "INFERRED",
-      "relation": "conceptually_related_to",
-      "why": "inferred connection - not explicitly stated in source"
-    },
-    {
-      "source": "Next.js Agent Rules",
-      "target": "Next.js Application",
-      "source_files": [
-        "frontend/AGENTS.md",
-        "frontend/README.md"
-      ],
-      "confidence": "INFERRED",
       "relation": "references",
       "why": "inferred connection - not explicitly stated in source"
-    },
-    {
-      "source": "Claude Instructions",
-      "target": "Next.js Agent Rules",
-      "source_files": [
-        "frontend/CLAUDE.md",
-        "frontend/AGENTS.md"
-      ],
-      "confidence": "EXTRACTED",
-      "relation": "references",
-      "why": "cross-file semantic connection"
     }
   ],
   "tokens": {
-    "input": 6903,
-    "output": 1216
+    "input": 7443,
+    "output": 1697
   }
 }

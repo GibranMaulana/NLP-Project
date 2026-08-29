@@ -18,7 +18,7 @@
       "source_file": "cms/sanity.config.ts",
       "source_location": "L1",
       "id": "cms_sanity_config_ts",
-      "community": 10,
+      "community": 4,
       "norm_label": "sanity.config.ts"
     },
     {
@@ -27,7 +27,7 @@
       "source_file": "cms/eslint.config.mjs",
       "source_location": "L1",
       "id": "cms_eslint_config_mjs",
-      "community": 4,
+      "community": 5,
       "norm_label": "eslint.config.mjs"
     },
     {
@@ -225,7 +225,7 @@
       "source_file": "cms/package.json",
       "source_location": "L7",
       "id": "cms_package_scripts",
-      "community": 6,
+      "community": 8,
       "norm_label": "scripts"
     },
     {
@@ -234,7 +234,7 @@
       "source_file": "cms/package.json",
       "source_location": "L8",
       "id": "cms_package_scripts_build",
-      "community": 6,
+      "community": 8,
       "norm_label": "build"
     },
     {
@@ -243,7 +243,7 @@
       "source_file": "cms/package.json",
       "source_location": "L9",
       "id": "cms_package_scripts_deploy",
-      "community": 6,
+      "community": 8,
       "norm_label": "deploy"
     },
     {
@@ -252,7 +252,7 @@
       "source_file": "cms/package.json",
       "source_location": "L10",
       "id": "cms_package_scripts_deploy_graphql",
-      "community": 6,
+      "community": 8,
       "norm_label": "deploy-graphql"
     },
     {
@@ -261,7 +261,7 @@
       "source_file": "cms/package.json",
       "source_location": "L11",
       "id": "cms_package_scripts_dev",
-      "community": 6,
+      "community": 8,
       "norm_label": "dev"
     },
     {
@@ -270,7 +270,7 @@
       "source_file": "cms/package.json",
       "source_location": "L12",
       "id": "cms_package_scripts_start",
-      "community": 6,
+      "community": 8,
       "norm_label": "start"
     },
     {
@@ -288,7 +288,7 @@
       "source_file": "cms/package.json",
       "source_location": "L17",
       "id": "cms_package_dependencies",
-      "community": 5,
+      "community": 7,
       "norm_label": "dependencies"
     },
     {
@@ -297,7 +297,7 @@
       "source_file": "cms/package.json",
       "source_location": "L18",
       "id": "cms_package_dependencies_sanity_vision",
-      "community": 5,
+      "community": 7,
       "norm_label": "@sanity/vision"
     },
     {
@@ -306,7 +306,7 @@
       "source_file": "cms/package.json",
       "source_location": "L19",
       "id": "cms_package_dependencies_react",
-      "community": 5,
+      "community": 7,
       "norm_label": "react"
     },
     {
@@ -315,7 +315,7 @@
       "source_file": "cms/package.json",
       "source_location": "L20",
       "id": "cms_package_dependencies_react_dom",
-      "community": 5,
+      "community": 7,
       "norm_label": "react-dom"
     },
     {
@@ -324,7 +324,7 @@
       "source_file": "cms/package.json",
       "source_location": "L21",
       "id": "cms_package_dependencies_sanity",
-      "community": 5,
+      "community": 7,
       "norm_label": "sanity"
     },
     {
@@ -333,7 +333,7 @@
       "source_file": "cms/package.json",
       "source_location": "L22",
       "id": "cms_package_dependencies_styled_components",
-      "community": 5,
+      "community": 7,
       "norm_label": "styled-components"
     },
     {
@@ -427,22 +427,112 @@
       "norm_label": "singlequote"
     },
     {
+      "label": "postType.ts",
+      "file_type": "code",
+      "source_file": "cms/schemaTypes/postType.ts",
+      "source_location": "L1",
+      "id": "cms_schematypes_posttype_ts",
+      "community": 12,
+      "norm_label": "posttype.ts"
+    },
+    {
+      "label": "postType",
+      "file_type": "code",
+      "source_file": "cms/schemaTypes/postType.ts",
+      "source_location": "L2",
+      "id": "schematypes_posttype_posttype",
+      "community": 12,
+      "norm_label": "posttype"
+    },
+    {
+      "label": "diagnosisType.ts",
+      "file_type": "code",
+      "source_file": "cms/schemaTypes/diagnosisType.ts",
+      "source_location": "L1",
+      "id": "cms_schematypes_diagnosistype_ts",
+      "community": 4,
+      "norm_label": "diagnosistype.ts"
+    },
+    {
+      "label": "diagnosis",
+      "file_type": "code",
+      "source_file": "cms/schemaTypes/diagnosisType.ts",
+      "source_location": "L3",
+      "id": "schematypes_diagnosistype_diagnosis",
+      "community": 4,
+      "norm_label": "diagnosis"
+    },
+    {
+      "label": "replyType.ts",
+      "file_type": "code",
+      "source_file": "cms/schemaTypes/replyType.ts",
+      "source_location": "L1",
+      "id": "cms_schematypes_replytype_ts",
+      "community": 4,
+      "norm_label": "replytype.ts"
+    },
+    {
+      "label": "reply",
+      "file_type": "code",
+      "source_file": "cms/schemaTypes/replyType.ts",
+      "source_location": "L3",
+      "id": "schematypes_replytype_reply",
+      "community": 4,
+      "norm_label": "reply"
+    },
+    {
       "label": "index.ts",
       "file_type": "code",
       "source_file": "cms/schemaTypes/index.ts",
       "source_location": "L1",
       "id": "cms_schematypes_index_ts",
-      "community": 10,
+      "community": 4,
       "norm_label": "index.ts"
     },
     {
       "label": "schemaTypes",
       "file_type": "code",
       "source_file": "cms/schemaTypes/index.ts",
-      "source_location": "L1",
+      "source_location": "L6",
       "id": "schematypes_index_schematypes",
-      "community": 10,
+      "community": 4,
       "norm_label": "schematypes"
+    },
+    {
+      "label": "stageType.ts",
+      "file_type": "code",
+      "source_file": "cms/schemaTypes/stageType.ts",
+      "source_location": "L1",
+      "id": "cms_schematypes_stagetype_ts",
+      "community": 4,
+      "norm_label": "stagetype.ts"
+    },
+    {
+      "label": "stage",
+      "file_type": "code",
+      "source_file": "cms/schemaTypes/stageType.ts",
+      "source_location": "L3",
+      "id": "schematypes_stagetype_stage",
+      "community": 4,
+      "norm_label": "stage"
+    },
+    {
+      "label": "scenarioType.ts",
+      "file_type": "code",
+      "source_file": "cms/schemaTypes/scenarioType.ts",
+      "source_location": "L1",
+      "id": "cms_schematypes_scenariotype_ts",
+      "community": 4,
+      "norm_label": "scenariotype.ts"
+    },
+    {
+      "label": "scenario",
+      "file_type": "code",
+      "source_file": "cms/schemaTypes/scenarioType.ts",
+      "source_location": "L3",
+      "id": "schematypes_scenariotype_scenario",
+      "community": 4,
+      "norm_label": "scenario"
     },
     {
       "label": "app.js",
@@ -450,7 +540,7 @@
       "source_file": "cms/.sanity/runtime/app.js",
       "source_location": "L1",
       "id": "cms_sanity_runtime_app_js",
-      "community": 10,
+      "community": 4,
       "norm_label": "app.js"
     },
     {
@@ -459,7 +549,7 @@
       "source_file": "frontend/eslint.config.mjs",
       "source_location": "L1",
       "id": "frontend_eslint_config_mjs",
-      "community": 4,
+      "community": 5,
       "norm_label": "eslint.config.mjs"
     },
     {
@@ -666,7 +756,7 @@
       "source_file": "frontend/postcss.config.mjs",
       "source_location": "L1",
       "id": "frontend_postcss_config_mjs",
-      "community": 12,
+      "community": 11,
       "norm_label": "postcss.config.mjs"
     },
     {
@@ -675,7 +765,7 @@
       "source_file": "frontend/postcss.config.mjs",
       "source_location": "L1",
       "id": "frontend_postcss_config_config",
-      "community": 12,
+      "community": 11,
       "norm_label": "config"
     },
     {
@@ -801,7 +891,7 @@
       "source_file": "frontend/package.json",
       "source_location": "L16",
       "id": "frontend_package_devdependencies",
-      "community": 4,
+      "community": 5,
       "norm_label": "devdependencies"
     },
     {
@@ -810,7 +900,7 @@
       "source_file": "frontend/package.json",
       "source_location": "L17",
       "id": "frontend_package_devdependencies_tailwindcss_postcss",
-      "community": 4,
+      "community": 5,
       "norm_label": "@tailwindcss/postcss"
     },
     {
@@ -819,7 +909,7 @@
       "source_file": "frontend/package.json",
       "source_location": "L18",
       "id": "frontend_package_devdependencies_types_node",
-      "community": 4,
+      "community": 5,
       "norm_label": "@types/node"
     },
     {
@@ -828,7 +918,7 @@
       "source_file": "frontend/package.json",
       "source_location": "L19",
       "id": "frontend_package_devdependencies_types_react",
-      "community": 4,
+      "community": 5,
       "norm_label": "@types/react"
     },
     {
@@ -837,7 +927,7 @@
       "source_file": "frontend/package.json",
       "source_location": "L21",
       "id": "frontend_package_devdependencies_eslint",
-      "community": 4,
+      "community": 5,
       "norm_label": "eslint"
     },
     {
@@ -846,7 +936,7 @@
       "source_file": "frontend/package.json",
       "source_location": "L23",
       "id": "frontend_package_devdependencies_tailwindcss",
-      "community": 4,
+      "community": 5,
       "norm_label": "tailwindcss"
     },
     {
@@ -855,7 +945,7 @@
       "source_file": "frontend/package.json",
       "source_location": "L24",
       "id": "frontend_package_devdependencies_typescript",
-      "community": 4,
+      "community": 5,
       "norm_label": "typescript"
     },
     {
@@ -864,7 +954,7 @@
       "source_file": "frontend/app/page.tsx",
       "source_location": "L1",
       "id": "frontend_app_page_tsx",
-      "community": 11,
+      "community": 10,
       "norm_label": "page.tsx"
     },
     {
@@ -873,7 +963,7 @@
       "source_file": "frontend/app/page.tsx",
       "source_location": "L3",
       "id": "app_page_home",
-      "community": 11,
+      "community": 10,
       "norm_label": "home()"
     },
     {
@@ -882,7 +972,7 @@
       "source_file": "frontend/app/layout.tsx",
       "source_location": "L1",
       "id": "frontend_app_layout_tsx",
-      "community": 8,
+      "community": 9,
       "norm_label": "layout.tsx"
     },
     {
@@ -891,7 +981,7 @@
       "source_file": "frontend/app/layout.tsx",
       "source_location": "L5",
       "id": "app_layout_geistsans",
-      "community": 8,
+      "community": 9,
       "norm_label": "geistsans"
     },
     {
@@ -900,7 +990,7 @@
       "source_file": "frontend/app/layout.tsx",
       "source_location": "L10",
       "id": "app_layout_geistmono",
-      "community": 8,
+      "community": 9,
       "norm_label": "geistmono"
     },
     {
@@ -909,7 +999,7 @@
       "source_file": "frontend/app/layout.tsx",
       "source_location": "L15",
       "id": "app_layout_metadata",
-      "community": 8,
+      "community": 9,
       "norm_label": "metadata"
     },
     {
@@ -918,89 +1008,125 @@
       "source_file": "frontend/app/layout.tsx",
       "source_location": "L20",
       "id": "app_layout_rootlayout",
-      "community": 8,
+      "community": 9,
       "norm_label": "rootlayout()"
     },
     {
-      "label": "Sanity Clean Content Studio README",
+      "label": "NLP Project Development Guide",
       "file_type": "document",
-      "source_file": "cms/README.md",
-      "id": "cms_readme",
-      "community": 7,
-      "norm_label": "sanity clean content studio readme"
+      "source_file": "README.md",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "id": "readme_nlp_project",
+      "community": 6,
+      "norm_label": "nlp project development guide"
     },
     {
-      "label": "Sanity Content Studio",
+      "label": "Frontend (Next.js)",
+      "file_type": "code",
+      "source_file": "frontend/README.md",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "id": "frontend_app",
+      "community": 6,
+      "norm_label": "frontend (next.js)"
+    },
+    {
+      "label": "CMS (Sanity Studio)",
+      "file_type": "code",
+      "source_file": "cms/README.md",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "id": "cms_backend",
+      "community": 6,
+      "norm_label": "cms (sanity studio)"
+    },
+    {
+      "label": "Graphify Knowledge Graph",
+      "file_type": "rationale",
+      "source_file": "README.md",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "id": "graphify_out",
+      "community": 6,
+      "norm_label": "graphify knowledge graph"
+    },
+    {
+      "label": "Graphify CLI",
       "file_type": "concept",
-      "source_file": "cms/README.md",
-      "id": "cms_sanity_studio",
-      "community": 7,
-      "norm_label": "sanity content studio"
+      "source_file": "README.md",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "id": "graphify_cli",
+      "community": 6,
+      "norm_label": "graphify cli"
     },
     {
-      "label": "Sanity Runtime Index",
+      "label": "MCP Server Configuration",
       "file_type": "code",
-      "source_file": "cms/.sanity/runtime/index.html",
-      "id": "index_html",
-      "community": 7,
-      "norm_label": "sanity runtime index"
+      "source_file": ".agents/mcp_config.json",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "id": "mcp_config",
+      "community": 6,
+      "norm_label": "mcp server configuration"
     },
     {
-      "label": "__sanityErrorChannel",
+      "label": "Sanity Studio Runtime Index",
       "file_type": "code",
       "source_file": "cms/.sanity/runtime/index.html",
-      "id": "index_sanity_error_channel",
-      "community": 7,
-      "norm_label": "__sanityerrorchannel"
-    },
-    {
-      "label": "Sanity Bridge SDK",
-      "file_type": "code",
-      "source_file": "cms/.sanity/runtime/index.html",
-      "source_url": "https://core.sanity-cdn.com/bridge.js",
-      "id": "index_sanity_bridge",
-      "community": 7,
-      "norm_label": "sanity bridge sdk"
-    },
-    {
-      "label": "Sanity Runtime App Entry",
-      "file_type": "code",
-      "source_file": "cms/.sanity/runtime/index.html",
-      "id": "index_app_js",
-      "community": 7,
-      "norm_label": "sanity runtime app entry"
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "id": "sanity_runtime_index",
+      "community": 6,
+      "norm_label": "sanity studio runtime index"
     },
     {
       "label": "Next.js Agent Rules",
       "file_type": "document",
       "source_file": "frontend/AGENTS.md",
-      "id": "agents_md",
-      "community": 9,
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "id": "frontend_agents_rules",
+      "community": 6,
       "norm_label": "next.js agent rules"
     },
     {
-      "label": "Claude Instructions",
+      "label": "Claude Configuration",
       "file_type": "document",
       "source_file": "frontend/CLAUDE.md",
-      "id": "claude_md",
-      "community": 9,
-      "norm_label": "claude instructions"
-    },
-    {
-      "label": "Frontend Next.js README",
-      "file_type": "document",
-      "source_file": "frontend/README.md",
-      "id": "frontend_readme",
-      "community": 9,
-      "norm_label": "frontend next.js readme"
-    },
-    {
-      "label": "Next.js Application",
-      "file_type": "concept",
-      "source_file": "frontend/README.md",
-      "id": "frontend_nextjs_app",
-      "community": 9,
-      "norm_label": "next.js application"
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "id": "frontend_claude_config",
+      "community": 6,
+      "norm_label": "claude configuration"
     }
   ],
   "links": [
@@ -1500,11 +1626,149 @@
     {
       "relation": "contains",
       "confidence": "EXTRACTED",
+      "source_file": "cms/schemaTypes/postType.ts",
+      "source_location": "L2",
+      "weight": 1.0,
+      "source": "cms_schematypes_posttype_ts",
+      "target": "schematypes_posttype_posttype",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "cms/schemaTypes/diagnosisType.ts",
+      "source_location": "L3",
+      "weight": 1.0,
+      "source": "cms_schematypes_diagnosistype_ts",
+      "target": "schematypes_diagnosistype_diagnosis",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "cms/schemaTypes/index.ts",
+      "source_location": "L4",
+      "weight": 1.0,
+      "source": "cms_schematypes_index_ts",
+      "target": "cms_schematypes_diagnosistype_ts",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "cms/schemaTypes/index.ts",
+      "source_location": "L4",
+      "weight": 1.0,
+      "source": "cms_schematypes_index_ts",
+      "target": "schematypes_diagnosistype_diagnosis",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "cms/schemaTypes/index.ts",
+      "source_location": "L3",
+      "weight": 1.0,
+      "source": "cms_schematypes_index_ts",
+      "target": "cms_schematypes_replytype_ts",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "cms/schemaTypes/replyType.ts",
+      "source_location": "L3",
+      "weight": 1.0,
+      "source": "cms_schematypes_replytype_ts",
+      "target": "schematypes_replytype_reply",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "cms/schemaTypes/index.ts",
+      "source_location": "L3",
+      "weight": 1.0,
+      "source": "cms_schematypes_index_ts",
+      "target": "schematypes_replytype_reply",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
       "source_file": "cms/schemaTypes/index.ts",
       "source_location": "L1",
       "weight": 1.0,
       "source": "cms_schematypes_index_ts",
+      "target": "cms_schematypes_scenariotype_ts",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "cms/schemaTypes/index.ts",
+      "source_location": "L2",
+      "weight": 1.0,
+      "source": "cms_schematypes_index_ts",
+      "target": "cms_schematypes_stagetype_ts",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "cms/schemaTypes/index.ts",
+      "source_location": "L6",
+      "weight": 1.0,
+      "source": "cms_schematypes_index_ts",
       "target": "schematypes_index_schematypes",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "cms/schemaTypes/index.ts",
+      "source_location": "L1",
+      "weight": 1.0,
+      "source": "cms_schematypes_index_ts",
+      "target": "schematypes_scenariotype_scenario",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "cms/schemaTypes/index.ts",
+      "source_location": "L2",
+      "weight": 1.0,
+      "source": "cms_schematypes_index_ts",
+      "target": "schematypes_stagetype_stage",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "cms/schemaTypes/stageType.ts",
+      "source_location": "L3",
+      "weight": 1.0,
+      "source": "cms_schematypes_stagetype_ts",
+      "target": "schematypes_stagetype_stage",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "cms/schemaTypes/scenarioType.ts",
+      "source_location": "L3",
+      "weight": 1.0,
+      "source": "cms_schematypes_scenariotype_ts",
+      "target": "schematypes_scenariotype_scenario",
       "confidence_score": 1.0
     },
     {
@@ -1951,67 +2215,93 @@
       "relation": "references",
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
-      "source_file": "cms/README.md",
-      "source": "cms_readme",
-      "target": "cms_sanity_studio"
+      "source_file": "README.md",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "readme_nlp_project",
+      "target": "cms_backend"
     },
     {
-      "relation": "conceptually_related_to",
-      "confidence": "INFERRED",
-      "confidence_score": 0.9,
-      "source_file": "cms/.sanity/runtime/index.html",
-      "source": "cms_sanity_studio",
-      "target": "index_html"
-    },
-    {
-      "relation": "calls",
+      "relation": "references",
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
-      "source_file": "cms/.sanity/runtime/index.html",
-      "source": "index_html",
-      "target": "index_app_js"
+      "source_file": "README.md",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "readme_nlp_project",
+      "target": "frontend_app"
     },
     {
-      "relation": "calls",
+      "relation": "references",
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
-      "source_file": "cms/.sanity/runtime/index.html",
-      "source": "index_html",
-      "target": "index_sanity_bridge"
+      "source_file": "README.md",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "readme_nlp_project",
+      "target": "graphify_cli"
     },
     {
-      "relation": "implements",
+      "relation": "references",
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
-      "source_file": "cms/.sanity/runtime/index.html",
-      "source": "index_html",
-      "target": "index_sanity_error_channel"
+      "source_file": "README.md",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "readme_nlp_project",
+      "target": "graphify_out"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "README.md",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "readme_nlp_project",
+      "target": "mcp_config"
     },
     {
       "relation": "references",
       "confidence": "INFERRED",
       "confidence_score": 0.8,
       "source_file": "frontend/AGENTS.md",
-      "source": "agents_md",
-      "target": "frontend_nextjs_app"
+      "source_location": null,
+      "weight": 1.0,
+      "source": "frontend_app",
+      "target": "frontend_agents_rules"
+    },
+    {
+      "relation": "references",
+      "confidence": "INFERRED",
+      "confidence_score": 0.9,
+      "source_file": "cms/README.md",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "cms_backend",
+      "target": "sanity_runtime_index"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "README.md",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "graphify_cli",
+      "target": "graphify_out"
     },
     {
       "relation": "references",
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "frontend/CLAUDE.md",
-      "source": "claude_md",
-      "target": "agents_md"
-    },
-    {
-      "relation": "references",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "frontend/README.md",
-      "source": "frontend_readme",
-      "target": "frontend_nextjs_app"
+      "source_location": null,
+      "weight": 1.0,
+      "source": "frontend_claude_config",
+      "target": "frontend_agents_rules"
     }
   ],
   "hyperedges": [],
-  "built_at_commit": "9b2f07cd6ec12ae6212edff106ba13addeaef0e4"
+  "built_at_commit": "6fb7b01c001067b08c80a6d1604a6ec7f55b404e"
 }
