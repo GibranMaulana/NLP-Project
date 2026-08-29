@@ -24,5 +24,20 @@ export const reflection = defineType({
       type: "text",
       rows: 4,
     }),
+    defineField({
+      name: "resultType",
+      title: "Resulting Pattern Type",
+      description: "Which type outcome does this reflection page belong to?",
+      type: "string",
+      options: {
+        list: [
+          { title: "Distortion Type (Tipe Distorsi)", value: "distortion" },
+          { title: "Generalization Type (Tipe Generalisasi)", value: "generalization" },
+          { title: "Deletion Type (Tipe Delesi)", value: "deletion" },
+        ],
+        layout: "radio",
+      },
+      validation: (rule) => rule.required(),
+    }),
   ],
 });

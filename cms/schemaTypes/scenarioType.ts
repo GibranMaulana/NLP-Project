@@ -19,23 +19,11 @@ export const scenario = defineType({
       validation: (rule) => rule.required(),
     }),
     defineField({
-      name: "description",
-      title: "Description",
-      type: "text",
-      rows: 3,
-    }),
-    defineField({
-      name: "image",
-      title: "Cover Image",
-      type: "image",
-      options: { hotspot: true },
-    }),
-    defineField({
       name: "prologue",
       title: "Prologue",
       description: "Introductory story or context for this scenario",
-      type: "reference",
-      to: [{ type: "prologue" }],
+      type: "array",
+      of: [{ type: "block" }]
     }),
     defineField({
       name: "startInteraction",
@@ -57,6 +45,7 @@ export const scenario = defineType({
       description: "Reflection after completing the scenario",
       type: "array",
       of: [{ type: "reference", to: [{ type: "reflection" }] }],
+      validation: Rule => Rule.required().length(7),
     }),
   ],
 });

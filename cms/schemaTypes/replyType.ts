@@ -24,5 +24,27 @@ export const reply = defineType({
       type: "reference",
       to: [{ type: "interaction" }],
     }),
+    defineField({
+      name: "reflection",
+      title: "Triggered Reflection",
+      description: "Specific reflection triggered when choosing this reply (for branching outcomes)",
+      type: "reference",
+      to: [{ type: "reflection" }],
+    }),
+    defineField({
+      name: "patternType",
+      title: "Pattern Type (Assessment Score)",
+      description: "Which type does choosing this reply count towards?",
+      type: "string",
+      options: {
+        list: [
+          { title: "Distortion", value: "distortion" },
+          { title: "Generalization", value: "generalization" },
+          { title: "Deletion", value: "deletion" },
+        ],
+        layout: "radio",
+      },
+      validation: (rule) => rule.required(),
+    }),
   ],
 });
