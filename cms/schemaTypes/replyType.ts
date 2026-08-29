@@ -12,37 +12,37 @@ export const reply = defineType({
       validation: (rule) => rule.required(),
     }),
     defineField({
-      name: "feedback",
-      title: "Feedback / Explanation",
-      type: "text",
-      rows: 2,
-    }),
-    defineField({
-      name: "nextInteraction",
-      title: "Next Interaction",
-      description: "The interaction node that this reply leads to",
+      name: "valueType",
+      title: "Category / Pattern Type",
       type: "reference",
-      to: [{ type: "interaction" }],
-    }),
-    defineField({
-      name: "reflection",
-      title: "Triggered Reflection",
-      description: "Specific reflection triggered when choosing this reply (for branching outcomes)",
-      type: "reference",
-      to: [{ type: "reflection" }],
-    }),
-    defineField({
-      name: "patternType",
-      title: "Pattern Type (Assessment Score)",
-      description: "Which type does choosing this reply count towards?",
-      type: "string",
+      to: [{ type: "valueType" }],
       options: {
-        list: [
-          { title: "Distortion", value: "distortion" },
-          { title: "Generalization", value: "generalization" },
-          { title: "Deletion", value: "deletion" },
-        ],
-        layout: "radio",
+        filter: ({ document, parentPath }: any) => {
+          const stagesIndex = parentPath.findIndex((p: any) => p === 'stages')
+          const repliesIndex = parentPath.findIndex((p: any) => p === 'replies')
+          
+          if (stagesIndex !== -1 && repliesIndex !== -1) {
+            const stageKey = parentPath[stagesIndex + 1]?._key
+            const replyKey = parentPath[repliesIndex + 1]?._key
+            
+            const stages = (document?.stages as any[]) || []
+            const stage = stages.find((s: any) => s._key === stageKey)
+            
+            if (stage && stage.replies) {
+              const otherRefs = stage.replies
+                .filter((r: any) => r._key !== replyKey && r.valueType?._ref)
+                .map((r: any) => r.valueType._ref)
+                
+              if (otherRefs.length > 0) {
+                return {
+                  filter: '!(_id in $otherRefs)',
+                  params: { otherRefs }
+                }
+              }
+            }
+          }
+          return { filter: '' }
+        }
       },
       validation: (rule) => rule.required(),
     }),

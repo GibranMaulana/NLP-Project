@@ -1,7 +1,7 @@
-import {postType} from "./postType"
-import {scenario} from "./scenarioType"
-import {interaction} from "./interactionType"
-import {reply} from "./replyType"
-import {reflection} from "./reflectionType"
+import {scenario} from './scenarioType'
+import {stage} from './stageType'
+import {reply} from './replyType'
+import {diagnosis} from './diagnosisType'
+import {valueType} from './valueType'
 
-export const schemaTypes = [postType,scenario,interaction,reply,reflection]
+export const schemaTypes = [scenario, stage, reply, diagnosis, valueType]
