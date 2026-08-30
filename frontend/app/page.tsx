@@ -67,9 +67,6 @@ export default async function Home() {
                   <h2 className="mb-3 font-serif-editorial text-2xl font-medium text-[#E9E7F5] group-hover:text-white">
                     {sc.title}
                   </h2>
-                  <p className="text-xs text-[#7a7a8e] font-mono">
-                    /scenario/{sc.slug}
-                  </p>
                 </div>
 
                 <div className="mt-6 flex items-center gap-3 pt-4 border-t border-[#292477]/30">

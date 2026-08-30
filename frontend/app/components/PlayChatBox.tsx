@@ -238,16 +238,15 @@ export default function PlayChatBox({ scenario }: Props) {
         <div className="absolute inset-0 bg-[radial-gradient(ellipse_60%_50%_at_50%_15%,rgba(41,36,119,0.25)_0%,transparent_70%)]" />
       </div>
 
-      {/* ── Top Header (WITHOUT back button) ───────────── */}
-      <header className="relative z-10 border-b border-[#292477]/40 bg-[#111116]/80 px-6 py-4 backdrop-blur-md">
-        <div className="mx-auto flex max-w-4xl items-center justify-between">
-          <div>
-            <h1 className="font-serif-editorial text-xl font-semibold tracking-wide text-[#E9E7F5] sm:text-2xl">
-              {scenario.title}
-            </h1>
-          </div>
+      {/* ── Main Chat Layout (Aligned max-w-3xl) ───────────────── */}
+      <main className="relative z-10 mx-auto flex w-full max-w-3xl flex-1 flex-col px-4 py-6 sm:px-6">
 
-          {/* Right Header Actions */}
+        {/* Inline Top Scenario & Profile Bar (Pas Selebar Chat Box) */}
+        <div className="mb-6 flex items-center justify-between border-b border-[#292477]/30 pb-4">
+          <h1 className="font-serif-editorial text-xl font-semibold tracking-wide text-[#E9E7F5] sm:text-2xl">
+            {scenario.title}
+          </h1>
+
           <div className="flex items-center gap-3">
             {/* Reset / Restart Session button */}
             {messages.length > 1 && (
@@ -278,10 +277,6 @@ export default function PlayChatBox({ scenario }: Props) {
             </div>
           </div>
         </div>
-      </header>
-
-      {/* ── Chat Messages Container ─────────────────────── */}
-      <main className="relative z-10 mx-auto flex w-full max-w-3xl flex-1 flex-col px-4 py-6 sm:px-6">
 
         {/* Message Stream */}
         <div className="flex-1 space-y-5">
@@ -381,11 +376,6 @@ export default function PlayChatBox({ scenario }: Props) {
                     <p className="text-[#E9E7F5] group-hover:text-white">
                       {reply.text}
                     </p>
-                    {reply.valueType?.title && (
-                      <span className="mt-1 inline-block text-[11px] font-medium text-[#7a7a8e] group-hover:text-[#a0a0b0]">
-                        {reply.valueType.title}
-                      </span>
-                    )}
                   </div>
                 </button>
               ))}
