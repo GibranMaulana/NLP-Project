@@ -84,9 +84,8 @@ export default function ScenarioPrologue({ scenario }: Props) {
     <main className="cinematic-grain cinematic-vignette relative flex min-h-dvh flex-col items-center overflow-hidden bg-[#111116] selection:bg-[#292477]/40 selection:text-[#E9E7F5]">
       {/* ── Cinematic Background ─────────────────────────── */}
       <div
-        className={`pointer-events-none fixed inset-0 transition-opacity duration-[2000ms] ${
-          vis("bg") ? "opacity-100" : "opacity-0"
-        }`}
+        className={`pointer-events-none fixed inset-0 transition-opacity duration-[2000ms] ${vis("bg") ? "opacity-100" : "opacity-0"
+          }`}
         aria-hidden="true"
       >
         {/* Subtle radial gradient — atmospheric purple light */}
@@ -102,9 +101,8 @@ export default function ScenarioPrologue({ scenario }: Props) {
         <header className="mb-14 sm:mb-18 md:mb-20">
           {/* Chapter Number */}
           <div
-            className={`mb-3 transition-all duration-700 ${
-              vis("number") ? "cin-animate-fade-in" : "opacity-0"
-            }`}
+            className={`mb-3 transition-all duration-700 ${vis("number") ? "cin-animate-fade-in" : "opacity-0"
+              }`}
           >
             <span className="text-[11px] font-semibold uppercase tracking-[0.35em] text-[#6a6a7a]">
               01
@@ -113,9 +111,8 @@ export default function ScenarioPrologue({ scenario }: Props) {
 
           {/* Eyebrow Labels */}
           <div
-            className={`mb-6 flex items-center gap-3 transition-all duration-700 ${
-              vis("eyebrow") ? "cin-animate-fade-in" : "opacity-0"
-            }`}
+            className={`mb-6 flex items-center gap-3 transition-all duration-700 ${vis("eyebrow") ? "cin-animate-fade-in" : "opacity-0"
+              }`}
           >
             <span className="text-[11px] font-bold uppercase tracking-[0.3em] text-[#6a6a7a]">
               Pengenalan
@@ -128,9 +125,8 @@ export default function ScenarioPrologue({ scenario }: Props) {
 
           {/* Main Title */}
           <div
-            className={`mb-8 transition-all duration-[800ms] ${
-              vis("title") ? "cin-animate-fade-up" : "opacity-0 translate-y-5"
-            }`}
+            className={`mb-8 transition-all duration-[800ms] ${vis("title") ? "cin-animate-fade-up" : "opacity-0 translate-y-5"
+              }`}
           >
             <h1 className="title-glow font-serif-editorial text-[2.75rem] font-normal leading-[1.08] tracking-tight text-[#E9E7F5] sm:text-6xl sm:leading-[1.06] md:text-7xl lg:text-8xl">
               {scenario.title}
@@ -139,9 +135,8 @@ export default function ScenarioPrologue({ scenario }: Props) {
 
           {/* Divider */}
           <div
-            className={`transition-all duration-700 ${
-              vis("divider") ? "cin-animate-divider" : "opacity-0 scale-x-0"
-            }`}
+            className={`transition-all duration-700 ${vis("divider") ? "cin-animate-divider" : "opacity-0 scale-x-0"
+              }`}
             aria-hidden="true"
           >
             <div className="relative flex items-center">
@@ -153,9 +148,8 @@ export default function ScenarioPrologue({ scenario }: Props) {
         {/* ── Narrative Prologue Body ─────────────────────── */}
         <section
           aria-label="Proloog Skenario"
-          className={`flex-1 pt-2 transition-all duration-[800ms] ${
-            vis("prologue") ? "cin-animate-fade-up" : "opacity-0 translate-y-4"
-          }`}
+          className={`flex-1 pt-2 transition-all duration-[800ms] ${vis("prologue") ? "cin-animate-fade-up" : "opacity-0 translate-y-4"
+            }`}
         >
           {scenario.prologue && scenario.prologue.length > 0 ? (
             <PortableText
@@ -173,9 +167,8 @@ export default function ScenarioPrologue({ scenario }: Props) {
 
         {/* ── Continue CTA ───────────────────────────────── */}
         <div
-          className={`mt-14 flex justify-center pb-8 transition-all duration-700 ${
-            vis("cta") ? "cin-animate-cta" : "opacity-0 translate-y-3"
-          }`}
+          className={`mt-14 flex justify-center pb-8 transition-all duration-700 ${vis("cta") ? "cin-animate-cta" : "opacity-0 translate-y-3"
+            }`}
         >
           <button
             onClick={handleContinue}
