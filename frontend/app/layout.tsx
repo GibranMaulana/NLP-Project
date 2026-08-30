@@ -6,17 +6,19 @@ import LanguageToggle from "@/app/components/LanguageToggle";
 
 const playfair = Playfair_Display({
   subsets: ["latin"],
+  display: "swap",
   variable: "--font-playfair",
 });
 
 const inter = Inter({
   subsets: ["latin"],
+  display: "swap",
   variable: "--font-inter",
 });
 
 export const metadata: Metadata = {
-  title: "Interactieve Scenario Ervaring",
-  description: "Interactieve NLP & Meta Model simulatie ervaring",
+  title: "Beleef NLP — De Leiderschapstaal Spiegel",
+  description: "Ervaar uw leiderschapspatronen via interactieve NLP Meta Model simulaties.",
 };
 
 export default function RootLayout({
@@ -27,11 +29,21 @@ export default function RootLayout({
   return (
     <html
       lang="nl"
+      suppressHydrationWarning
       className={`${playfair.variable} ${inter.variable} h-full antialiased`}
     >
-      <body className="min-h-full flex flex-col font-sans bg-[#111116] text-[#e8e8ec]">
+      <head>
+        <link rel="preconnect" href="https://v8udsf47.api.sanity.io" crossOrigin="anonymous" />
+        <link rel="dns-prefetch" href="https://v8udsf47.api.sanity.io" />
+        <link rel="preconnect" href="https://cdn.sanity.io" crossOrigin="anonymous" />
+        <link rel="dns-prefetch" href="https://cdn.sanity.io" />
+      </head>
+      <body
+        suppressHydrationWarning
+        className="min-h-full flex flex-col font-sans bg-[#111116] text-[#e8e8ec]"
+      >
         {/* Global Floating Language Switcher */}
-        <header className="fixed bottom-5 right-5 sm:bottom-auto sm:top-5 sm:right-6 z-50 pointer-events-auto">
+        <header className="global-floating-lang fixed top-4 right-4 sm:top-5 sm:right-6 z-50 pointer-events-auto">
           <LanguageToggle />
         </header>
 
