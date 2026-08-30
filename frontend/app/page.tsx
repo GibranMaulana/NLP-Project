@@ -41,13 +41,13 @@ export default async function Home() {
           </span>
           <span className="h-[3px] w-[3px] rounded-full bg-[#F46B3C]" />
           <span className="text-[11px] font-semibold uppercase tracking-[0.25em] text-[#E9E7F5]/60">
-            Meta Model Simulation
+            Beleef NLP
           </span>
         </div>
 
         {/* Title */}
         <h1 className="title-glow mb-6 font-serif-editorial text-4xl font-normal tracking-tight text-[#E9E7F5] sm:text-6xl md:text-7xl">
-          Pelatihan Kepekaan Meta Model
+          Meta Model Gevoeligheidstraining
         </h1>
 
         {/* Explanation Section */}
@@ -60,31 +60,29 @@ export default async function Home() {
           <div className="relative z-10">
             <div className="mb-6 inline-flex items-center gap-2 rounded-full border border-[#F46B3C]/20 bg-[#F46B3C]/10 px-3 py-1 text-[10px] font-semibold uppercase tracking-widest text-[#F46B3C]">
               <span className="h-1.5 w-1.5 rounded-full bg-[#F46B3C] animate-pulse" />
-              Platform Overview
+              Over dit platform
             </div>
 
             <h2 className="mb-6 font-serif-editorial text-3xl font-medium tracking-tight text-[#E9E7F5] sm:text-4xl">
-              Tentang Platform Ini
+              Voel het effect van uw taal, in plaats van theorie te memoriseren.
             </h2>
 
             <div className="space-y-6 text-base leading-relaxed text-[#a0a0b0] sm:text-lg">
               <p>
-                Aplikasi ini adalah platform simulasi interaktif yang dirancang
-                premium untuk melatih secara mendalam keterampilan Anda dalam
-                mendeteksi pola bahasa{" "}
+                Dit platform is een interactieve gesprekssimulatie ontworpen om uw
+                onderbewuste gevoeligheid te vergroten voor het herkennen van{" "}
                 <strong className="font-medium text-[#E9E7F5]">
                   NLP Meta Model
-                </strong>
-                .
+                </strong>{" "}
+                taalpatronen.
               </p>
               <p>
-                Melalui studi kasus berupa percakapan interaktif, Anda akan
-                berlatih mengenali pelanggaran bahasa seperti{" "}
-                <em className="text-[#E9E7F5]">Deletion</em>,{" "}
-                <em className="text-[#E9E7F5]">Distortion</em>, dan{" "}
-                <em className="text-[#E9E7F5]">Generalization</em>, serta
-                merumuskan pola pertanyaan presisi untuk menggali informasi
-                terdalam dari lawan bicara.
+                Via realistische managementgesprekken ervaart u direct de impact
+                van taalvervormingen zoals{" "}
+                <em className="text-[#E9E7F5]">Weglating</em>,{" "}
+                <em className="text-[#E9E7F5]">Vervorming</em> en{" "}
+                <em className="text-[#E9E7F5]">Generalisatie</em>. U ontdekt de
+                precieze vragen om helderheid te scheppen en effectief leiding te geven.
               </p>
             </div>
           </div>
@@ -95,11 +93,11 @@ export default async function Home() {
             {/* Batches Header */}
             <div className="mb-10 flex w-full items-center justify-between border-b border-[#292477]/30 pb-5">
               <h2 className="font-serif-editorial text-3xl font-normal text-[#E9E7F5] sm:text-4xl">
-                Try Now
+                Probeer nu
               </h2>
             </div>
 
-            {/* Scenarios Grid */}
+            {/* Batches Grid */}
             <div className="grid w-full grid-cols-1 gap-4 sm:grid-cols-2">
               {batches && batches.length > 0 ? (
                 batches.map((batch, i) => (
@@ -114,7 +112,7 @@ export default async function Home() {
                         </span>
                         {batch.scenariosCount !== undefined && (
                           <span className="rounded-full border border-[#292477]/50 bg-[#292477]/20 px-2.5 py-0.5 text-[10px] font-medium text-[#a0a0b0]">
-                            {batch.scenariosCount} Skenario
+                            {batch.scenariosCount} {batch.scenariosCount === 1 ? "Scenario" : "Scenario's"}
                           </span>
                         )}
                       </div>
@@ -129,7 +127,7 @@ export default async function Home() {
                         href={`/b/${batch.slug}`}
                         className="inline-flex flex-1 items-center justify-center gap-2 rounded-full bg-[#F46B3C] px-4 py-2.5 text-xs font-medium text-white shadow transition hover:bg-[#E0592B]"
                       >
-                        <span>Lihat Skenario</span>
+                        <span>Bekijk Scenario's</span>
                         <span>→</span>
                       </Link>
                     </div>
@@ -137,7 +135,7 @@ export default async function Home() {
                 ))
               ) : (
                 <div className="col-span-full rounded-2xl border border-[#292477]/40 bg-[#1a1a24]/60 p-8 text-center text-[#a0a0b0]">
-                  Belum ada batch di Sanity CMS.
+                  Geen actieve batches gevonden in het CMS.
                 </div>
               )}
             </div>
