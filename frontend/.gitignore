@@ -39,3 +39,8 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+# Graphify - ignore all output files (local tool, not for version control)
+graphify-out/
+**/graphify-out/
+.graphify_*
