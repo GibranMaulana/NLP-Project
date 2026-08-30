@@ -11,7 +11,8 @@ interface ScenarioItem {
 }
 
 export default async function Home() {
-  const scenarios = await sanityClient.fetch<ScenarioItem[]>(ALL_SCENARIOS_QUERY);
+  const scenarios =
+    await sanityClient.fetch<ScenarioItem[]>(ALL_SCENARIOS_QUERY);
 
   return (
     <div className="cinematic-grain cinematic-vignette relative flex min-h-dvh flex-col items-center bg-[#111116] px-6 py-20 text-[#e8e8ec] sm:px-10 md:py-28">
@@ -41,7 +42,8 @@ export default async function Home() {
         </h1>
 
         <p className="mb-12 max-w-xl text-base text-[#a0a0b0] sm:text-lg">
-          Pilih skenario studi kasus interaktif untuk melatih kepekaan pola Meta Model (Deletion, Distortion, Generalization).
+          Pilih skenario studi kasus interaktif untuk melatih kepekaan pola Meta
+          Model (Deletion, Distortion, Generalization).
         </p>
 
         {/* Scenarios Grid */}
