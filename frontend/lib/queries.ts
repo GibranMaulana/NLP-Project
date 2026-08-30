@@ -37,7 +37,9 @@ export const SCENARIO_PLAY_QUERY = `
       title,
       headline,
       harshTruth,
-      "patternTitle": valueType->title
+      conditionType,
+      "patternTitle": valueType->title,
+      "valueTypes": valueTypes[]->title
     }
   }
 `;
@@ -65,7 +67,9 @@ export const DEFAULT_SCENARIO_PLAY_QUERY = `
       title,
       headline,
       harshTruth,
-      "patternTitle": valueType->title
+      conditionType,
+      "patternTitle": valueType->title,
+      "valueTypes": valueTypes[]->title
     }
   }
 `;

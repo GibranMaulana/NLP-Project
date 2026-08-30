@@ -24,8 +24,9 @@ export interface Diagnosis {
   title: string;
   headline?: string;
   harshTruth?: string;
+  conditionType?: "dominant" | "tie_2" | "tie_3" | string;
   patternTitle?: string;
-  // Fallbacks for flexibility
+  valueTypes?: string[];
   description?: string;
   dominantPattern?: string;
 }
