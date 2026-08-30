@@ -2,32 +2,33 @@ import { defineField, defineType } from "sanity";
 
 export const diagnosis = defineType({
   name: "diagnosis",
-  title: "Diagnose",
+  title: "Diagnosis",
   type: "document",
   fields: [
     defineField({
       name: "title",
-      title: "Interne titel (Alleen voor CMS)",
+      title: "Internal Title (For CMS only)",
+      description: "e.g., 'Terjebak Empati - Level 1'",
       type: "string",
       validation: (rule) => rule.required(),
     }),
     defineField({
       name: "headline",
-      title: "Pakkende kop",
+      title: "Punchy Headline",
       type: "string",
       validation: (rule) => rule.required(),
     }),
     defineField({
       name: "valueType",
-      title: "Waardetype / Patroon",
-      description: "Op welk patroon is deze diagnose van toepassing?",
+      title: "Value Type / Pattern",
+      description: "Which pattern does this diagnosis apply to?",
       type: "reference",
       to: [{ type: "valueType" }],
       validation: (rule) => rule.required(),
     }),
     defineField({
       name: "harshTruth",
-      title: "De harde waarheid",
+      title: "The Harsh Truth",
       type: "text",
       rows: 4,
       validation: (rule) => rule.required(),
