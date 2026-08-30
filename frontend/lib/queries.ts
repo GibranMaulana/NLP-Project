@@ -73,3 +73,32 @@ export const DEFAULT_SCENARIO_PLAY_QUERY = `
     }
   }
 `;
+
+export const SETTINGS_QUERY = `
+  *[_type == "settings"][0]{
+    isPrivate
+  }
+`;
+
+export const ALL_BATCHES_QUERY = `
+  *[_type == "batch"]{
+    title,
+    "slug": slug.current,
+    "scenariosCount": count(*[_type == "scenario" && references(^._id)])
+  }
+`;
+
+export const BATCH_SCENARIOS_QUERY = `
+  *[_type == "scenario" && batch->slug.current == $batchId]{
+    title,
+    "slug": slug.current,
+    "stagesCount": count(stages)
+  }
+`;
+
+export const BATCH_BY_SLUG_QUERY = `
+  *[_type == "batch" && slug.current == $batchId][0]{
+    title,
+    "slug": slug.current
+  }
+`;

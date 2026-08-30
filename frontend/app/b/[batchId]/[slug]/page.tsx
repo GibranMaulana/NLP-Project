@@ -8,7 +8,7 @@ import ScenarioNotFound from "@/app/components/ScenarioNotFound";
 export const revalidate = 0;
 
 interface PageProps {
-  params: Promise<{ slug: string }>;
+  params: Promise<{ batchId: string; slug: string }>;
 }
 
 async function getPlayScenario(slug: string): Promise<PlayScenario | null> {
