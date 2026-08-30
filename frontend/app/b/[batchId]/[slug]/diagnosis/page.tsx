@@ -2,13 +2,13 @@ import type { Metadata } from "next";
 import { sanityClient } from "@/lib/sanity";
 import { SCENARIO_PLAY_QUERY } from "@/lib/queries";
 import type { PlayScenario } from "@/lib/types";
-import ScenarioContainer from "@/app/components/ScenarioContainer";
 import ScenarioNotFound from "@/app/components/ScenarioNotFound";
+import DiagnosisResult from "@/app/components/DiagnosisResult";
 
 export const revalidate = 0;
 
 interface PageProps {
-  params: Promise<{ batchId: string; slug: string }>;
+  params: Promise<{ slug: string }>;
 }
 
 async function getPlayScenario(slug: string): Promise<PlayScenario | null> {
@@ -17,29 +17,33 @@ async function getPlayScenario(slug: string): Promise<PlayScenario | null> {
 
 export async function generateMetadata({
   params,
-}: PageProps): Promise<Metadata> {
+}: {
+  params: Promise<{ slug: string }>;
+}): Promise<Metadata> {
   const { slug } = await params;
   const scenario = await getPlayScenario(slug);
 
   if (!scenario) {
     return {
-      title: "Percakapan Tidak Ditemukan",
+      title: "Refleksi Tidak Ditemukan",
     };
   }
 
   return {
-    title: `${scenario.title} — Percakapan Simulasi`,
-    description: `Simulasi interaktif NLP untuk ${scenario.title}`,
+    title: `Refleksi: ${scenario.title}`,
+    description: `Refleksi hasil skenario ${scenario.title}`,
   };
 }
 
-export default async function ScenarioPlayPage({ params }: PageProps) {
+export default async function ScenarioDiagnosisPage({
+  params,
+}: PageProps) {
   const { slug } = await params;
   const scenario = await getPlayScenario(slug);
 
-  if (!scenario || !scenario.stages || scenario.stages.length === 0) {
+  if (!scenario) {
     return <ScenarioNotFound />;
   }
 
-  return <ScenarioContainer scenario={scenario} />;
+  return <DiagnosisResult scenario={scenario} slug={slug} />;
 }

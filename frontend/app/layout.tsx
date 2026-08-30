@@ -31,7 +31,7 @@ export default function RootLayout({
     >
       <body className="min-h-full flex flex-col font-sans bg-[#111116] text-[#e8e8ec]">
         {/* Global Floating Language Switcher */}
-        <header className="fixed top-5 right-6 z-50 pointer-events-auto">
+        <header className="fixed bottom-5 right-5 sm:bottom-auto sm:top-5 sm:right-6 z-50 pointer-events-auto">
           <LanguageToggle />
         </header>
 

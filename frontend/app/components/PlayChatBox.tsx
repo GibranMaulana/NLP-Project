@@ -1,7 +1,8 @@
 "use client";
 
 import { useState, useRef, useEffect } from "react";
-import { useRouter, useSearchParams } from "next/navigation";
+import { useRouter, useSearchParams, useParams } from "next/navigation";
+import Link from "next/link";
 import type { PlayScenario, Stage, Reply } from "@/lib/types";
 
 interface Message {
@@ -22,12 +23,15 @@ interface StoredChatState {
 
 interface Props {
   scenario: PlayScenario;
+  onRestart?: () => void;
 }
 
-export default function PlayChatBox({ scenario }: Props) {
+export default function PlayChatBox({ scenario, onRestart }: Props) {
   const storageKey = `nlp_chat_state_${scenario.slug}`;
   const router = useRouter();
   const searchParams = useSearchParams();
+  const params = useParams();
+  const batchId = params.batchId as string;
   const restartParam = searchParams.get("restart");
 
   const [currentStageIndex, setCurrentStageIndex] = useState(0);
@@ -45,7 +49,7 @@ export default function PlayChatBox({ scenario }: Props) {
   const getFormattedTime = () => {
     const now = new Date();
     return `${String(now.getHours()).padStart(2, "0")}:${String(
-      now.getMinutes()
+      now.getMinutes(),
     ).padStart(2, "0")}`;
   };
 
@@ -72,7 +76,7 @@ export default function PlayChatBox({ scenario }: Props) {
       }
       setIsInitialized(true);
       // Clean url
-      router.replace(`/scenario/${scenario.slug}/play`);
+      router.replace(`/b/${batchId}/${scenario.slug}`);
       return;
     }
 
@@ -80,7 +84,11 @@ export default function PlayChatBox({ scenario }: Props) {
       const saved = sessionStorage.getItem(storageKey);
       if (saved) {
         const parsed: StoredChatState = JSON.parse(saved);
-        if (parsed && Array.isArray(parsed.messages) && parsed.messages.length > 0) {
+        if (
+          parsed &&
+          Array.isArray(parsed.messages) &&
+          parsed.messages.length > 0
+        ) {
           setCurrentStageIndex(parsed.currentStageIndex || 0);
           setMessages(parsed.messages);
           setIsCompleted(!!parsed.isCompleted);
@@ -123,7 +131,14 @@ export default function PlayChatBox({ scenario }: Props) {
     } catch {
       // sessionStorage quota or security block handling
     }
-  }, [isInitialized, currentStageIndex, messages, isCompleted, selectedPatterns, storageKey]);
+  }, [
+    isInitialized,
+    currentStageIndex,
+    messages,
+    isCompleted,
+    selectedPatterns,
+    storageKey,
+  ]);
 
   const scrollToBottom = () => {
     messagesEndRef.current?.scrollIntoView({ behavior: "smooth" });
@@ -154,6 +169,10 @@ export default function PlayChatBox({ scenario }: Props) {
       setIsCompleted(false);
       setSelectedPatterns([]);
       setIsTyping(false);
+    }
+
+    if (onRestart) {
+      onRestart();
     }
   };
 
@@ -218,10 +237,6 @@ export default function PlayChatBox({ scenario }: Props) {
         };
 
         setMessages((prev) => [...prev, finalNpcMsg]);
-
-        // Redirect to diagnosis subpage with selection pattern list
-        const qp = updatedPatterns.join(",");
-        router.push(`/scenario/${scenario.slug}/diagnosis?patterns=${encodeURIComponent(qp)}`);
       }, 1000);
     }
   };
@@ -240,7 +255,6 @@ export default function PlayChatBox({ scenario }: Props) {
 
       {/* ── Main Chat Layout (Aligned max-w-3xl) ───────────────── */}
       <main className="relative z-10 mx-auto flex w-full max-w-3xl flex-1 flex-col px-4 py-6 sm:px-6">
-
         {/* Inline Top Scenario & Profile Bar (Pas Selebar Chat Box) */}
         <div className="mb-6 flex items-center justify-between border-b border-[#292477]/30 pb-4">
           <h1 className="font-serif-editorial text-xl font-semibold tracking-wide text-[#E9E7F5] sm:text-2xl">
@@ -256,7 +270,7 @@ export default function PlayChatBox({ scenario }: Props) {
                 className="cursor-pointer rounded-full border border-[#292477]/40 bg-[#292477]/10 px-3 py-1.5 text-xs text-[#a0a0b0] transition hover:bg-[#292477]/30 hover:text-white"
                 title="Mulai Ulang Percakapan"
               >
-                ↻ Ulangi
+                <span>↻ Ulangi</span>
               </button>
             )}
 
@@ -291,7 +305,7 @@ export default function PlayChatBox({ scenario }: Props) {
               >
                 {!isUser && (
                   <div className="flex h-9 w-9 shrink-0 items-center justify-center rounded-full border border-[#292477]/40 bg-[#292477]/30 text-base shadow-sm">
-                    👤
+                    <span>👤</span>
                   </div>
                 )}
 
@@ -308,12 +322,6 @@ export default function PlayChatBox({ scenario }: Props) {
                     </p>
                   )}
 
-                  {isUser && msg.patternType && (
-                    <p className="mb-1 text-[10px] font-semibold uppercase tracking-wider text-white/80">
-                      {msg.patternType}
-                    </p>
-                  )}
-
                   <p className="whitespace-pre-wrap">{msg.text}</p>
 
                   <span
@@ -327,7 +335,7 @@ export default function PlayChatBox({ scenario }: Props) {
 
                 {isUser && (
                   <div className="flex h-9 w-9 shrink-0 items-center justify-center rounded-full border border-[#F46B3C]/40 bg-[#F46B3C]/20 text-xs font-bold text-[#F46B3C]">
-                    Anda
+                    <span>Anda</span>
                   </div>
                 )}
               </div>
@@ -338,7 +346,7 @@ export default function PlayChatBox({ scenario }: Props) {
           {isTyping && (
             <div className="flex items-center gap-3">
               <div className="flex h-9 w-9 shrink-0 items-center justify-center rounded-full border border-[#292477]/40 bg-[#292477]/30 text-base shadow-sm">
-                👤
+                <span>👤</span>
               </div>
               <div className="rounded-2xl rounded-tl-xs border border-[#292477]/40 bg-[#1a1a24] px-4 py-3 text-xs text-[#a0a0b0]">
                 <div className="flex items-center gap-1.5">
@@ -382,8 +390,20 @@ export default function PlayChatBox({ scenario }: Props) {
             </div>
           </div>
         )}
+
+        {/* ── Completion UI ────────────────────────────── */}
+        {isCompleted && (
+          <div className="mt-8 flex flex-col items-center justify-center gap-4 border-t border-[#292477]/30 pt-6 pb-4">
+            <p className="text-sm text-[#a0a0b0]">Percakapan telah selesai.</p>
+            <Link
+              href={`/b/${batchId}/${scenario.slug}/diagnosis`}
+              className="inline-flex items-center gap-2 rounded-full bg-[#F46B3C] px-6 py-3 text-sm font-semibold text-white shadow-md transition hover:bg-[#E0592B]"
+            >
+              <span>Cek Hasil Diagnosis →</span>
+            </Link>
+          </div>
+        )}
       </main>
     </div>
   );
 }
-

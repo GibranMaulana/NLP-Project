@@ -42,9 +42,10 @@ const prologueComponents: PortableTextComponents = {
 
 interface Props {
   scenario: Scenario;
+  onContinue?: () => void;
 }
 
-export default function ScenarioPrologue({ scenario }: Props) {
+export default function ScenarioPrologue({ scenario, onContinue }: Props) {
   const router = useRouter();
   const [visibleSections, setVisibleSections] = useState<Set<string>>(new Set());
   const reducedMotion = useRef(false);
@@ -54,12 +55,18 @@ export default function ScenarioPrologue({ scenario }: Props) {
       "(prefers-reduced-motion: reduce)"
     ).matches;
 
-    if (reducedMotion.current) {
+    const storageKey = `nlp_prologue_seen_${scenario.slug}`;
+    const hasSeen = sessionStorage.getItem(storageKey);
+
+    if (reducedMotion.current || hasSeen) {
       setVisibleSections(
         new Set(["bg", "number", "eyebrow", "title", "divider", "prologue", "cta"])
       );
+      if (!hasSeen) sessionStorage.setItem(storageKey, "true");
       return;
     }
+
+    sessionStorage.setItem(storageKey, "true");
 
     const timers = [
       setTimeout(() => setVisibleSections((s) => new Set([...s, "bg"])), 100),
@@ -75,8 +82,12 @@ export default function ScenarioPrologue({ scenario }: Props) {
   }, []);
 
   const handleContinue = useCallback(() => {
-    router.push(`/scenario/${scenario.slug}/play`);
-  }, [router, scenario.slug]);
+    if (onContinue) {
+      onContinue();
+    } else {
+      router.push(`/scenario/${scenario.slug}/play`);
+    }
+  }, [onContinue, router, scenario.slug]);
 
   const vis = (key: string) => visibleSections.has(key);
 

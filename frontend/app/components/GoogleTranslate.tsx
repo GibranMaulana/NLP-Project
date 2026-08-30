@@ -76,6 +76,31 @@ export default function GoogleTranslate() {
         dangerouslySetInnerHTML={{
           __html: `
             (function() {
+              /* 
+               * MONKEY PATCH FIX FOR REACT + GOOGLE TRANSLATE
+               * Prevents "Node.removeChild: The node to be removed is not a child of this node" crashes
+               * by catching when React tries to remove or insert a node that Google Translate has altered.
+               */
+              if (typeof Node === 'function' && Node.prototype) {
+                var originalRemoveChild = Node.prototype.removeChild;
+                Node.prototype.removeChild = function(child) {
+                  if (child.parentNode !== this) {
+                    if (console) console.warn('Cannot remove a child from a different parent', child, this);
+                    return child;
+                  }
+                  return originalRemoveChild.apply(this, arguments);
+                };
+
+                var originalInsertBefore = Node.prototype.insertBefore;
+                Node.prototype.insertBefore = function(newNode, referenceNode) {
+                  if (referenceNode && referenceNode.parentNode !== this) {
+                    if (console) console.warn('Cannot insert before a reference node from a different parent', referenceNode, this);
+                    return newNode;
+                  }
+                  return originalInsertBefore.apply(this, arguments);
+                };
+              }
+
               if (!document.cookie.includes('googtrans=')) {
                 var hostname = window.location.hostname;
                 document.cookie = 'googtrans=/auto/nl; path=/;';
@@ -87,7 +112,7 @@ export default function GoogleTranslate() {
             function googleTranslateElementInit() {
               new google.translate.TranslateElement({
                 pageLanguage: 'auto',
-                includedLanguages: 'id,nl,en',
+                includedLanguages: 'nl,en',
                 autoDisplay: false
               }, 'google_translate_element');
             }

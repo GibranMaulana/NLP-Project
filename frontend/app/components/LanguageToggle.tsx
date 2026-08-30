@@ -2,7 +2,7 @@
 
 import { useEffect, useState } from "react";
 
-type Language = "id" | "nl";
+type Language = "en" | "nl";
 
 interface Props {
   className?: string;
@@ -18,8 +18,8 @@ export default function LanguageToggle({ className = "" }: Props) {
     const match = document.cookie.match(/(?:^|;\s*)googtrans=([^;]*)/);
     if (match) {
       const value = decodeURIComponent(match[1]);
-      if (value.endsWith("/id")) {
-        setCurrentLang("id");
+      if (value.endsWith("/en")) {
+        setCurrentLang("en");
         return;
       }
       if (value.endsWith("/nl")) {
@@ -42,11 +42,11 @@ export default function LanguageToggle({ className = "" }: Props) {
 
     const hostname = window.location.hostname;
 
-    if (lang === "id") {
-      // Set to Indonesian (/auto/id)
-      document.cookie = "googtrans=/auto/id; path=/;";
+    if (lang === "en") {
+      // Set to English (/auto/en)
+      document.cookie = "googtrans=/auto/en; path=/;";
       if (hostname && hostname !== "localhost") {
-        document.cookie = `googtrans=/auto/id; path=/; domain=.${hostname};`;
+        document.cookie = `googtrans=/auto/en; path=/; domain=.${hostname};`;
       }
     } else {
       // Set to Dutch (/auto/nl)
@@ -78,28 +78,26 @@ export default function LanguageToggle({ className = "" }: Props) {
         type="button"
         onClick={() => changeLanguage("nl")}
         aria-pressed={currentLang === "nl"}
-        className={`inline-flex cursor-pointer items-center gap-2 rounded-full px-4 py-1.5 text-xs font-medium tracking-wide transition-all duration-200 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#F46B3C] ${
+        className={`inline-flex cursor-pointer items-center justify-center rounded-full px-5 py-1.5 text-xs font-bold tracking-widest uppercase transition-all duration-200 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#F46B3C] ${
           currentLang === "nl"
             ? "bg-[#292477] text-[#E9E7F5] shadow"
             : "text-[#8a8a9e] hover:text-[#E9E7F5]"
         }`}
       >
-        <span className="text-sm">🇳🇱</span>
-        <span>Nederlands</span>
+        <span>NL</span>
       </button>
 
       <button
         type="button"
-        onClick={() => changeLanguage("id")}
-        aria-pressed={currentLang === "id"}
-        className={`inline-flex cursor-pointer items-center gap-2 rounded-full px-4 py-1.5 text-xs font-medium tracking-wide transition-all duration-200 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#F46B3C] ${
-          currentLang === "id"
+        onClick={() => changeLanguage("en")}
+        aria-pressed={currentLang === "en"}
+        className={`inline-flex cursor-pointer items-center justify-center rounded-full px-5 py-1.5 text-xs font-bold tracking-widest uppercase transition-all duration-200 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#F46B3C] ${
+          currentLang === "en"
             ? "bg-[#292477] text-[#E9E7F5] shadow"
             : "text-[#8a8a9e] hover:text-[#E9E7F5]"
         }`}
       >
-        <span className="text-sm">🇮🇩</span>
-        <span>Indonesia</span>
+        <span>EN</span>
       </button>
     </div>
   );

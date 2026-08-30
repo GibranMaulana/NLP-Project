@@ -1,54 +1,35 @@
-import type { Metadata } from "next";
+"use client";
+
+import { useEffect, useState } from "react";
 import Link from "next/link";
-import { sanityClient } from "@/lib/sanity";
-import { SCENARIO_PLAY_QUERY } from "@/lib/queries";
+import { useParams } from "next/navigation";
 import type { PlayScenario } from "@/lib/types";
-import ScenarioNotFound from "@/app/components/ScenarioNotFound";
 
-export const revalidate = 0;
-
-interface PageProps {
-  params: Promise<{ slug: string }>;
-  searchParams: Promise<{ patterns?: string }>;
+interface Props {
+  scenario: PlayScenario;
+  slug: string;
 }
 
-async function getPlayScenario(slug: string): Promise<PlayScenario | null> {
-  return sanityClient.fetch<PlayScenario | null>(SCENARIO_PLAY_QUERY, { slug });
-}
+export default function DiagnosisResult({ scenario, slug }: Props) {
+  const params = useParams();
+  const batchId = params.batchId as string;
+  const [selectedPatterns, setSelectedPatterns] = useState<string[]>([]);
+  const [isLoaded, setIsLoaded] = useState(false);
 
-export async function generateMetadata({
-  params,
-}: {
-  params: Promise<{ slug: string }>;
-}): Promise<Metadata> {
-  const { slug } = await params;
-  const scenario = await getPlayScenario(slug);
-
-  if (!scenario) {
-    return {
-      title: "Refleksi Tidak Ditemukan",
-    };
-  }
-
-  return {
-    title: `Refleksi: ${scenario.title}`,
-    description: `Refleksi hasil skenario ${scenario.title}`,
-  };
-}
-
-export default async function ScenarioDiagnosisPage({
-  params,
-  searchParams,
-}: PageProps) {
-  const { slug } = await params;
-  const { patterns: patternsRaw } = await searchParams;
-  const scenario = await getPlayScenario(slug);
-
-  if (!scenario) {
-    return <ScenarioNotFound />;
-  }
-
-  const selectedPatterns = patternsRaw ? patternsRaw.split(",") : [];
+  useEffect(() => {
+    try {
+      const saved = sessionStorage.getItem(`nlp_chat_state_${slug}`);
+      if (saved) {
+        const parsed = JSON.parse(saved);
+        if (parsed && Array.isArray(parsed.selectedPatterns)) {
+          setSelectedPatterns(parsed.selectedPatterns);
+        }
+      }
+    } catch {
+      // ignore parse error
+    }
+    setIsLoaded(true);
+  }, [slug]);
 
   // Count exact pattern choices made by user across chat stages
   let distortionCount = 0;
@@ -133,7 +114,13 @@ export default async function ScenarioDiagnosisPage({
       return false;
     }) || scenario.diagnoses?.[0];
 
-  const harshTruth = matchedDiag?.harshTruth || matchedDiag?.description;
+  if (!isLoaded) {
+    return (
+      <div className="flex min-h-dvh items-center justify-center bg-[#111116] text-[#e8e8ec]">
+        <div className="h-6 w-6 animate-spin rounded-full border-2 border-[#F46B3C] border-t-transparent" />
+      </div>
+    );
+  }
 
   return (
     <div className="cinematic-grain cinematic-vignette relative flex min-h-dvh flex-col bg-[#111116] text-[#e8e8ec] selection:bg-[#292477]/40 selection:text-[#E9E7F5]">
@@ -146,7 +133,7 @@ export default async function ScenarioDiagnosisPage({
         {/* Header Navigation Only */}
         <div className="mb-8 flex items-center justify-start">
           <Link
-            href="/"
+            href={`/b/${batchId}`}
             className="inline-flex items-center gap-1.5 rounded-full border border-[#292477]/50 bg-[#1a1a24] px-4 py-2 text-xs font-medium text-[#a0a0b0] transition hover:bg-[#292477]/30 hover:text-white"
           >
             ← Kembali ke Batch Skenario
@@ -163,7 +150,7 @@ export default async function ScenarioDiagnosisPage({
                 className="pointer-events-none absolute left-1/2 top-1/2 h-28 w-4/5 -translate-x-1/2 -translate-y-1/2 rounded-full bg-[radial-gradient(ellipse_at_center,rgba(59,130,246,0.25)_0%,rgba(41,36,119,0.15)_45%,transparent_75%)] blur-2xl opacity-90" 
                 aria-hidden="true" 
               />
-              <h1 className="notranslate relative z-10 text-center font-serif-editorial text-3xl sm:text-4xl font-normal tracking-tight text-[#E9E7F5] leading-snug drop-shadow-[0_4px_16px_rgba(41,36,119,0.5)]">
+              <h1 className="relative z-10 text-center font-serif-editorial text-3xl sm:text-4xl font-normal tracking-tight text-[#E9E7F5] leading-snug drop-shadow-[0_4px_16px_rgba(41,36,119,0.5)]">
                 {matchedDiag.headline}
               </h1>
             </div>
@@ -172,7 +159,7 @@ export default async function ScenarioDiagnosisPage({
           {/* Box Container strictly for Harsh Truth */}
           {(matchedDiag?.harshTruth || matchedDiag?.description) && (
             <div className="rounded-2xl border border-[#292477]/50 bg-[#1a1a24]/80 p-8 sm:p-10 shadow-xl backdrop-blur-sm">
-              <p className="notranslate font-sans text-base sm:text-lg leading-[1.85] text-[#c8c8d4] font-normal whitespace-pre-wrap">
+              <p className="font-sans text-base sm:text-lg leading-[1.85] text-[#c8c8d4] font-normal whitespace-pre-wrap">
                 {matchedDiag.harshTruth || matchedDiag.description}
               </p>
             </div>
@@ -210,13 +197,13 @@ export default async function ScenarioDiagnosisPage({
           {/* Action Buttons */}
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4 pt-2">
             <Link
-              href={`/scenario/${slug}/play?restart=true`}
+              href={`/b/${batchId}/${slug}?restart=true`}
               className="w-full sm:w-auto inline-flex items-center justify-center gap-2 rounded-full border border-[#292477]/60 bg-[#1a1a24] px-8 py-3.5 text-xs font-semibold uppercase tracking-wider text-[#E9E7F5] transition hover:bg-[#292477]/30"
             >
               ↻ Ulangi Skenario
             </Link>
             <Link
-              href="/"
+              href={`/b/${batchId}`}
               className="w-full sm:w-auto inline-flex items-center justify-center gap-2 rounded-full bg-[#292477] px-8 py-3.5 text-xs font-semibold uppercase tracking-wider text-[#E9E7F5] transition hover:bg-[#292477]/80"
             >
               Kembali ke Batch Skenario
