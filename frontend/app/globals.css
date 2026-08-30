@@ -166,3 +166,72 @@ body {
     animation: none !important;
   }
 }
+
+/* Hide floating language toggle when page has an inline header toggle or is in loading state */
+body:has(.chat-header-lang) .global-floating-lang,
+body:has(.loading-screen) .global-floating-lang,
+body:has(.prologue-shimmer) .global-floating-lang {
+  display: none !important;
+}
+
+/* ── Chat Flow Animations ────────────────────────────────── */
+
+@keyframes chat-user-enter {
+  0% {
+    opacity: 0;
+    transform: translateY(12px) scale(0.96);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+@keyframes chat-npc-enter {
+  0% {
+    opacity: 0;
+    transform: translateY(12px) scale(0.96);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+@keyframes chat-options-enter {
+  0% {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes chat-typing-fade {
+  0% {
+    opacity: 0;
+    transform: translateY(6px) scale(0.98);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+.chat-animate-user {
+  animation: chat-user-enter 380ms cubic-bezier(0.16, 1, 0.3, 1) both;
+}
+
+.chat-animate-npc {
+  animation: chat-npc-enter 420ms cubic-bezier(0.16, 1, 0.3, 1) both;
+}
+
+.chat-animate-options {
+  animation: chat-options-enter 320ms cubic-bezier(0.16, 1, 0.3, 1) both;
+}
+
+.chat-animate-typing {
+  animation: chat-typing-fade 300ms cubic-bezier(0.16, 1, 0.3, 1) both;
+}
