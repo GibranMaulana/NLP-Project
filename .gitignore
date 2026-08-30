@@ -7,6 +7,8 @@ functions/**/.build/
 functions/**/node_modules/
 
 # Graphify - ignore all output files (local tool, not for version control)
-graphify-out/
-**/graphify-out/
+graphify-out/*
+!graphify-out/graph.json
+**/graphify-out/*
+!**/graphify-out/graph.json
 .graphify_*
