@@ -1,3 +1,4 @@
+import { cache } from "react";
 import type { Metadata } from "next";
 import { sanityClient } from "@/lib/sanity";
 import { SCENARIO_PLAY_QUERY } from "@/lib/queries";
@@ -11,9 +12,9 @@ interface PageProps {
   params: Promise<{ batchId: string; slug: string }>;
 }
 
-async function getPlayScenario(slug: string): Promise<PlayScenario | null> {
+const getPlayScenario = cache(async (slug: string): Promise<PlayScenario | null> => {
   return sanityClient.fetch<PlayScenario | null>(SCENARIO_PLAY_QUERY, { slug });
-}
+});
 
 export async function generateMetadata({
   params,
@@ -23,13 +24,13 @@ export async function generateMetadata({
 
   if (!scenario) {
     return {
-      title: "Percakapan Tidak Ditemukan",
+      title: "Gesprek Niet Gevonden",
     };
   }
 
   return {
-    title: `${scenario.title} — Percakapan Simulasi`,
-    description: `Simulasi interaktif NLP untuk ${scenario.title}`,
+    title: `${scenario.title} — Interactieve Simulatie`,
+    description: `NLP Meta Model interactieve simulatie voor ${scenario.title}`,
   };
 }
 
