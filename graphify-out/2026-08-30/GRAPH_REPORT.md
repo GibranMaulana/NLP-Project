@@ -5,18 +5,18 @@
 - Verdict: corpus is large enough that graph structure adds value.
 
 ## Summary
-- 243 nodes · 291 edges · 24 communities (16 shown, 8 thin omitted)
+- 241 nodes · 285 edges · 24 communities (16 shown, 8 thin omitted)
 - Extraction: 100% EXTRACTED · 0% INFERRED · 0% AMBIGUOUS · INFERRED: 1 edges (avg confidence: 0.8)
 - Token cost: 0 input · 0 output
 
 ## Graph Freshness
-- Built from commit: `1b21e781`
+- Built from commit: `b58dd0f5`
 - Run `git rev-parse HEAD` and compare to check if the graph is stale.
 - Run `graphify update .` after code changes (no API cost).
 
 ## Community Hubs (Navigation)
 - devDependencies
-- include
+- compilerOptions
 - app/play/page.tsx
 - frontend/package.json
 - compilerOptions
@@ -25,7 +25,6 @@
 - NLP Project Development Guide
 - dependencies
 - scenario/[slug]/page.tsx
-- compilerOptions
 - layout.tsx
 - frontend/README.md
 - loading.tsx
@@ -43,9 +42,9 @@
 3. `sanity` - 8 edges
 4. `NLP Project Development Guide` - 8 edges
 5. `include` - 7 edges
-6. `sanityClient` - 6 edges
-7. `scripts` - 6 edges
-8. `PlayScenario` - 5 edges
+6. `scripts` - 6 edges
+7. `PlayScenario` - 5 edges
+8. `sanityClient` - 5 edges
 9. `scripts` - 5 edges
 10. `prettier` - 5 edges
 
@@ -70,21 +69,21 @@
 Cohesion: 0.09
 Nodes (25): devDependencies, eslint, prettier, @sanity/eslint-config-studio, @types/react, typescript, eslint, eslint-config-next (+17 more)
 
-### Community 1 - "include"
-Cohesion: 0.13
-Nodes (13): exclude, include, node_modules, **/*.ts, **/*.tsx, exclude, include, **/*.ts (+5 more)
+### Community 1 - "compilerOptions"
+Cohesion: 0.08
+Nodes (24): compilerOptions, allowJs, forceConsistentCasingInFileNames, incremental, isolatedModules, jsx, module, moduleDetection (+16 more)
 
 ### Community 2 - "app/play/page.tsx"
-Cohesion: 0.09
-Nodes (31): Message, PlayChatBox(), Props, StoredChatState, revalidate, ScenarioItem, generateMetadata(), getPlayScenario() (+23 more)
+Cohesion: 0.10
+Nodes (29): Message, PlayChatBox(), Props, StoredChatState, generateMetadata(), getPlayScenario(), PageProps, PlayPage() (+21 more)
 
 ### Community 3 - "frontend/package.json"
 Cohesion: 0.11
 Nodes (17): dependencies, next, @portabletext/react, react, @sanity/client, name, private, scripts (+9 more)
 
 ### Community 4 - "compilerOptions"
-Cohesion: 0.13
-Nodes (15): compilerOptions, allowJs, esModuleInterop, incremental, isolatedModules, jsx, module, moduleResolution (+7 more)
+Cohesion: 0.09
+Nodes (22): lib, dom, dom.iterable, esnext, compilerOptions, allowJs, esModuleInterop, incremental (+14 more)
 
 ### Community 5 - "cms/package.json"
 Cohesion: 0.12
@@ -106,10 +105,6 @@ Nodes (11): dependencies, react, react-dom, sanity, @sanity/vision, styled-compo
 Cohesion: 0.22
 Nodes (10): ScenarioNotFound(), prologueComponents, Props, ScenarioPrologue(), generateMetadata(), getScenario(), PageProps, revalidate (+2 more)
 
-### Community 10 - "compilerOptions"
-Cohesion: 0.11
-Nodes (18): compilerOptions, allowJs, forceConsistentCasingInFileNames, incremental, isolatedModules, jsx, lib, module (+10 more)
-
 ### Community 11 - "layout.tsx"
 Cohesion: 0.40
 Nodes (3): inter, metadata, playfair
@@ -119,7 +114,7 @@ Cohesion: 0.40
 Nodes (4): code:bash (npm run dev), Deploy on Vercel, Getting Started, Learn More
 
 ## Knowledge Gaps
-- **110 isolated node(s):** `revalidate`, `ScenarioItem`, `Message`, `Props`, `StoredChatState` (+105 more)
+- **109 isolated node(s):** `Message`, `StoredChatState`, `Props`, `revalidate`, `PageProps` (+104 more)
   These have ≤1 connection - possible missing edges or undocumented components.
 - **8 thin communities (<3 nodes) omitted from report** — run `graphify query` to explore isolated nodes.
 
@@ -129,14 +124,14 @@ _Questions this graph is uniquely positioned to answer:_
 - **Why does `devDependencies` connect `devDependencies` to `cms/package.json`?**
   _High betweenness centrality (0.045) - this node is a cross-community bridge._
 - **Why does `devDependencies` connect `devDependencies` to `frontend/package.json`?**
-  _High betweenness centrality (0.041) - this node is a cross-community bridge._
+  _High betweenness centrality (0.042) - this node is a cross-community bridge._
 - **Why does `dependencies` connect `dependencies` to `cms/package.json`?**
-  _High betweenness centrality (0.041) - this node is a cross-community bridge._
-- **What connects `revalidate`, `ScenarioItem`, `Message` to the rest of the system?**
-  _110 weakly-connected nodes found - possible documentation gaps or missing edges._
+  _High betweenness centrality (0.042) - this node is a cross-community bridge._
+- **What connects `Message`, `StoredChatState`, `Props` to the rest of the system?**
+  _109 weakly-connected nodes found - possible documentation gaps or missing edges._
 - **Should `devDependencies` be split into smaller, more focused modules?**
   _Cohesion score 0.08666666666666667 - nodes in this community are weakly interconnected._
-- **Should `include` be split into smaller, more focused modules?**
-  _Cohesion score 0.13333333333333333 - nodes in this community are weakly interconnected._
+- **Should `compilerOptions` be split into smaller, more focused modules?**
+  _Cohesion score 0.07692307692307693 - nodes in this community are weakly interconnected._
 - **Should `app/play/page.tsx` be split into smaller, more focused modules?**
-  _Cohesion score 0.09102564102564102 - nodes in this community are weakly interconnected._
+  _Cohesion score 0.10158730158730159 - nodes in this community are weakly interconnected._
