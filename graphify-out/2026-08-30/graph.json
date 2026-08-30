@@ -28,16 +28,28 @@
       "id": "frontend_app_page_home"
     },
     {
+      "label": "attachAllDiagnosesAction()",
+      "file_type": "code",
+      "source_file": "cms/actions/attachDiagnosesAction.ts",
+      "source_location": "L4",
+      "_callable": true,
+      "_origin": "ast",
+      "id": "cms_actions_attachdiagnosesaction_attachalldiagnosesaction",
+      "community": 4,
+      "community_name": "sanity",
+      "norm_label": "attachalldiagnosesaction()"
+    },
+    {
       "label": "publishBatchWithScenariosAction()",
       "file_type": "code",
       "source_file": "cms/actions/publishBatchAction.ts",
       "source_location": "L4",
       "_callable": true,
       "_origin": "ast",
-      "id": "cms_actions_publishbatchaction_publishbatchwithscenariosaction",
       "community": 4,
       "community_name": "sanity",
-      "norm_label": "publishbatchwithscenariosaction()"
+      "norm_label": "publishbatchwithscenariosaction()",
+      "id": "cms_actions_publishbatchaction_publishbatchwithscenariosaction"
     },
     {
       "label": "compilerOptions",
@@ -260,70 +272,70 @@
       "id": "cms_package"
     },
     {
-      "label": "dependencies",
+      "label": "devDependencies",
       "file_type": "code",
       "source_file": "cms/package.json",
-      "source_location": "L17",
+      "source_location": "L24",
       "_origin": "ast",
       "community": 1,
       "community_name": "cms/package.json",
-      "norm_label": "dependencies",
-      "id": "cms_package_dependencies"
+      "norm_label": "devdependencies",
+      "id": "cms_package_devdependencies"
     },
     {
-      "label": "react",
+      "label": "eslint",
       "file_type": "code",
       "source_file": "cms/package.json",
-      "source_location": "L19",
+      "source_location": "L27",
       "_origin": "ast",
       "community": 1,
       "community_name": "cms/package.json",
-      "norm_label": "react",
-      "id": "cms_package_dependencies_react"
+      "norm_label": "eslint",
+      "id": "cms_package_devdependencies_eslint"
     },
     {
-      "label": "react-dom",
+      "label": "prettier",
       "file_type": "code",
       "source_file": "cms/package.json",
-      "source_location": "L20",
+      "source_location": "L28",
       "_origin": "ast",
       "community": 1,
       "community_name": "cms/package.json",
-      "norm_label": "react-dom",
-      "id": "cms_package_dependencies_react_dom"
+      "norm_label": "prettier",
+      "id": "cms_package_devdependencies_prettier"
     },
     {
-      "label": "sanity",
+      "label": "@sanity/eslint-config-studio",
       "file_type": "code",
       "source_file": "cms/package.json",
-      "source_location": "L21",
+      "source_location": "L25",
       "_origin": "ast",
       "community": 1,
       "community_name": "cms/package.json",
-      "norm_label": "sanity",
-      "id": "cms_package_dependencies_sanity"
+      "norm_label": "@sanity/eslint-config-studio",
+      "id": "cms_package_devdependencies_sanity_eslint_config_studio"
     },
     {
-      "label": "@sanity/vision",
+      "label": "@types/react",
       "file_type": "code",
       "source_file": "cms/package.json",
-      "source_location": "L18",
+      "source_location": "L26",
       "_origin": "ast",
       "community": 1,
       "community_name": "cms/package.json",
-      "norm_label": "@sanity/vision",
-      "id": "cms_package_dependencies_sanity_vision"
+      "norm_label": "@types/react",
+      "id": "cms_package_devdependencies_types_react"
     },
     {
-      "label": "styled-components",
+      "label": "typescript",
       "file_type": "code",
       "source_file": "cms/package.json",
-      "source_location": "L22",
+      "source_location": "L29",
       "_origin": "ast",
       "community": 1,
       "community_name": "cms/package.json",
-      "norm_label": "styled-components",
-      "id": "cms_package_dependencies_styled_components"
+      "norm_label": "typescript",
+      "id": "cms_package_devdependencies_typescript"
     },
     {
       "label": "keywords",
@@ -447,59 +459,59 @@
       "id": "cms_package_version"
     },
     {
-      "label": "react",
+      "label": "eslint",
       "file_type": "concept",
       "source_file": "cms/package.json",
-      "source_location": "L19",
+      "source_location": "L27",
       "_origin": "ast",
       "community": 1,
       "community_name": "cms/package.json",
-      "norm_label": "react",
-      "id": "cms_package_json_react"
+      "norm_label": "eslint",
+      "id": "cms_package_json_eslint"
     },
     {
-      "label": "react-dom",
+      "label": "@types/react",
       "file_type": "concept",
       "source_file": "cms/package.json",
-      "source_location": "L20",
+      "source_location": "L26",
       "_origin": "ast",
       "community": 1,
       "community_name": "cms/package.json",
-      "norm_label": "react-dom",
-      "id": "cms_package_json_react_dom"
+      "norm_label": "@types/react",
+      "id": "cms_package_json_types_react"
     },
     {
-      "label": "sanity",
+      "label": "typescript",
       "file_type": "concept",
       "source_file": "cms/package.json",
-      "source_location": "L21",
+      "source_location": "L29",
       "_origin": "ast",
       "community": 1,
       "community_name": "cms/package.json",
-      "norm_label": "sanity",
-      "id": "sanity"
+      "norm_label": "typescript",
+      "id": "cms_package_json_typescript"
     },
     {
-      "label": "@sanity/vision",
+      "label": "prettier",
       "file_type": "concept",
       "source_file": "cms/package.json",
-      "source_location": "L18",
+      "source_location": "L28",
       "_origin": "ast",
       "community": 1,
       "community_name": "cms/package.json",
-      "norm_label": "@sanity/vision",
-      "id": "sanity_vision"
+      "norm_label": "prettier",
+      "id": "prettier"
     },
     {
-      "label": "styled-components",
+      "label": "@sanity/eslint-config-studio",
       "file_type": "concept",
       "source_file": "cms/package.json",
-      "source_location": "L22",
+      "source_location": "L25",
       "_origin": "ast",
       "community": 1,
       "community_name": "cms/package.json",
-      "norm_label": "styled-components",
-      "id": "styled_components"
+      "norm_label": "@sanity/eslint-config-studio",
+      "id": "sanity_eslint_config_studio"
     },
     {
       "label": "layout.tsx",
@@ -1327,15 +1339,26 @@
       "id": "next"
     },
     {
+      "label": "attachDiagnosesAction.ts",
+      "file_type": "code",
+      "source_file": "cms/actions/attachDiagnosesAction.ts",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "cms_actions_attachdiagnosesaction",
+      "community": 4,
+      "community_name": "sanity",
+      "norm_label": "attachdiagnosesaction.ts"
+    },
+    {
       "label": "publishBatchAction.ts",
       "file_type": "code",
       "source_file": "cms/actions/publishBatchAction.ts",
       "source_location": "L1",
       "_origin": "ast",
-      "id": "cms_actions_publishbatchaction",
       "community": 4,
       "community_name": "sanity",
-      "norm_label": "publishbatchaction.ts"
+      "norm_label": "publishbatchaction.ts",
+      "id": "cms_actions_publishbatchaction"
     },
     {
       "label": "sanity.config.ts",
@@ -1354,10 +1377,10 @@
       "source_file": "cms/schemaTypes/batchType.ts",
       "source_location": "L1",
       "_origin": "ast",
-      "id": "cms_schematypes_batchtype",
       "community": 4,
       "community_name": "sanity",
-      "norm_label": "schematypes/batchtype.ts"
+      "norm_label": "schematypes/batchtype.ts",
+      "id": "cms_schematypes_batchtype"
     },
     {
       "label": "batch",
@@ -1365,10 +1388,10 @@
       "source_file": "cms/schemaTypes/batchType.ts",
       "source_location": "L3",
       "_origin": "ast",
-      "id": "cms_schematypes_batchtype_batch",
       "community": 4,
       "community_name": "sanity",
-      "norm_label": "batch"
+      "norm_label": "batch",
+      "id": "cms_schematypes_batchtype_batch"
     },
     {
       "label": "schemaTypes/diagnosisType.ts",
@@ -1398,10 +1421,10 @@
       "source_file": "cms/schemaTypes/index.ts",
       "source_location": "L1",
       "_origin": "ast",
-      "id": "cms_schematypes_index",
       "community": 4,
       "community_name": "sanity",
-      "norm_label": "schematypes/index.ts"
+      "norm_label": "schematypes/index.ts",
+      "id": "cms_schematypes_index"
     },
     {
       "label": "schemaTypes",
@@ -1409,10 +1432,10 @@
       "source_file": "cms/schemaTypes/index.ts",
       "source_location": "L8",
       "_origin": "ast",
-      "id": "cms_schematypes_index_schematypes",
       "community": 4,
       "community_name": "sanity",
-      "norm_label": "schematypes"
+      "norm_label": "schematypes",
+      "id": "cms_schematypes_index_schematypes"
     },
     {
       "label": "schemaTypes/replyType.ts",
@@ -1420,10 +1443,10 @@
       "source_file": "cms/schemaTypes/replyType.ts",
       "source_location": "L1",
       "_origin": "ast",
-      "id": "cms_schematypes_replytype",
       "community": 4,
       "community_name": "sanity",
-      "norm_label": "schematypes/replytype.ts"
+      "norm_label": "schematypes/replytype.ts",
+      "id": "cms_schematypes_replytype"
     },
     {
       "label": "reply",
@@ -1431,10 +1454,10 @@
       "source_file": "cms/schemaTypes/replyType.ts",
       "source_location": "L3",
       "_origin": "ast",
-      "id": "cms_schematypes_replytype_reply",
       "community": 4,
       "community_name": "sanity",
-      "norm_label": "reply"
+      "norm_label": "reply",
+      "id": "cms_schematypes_replytype_reply"
     },
     {
       "label": "schemaTypes/scenarioType.ts",
@@ -1464,10 +1487,10 @@
       "source_file": "cms/schemaTypes/stageType.ts",
       "source_location": "L1",
       "_origin": "ast",
-      "id": "cms_schematypes_stagetype",
       "community": 4,
       "community_name": "sanity",
-      "norm_label": "schematypes/stagetype.ts"
+      "norm_label": "schematypes/stagetype.ts",
+      "id": "cms_schematypes_stagetype"
     },
     {
       "label": "stage",
@@ -1475,10 +1498,10 @@
       "source_file": "cms/schemaTypes/stageType.ts",
       "source_location": "L3",
       "_origin": "ast",
-      "id": "cms_schematypes_stagetype_stage",
       "community": 4,
       "community_name": "sanity",
-      "norm_label": "stage"
+      "norm_label": "stage",
+      "id": "cms_schematypes_stagetype_stage"
     },
     {
       "label": "schemaTypes/valueType.ts",
@@ -1486,10 +1509,10 @@
       "source_file": "cms/schemaTypes/valueType.ts",
       "source_location": "L1",
       "_origin": "ast",
-      "id": "cms_schematypes_valuetype",
       "community": 4,
       "community_name": "sanity",
-      "norm_label": "schematypes/valuetype.ts"
+      "norm_label": "schematypes/valuetype.ts",
+      "id": "cms_schematypes_valuetype"
     },
     {
       "label": "valueType",
@@ -1497,10 +1520,10 @@
       "source_file": "cms/schemaTypes/valueType.ts",
       "source_location": "L3",
       "_origin": "ast",
-      "id": "cms_schematypes_valuetype_valuetype",
       "community": 4,
       "community_name": "sanity",
-      "norm_label": "valuetype"
+      "norm_label": "valuetype",
+      "id": "cms_schematypes_valuetype_valuetype"
     },
     {
       "label": "sanity",
@@ -1783,10 +1806,10 @@
       "source_file": "cms/schemaTypes/backup/batchType.ts",
       "source_location": "L1",
       "_origin": "ast",
-      "id": "cms_schematypes_backup_batchtype",
       "community": 7,
       "community_name": "backup/index.ts",
-      "norm_label": "backup/batchtype.ts"
+      "norm_label": "backup/batchtype.ts",
+      "id": "cms_schematypes_backup_batchtype"
     },
     {
       "label": "batch",
@@ -1794,10 +1817,10 @@
       "source_file": "cms/schemaTypes/backup/batchType.ts",
       "source_location": "L3",
       "_origin": "ast",
-      "id": "cms_schematypes_backup_batchtype_batch",
       "community": 7,
       "community_name": "backup/index.ts",
-      "norm_label": "batch"
+      "norm_label": "batch",
+      "id": "cms_schematypes_backup_batchtype_batch"
     },
     {
       "label": "backup/diagnosisType.ts",
@@ -1805,10 +1828,10 @@
       "source_file": "cms/schemaTypes/backup/diagnosisType.ts",
       "source_location": "L1",
       "_origin": "ast",
-      "id": "cms_schematypes_backup_diagnosistype",
       "community": 7,
       "community_name": "backup/index.ts",
-      "norm_label": "backup/diagnosistype.ts"
+      "norm_label": "backup/diagnosistype.ts",
+      "id": "cms_schematypes_backup_diagnosistype"
     },
     {
       "label": "diagnosis",
@@ -1816,10 +1839,10 @@
       "source_file": "cms/schemaTypes/backup/diagnosisType.ts",
       "source_location": "L3",
       "_origin": "ast",
-      "id": "cms_schematypes_backup_diagnosistype_diagnosis",
       "community": 7,
       "community_name": "backup/index.ts",
-      "norm_label": "diagnosis"
+      "norm_label": "diagnosis",
+      "id": "cms_schematypes_backup_diagnosistype_diagnosis"
     },
     {
       "label": "backup/index.ts",
@@ -1827,10 +1850,10 @@
       "source_file": "cms/schemaTypes/backup/index.ts",
       "source_location": "L1",
       "_origin": "ast",
-      "id": "cms_schematypes_backup_index",
       "community": 7,
       "community_name": "backup/index.ts",
-      "norm_label": "backup/index.ts"
+      "norm_label": "backup/index.ts",
+      "id": "cms_schematypes_backup_index"
     },
     {
       "label": "schemaTypes",
@@ -1838,10 +1861,10 @@
       "source_file": "cms/schemaTypes/backup/index.ts",
       "source_location": "L8",
       "_origin": "ast",
-      "id": "cms_schematypes_backup_index_schematypes",
       "community": 7,
       "community_name": "backup/index.ts",
-      "norm_label": "schematypes"
+      "norm_label": "schematypes",
+      "id": "cms_schematypes_backup_index_schematypes"
     },
     {
       "label": "backup/replyType.ts",
@@ -1849,10 +1872,10 @@
       "source_file": "cms/schemaTypes/backup/replyType.ts",
       "source_location": "L1",
       "_origin": "ast",
-      "id": "cms_schematypes_backup_replytype",
       "community": 7,
       "community_name": "backup/index.ts",
-      "norm_label": "backup/replytype.ts"
+      "norm_label": "backup/replytype.ts",
+      "id": "cms_schematypes_backup_replytype"
     },
     {
       "label": "reply",
@@ -1860,10 +1883,10 @@
       "source_file": "cms/schemaTypes/backup/replyType.ts",
       "source_location": "L3",
       "_origin": "ast",
-      "id": "cms_schematypes_backup_replytype_reply",
       "community": 7,
       "community_name": "backup/index.ts",
-      "norm_label": "reply"
+      "norm_label": "reply",
+      "id": "cms_schematypes_backup_replytype_reply"
     },
     {
       "label": "backup/scenarioType.ts",
@@ -1871,10 +1894,10 @@
       "source_file": "cms/schemaTypes/backup/scenarioType.ts",
       "source_location": "L1",
       "_origin": "ast",
-      "id": "cms_schematypes_backup_scenariotype",
       "community": 7,
       "community_name": "backup/index.ts",
-      "norm_label": "backup/scenariotype.ts"
+      "norm_label": "backup/scenariotype.ts",
+      "id": "cms_schematypes_backup_scenariotype"
     },
     {
       "label": "scenario",
@@ -1882,10 +1905,10 @@
       "source_file": "cms/schemaTypes/backup/scenarioType.ts",
       "source_location": "L3",
       "_origin": "ast",
-      "id": "cms_schematypes_backup_scenariotype_scenario",
       "community": 7,
       "community_name": "backup/index.ts",
-      "norm_label": "scenario"
+      "norm_label": "scenario",
+      "id": "cms_schematypes_backup_scenariotype_scenario"
     },
     {
       "label": "backup/stageType.ts",
@@ -1893,10 +1916,10 @@
       "source_file": "cms/schemaTypes/backup/stageType.ts",
       "source_location": "L1",
       "_origin": "ast",
-      "id": "cms_schematypes_backup_stagetype",
       "community": 7,
       "community_name": "backup/index.ts",
-      "norm_label": "backup/stagetype.ts"
+      "norm_label": "backup/stagetype.ts",
+      "id": "cms_schematypes_backup_stagetype"
     },
     {
       "label": "stage",
@@ -1904,10 +1927,10 @@
       "source_file": "cms/schemaTypes/backup/stageType.ts",
       "source_location": "L3",
       "_origin": "ast",
-      "id": "cms_schematypes_backup_stagetype_stage",
       "community": 7,
       "community_name": "backup/index.ts",
-      "norm_label": "stage"
+      "norm_label": "stage",
+      "id": "cms_schematypes_backup_stagetype_stage"
     },
     {
       "label": "backup/valueType.ts",
@@ -1915,10 +1938,10 @@
       "source_file": "cms/schemaTypes/backup/valueType.ts",
       "source_location": "L1",
       "_origin": "ast",
-      "id": "cms_schematypes_backup_valuetype",
       "community": 7,
       "community_name": "backup/index.ts",
-      "norm_label": "backup/valuetype.ts"
+      "norm_label": "backup/valuetype.ts",
+      "id": "cms_schematypes_backup_valuetype"
     },
     {
       "label": "valueType",
@@ -1926,131 +1949,131 @@
       "source_file": "cms/schemaTypes/backup/valueType.ts",
       "source_location": "L3",
       "_origin": "ast",
-      "id": "cms_schematypes_backup_valuetype_valuetype",
       "community": 7,
       "community_name": "backup/index.ts",
-      "norm_label": "valuetype"
+      "norm_label": "valuetype",
+      "id": "cms_schematypes_backup_valuetype_valuetype"
     },
     {
-      "label": "devDependencies",
+      "label": "dependencies",
       "file_type": "code",
       "source_file": "cms/package.json",
-      "source_location": "L24",
+      "source_location": "L17",
       "_origin": "ast",
       "community": 8,
-      "community_name": "devDependencies",
-      "norm_label": "devdependencies",
-      "id": "cms_package_devdependencies"
+      "community_name": "dependencies",
+      "norm_label": "dependencies",
+      "id": "cms_package_dependencies"
     },
     {
-      "label": "eslint",
+      "label": "react",
       "file_type": "code",
       "source_file": "cms/package.json",
-      "source_location": "L27",
+      "source_location": "L19",
       "_origin": "ast",
       "community": 8,
-      "community_name": "devDependencies",
-      "norm_label": "eslint",
-      "id": "cms_package_devdependencies_eslint"
+      "community_name": "dependencies",
+      "norm_label": "react",
+      "id": "cms_package_dependencies_react"
     },
     {
-      "label": "prettier",
+      "label": "react-dom",
       "file_type": "code",
       "source_file": "cms/package.json",
-      "source_location": "L28",
+      "source_location": "L20",
       "_origin": "ast",
       "community": 8,
-      "community_name": "devDependencies",
-      "norm_label": "prettier",
-      "id": "cms_package_devdependencies_prettier"
+      "community_name": "dependencies",
+      "norm_label": "react-dom",
+      "id": "cms_package_dependencies_react_dom"
     },
     {
-      "label": "@sanity/eslint-config-studio",
+      "label": "sanity",
       "file_type": "code",
       "source_file": "cms/package.json",
-      "source_location": "L25",
+      "source_location": "L21",
       "_origin": "ast",
       "community": 8,
-      "community_name": "devDependencies",
-      "norm_label": "@sanity/eslint-config-studio",
-      "id": "cms_package_devdependencies_sanity_eslint_config_studio"
+      "community_name": "dependencies",
+      "norm_label": "sanity",
+      "id": "cms_package_dependencies_sanity"
     },
     {
-      "label": "@types/react",
+      "label": "@sanity/vision",
       "file_type": "code",
       "source_file": "cms/package.json",
-      "source_location": "L26",
+      "source_location": "L18",
       "_origin": "ast",
       "community": 8,
-      "community_name": "devDependencies",
-      "norm_label": "@types/react",
-      "id": "cms_package_devdependencies_types_react"
+      "community_name": "dependencies",
+      "norm_label": "@sanity/vision",
+      "id": "cms_package_dependencies_sanity_vision"
     },
     {
-      "label": "typescript",
+      "label": "styled-components",
       "file_type": "code",
       "source_file": "cms/package.json",
-      "source_location": "L29",
+      "source_location": "L22",
       "_origin": "ast",
       "community": 8,
-      "community_name": "devDependencies",
-      "norm_label": "typescript",
-      "id": "cms_package_devdependencies_typescript"
+      "community_name": "dependencies",
+      "norm_label": "styled-components",
+      "id": "cms_package_dependencies_styled_components"
     },
     {
-      "label": "eslint",
+      "label": "react",
       "file_type": "concept",
       "source_file": "cms/package.json",
-      "source_location": "L27",
+      "source_location": "L19",
       "_origin": "ast",
       "community": 8,
-      "community_name": "devDependencies",
-      "norm_label": "eslint",
-      "id": "cms_package_json_eslint"
+      "community_name": "dependencies",
+      "norm_label": "react",
+      "id": "cms_package_json_react"
     },
     {
-      "label": "@types/react",
+      "label": "react-dom",
       "file_type": "concept",
       "source_file": "cms/package.json",
-      "source_location": "L26",
+      "source_location": "L20",
       "_origin": "ast",
       "community": 8,
-      "community_name": "devDependencies",
-      "norm_label": "@types/react",
-      "id": "cms_package_json_types_react"
+      "community_name": "dependencies",
+      "norm_label": "react-dom",
+      "id": "cms_package_json_react_dom"
     },
     {
-      "label": "typescript",
+      "label": "sanity",
       "file_type": "concept",
       "source_file": "cms/package.json",
-      "source_location": "L29",
+      "source_location": "L21",
       "_origin": "ast",
       "community": 8,
-      "community_name": "devDependencies",
-      "norm_label": "typescript",
-      "id": "cms_package_json_typescript"
+      "community_name": "dependencies",
+      "norm_label": "sanity",
+      "id": "sanity"
     },
     {
-      "label": "prettier",
+      "label": "@sanity/vision",
       "file_type": "concept",
       "source_file": "cms/package.json",
-      "source_location": "L28",
+      "source_location": "L18",
       "_origin": "ast",
       "community": 8,
-      "community_name": "devDependencies",
-      "norm_label": "prettier",
-      "id": "prettier"
+      "community_name": "dependencies",
+      "norm_label": "@sanity/vision",
+      "id": "sanity_vision"
     },
     {
-      "label": "@sanity/eslint-config-studio",
+      "label": "styled-components",
       "file_type": "concept",
       "source_file": "cms/package.json",
-      "source_location": "L25",
+      "source_location": "L22",
       "_origin": "ast",
       "community": 8,
-      "community_name": "devDependencies",
-      "norm_label": "@sanity/eslint-config-studio",
-      "id": "sanity_eslint_config_studio"
+      "community_name": "dependencies",
+      "norm_label": "styled-components",
+      "id": "styled_components"
     },
     {
       "label": "frontend/tsconfig.json",
@@ -2606,13 +2629,25 @@
       "relation": "imports",
       "context": "import",
       "confidence": "EXTRACTED",
+      "source_file": "cms/sanity.config.ts",
+      "source_location": "L6",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "cms_sanity_config",
+      "target": "cms_actions_attachdiagnosesaction_attachalldiagnosesaction",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
       "source_file": "cms/schemaTypes/backup/index.ts",
       "source_location": "L1",
       "weight": 1.0,
       "_origin": "ast",
+      "confidence_score": 1.0,
       "source": "cms_schematypes_backup_index",
-      "target": "cms_schematypes_backup_batchtype_batch",
-      "confidence_score": 1.0
+      "target": "cms_schematypes_backup_batchtype_batch"
     },
     {
       "relation": "imports",
@@ -2622,9 +2657,9 @@
       "source_location": "L2",
       "weight": 1.0,
       "_origin": "ast",
+      "confidence_score": 1.0,
       "source": "cms_schematypes_backup_index",
-      "target": "cms_schematypes_backup_scenariotype_scenario",
-      "confidence_score": 1.0
+      "target": "cms_schematypes_backup_scenariotype_scenario"
     },
     {
       "relation": "imports",
@@ -2634,9 +2669,9 @@
       "source_location": "L3",
       "weight": 1.0,
       "_origin": "ast",
+      "confidence_score": 1.0,
       "source": "cms_schematypes_backup_index",
-      "target": "cms_schematypes_backup_stagetype_stage",
-      "confidence_score": 1.0
+      "target": "cms_schematypes_backup_stagetype_stage"
     },
     {
       "relation": "imports",
@@ -2646,9 +2681,9 @@
       "source_location": "L4",
       "weight": 1.0,
       "_origin": "ast",
+      "confidence_score": 1.0,
       "source": "cms_schematypes_backup_index",
-      "target": "cms_schematypes_backup_replytype_reply",
-      "confidence_score": 1.0
+      "target": "cms_schematypes_backup_replytype_reply"
     },
     {
       "relation": "imports",
@@ -2658,9 +2693,9 @@
       "source_location": "L5",
       "weight": 1.0,
       "_origin": "ast",
+      "confidence_score": 1.0,
       "source": "cms_schematypes_backup_index",
-      "target": "cms_schematypes_backup_diagnosistype_diagnosis",
-      "confidence_score": 1.0
+      "target": "cms_schematypes_backup_diagnosistype_diagnosis"
     },
     {
       "relation": "imports",
@@ -2670,9 +2705,9 @@
       "source_location": "L6",
       "weight": 1.0,
       "_origin": "ast",
+      "confidence_score": 1.0,
       "source": "cms_schematypes_backup_index",
-      "target": "cms_schematypes_backup_valuetype_valuetype",
-      "confidence_score": 1.0
+      "target": "cms_schematypes_backup_valuetype_valuetype"
     },
     {
       "relation": "imports",
@@ -2682,9 +2717,9 @@
       "source_location": "L1",
       "weight": 1.0,
       "_origin": "ast",
+      "confidence_score": 1.0,
       "source": "cms_schematypes_index",
-      "target": "cms_schematypes_batchtype_batch",
-      "confidence_score": 1.0
+      "target": "cms_schematypes_batchtype_batch"
     },
     {
       "relation": "imports",
@@ -2694,9 +2729,9 @@
       "source_location": "L2",
       "weight": 1.0,
       "_origin": "ast",
+      "confidence_score": 1.0,
       "source": "cms_schematypes_index",
-      "target": "cms_schematypes_scenariotype_scenario",
-      "confidence_score": 1.0
+      "target": "cms_schematypes_scenariotype_scenario"
     },
     {
       "relation": "imports",
@@ -2706,9 +2741,9 @@
       "source_location": "L3",
       "weight": 1.0,
       "_origin": "ast",
+      "confidence_score": 1.0,
       "source": "cms_schematypes_index",
-      "target": "cms_schematypes_stagetype_stage",
-      "confidence_score": 1.0
+      "target": "cms_schematypes_stagetype_stage"
     },
     {
       "relation": "imports",
@@ -2718,9 +2753,9 @@
       "source_location": "L4",
       "weight": 1.0,
       "_origin": "ast",
+      "confidence_score": 1.0,
       "source": "cms_schematypes_index",
-      "target": "cms_schematypes_replytype_reply",
-      "confidence_score": 1.0
+      "target": "cms_schematypes_replytype_reply"
     },
     {
       "relation": "imports",
@@ -2730,9 +2765,9 @@
       "source_location": "L5",
       "weight": 1.0,
       "_origin": "ast",
+      "confidence_score": 1.0,
       "source": "cms_schematypes_index",
-      "target": "cms_schematypes_diagnosistype_diagnosis",
-      "confidence_score": 1.0
+      "target": "cms_schematypes_diagnosistype_diagnosis"
     },
     {
       "relation": "imports",
@@ -2742,9 +2777,9 @@
       "source_location": "L6",
       "weight": 1.0,
       "_origin": "ast",
+      "confidence_score": 1.0,
       "source": "cms_schematypes_index",
-      "target": "cms_schematypes_valuetype_valuetype",
-      "confidence_score": 1.0
+      "target": "cms_schematypes_valuetype_valuetype"
     },
     {
       "relation": "imports",
@@ -2882,13 +2917,25 @@
       "relation": "imports_from",
       "context": "import",
       "confidence": "EXTRACTED",
+      "source_file": "cms/actions/attachDiagnosesAction.ts",
+      "source_location": "L2",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "cms_actions_attachdiagnosesaction",
+      "target": "ref_sanity",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
       "source_file": "cms/actions/publishBatchAction.ts",
       "source_location": "L2",
       "weight": 1.0,
       "_origin": "ast",
+      "confidence_score": 1.0,
       "source": "cms_actions_publishbatchaction",
-      "target": "ref_sanity",
-      "confidence_score": 1.0
+      "target": "ref_sanity"
     },
     {
       "relation": "imports_from",
@@ -2930,13 +2977,25 @@
       "relation": "imports_from",
       "context": "import",
       "confidence": "EXTRACTED",
+      "source_file": "cms/sanity.config.ts",
+      "source_location": "L6",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "cms_sanity_config",
+      "target": "cms_actions_attachdiagnosesaction",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
       "source_file": "cms/schemaTypes/backup/batchType.ts",
       "source_location": "L1",
       "weight": 1.0,
       "_origin": "ast",
+      "confidence_score": 1.0,
       "source": "cms_schematypes_backup_batchtype",
-      "target": "ref_sanity",
-      "confidence_score": 1.0
+      "target": "ref_sanity"
     },
     {
       "relation": "imports_from",
@@ -2946,9 +3005,9 @@
       "source_location": "L1",
       "weight": 1.0,
       "_origin": "ast",
+      "confidence_score": 1.0,
       "source": "cms_schematypes_backup_diagnosistype",
-      "target": "ref_sanity",
-      "confidence_score": 1.0
+      "target": "ref_sanity"
     },
     {
       "relation": "imports_from",
@@ -2958,9 +3017,9 @@
       "source_location": "L1",
       "weight": 1.0,
       "_origin": "ast",
+      "confidence_score": 1.0,
       "source": "cms_schematypes_backup_index",
-      "target": "cms_schematypes_backup_batchtype",
-      "confidence_score": 1.0
+      "target": "cms_schematypes_backup_batchtype"
     },
     {
       "relation": "imports_from",
@@ -2970,9 +3029,9 @@
       "source_location": "L2",
       "weight": 1.0,
       "_origin": "ast",
+      "confidence_score": 1.0,
       "source": "cms_schematypes_backup_index",
-      "target": "cms_schematypes_backup_scenariotype",
-      "confidence_score": 1.0
+      "target": "cms_schematypes_backup_scenariotype"
     },
     {
       "relation": "imports_from",
@@ -2982,9 +3041,9 @@
       "source_location": "L3",
       "weight": 1.0,
       "_origin": "ast",
+      "confidence_score": 1.0,
       "source": "cms_schematypes_backup_index",
-      "target": "cms_schematypes_backup_stagetype",
-      "confidence_score": 1.0
+      "target": "cms_schematypes_backup_stagetype"
     },
     {
       "relation": "imports_from",
@@ -2994,9 +3053,9 @@
       "source_location": "L4",
       "weight": 1.0,
       "_origin": "ast",
+      "confidence_score": 1.0,
       "source": "cms_schematypes_backup_index",
-      "target": "cms_schematypes_backup_replytype",
-      "confidence_score": 1.0
+      "target": "cms_schematypes_backup_replytype"
     },
     {
       "relation": "imports_from",
@@ -3006,9 +3065,9 @@
       "source_location": "L5",
       "weight": 1.0,
       "_origin": "ast",
+      "confidence_score": 1.0,
       "source": "cms_schematypes_backup_index",
-      "target": "cms_schematypes_backup_diagnosistype",
-      "confidence_score": 1.0
+      "target": "cms_schematypes_backup_diagnosistype"
     },
     {
       "relation": "imports_from",
@@ -3018,9 +3077,9 @@
       "source_location": "L6",
       "weight": 1.0,
       "_origin": "ast",
+      "confidence_score": 1.0,
       "source": "cms_schematypes_backup_index",
-      "target": "cms_schematypes_backup_valuetype",
-      "confidence_score": 1.0
+      "target": "cms_schematypes_backup_valuetype"
     },
     {
       "relation": "imports_from",
@@ -3030,9 +3089,9 @@
       "source_location": "L1",
       "weight": 1.0,
       "_origin": "ast",
+      "confidence_score": 1.0,
       "source": "cms_schematypes_backup_replytype",
-      "target": "ref_sanity",
-      "confidence_score": 1.0
+      "target": "ref_sanity"
     },
     {
       "relation": "imports_from",
@@ -3042,9 +3101,9 @@
       "source_location": "L1",
       "weight": 1.0,
       "_origin": "ast",
+      "confidence_score": 1.0,
       "source": "cms_schematypes_backup_scenariotype",
-      "target": "ref_sanity",
-      "confidence_score": 1.0
+      "target": "ref_sanity"
     },
     {
       "relation": "imports_from",
@@ -3054,9 +3113,9 @@
       "source_location": "L1",
       "weight": 1.0,
       "_origin": "ast",
+      "confidence_score": 1.0,
       "source": "cms_schematypes_backup_stagetype",
-      "target": "ref_sanity",
-      "confidence_score": 1.0
+      "target": "ref_sanity"
     },
     {
       "relation": "imports_from",
@@ -3066,9 +3125,9 @@
       "source_location": "L1",
       "weight": 1.0,
       "_origin": "ast",
+      "confidence_score": 1.0,
       "source": "cms_schematypes_backup_valuetype",
-      "target": "ref_sanity",
-      "confidence_score": 1.0
+      "target": "ref_sanity"
     },
     {
       "relation": "imports_from",
@@ -3078,9 +3137,9 @@
       "source_location": "L1",
       "weight": 1.0,
       "_origin": "ast",
+      "confidence_score": 1.0,
       "source": "cms_schematypes_batchtype",
-      "target": "ref_sanity",
-      "confidence_score": 1.0
+      "target": "ref_sanity"
     },
     {
       "relation": "imports_from",
@@ -3102,9 +3161,9 @@
       "source_location": "L1",
       "weight": 1.0,
       "_origin": "ast",
+      "confidence_score": 1.0,
       "source": "cms_schematypes_index",
-      "target": "cms_schematypes_batchtype",
-      "confidence_score": 1.0
+      "target": "cms_schematypes_batchtype"
     },
     {
       "relation": "imports_from",
@@ -3114,9 +3173,9 @@
       "source_location": "L2",
       "weight": 1.0,
       "_origin": "ast",
+      "confidence_score": 1.0,
       "source": "cms_schematypes_index",
-      "target": "cms_schematypes_scenariotype",
-      "confidence_score": 1.0
+      "target": "cms_schematypes_scenariotype"
     },
     {
       "relation": "imports_from",
@@ -3126,9 +3185,9 @@
       "source_location": "L3",
       "weight": 1.0,
       "_origin": "ast",
+      "confidence_score": 1.0,
       "source": "cms_schematypes_index",
-      "target": "cms_schematypes_stagetype",
-      "confidence_score": 1.0
+      "target": "cms_schematypes_stagetype"
     },
     {
       "relation": "imports_from",
@@ -3138,9 +3197,9 @@
       "source_location": "L4",
       "weight": 1.0,
       "_origin": "ast",
+      "confidence_score": 1.0,
       "source": "cms_schematypes_index",
-      "target": "cms_schematypes_replytype",
-      "confidence_score": 1.0
+      "target": "cms_schematypes_replytype"
     },
     {
       "relation": "imports_from",
@@ -3150,9 +3209,9 @@
       "source_location": "L5",
       "weight": 1.0,
       "_origin": "ast",
+      "confidence_score": 1.0,
       "source": "cms_schematypes_index",
-      "target": "cms_schematypes_diagnosistype",
-      "confidence_score": 1.0
+      "target": "cms_schematypes_diagnosistype"
     },
     {
       "relation": "imports_from",
@@ -3162,9 +3221,9 @@
       "source_location": "L6",
       "weight": 1.0,
       "_origin": "ast",
+      "confidence_score": 1.0,
       "source": "cms_schematypes_index",
-      "target": "cms_schematypes_valuetype",
-      "confidence_score": 1.0
+      "target": "cms_schematypes_valuetype"
     },
     {
       "relation": "imports_from",
@@ -3174,9 +3233,9 @@
       "source_location": "L1",
       "weight": 1.0,
       "_origin": "ast",
+      "confidence_score": 1.0,
       "source": "cms_schematypes_replytype",
-      "target": "ref_sanity",
-      "confidence_score": 1.0
+      "target": "ref_sanity"
     },
     {
       "relation": "imports_from",
@@ -3198,9 +3257,9 @@
       "source_location": "L1",
       "weight": 1.0,
       "_origin": "ast",
+      "confidence_score": 1.0,
       "source": "cms_schematypes_stagetype",
-      "target": "ref_sanity",
-      "confidence_score": 1.0
+      "target": "ref_sanity"
     },
     {
       "relation": "imports_from",
@@ -3210,8 +3269,19 @@
       "source_location": "L1",
       "weight": 1.0,
       "_origin": "ast",
+      "confidence_score": 1.0,
       "source": "cms_schematypes_valuetype",
-      "target": "ref_sanity",
+      "target": "ref_sanity"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "cms/actions/attachDiagnosesAction.ts",
+      "source_location": "L4",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "cms_actions_attachdiagnosesaction",
+      "target": "cms_actions_attachdiagnosesaction_attachalldiagnosesaction",
       "confidence_score": 1.0
     },
     {
@@ -3221,9 +3291,9 @@
       "source_location": "L4",
       "weight": 1.0,
       "_origin": "ast",
+      "confidence_score": 1.0,
       "source": "cms_actions_publishbatchaction",
-      "target": "cms_actions_publishbatchaction_publishbatchwithscenariosaction",
-      "confidence_score": 1.0
+      "target": "cms_actions_publishbatchaction_publishbatchwithscenariosaction"
     },
     {
       "relation": "contains",
@@ -3562,9 +3632,9 @@
       "source_location": "L3",
       "weight": 1.0,
       "_origin": "ast",
+      "confidence_score": 1.0,
       "source": "cms_schematypes_backup_batchtype",
-      "target": "cms_schematypes_backup_batchtype_batch",
-      "confidence_score": 1.0
+      "target": "cms_schematypes_backup_batchtype_batch"
     },
     {
       "relation": "contains",
@@ -3573,9 +3643,9 @@
       "source_location": "L3",
       "weight": 1.0,
       "_origin": "ast",
+      "confidence_score": 1.0,
       "source": "cms_schematypes_backup_diagnosistype",
-      "target": "cms_schematypes_backup_diagnosistype_diagnosis",
-      "confidence_score": 1.0
+      "target": "cms_schematypes_backup_diagnosistype_diagnosis"
     },
     {
       "relation": "contains",
@@ -3584,9 +3654,9 @@
       "source_location": "L8",
       "weight": 1.0,
       "_origin": "ast",
+      "confidence_score": 1.0,
       "source": "cms_schematypes_backup_index",
-      "target": "cms_schematypes_backup_index_schematypes",
-      "confidence_score": 1.0
+      "target": "cms_schematypes_backup_index_schematypes"
     },
     {
       "relation": "contains",
@@ -3595,9 +3665,9 @@
       "source_location": "L3",
       "weight": 1.0,
       "_origin": "ast",
+      "confidence_score": 1.0,
       "source": "cms_schematypes_backup_replytype",
-      "target": "cms_schematypes_backup_replytype_reply",
-      "confidence_score": 1.0
+      "target": "cms_schematypes_backup_replytype_reply"
     },
     {
       "relation": "contains",
@@ -3606,9 +3676,9 @@
       "source_location": "L3",
       "weight": 1.0,
       "_origin": "ast",
+      "confidence_score": 1.0,
       "source": "cms_schematypes_backup_scenariotype",
-      "target": "cms_schematypes_backup_scenariotype_scenario",
-      "confidence_score": 1.0
+      "target": "cms_schematypes_backup_scenariotype_scenario"
     },
     {
       "relation": "contains",
@@ -3617,9 +3687,9 @@
       "source_location": "L3",
       "weight": 1.0,
       "_origin": "ast",
+      "confidence_score": 1.0,
       "source": "cms_schematypes_backup_stagetype",
-      "target": "cms_schematypes_backup_stagetype_stage",
-      "confidence_score": 1.0
+      "target": "cms_schematypes_backup_stagetype_stage"
     },
     {
       "relation": "contains",
@@ -3628,9 +3698,9 @@
       "source_location": "L3",
       "weight": 1.0,
       "_origin": "ast",
+      "confidence_score": 1.0,
       "source": "cms_schematypes_backup_valuetype",
-      "target": "cms_schematypes_backup_valuetype_valuetype",
-      "confidence_score": 1.0
+      "target": "cms_schematypes_backup_valuetype_valuetype"
     },
     {
       "relation": "contains",
@@ -3639,9 +3709,9 @@
       "source_location": "L3",
       "weight": 1.0,
       "_origin": "ast",
+      "confidence_score": 1.0,
       "source": "cms_schematypes_batchtype",
-      "target": "cms_schematypes_batchtype_batch",
-      "confidence_score": 1.0
+      "target": "cms_schematypes_batchtype_batch"
     },
     {
       "relation": "contains",
@@ -3661,9 +3731,9 @@
       "source_location": "L8",
       "weight": 1.0,
       "_origin": "ast",
+      "confidence_score": 1.0,
       "source": "cms_schematypes_index",
-      "target": "cms_schematypes_index_schematypes",
-      "confidence_score": 1.0
+      "target": "cms_schematypes_index_schematypes"
     },
     {
       "relation": "contains",
@@ -3672,9 +3742,9 @@
       "source_location": "L3",
       "weight": 1.0,
       "_origin": "ast",
+      "confidence_score": 1.0,
       "source": "cms_schematypes_replytype",
-      "target": "cms_schematypes_replytype_reply",
-      "confidence_score": 1.0
+      "target": "cms_schematypes_replytype_reply"
     },
     {
       "relation": "contains",
@@ -3694,9 +3764,9 @@
       "source_location": "L3",
       "weight": 1.0,
       "_origin": "ast",
+      "confidence_score": 1.0,
       "source": "cms_schematypes_stagetype",
-      "target": "cms_schematypes_stagetype_stage",
-      "confidence_score": 1.0
+      "target": "cms_schematypes_stagetype_stage"
     },
     {
       "relation": "contains",
@@ -3705,9 +3775,9 @@
       "source_location": "L3",
       "weight": 1.0,
       "_origin": "ast",
+      "confidence_score": 1.0,
       "source": "cms_schematypes_valuetype",
-      "target": "cms_schematypes_valuetype_valuetype",
-      "confidence_score": 1.0
+      "target": "cms_schematypes_valuetype_valuetype"
     },
     {
       "relation": "contains",
@@ -4679,5 +4749,5 @@
     }
   ],
   "hyperedges": [],
-  "built_at_commit": "066a3ce38488baba836f11123d46fff41ecbff6d"
+  "built_at_commit": "69b2ce078712931af4faea511b74f0ebfb110bed"
 }

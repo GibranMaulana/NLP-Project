@@ -34,10 +34,10 @@
       "source_location": "L4",
       "_callable": true,
       "_origin": "ast",
-      "id": "cms_actions_attachdiagnosesaction_attachalldiagnosesaction",
       "community": 4,
       "community_name": "sanity",
-      "norm_label": "attachalldiagnosesaction()"
+      "norm_label": "attachalldiagnosesaction()",
+      "id": "cms_actions_attachdiagnosesaction_attachalldiagnosesaction"
     },
     {
       "label": "publishBatchWithScenariosAction()",
@@ -272,72 +272,6 @@
       "id": "cms_package"
     },
     {
-      "label": "devDependencies",
-      "file_type": "code",
-      "source_file": "cms/package.json",
-      "source_location": "L24",
-      "_origin": "ast",
-      "community": 1,
-      "community_name": "cms/package.json",
-      "norm_label": "devdependencies",
-      "id": "cms_package_devdependencies"
-    },
-    {
-      "label": "eslint",
-      "file_type": "code",
-      "source_file": "cms/package.json",
-      "source_location": "L27",
-      "_origin": "ast",
-      "community": 1,
-      "community_name": "cms/package.json",
-      "norm_label": "eslint",
-      "id": "cms_package_devdependencies_eslint"
-    },
-    {
-      "label": "prettier",
-      "file_type": "code",
-      "source_file": "cms/package.json",
-      "source_location": "L28",
-      "_origin": "ast",
-      "community": 1,
-      "community_name": "cms/package.json",
-      "norm_label": "prettier",
-      "id": "cms_package_devdependencies_prettier"
-    },
-    {
-      "label": "@sanity/eslint-config-studio",
-      "file_type": "code",
-      "source_file": "cms/package.json",
-      "source_location": "L25",
-      "_origin": "ast",
-      "community": 1,
-      "community_name": "cms/package.json",
-      "norm_label": "@sanity/eslint-config-studio",
-      "id": "cms_package_devdependencies_sanity_eslint_config_studio"
-    },
-    {
-      "label": "@types/react",
-      "file_type": "code",
-      "source_file": "cms/package.json",
-      "source_location": "L26",
-      "_origin": "ast",
-      "community": 1,
-      "community_name": "cms/package.json",
-      "norm_label": "@types/react",
-      "id": "cms_package_devdependencies_types_react"
-    },
-    {
-      "label": "typescript",
-      "file_type": "code",
-      "source_file": "cms/package.json",
-      "source_location": "L29",
-      "_origin": "ast",
-      "community": 1,
-      "community_name": "cms/package.json",
-      "norm_label": "typescript",
-      "id": "cms_package_devdependencies_typescript"
-    },
-    {
       "label": "keywords",
       "file_type": "code",
       "source_file": "cms/package.json",
@@ -448,6 +382,72 @@
       "id": "cms_package_private"
     },
     {
+      "label": "scripts",
+      "file_type": "code",
+      "source_file": "cms/package.json",
+      "source_location": "L7",
+      "_origin": "ast",
+      "community": 1,
+      "community_name": "cms/package.json",
+      "norm_label": "scripts",
+      "id": "cms_package_scripts"
+    },
+    {
+      "label": "build",
+      "file_type": "code",
+      "source_file": "cms/package.json",
+      "source_location": "L8",
+      "_origin": "ast",
+      "community": 1,
+      "community_name": "cms/package.json",
+      "norm_label": "build",
+      "id": "cms_package_scripts_build"
+    },
+    {
+      "label": "deploy",
+      "file_type": "code",
+      "source_file": "cms/package.json",
+      "source_location": "L9",
+      "_origin": "ast",
+      "community": 1,
+      "community_name": "cms/package.json",
+      "norm_label": "deploy",
+      "id": "cms_package_scripts_deploy"
+    },
+    {
+      "label": "deploy-graphql",
+      "file_type": "code",
+      "source_file": "cms/package.json",
+      "source_location": "L10",
+      "_origin": "ast",
+      "community": 1,
+      "community_name": "cms/package.json",
+      "norm_label": "deploy-graphql",
+      "id": "cms_package_scripts_deploy_graphql"
+    },
+    {
+      "label": "dev",
+      "file_type": "code",
+      "source_file": "cms/package.json",
+      "source_location": "L11",
+      "_origin": "ast",
+      "community": 1,
+      "community_name": "cms/package.json",
+      "norm_label": "dev",
+      "id": "cms_package_scripts_dev"
+    },
+    {
+      "label": "start",
+      "file_type": "code",
+      "source_file": "cms/package.json",
+      "source_location": "L12",
+      "_origin": "ast",
+      "community": 1,
+      "community_name": "cms/package.json",
+      "norm_label": "start",
+      "id": "cms_package_scripts_start"
+    },
+    {
       "label": "version",
       "file_type": "code",
       "source_file": "cms/package.json",
@@ -457,61 +457,6 @@
       "community_name": "cms/package.json",
       "norm_label": "version",
       "id": "cms_package_version"
-    },
-    {
-      "label": "eslint",
-      "file_type": "concept",
-      "source_file": "cms/package.json",
-      "source_location": "L27",
-      "_origin": "ast",
-      "community": 1,
-      "community_name": "cms/package.json",
-      "norm_label": "eslint",
-      "id": "cms_package_json_eslint"
-    },
-    {
-      "label": "@types/react",
-      "file_type": "concept",
-      "source_file": "cms/package.json",
-      "source_location": "L26",
-      "_origin": "ast",
-      "community": 1,
-      "community_name": "cms/package.json",
-      "norm_label": "@types/react",
-      "id": "cms_package_json_types_react"
-    },
-    {
-      "label": "typescript",
-      "file_type": "concept",
-      "source_file": "cms/package.json",
-      "source_location": "L29",
-      "_origin": "ast",
-      "community": 1,
-      "community_name": "cms/package.json",
-      "norm_label": "typescript",
-      "id": "cms_package_json_typescript"
-    },
-    {
-      "label": "prettier",
-      "file_type": "concept",
-      "source_file": "cms/package.json",
-      "source_location": "L28",
-      "_origin": "ast",
-      "community": 1,
-      "community_name": "cms/package.json",
-      "norm_label": "prettier",
-      "id": "prettier"
-    },
-    {
-      "label": "@sanity/eslint-config-studio",
-      "file_type": "concept",
-      "source_file": "cms/package.json",
-      "source_location": "L25",
-      "_origin": "ast",
-      "community": 1,
-      "community_name": "cms/package.json",
-      "norm_label": "@sanity/eslint-config-studio",
-      "id": "sanity_eslint_config_studio"
     },
     {
       "label": "layout.tsx",
@@ -1097,70 +1042,125 @@
       "id": "cms_sanity_cli"
     },
     {
-      "label": "scripts",
+      "label": "devDependencies",
       "file_type": "code",
       "source_file": "cms/package.json",
-      "source_location": "L7",
+      "source_location": "L24",
       "_origin": "ast",
       "community": 22,
-      "community_name": "scripts",
-      "norm_label": "scripts",
-      "id": "cms_package_scripts"
+      "community_name": "devDependencies",
+      "norm_label": "devdependencies",
+      "id": "cms_package_devdependencies"
     },
     {
-      "label": "build",
+      "label": "eslint",
       "file_type": "code",
       "source_file": "cms/package.json",
-      "source_location": "L8",
+      "source_location": "L27",
       "_origin": "ast",
       "community": 22,
-      "community_name": "scripts",
-      "norm_label": "build",
-      "id": "cms_package_scripts_build"
+      "community_name": "devDependencies",
+      "norm_label": "eslint",
+      "id": "cms_package_devdependencies_eslint"
     },
     {
-      "label": "deploy",
+      "label": "prettier",
       "file_type": "code",
       "source_file": "cms/package.json",
-      "source_location": "L9",
+      "source_location": "L28",
       "_origin": "ast",
       "community": 22,
-      "community_name": "scripts",
-      "norm_label": "deploy",
-      "id": "cms_package_scripts_deploy"
+      "community_name": "devDependencies",
+      "norm_label": "prettier",
+      "id": "cms_package_devdependencies_prettier"
     },
     {
-      "label": "deploy-graphql",
+      "label": "@sanity/eslint-config-studio",
       "file_type": "code",
       "source_file": "cms/package.json",
-      "source_location": "L10",
+      "source_location": "L25",
       "_origin": "ast",
       "community": 22,
-      "community_name": "scripts",
-      "norm_label": "deploy-graphql",
-      "id": "cms_package_scripts_deploy_graphql"
+      "community_name": "devDependencies",
+      "norm_label": "@sanity/eslint-config-studio",
+      "id": "cms_package_devdependencies_sanity_eslint_config_studio"
     },
     {
-      "label": "dev",
+      "label": "@types/react",
       "file_type": "code",
       "source_file": "cms/package.json",
-      "source_location": "L11",
+      "source_location": "L26",
       "_origin": "ast",
       "community": 22,
-      "community_name": "scripts",
-      "norm_label": "dev",
-      "id": "cms_package_scripts_dev"
+      "community_name": "devDependencies",
+      "norm_label": "@types/react",
+      "id": "cms_package_devdependencies_types_react"
     },
     {
-      "label": "start",
+      "label": "typescript",
       "file_type": "code",
       "source_file": "cms/package.json",
-      "source_location": "L12",
+      "source_location": "L29",
       "_origin": "ast",
       "community": 22,
-      "community_name": "scripts",
-      "norm_label": "start",
-      "id": "cms_package_scripts_start"
+      "community_name": "devDependencies",
+      "norm_label": "typescript",
+      "id": "cms_package_devdependencies_typescript"
+    },
+    {
+      "label": "eslint",
+      "file_type": "concept",
+      "source_file": "cms/package.json",
+      "source_location": "L27",
+      "_origin": "ast",
+      "community": 22,
+      "community_name": "devDependencies",
+      "norm_label": "eslint",
+      "id": "cms_package_json_eslint"
+    },
+    {
+      "label": "@types/react",
+      "file_type": "concept",
+      "source_file": "cms/package.json",
+      "source_location": "L26",
+      "_origin": "ast",
+      "community": 22,
+      "community_name": "devDependencies",
+      "norm_label": "@types/react",
+      "id": "cms_package_json_types_react"
+    },
+    {
+      "label": "typescript",
+      "file_type": "concept",
+      "source_file": "cms/package.json",
+      "source_location": "L29",
+      "_origin": "ast",
+      "community": 22,
+      "community_name": "devDependencies",
+      "norm_label": "typescript",
+      "id": "cms_package_json_typescript"
+    },
+    {
+      "label": "prettier",
+      "file_type": "concept",
+      "source_file": "cms/package.json",
+      "source_location": "L28",
+      "_origin": "ast",
+      "community": 22,
+      "community_name": "devDependencies",
+      "norm_label": "prettier",
+      "id": "prettier"
+    },
+    {
+      "label": "@sanity/eslint-config-studio",
+      "file_type": "concept",
+      "source_file": "cms/package.json",
+      "source_location": "L25",
+      "_origin": "ast",
+      "community": 22,
+      "community_name": "devDependencies",
+      "norm_label": "@sanity/eslint-config-studio",
+      "id": "sanity_eslint_config_studio"
     },
     {
       "label": "frontend/package.json",
@@ -1344,10 +1344,10 @@
       "source_file": "cms/actions/attachDiagnosesAction.ts",
       "source_location": "L1",
       "_origin": "ast",
-      "id": "cms_actions_attachdiagnosesaction",
       "community": 4,
       "community_name": "sanity",
-      "norm_label": "attachdiagnosesaction.ts"
+      "norm_label": "attachdiagnosesaction.ts",
+      "id": "cms_actions_attachdiagnosesaction"
     },
     {
       "label": "publishBatchAction.ts",
@@ -1366,10 +1366,10 @@
       "source_file": "cms/sanity.config.ts",
       "source_location": "L1",
       "_origin": "ast",
-      "id": "cms_sanity_config",
       "community": 4,
       "community_name": "sanity",
-      "norm_label": "sanity.config.ts"
+      "norm_label": "sanity.config.ts",
+      "id": "cms_sanity_config"
     },
     {
       "label": "schemaTypes/batchType.ts",
@@ -1394,15 +1394,37 @@
       "id": "cms_schematypes_batchtype_batch"
     },
     {
+      "label": "businessType.ts",
+      "file_type": "code",
+      "source_file": "cms/schemaTypes/businessType.ts",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "cms_schematypes_businesstype",
+      "community": 4,
+      "community_name": "sanity",
+      "norm_label": "businesstype.ts"
+    },
+    {
+      "label": "business",
+      "file_type": "code",
+      "source_file": "cms/schemaTypes/businessType.ts",
+      "source_location": "L3",
+      "_origin": "ast",
+      "id": "cms_schematypes_businesstype_business",
+      "community": 4,
+      "community_name": "sanity",
+      "norm_label": "business"
+    },
+    {
       "label": "schemaTypes/diagnosisType.ts",
       "file_type": "code",
       "source_file": "cms/schemaTypes/diagnosisType.ts",
       "source_location": "L1",
       "_origin": "ast",
-      "id": "cms_schematypes_diagnosistype",
       "community": 4,
       "community_name": "sanity",
-      "norm_label": "schematypes/diagnosistype.ts"
+      "norm_label": "schematypes/diagnosistype.ts",
+      "id": "cms_schematypes_diagnosistype"
     },
     {
       "label": "diagnosis",
@@ -1410,10 +1432,10 @@
       "source_file": "cms/schemaTypes/diagnosisType.ts",
       "source_location": "L3",
       "_origin": "ast",
-      "id": "cms_schematypes_diagnosistype_diagnosis",
       "community": 4,
       "community_name": "sanity",
-      "norm_label": "diagnosis"
+      "norm_label": "diagnosis",
+      "id": "cms_schematypes_diagnosistype_diagnosis"
     },
     {
       "label": "schemaTypes/index.ts",
@@ -1421,21 +1443,21 @@
       "source_file": "cms/schemaTypes/index.ts",
       "source_location": "L1",
       "_origin": "ast",
+      "id": "cms_schematypes_index",
       "community": 4,
       "community_name": "sanity",
-      "norm_label": "schematypes/index.ts",
-      "id": "cms_schematypes_index"
+      "norm_label": "schematypes/index.ts"
     },
     {
       "label": "schemaTypes",
       "file_type": "code",
       "source_file": "cms/schemaTypes/index.ts",
-      "source_location": "L8",
+      "source_location": "L9",
       "_origin": "ast",
+      "id": "cms_schematypes_index_schematypes",
       "community": 4,
       "community_name": "sanity",
-      "norm_label": "schematypes",
-      "id": "cms_schematypes_index_schematypes"
+      "norm_label": "schematypes"
     },
     {
       "label": "schemaTypes/replyType.ts",
@@ -1465,10 +1487,10 @@
       "source_file": "cms/schemaTypes/scenarioType.ts",
       "source_location": "L1",
       "_origin": "ast",
-      "id": "cms_schematypes_scenariotype",
       "community": 4,
       "community_name": "sanity",
-      "norm_label": "schematypes/scenariotype.ts"
+      "norm_label": "schematypes/scenariotype.ts",
+      "id": "cms_schematypes_scenariotype"
     },
     {
       "label": "scenario",
@@ -1476,10 +1498,10 @@
       "source_file": "cms/schemaTypes/scenarioType.ts",
       "source_location": "L3",
       "_origin": "ast",
-      "id": "cms_schematypes_scenariotype_scenario",
       "community": 4,
       "community_name": "sanity",
-      "norm_label": "scenario"
+      "norm_label": "scenario",
+      "id": "cms_schematypes_scenariotype_scenario"
     },
     {
       "label": "schemaTypes/stageType.ts",
@@ -2609,9 +2631,9 @@
       "source_location": "L4",
       "weight": 1.0,
       "_origin": "ast",
+      "confidence_score": 1.0,
       "source": "cms_sanity_config",
-      "target": "cms_schematypes_index_schematypes",
-      "confidence_score": 1.0
+      "target": "cms_schematypes_index_schematypes"
     },
     {
       "relation": "imports",
@@ -2621,9 +2643,9 @@
       "source_location": "L5",
       "weight": 1.0,
       "_origin": "ast",
+      "confidence_score": 1.0,
       "source": "cms_sanity_config",
-      "target": "cms_actions_publishbatchaction_publishbatchwithscenariosaction",
-      "confidence_score": 1.0
+      "target": "cms_actions_publishbatchaction_publishbatchwithscenariosaction"
     },
     {
       "relation": "imports",
@@ -2633,9 +2655,9 @@
       "source_location": "L6",
       "weight": 1.0,
       "_origin": "ast",
+      "confidence_score": 1.0,
       "source": "cms_sanity_config",
-      "target": "cms_actions_attachdiagnosesaction_attachalldiagnosesaction",
-      "confidence_score": 1.0
+      "target": "cms_actions_attachdiagnosesaction_attachalldiagnosesaction"
     },
     {
       "relation": "imports",
@@ -2717,9 +2739,9 @@
       "source_location": "L1",
       "weight": 1.0,
       "_origin": "ast",
-      "confidence_score": 1.0,
       "source": "cms_schematypes_index",
-      "target": "cms_schematypes_batchtype_batch"
+      "target": "cms_schematypes_batchtype_batch",
+      "confidence_score": 1.0
     },
     {
       "relation": "imports",
@@ -2729,9 +2751,9 @@
       "source_location": "L2",
       "weight": 1.0,
       "_origin": "ast",
-      "confidence_score": 1.0,
       "source": "cms_schematypes_index",
-      "target": "cms_schematypes_scenariotype_scenario"
+      "target": "cms_schematypes_scenariotype_scenario",
+      "confidence_score": 1.0
     },
     {
       "relation": "imports",
@@ -2741,9 +2763,9 @@
       "source_location": "L3",
       "weight": 1.0,
       "_origin": "ast",
-      "confidence_score": 1.0,
       "source": "cms_schematypes_index",
-      "target": "cms_schematypes_stagetype_stage"
+      "target": "cms_schematypes_stagetype_stage",
+      "confidence_score": 1.0
     },
     {
       "relation": "imports",
@@ -2753,9 +2775,9 @@
       "source_location": "L4",
       "weight": 1.0,
       "_origin": "ast",
-      "confidence_score": 1.0,
       "source": "cms_schematypes_index",
-      "target": "cms_schematypes_replytype_reply"
+      "target": "cms_schematypes_replytype_reply",
+      "confidence_score": 1.0
     },
     {
       "relation": "imports",
@@ -2765,9 +2787,9 @@
       "source_location": "L5",
       "weight": 1.0,
       "_origin": "ast",
-      "confidence_score": 1.0,
       "source": "cms_schematypes_index",
-      "target": "cms_schematypes_diagnosistype_diagnosis"
+      "target": "cms_schematypes_diagnosistype_diagnosis",
+      "confidence_score": 1.0
     },
     {
       "relation": "imports",
@@ -2777,9 +2799,21 @@
       "source_location": "L6",
       "weight": 1.0,
       "_origin": "ast",
-      "confidence_score": 1.0,
       "source": "cms_schematypes_index",
-      "target": "cms_schematypes_valuetype_valuetype"
+      "target": "cms_schematypes_valuetype_valuetype",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "cms/schemaTypes/index.ts",
+      "source_location": "L7",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "cms_schematypes_index",
+      "target": "cms_schematypes_businesstype_business",
+      "confidence_score": 1.0
     },
     {
       "relation": "imports",
@@ -2921,9 +2955,9 @@
       "source_location": "L2",
       "weight": 1.0,
       "_origin": "ast",
+      "confidence_score": 1.0,
       "source": "cms_actions_attachdiagnosesaction",
-      "target": "ref_sanity",
-      "confidence_score": 1.0
+      "target": "ref_sanity"
     },
     {
       "relation": "imports_from",
@@ -2945,9 +2979,9 @@
       "source_location": "L1",
       "weight": 1.0,
       "_origin": "ast",
+      "confidence_score": 1.0,
       "source": "cms_sanity_config",
-      "target": "ref_sanity",
-      "confidence_score": 1.0
+      "target": "ref_sanity"
     },
     {
       "relation": "imports_from",
@@ -2957,9 +2991,9 @@
       "source_location": "L4",
       "weight": 1.0,
       "_origin": "ast",
+      "confidence_score": 1.0,
       "source": "cms_sanity_config",
-      "target": "cms_schematypes_index",
-      "confidence_score": 1.0
+      "target": "cms_schematypes_index"
     },
     {
       "relation": "imports_from",
@@ -2969,9 +3003,9 @@
       "source_location": "L5",
       "weight": 1.0,
       "_origin": "ast",
+      "confidence_score": 1.0,
       "source": "cms_sanity_config",
-      "target": "cms_actions_publishbatchaction",
-      "confidence_score": 1.0
+      "target": "cms_actions_publishbatchaction"
     },
     {
       "relation": "imports_from",
@@ -2981,9 +3015,9 @@
       "source_location": "L6",
       "weight": 1.0,
       "_origin": "ast",
+      "confidence_score": 1.0,
       "source": "cms_sanity_config",
-      "target": "cms_actions_attachdiagnosesaction",
-      "confidence_score": 1.0
+      "target": "cms_actions_attachdiagnosesaction"
     },
     {
       "relation": "imports_from",
@@ -3145,13 +3179,25 @@
       "relation": "imports_from",
       "context": "import",
       "confidence": "EXTRACTED",
+      "source_file": "cms/schemaTypes/businessType.ts",
+      "source_location": "L1",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "cms_schematypes_businesstype",
+      "target": "ref_sanity",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
       "source_file": "cms/schemaTypes/diagnosisType.ts",
       "source_location": "L1",
       "weight": 1.0,
       "_origin": "ast",
+      "confidence_score": 1.0,
       "source": "cms_schematypes_diagnosistype",
-      "target": "ref_sanity",
-      "confidence_score": 1.0
+      "target": "ref_sanity"
     },
     {
       "relation": "imports_from",
@@ -3161,9 +3207,9 @@
       "source_location": "L1",
       "weight": 1.0,
       "_origin": "ast",
-      "confidence_score": 1.0,
       "source": "cms_schematypes_index",
-      "target": "cms_schematypes_batchtype"
+      "target": "cms_schematypes_batchtype",
+      "confidence_score": 1.0
     },
     {
       "relation": "imports_from",
@@ -3173,9 +3219,9 @@
       "source_location": "L2",
       "weight": 1.0,
       "_origin": "ast",
-      "confidence_score": 1.0,
       "source": "cms_schematypes_index",
-      "target": "cms_schematypes_scenariotype"
+      "target": "cms_schematypes_scenariotype",
+      "confidence_score": 1.0
     },
     {
       "relation": "imports_from",
@@ -3185,9 +3231,9 @@
       "source_location": "L3",
       "weight": 1.0,
       "_origin": "ast",
-      "confidence_score": 1.0,
       "source": "cms_schematypes_index",
-      "target": "cms_schematypes_stagetype"
+      "target": "cms_schematypes_stagetype",
+      "confidence_score": 1.0
     },
     {
       "relation": "imports_from",
@@ -3197,9 +3243,9 @@
       "source_location": "L4",
       "weight": 1.0,
       "_origin": "ast",
-      "confidence_score": 1.0,
       "source": "cms_schematypes_index",
-      "target": "cms_schematypes_replytype"
+      "target": "cms_schematypes_replytype",
+      "confidence_score": 1.0
     },
     {
       "relation": "imports_from",
@@ -3209,9 +3255,9 @@
       "source_location": "L5",
       "weight": 1.0,
       "_origin": "ast",
-      "confidence_score": 1.0,
       "source": "cms_schematypes_index",
-      "target": "cms_schematypes_diagnosistype"
+      "target": "cms_schematypes_diagnosistype",
+      "confidence_score": 1.0
     },
     {
       "relation": "imports_from",
@@ -3221,9 +3267,21 @@
       "source_location": "L6",
       "weight": 1.0,
       "_origin": "ast",
-      "confidence_score": 1.0,
       "source": "cms_schematypes_index",
-      "target": "cms_schematypes_valuetype"
+      "target": "cms_schematypes_valuetype",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "cms/schemaTypes/index.ts",
+      "source_location": "L7",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "cms_schematypes_index",
+      "target": "cms_schematypes_businesstype",
+      "confidence_score": 1.0
     },
     {
       "relation": "imports_from",
@@ -3245,9 +3303,9 @@
       "source_location": "L1",
       "weight": 1.0,
       "_origin": "ast",
+      "confidence_score": 1.0,
       "source": "cms_schematypes_scenariotype",
-      "target": "ref_sanity",
-      "confidence_score": 1.0
+      "target": "ref_sanity"
     },
     {
       "relation": "imports_from",
@@ -3280,9 +3338,9 @@
       "source_location": "L4",
       "weight": 1.0,
       "_origin": "ast",
+      "confidence_score": 1.0,
       "source": "cms_actions_attachdiagnosesaction",
-      "target": "cms_actions_attachdiagnosesaction_attachalldiagnosesaction",
-      "confidence_score": 1.0
+      "target": "cms_actions_attachdiagnosesaction_attachalldiagnosesaction"
     },
     {
       "relation": "contains",
@@ -3716,24 +3774,35 @@
     {
       "relation": "contains",
       "confidence": "EXTRACTED",
-      "source_file": "cms/schemaTypes/diagnosisType.ts",
+      "source_file": "cms/schemaTypes/businessType.ts",
       "source_location": "L3",
       "weight": 1.0,
       "_origin": "ast",
-      "source": "cms_schematypes_diagnosistype",
-      "target": "cms_schematypes_diagnosistype_diagnosis",
+      "source": "cms_schematypes_businesstype",
+      "target": "cms_schematypes_businesstype_business",
       "confidence_score": 1.0
     },
     {
       "relation": "contains",
       "confidence": "EXTRACTED",
-      "source_file": "cms/schemaTypes/index.ts",
-      "source_location": "L8",
+      "source_file": "cms/schemaTypes/diagnosisType.ts",
+      "source_location": "L3",
       "weight": 1.0,
       "_origin": "ast",
       "confidence_score": 1.0,
+      "source": "cms_schematypes_diagnosistype",
+      "target": "cms_schematypes_diagnosistype_diagnosis"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "cms/schemaTypes/index.ts",
+      "source_location": "L9",
+      "weight": 1.0,
+      "_origin": "ast",
       "source": "cms_schematypes_index",
-      "target": "cms_schematypes_index_schematypes"
+      "target": "cms_schematypes_index_schematypes",
+      "confidence_score": 1.0
     },
     {
       "relation": "contains",
@@ -3753,9 +3822,9 @@
       "source_location": "L3",
       "weight": 1.0,
       "_origin": "ast",
+      "confidence_score": 1.0,
       "source": "cms_schematypes_scenariotype",
-      "target": "cms_schematypes_scenariotype_scenario",
-      "confidence_score": 1.0
+      "target": "cms_schematypes_scenariotype_scenario"
     },
     {
       "relation": "contains",
@@ -4749,5 +4818,5 @@
     }
   ],
   "hyperedges": [],
-  "built_at_commit": "69b2ce078712931af4faea511b74f0ebfb110bed"
+  "built_at_commit": "8e558193d4ad74fc49174f15ec29abab2b74911c"
 }

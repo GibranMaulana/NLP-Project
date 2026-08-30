@@ -1,16 +1,16 @@
 # Graph Report - NLP-Project  (2026-08-30)
 
 ## Corpus Check
-- 33 files · ~3,856 words
+- 34 files · ~3,926 words
 - Verdict: corpus is large enough that graph structure adds value.
 
 ## Summary
-- 204 nodes · 217 edges · 23 communities (18 shown, 5 thin omitted)
+- 206 nodes · 221 edges · 23 communities (18 shown, 5 thin omitted)
 - Extraction: 100% EXTRACTED · 0% INFERRED · 0% AMBIGUOUS · INFERRED: 1 edges (avg confidence: 0.8)
 - Token cost: 0 input · 0 output
 
 ## Graph Freshness
-- Built from commit: `69b2ce07`
+- Built from commit: `8e558193`
 - Run `git rev-parse HEAD` and compare to check if the graph is stale.
 - Run `graphify update .` after code changes (no API cost).
 
@@ -33,11 +33,11 @@
 - frontend/README.md
 - cms/README.md
 - AGENTS.md
-- scripts
+- devDependencies
 
 ## God Nodes (most connected - your core abstractions)
-1. `compilerOptions` - 16 edges
-2. `sanity` - 16 edges
+1. `sanity` - 17 edges
+2. `compilerOptions` - 16 edges
 3. `compilerOptions` - 12 edges
 4. `NLP Project Development Guide` - 8 edges
 5. `include` - 7 edges
@@ -67,8 +67,8 @@ Cohesion: 0.11
 Nodes (19): compilerOptions, allowJs, esModuleInterop, incremental, isolatedModules, jsx, lib, module (+11 more)
 
 ### Community 1 - "cms/package.json"
-Cohesion: 0.09
-Nodes (22): devDependencies, eslint, prettier, @sanity/eslint-config-studio, @types/react, typescript, eslint, @types/react (+14 more)
+Cohesion: 0.11
+Nodes (17): keywords, license, main, name, prettier, bracketSpacing, printWidth, semi (+9 more)
 
 ### Community 2 - "compilerOptions"
 Cohesion: 0.10
@@ -79,8 +79,8 @@ Cohesion: 0.12
 Nodes (15): dependencies, next, react, react-dom, react, react-dom, name, private (+7 more)
 
 ### Community 4 - "sanity"
-Cohesion: 0.19
-Nodes (10): attachAllDiagnosesAction(), publishBatchWithScenariosAction(), batch, diagnosis, schemaTypes, reply, scenario, stage (+2 more)
+Cohesion: 0.17
+Nodes (11): attachAllDiagnosesAction(), publishBatchWithScenariosAction(), batch, business, diagnosis, schemaTypes, reply, scenario (+3 more)
 
 ### Community 5 - "devDependencies"
 Cohesion: 0.12
@@ -114,9 +114,9 @@ Nodes (9): CMS (Sanity Studio), code:bash (cd cms), code:bash (npm install), cod
 Cohesion: 0.40
 Nodes (4): code:bash (npm run dev), Deploy on Vercel, Getting Started, Learn More
 
-### Community 22 - "scripts"
-Cohesion: 0.33
-Nodes (6): scripts, build, deploy, deploy-graphql, dev, start
+### Community 22 - "devDependencies"
+Cohesion: 0.18
+Nodes (11): devDependencies, eslint, prettier, @sanity/eslint-config-studio, @types/react, typescript, eslint, @types/react (+3 more)
 
 ## Knowledge Gaps
 - **105 isolated node(s):** `allowJs`, `esModuleInterop`, `incremental`, `isolatedModules`, `jsx` (+100 more)
@@ -127,16 +127,16 @@ Nodes (6): scripts, build, deploy, deploy-graphql, dev, start
 _Questions this graph is uniquely positioned to answer:_
 
 - **Why does `sanity` connect `sanity` to `cms/package.json`, `backup/index.ts`?**
-  _High betweenness centrality (0.080) - this node is a cross-community bridge._
+  _High betweenness centrality (0.084) - this node is a cross-community bridge._
 - **Why does `keywords` connect `cms/package.json` to `sanity`?**
-  _High betweenness centrality (0.065) - this node is a cross-community bridge._
-- **Why does `dependencies` connect `dependencies` to `cms/package.json`?**
+  _High betweenness centrality (0.067) - this node is a cross-community bridge._
+- **Why does `devDependencies` connect `devDependencies` to `cms/package.json`?**
   _High betweenness centrality (0.033) - this node is a cross-community bridge._
 - **What connects `allowJs`, `esModuleInterop`, `incremental` to the rest of the system?**
   _105 weakly-connected nodes found - possible documentation gaps or missing edges._
 - **Should `compilerOptions` be split into smaller, more focused modules?**
   _Cohesion score 0.10526315789473684 - nodes in this community are weakly interconnected._
 - **Should `cms/package.json` be split into smaller, more focused modules?**
-  _Cohesion score 0.08695652173913043 - nodes in this community are weakly interconnected._
+  _Cohesion score 0.1111111111111111 - nodes in this community are weakly interconnected._
 - **Should `compilerOptions` be split into smaller, more focused modules?**
   _Cohesion score 0.09523809523809523 - nodes in this community are weakly interconnected._
