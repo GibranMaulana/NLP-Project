@@ -33,9 +33,11 @@ export const SCENARIO_PLAY_QUERY = `
       }
     },
     diagnoses[]->{
+      _id,
       title,
-      description,
-      "dominantPattern": dominantPattern->title
+      headline,
+      harshTruth,
+      "patternTitle": valueType->title
     }
   }
 `;
@@ -59,9 +61,11 @@ export const DEFAULT_SCENARIO_PLAY_QUERY = `
       }
     },
     diagnoses[]->{
+      _id,
       title,
-      description,
-      "dominantPattern": dominantPattern->title
+      headline,
+      harshTruth,
+      "patternTitle": valueType->title
     }
   }
 `;

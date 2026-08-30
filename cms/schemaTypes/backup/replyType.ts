@@ -2,18 +2,18 @@ import { defineField, defineType } from "sanity";
 
 export const reply = defineType({
   name: "reply",
-  title: "Reactie",
+  title: "Reply",
   type: "object",
   fields: [
     defineField({
       name: "text",
-      title: "Reactietekst",
+      title: "Reply Text",
       type: "string",
       validation: (rule) => rule.required(),
     }),
     defineField({
       name: "valueType",
-      title: "Categorie / Patroontype",
+      title: "Category / Pattern Type",
       type: "reference",
       to: [{ type: "valueType" }],
       options: {

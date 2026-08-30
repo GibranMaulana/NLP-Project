@@ -20,7 +20,12 @@ export interface Stage {
 }
 
 export interface Diagnosis {
+  _id?: string;
   title: string;
+  headline?: string;
+  harshTruth?: string;
+  patternTitle?: string;
+  // Fallbacks for flexibility
   description?: string;
   dominantPattern?: string;
 }

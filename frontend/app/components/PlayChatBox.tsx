@@ -1,6 +1,7 @@
 "use client";
 
 import { useState, useRef, useEffect } from "react";
+import { useRouter, useSearchParams } from "next/navigation";
 import type { PlayScenario, Stage, Reply } from "@/lib/types";
 
 interface Message {
@@ -25,6 +26,9 @@ interface Props {
 
 export default function PlayChatBox({ scenario }: Props) {
   const storageKey = `nlp_chat_state_${scenario.slug}`;
+  const router = useRouter();
+  const searchParams = useSearchParams();
+  const restartParam = searchParams.get("restart");
 
   const [currentStageIndex, setCurrentStageIndex] = useState(0);
   const [messages, setMessages] = useState<Message[]>([]);
@@ -47,6 +51,31 @@ export default function PlayChatBox({ scenario }: Props) {
 
   // 1. Restore from sessionStorage on initial load (persists across language toggles / reloads)
   useEffect(() => {
+    if (restartParam === "true") {
+      try {
+        sessionStorage.removeItem(storageKey);
+      } catch {}
+      if (stages.length > 0) {
+        const firstStage = stages[0];
+        const initialNpcMsg: Message = {
+          id: `npc-init-${firstStage._key || "0"}-${Date.now()}`,
+          sender: "npc",
+          speakerName: firstStage.speaker || "Karakter",
+          text: firstStage.botPrompt,
+          timestamp: getFormattedTime(),
+        };
+        setCurrentStageIndex(0);
+        setMessages([initialNpcMsg]);
+        setIsCompleted(false);
+        setSelectedPatterns([]);
+        setIsTyping(false);
+      }
+      setIsInitialized(true);
+      // Clean url
+      router.replace(`/scenario/${scenario.slug}/play`);
+      return;
+    }
+
     try {
       const saved = sessionStorage.getItem(storageKey);
       if (saved) {
@@ -77,7 +106,7 @@ export default function PlayChatBox({ scenario }: Props) {
       setMessages([initialNpcMsg]);
     }
     setIsInitialized(true);
-  }, [storageKey, stages]);
+  }, [storageKey, stages, restartParam]);
 
   // 2. Persist state to sessionStorage whenever it updates
   useEffect(() => {
@@ -144,8 +173,10 @@ export default function PlayChatBox({ scenario }: Props) {
       patternType: patternTitle,
     };
 
+    let updatedPatterns = [...selectedPatterns];
     if (patternTitle) {
-      setSelectedPatterns((prev) => [...prev, patternTitle]);
+      updatedPatterns.push(patternTitle);
+      setSelectedPatterns(updatedPatterns);
     }
 
     setMessages((prev) => [...prev, userMsg]);
@@ -187,6 +218,10 @@ export default function PlayChatBox({ scenario }: Props) {
         };
 
         setMessages((prev) => [...prev, finalNpcMsg]);
+
+        // Redirect to diagnosis subpage with selection pattern list
+        const qp = updatedPatterns.join(",");
+        router.push(`/scenario/${scenario.slug}/diagnosis?patterns=${encodeURIComponent(qp)}`);
       }, 1000);
     }
   };
@@ -324,30 +359,6 @@ export default function PlayChatBox({ scenario }: Props) {
           <div ref={messagesEndRef} />
         </div>
 
-        {/* ── Completion Card (If finished all stages) ────── */}
-        {isCompleted && (
-          <div className="my-6 rounded-2xl border border-[#292477]/60 bg-[#1a1a24]/90 p-6 text-center shadow-2xl">
-            <div className="mx-auto mb-3 flex h-12 w-12 items-center justify-center rounded-full bg-[#F46B3C]/20 text-2xl text-[#F46B3C]">
-              ✓
-            </div>
-            <h2 className="font-serif-editorial text-2xl font-semibold text-[#E9E7F5]">
-              Skenario Selesai!
-            </h2>
-            <p className="mt-1 text-sm text-[#a0a0b0]">
-              Anda telah menyelesaikan seluruh {stages.length} babak percakapan dari Sanity.
-            </p>
-            <div className="mt-4">
-              <button
-                type="button"
-                onClick={handleResetChat}
-                className="cursor-pointer rounded-full bg-[#292477] px-6 py-2.5 text-xs font-semibold uppercase tracking-wider text-[#E9E7F5] transition hover:bg-[#292477]/80"
-              >
-                Mulai Ulang Skenario
-              </button>
-            </div>
-          </div>
-        )}
-
         {/* ── Interactive Replies from Sanity ────────────── */}
         {!isCompleted && currentReplies.length > 0 && (
           <div className="mt-6 border-t border-[#292477]/30 pt-4">
@@ -385,3 +396,4 @@ export default function PlayChatBox({ scenario }: Props) {
     </div>
   );
 }
+
