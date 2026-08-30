@@ -12,7 +12,23 @@ export default defineConfig({
   projectId: 'v8udsf47',
   dataset: 'production',
 
-  plugins: [structureTool(), visionTool()],
+  plugins: [
+    structureTool({
+      structure: (S) =>
+        S.list()
+          .title('Content')
+          .items([
+            S.listItem()
+              .title('Settings')
+              .child(S.document().schemaType('settings').documentId('settings')),
+            S.divider(),
+            ...S.documentTypeListItems().filter(
+              (listItem) => !['settings'].includes(listItem.getId() as string)
+            ),
+          ]),
+    }),
+    visionTool(),
+  ],
 
   schema: {
     types: schemaTypes,

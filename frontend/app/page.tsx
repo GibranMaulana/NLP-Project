@@ -1,68 +1,148 @@
-import Image from "next/image";
+import Link from "next/link";
+import { sanityClient } from "@/lib/sanity";
+import { ALL_BATCHES_QUERY, SETTINGS_QUERY } from "@/lib/queries";
 
-export default function Home() {
+export const revalidate = 0;
+
+interface BatchItem {
+  title: string;
+  slug: string;
+  scenariosCount?: number;
+}
+
+interface Settings {
+  isPrivate?: boolean;
+}
+
+export default async function Home() {
+  const settings = await sanityClient.fetch<Settings | null>(SETTINGS_QUERY);
+  const isPrivate = settings?.isPrivate ?? false;
+
+  let batches: BatchItem[] = [];
+  if (!isPrivate) {
+    batches = await sanityClient.fetch<BatchItem[]>(ALL_BATCHES_QUERY);
+  }
+
   return (
-    <div className="flex flex-col flex-1 items-center justify-center bg-zinc-50 font-sans dark:bg-black">
-      <main className="flex flex-1 w-full max-w-3xl flex-col items-center justify-between py-32 px-16 bg-white dark:bg-black sm:items-start">
-        <Image
-          className="dark:invert h-5 w-[100px]"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={100}
-          height={20}
-          priority
-        />
-        <div className="flex flex-col items-center gap-6 text-center sm:items-start sm:text-left">
-          <h1 className="max-w-xs text-3xl font-semibold leading-10 tracking-tight text-black dark:text-zinc-50">
-            To get started, edit the{" "}
-            <code className="rounded bg-black/[.06] px-1.5 py-0.5 font-mono text-[0.9em] dark:bg-white/[.08]">
-              page.tsx
-            </code>{" "}
-            file.
-          </h1>
-          <p className="max-w-md text-lg leading-8 text-zinc-600 dark:text-zinc-400">
-            Looking for a starting point or more instructions? Head over to{" "}
-            <a
-              href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Templates
-            </a>{" "}
-            or the{" "}
-            <a
-              href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Learning
-            </a>{" "}
-            center.
-          </p>
+    <div className="cinematic-grain cinematic-vignette relative flex min-h-dvh flex-col items-center bg-[#111116] px-6 py-20 text-[#e8e8ec] sm:px-10 md:py-28">
+      {/* ── Background Glow ──────────────────────────────── */}
+      <div
+        className="pointer-events-none fixed inset-0 opacity-70"
+        aria-hidden="true"
+      >
+        <div className="absolute inset-0 bg-[radial-gradient(ellipse_60%_50%_at_50%_30%,rgba(41,36,119,0.25)_0%,transparent_70%)]" />
+      </div>
+
+      <main className="relative z-10 flex w-full max-w-4xl flex-col items-center text-center">
+        {/* Eyebrow */}
+        <div className="mb-6 flex items-center gap-3">
+          <span className="text-[11px] font-bold uppercase tracking-[0.3em] text-[#6a6a7a]">
+            NLP Training Platform
+          </span>
+          <span className="h-[3px] w-[3px] rounded-full bg-[#F46B3C]" />
+          <span className="text-[11px] font-semibold uppercase tracking-[0.25em] text-[#E9E7F5]/60">
+            Meta Model Simulation
+          </span>
         </div>
-        <div className="flex flex-col gap-4 text-base font-medium sm:flex-row">
-          <a
-            className="flex h-12 w-full items-center justify-center gap-2 rounded-full bg-foreground px-5 text-background transition-colors hover:bg-[#383838] dark:hover:bg-[#ccc] md:w-[158px]"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert h-[14px] w-4"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={16}
-              height={14}
-            />
-            Deploy Now
-          </a>
-          <a
-            className="flex h-12 w-full items-center justify-center rounded-full border border-solid border-black/[.08] px-5 transition-colors hover:border-transparent hover:bg-black/[.04] dark:border-white/[.145] dark:hover:bg-[#1a1a1a] md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Documentation
-          </a>
+
+        {/* Title */}
+        <h1 className="title-glow mb-6 font-serif-editorial text-4xl font-normal tracking-tight text-[#E9E7F5] sm:text-6xl md:text-7xl">
+          Pelatihan Kepekaan Meta Model
+        </h1>
+
+        {/* Explanation Section */}
+        <div className="relative mb-20 w-full max-w-3xl overflow-hidden rounded-[2rem] border border-[#292477]/40 bg-gradient-to-b from-[#1a1a24]/90 to-[#111116]/80 p-8 text-left shadow-[0_0_40px_-10px_rgba(41,36,119,0.3)] backdrop-blur-xl sm:p-12">
+          {/* Subtle top inner glow */}
+          <div className="absolute inset-x-0 top-0 h-[1px] bg-gradient-to-r from-transparent via-[#F46B3C]/30 to-transparent" />
+          {/* Decorative subtle gradient blob inside the card */}
+          <div className="absolute -top-24 -right-24 h-48 w-48 rounded-full bg-[#292477]/20 blur-3xl" />
+
+          <div className="relative z-10">
+            <div className="mb-6 inline-flex items-center gap-2 rounded-full border border-[#F46B3C]/20 bg-[#F46B3C]/10 px-3 py-1 text-[10px] font-semibold uppercase tracking-widest text-[#F46B3C]">
+              <span className="h-1.5 w-1.5 rounded-full bg-[#F46B3C] animate-pulse" />
+              Platform Overview
+            </div>
+
+            <h2 className="mb-6 font-serif-editorial text-3xl font-medium tracking-tight text-[#E9E7F5] sm:text-4xl">
+              Tentang Platform Ini
+            </h2>
+
+            <div className="space-y-6 text-base leading-relaxed text-[#a0a0b0] sm:text-lg">
+              <p>
+                Aplikasi ini adalah platform simulasi interaktif yang dirancang
+                premium untuk melatih secara mendalam keterampilan Anda dalam
+                mendeteksi pola bahasa{" "}
+                <strong className="font-medium text-[#E9E7F5]">
+                  NLP Meta Model
+                </strong>
+                .
+              </p>
+              <p>
+                Melalui studi kasus berupa percakapan interaktif, Anda akan
+                berlatih mengenali pelanggaran bahasa seperti{" "}
+                <em className="text-[#E9E7F5]">Deletion</em>,{" "}
+                <em className="text-[#E9E7F5]">Distortion</em>, dan{" "}
+                <em className="text-[#E9E7F5]">Generalization</em>, serta
+                merumuskan pola pertanyaan presisi untuk menggali informasi
+                terdalam dari lawan bicara.
+              </p>
+            </div>
+          </div>
         </div>
+
+        {!isPrivate && (
+          <>
+            {/* Batches Header */}
+            <div className="mb-10 flex w-full items-center justify-between border-b border-[#292477]/30 pb-5">
+              <h2 className="font-serif-editorial text-3xl font-normal text-[#E9E7F5] sm:text-4xl">
+                Try Now
+              </h2>
+            </div>
+
+            {/* Scenarios Grid */}
+            <div className="grid w-full grid-cols-1 gap-4 sm:grid-cols-2">
+              {batches && batches.length > 0 ? (
+                batches.map((batch, i) => (
+                  <div
+                    key={batch.slug || i}
+                    className="group relative flex flex-col justify-between rounded-2xl border border-[#292477]/40 bg-[#1a1a24]/80 p-6 text-left shadow-lg backdrop-blur-sm transition-all duration-300 hover:border-[#F46B3C]/50 hover:bg-[#292477]/20"
+                  >
+                    <div>
+                      <div className="mb-3 flex items-center justify-between">
+                        <span className="text-xs font-semibold uppercase tracking-wider text-[#F46B3C]">
+                          Batch 0{i + 1}
+                        </span>
+                        {batch.scenariosCount !== undefined && (
+                          <span className="rounded-full border border-[#292477]/50 bg-[#292477]/20 px-2.5 py-0.5 text-[10px] font-medium text-[#a0a0b0]">
+                            {batch.scenariosCount} Skenario
+                          </span>
+                        )}
+                      </div>
+
+                      <h2 className="mb-3 font-serif-editorial text-2xl font-medium text-[#E9E7F5] group-hover:text-white">
+                        {batch.title}
+                      </h2>
+                    </div>
+
+                    <div className="mt-6 flex items-center gap-3 pt-4 border-t border-[#292477]/30">
+                      <Link
+                        href={`/b/${batch.slug}`}
+                        className="inline-flex flex-1 items-center justify-center gap-2 rounded-full bg-[#F46B3C] px-4 py-2.5 text-xs font-medium text-white shadow transition hover:bg-[#E0592B]"
+                      >
+                        <span>Lihat Skenario</span>
+                        <span>→</span>
+                      </Link>
+                    </div>
+                  </div>
+                ))
+              ) : (
+                <div className="col-span-full rounded-2xl border border-[#292477]/40 bg-[#1a1a24]/60 p-8 text-center text-[#a0a0b0]">
+                  Belum ada batch di Sanity CMS.
+                </div>
+              )}
+            </div>
+          </>
+        )}
       </main>
     </div>
   );

@@ -2,17 +2,18 @@ import { defineField, defineType } from "sanity";
 
 export const business = defineType({
   name: "business",
-  title: "Business",
+  title: "Bedrijf",
   type: "document",
   fields: [
     defineField({
-      name: "title",
-      title: "Bussiness Title",
+      name: "titel",
+      title: "Bedrijfsnaam",
       type: "string",
+      validation: (rule) => rule.required().min(1),
     }),
     defineField({
       name: "businessLink",
-      title: "Link Business",
+      title: "Bedrijfslink",
       type: "url",
       validation: (rule) => rule.uri({ scheme: ["http", "https", "ftp", "mailto", "tel"] }).required()
     }),

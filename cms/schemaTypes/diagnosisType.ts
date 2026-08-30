@@ -32,6 +32,13 @@ export const diagnosis = defineType({
       validation: (rule) => rule.required(),
     }),
     defineField({
+      name: "valueType",
+      title: "Value Type / Pattern",
+      description: "Which pattern does this diagnosis apply to? (Optional for combination diagnoses)",
+      type: "reference",
+      to: [{ type: "valueType" }],
+    }),
+    defineField({
       name: "valueTypes",
       title: "Waardetypen / Patronen",
       type: "array",
