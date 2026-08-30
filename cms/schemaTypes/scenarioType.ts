@@ -4,6 +4,26 @@ export const scenario = defineType({
   name: 'scenario',
   title: 'Scenario',
   type: 'document',
+  initialValue: async (_params, { getClient }) => {
+    try {
+      const client = getClient({ apiVersion: '2024-01-01' })
+      const diagnoses = await client.fetch<Array<{ _id: string }>>(
+        `*[_type == "diagnosis" && !(_id in path("drafts.**"))]{ _id }`
+      )
+      if (diagnoses && diagnoses.length > 0) {
+        return {
+          diagnoses: diagnoses.map((d) => ({
+            _type: 'reference',
+            _ref: d._id,
+            _key: d._id.replace(/^drafts\./, ''),
+          })),
+        }
+      }
+    } catch (e) {
+      console.error('Failed to fetch initial diagnoses:', e)
+    }
+    return {}
+  },
   fields: [
     defineField({
       name: 'batch',
@@ -35,7 +55,7 @@ export const scenario = defineType({
     }),
     defineField({
       name: 'stages',
-      title: 'Fasen (Babak)',
+      title: 'Fasen',
       description: 'De lineaire voortgang van het gesprek',
       type: 'array',
       of: [{type: 'stage'}],
@@ -44,13 +64,21 @@ export const scenario = defineType({
     defineField({
       name: 'diagnoses',
       title: 'Diagnoses / Eindschermen',
-      description: 'De mogelijke uitkomsten voor dit scenario. Voeg hier alle relevante diagnosedocumenten toe.',
       type: 'array',
       of: [{
         type: 'reference',
         to: [{type: 'diagnosis'}]
       }],
-      validation: (rule) => rule.required().min(1),
+      validation: (rule) =>
+        rule.required().min(1).max(7).custom((diagnoses: any[] | undefined) => {
+          if (!diagnoses || diagnoses.length === 0) return true
+          const refs = diagnoses.map((d: any) => d._ref).filter(Boolean)
+          const uniqueRefs = new Set(refs)
+          if (uniqueRefs.size !== diagnoses.length) {
+            return 'Geen dubbele diagnose-referenties toegestaan.'
+          }
+          return true
+        }),
     }),
   ],
 })

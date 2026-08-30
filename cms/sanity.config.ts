@@ -3,6 +3,7 @@ import {structureTool} from 'sanity/structure'
 import {visionTool} from '@sanity/vision'
 import {schemaTypes} from './schemaTypes'
 import {publishBatchWithScenariosAction} from './actions/publishBatchAction'
+import {attachAllDiagnosesAction} from './actions/attachDiagnosesAction'
 
 export default defineConfig({
   name: 'default',
@@ -20,10 +21,13 @@ export default defineConfig({
   document: {
     actions: (prev, context) => {
       if (context.schemaType === 'batch') {
-        // Add our custom action alongside the default actions
         return [...prev, publishBatchWithScenariosAction]
+      }
+      if (context.schemaType === 'scenario') {
+        return [...prev, attachAllDiagnosesAction]
       }
       return prev
     },
   },
 })
+
