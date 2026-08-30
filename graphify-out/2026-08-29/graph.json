@@ -373,6 +373,15 @@
       "norm_label": "eslint"
     },
     {
+      "label": "prettier",
+      "file_type": "code",
+      "source_file": "cms/package.json",
+      "source_location": "L28",
+      "id": "cms_package_devdependencies_prettier",
+      "community": 1,
+      "norm_label": "prettier"
+    },
+    {
       "label": "typescript",
       "file_type": "code",
       "source_file": "cms/package.json",
@@ -493,10 +502,28 @@
       "label": "schemaTypes",
       "file_type": "code",
       "source_file": "cms/schemaTypes/index.ts",
-      "source_location": "L6",
+      "source_location": "L7",
       "id": "schematypes_index_schematypes",
       "community": 4,
       "norm_label": "schematypes"
+    },
+    {
+      "label": "valueType.ts",
+      "file_type": "code",
+      "source_file": "cms/schemaTypes/valueType.ts",
+      "source_location": "L1",
+      "id": "cms_schematypes_valuetype_ts",
+      "community": 4,
+      "norm_label": "valuetype.ts"
+    },
+    {
+      "label": "valueType",
+      "file_type": "code",
+      "source_file": "cms/schemaTypes/valueType.ts",
+      "source_location": "L3",
+      "id": "schematypes_valuetype_valuetype",
+      "community": 4,
+      "norm_label": "valuetype"
     },
     {
       "label": "stageType.ts",
@@ -551,6 +578,15 @@
       "id": "frontend_eslint_config_mjs",
       "community": 5,
       "norm_label": "eslint.config.mjs"
+    },
+    {
+      "label": "eslintConfig",
+      "file_type": "code",
+      "source_file": "frontend/eslint.config.mjs",
+      "source_location": "L5",
+      "id": "frontend_eslint_config_eslintconfig",
+      "community": 5,
+      "norm_label": "eslintconfig"
     },
     {
       "label": "next-env.d.ts",
@@ -751,6 +787,15 @@
       "norm_label": "next.config.ts"
     },
     {
+      "label": "nextConfig",
+      "file_type": "code",
+      "source_file": "frontend/next.config.ts",
+      "source_location": "L3",
+      "id": "frontend_next_config_nextconfig",
+      "community": 15,
+      "norm_label": "nextconfig"
+    },
+    {
       "label": "postcss.config.mjs",
       "file_type": "code",
       "source_file": "frontend/postcss.config.mjs",
@@ -922,6 +967,15 @@
       "norm_label": "@types/react"
     },
     {
+      "label": "@types/react-dom",
+      "file_type": "code",
+      "source_file": "frontend/package.json",
+      "source_location": "L20",
+      "id": "frontend_package_devdependencies_types_react_dom",
+      "community": 5,
+      "norm_label": "@types/react-dom"
+    },
+    {
       "label": "eslint",
       "file_type": "code",
       "source_file": "frontend/package.json",
@@ -929,6 +983,15 @@
       "id": "frontend_package_devdependencies_eslint",
       "community": 5,
       "norm_label": "eslint"
+    },
+    {
+      "label": "eslint-config-next",
+      "file_type": "code",
+      "source_file": "frontend/package.json",
+      "source_location": "L22",
+      "id": "frontend_package_devdependencies_eslint_config_next",
+      "community": 5,
+      "norm_label": "eslint-config-next"
     },
     {
       "label": "tailwindcss",
@@ -1012,6 +1075,240 @@
       "norm_label": "rootlayout()"
     },
     {
+      "label": "README.md",
+      "file_type": "document",
+      "source_file": "README.md",
+      "source_location": "L1",
+      "id": "readme_md",
+      "community": 16,
+      "norm_label": "readme.md"
+    },
+    {
+      "label": "NLP Project Development Guide",
+      "file_type": "document",
+      "source_file": "README.md",
+      "source_location": "L1",
+      "id": "nlp_project_readme_nlp_project_development_guide",
+      "community": 16,
+      "norm_label": "nlp project development guide"
+    },
+    {
+      "label": "Project Structure",
+      "file_type": "document",
+      "source_file": "README.md",
+      "source_location": "L5",
+      "id": "nlp_project_readme_project_structure",
+      "community": 16,
+      "norm_label": "project structure"
+    },
+    {
+      "label": "Development Setup",
+      "file_type": "document",
+      "source_file": "README.md",
+      "source_location": "L11",
+      "id": "nlp_project_readme_development_setup",
+      "community": 16,
+      "norm_label": "development setup"
+    },
+    {
+      "label": "CMS (Sanity Studio)",
+      "file_type": "document",
+      "source_file": "README.md",
+      "source_location": "L13",
+      "id": "nlp_project_readme_cms_sanity_studio",
+      "community": 16,
+      "norm_label": "cms (sanity studio)"
+    },
+    {
+      "label": "code:bash (cd cms)",
+      "file_type": "document",
+      "source_file": "README.md",
+      "source_location": "L15",
+      "id": "nlp_project_readme_codeblock_1",
+      "community": 16,
+      "norm_label": "code:bash (cd cms)"
+    },
+    {
+      "label": "code:bash (npm install)",
+      "file_type": "document",
+      "source_file": "README.md",
+      "source_location": "L19",
+      "id": "nlp_project_readme_codeblock_2",
+      "community": 16,
+      "norm_label": "code:bash (npm install)"
+    },
+    {
+      "label": "code:bash (npm run dev)",
+      "file_type": "document",
+      "source_file": "README.md",
+      "source_location": "L23",
+      "id": "nlp_project_readme_codeblock_3",
+      "community": 16,
+      "norm_label": "code:bash (npm run dev)"
+    },
+    {
+      "label": "Frontend (Next.js)",
+      "file_type": "document",
+      "source_file": "README.md",
+      "source_location": "L28",
+      "id": "nlp_project_readme_frontend_next_js",
+      "community": 16,
+      "norm_label": "frontend (next.js)"
+    },
+    {
+      "label": "code:bash (cd frontend)",
+      "file_type": "document",
+      "source_file": "README.md",
+      "source_location": "L30",
+      "id": "nlp_project_readme_codeblock_4",
+      "community": 16,
+      "norm_label": "code:bash (cd frontend)"
+    },
+    {
+      "label": "code:bash (npm install)",
+      "file_type": "document",
+      "source_file": "README.md",
+      "source_location": "L34",
+      "id": "nlp_project_readme_codeblock_5",
+      "community": 16,
+      "norm_label": "code:bash (npm install)"
+    },
+    {
+      "label": "code:bash (npm run dev)",
+      "file_type": "document",
+      "source_file": "README.md",
+      "source_location": "L38",
+      "id": "nlp_project_readme_codeblock_6",
+      "community": 16,
+      "norm_label": "code:bash (npm run dev)"
+    },
+    {
+      "label": "Graphify IDE Integration for the Team",
+      "file_type": "document",
+      "source_file": "README.md",
+      "source_location": "L43",
+      "id": "nlp_project_readme_graphify_ide_integration_for_the_team",
+      "community": 16,
+      "norm_label": "graphify ide integration for the team"
+    },
+    {
+      "label": "Setting Up Graphify",
+      "file_type": "document",
+      "source_file": "README.md",
+      "source_location": "L47",
+      "id": "nlp_project_readme_setting_up_graphify",
+      "community": 16,
+      "norm_label": "setting up graphify"
+    },
+    {
+      "label": "code:bash (graphify)",
+      "file_type": "document",
+      "source_file": "README.md",
+      "source_location": "L53",
+      "id": "nlp_project_readme_codeblock_7",
+      "community": 16,
+      "norm_label": "code:bash (graphify)"
+    },
+    {
+      "label": "code:bash (graphify hook install)",
+      "file_type": "document",
+      "source_file": "README.md",
+      "source_location": "L58",
+      "id": "nlp_project_readme_codeblock_8",
+      "community": 16,
+      "norm_label": "code:bash (graphify hook install)"
+    },
+    {
+      "label": "README.md",
+      "file_type": "document",
+      "source_file": "cms/README.md",
+      "source_location": "L1",
+      "id": "cms_readme_md",
+      "community": 18,
+      "norm_label": "readme.md"
+    },
+    {
+      "label": "Sanity Clean Content Studio",
+      "file_type": "document",
+      "source_file": "cms/README.md",
+      "source_location": "L1",
+      "id": "cms_readme_sanity_clean_content_studio",
+      "community": 18,
+      "norm_label": "sanity clean content studio"
+    },
+    {
+      "label": "AGENTS.md",
+      "file_type": "document",
+      "source_file": "frontend/AGENTS.md",
+      "source_location": "L1",
+      "id": "frontend_agents_md",
+      "community": 19,
+      "norm_label": "agents.md"
+    },
+    {
+      "label": "This is NOT the Next.js you know",
+      "file_type": "document",
+      "source_file": "frontend/AGENTS.md",
+      "source_location": "L3",
+      "id": "frontend_agents_this_is_not_the_next_js_you_know",
+      "community": 19,
+      "norm_label": "this is not the next.js you know"
+    },
+    {
+      "label": "CLAUDE.md",
+      "file_type": "document",
+      "source_file": "frontend/CLAUDE.md",
+      "source_location": "L1",
+      "id": "frontend_claude_md",
+      "community": 20,
+      "norm_label": "claude.md"
+    },
+    {
+      "label": "README.md",
+      "file_type": "document",
+      "source_file": "frontend/README.md",
+      "source_location": "L1",
+      "id": "frontend_readme_md",
+      "community": 17,
+      "norm_label": "readme.md"
+    },
+    {
+      "label": "Getting Started",
+      "file_type": "document",
+      "source_file": "frontend/README.md",
+      "source_location": "L3",
+      "id": "frontend_readme_getting_started",
+      "community": 17,
+      "norm_label": "getting started"
+    },
+    {
+      "label": "code:bash (npm run dev)",
+      "file_type": "document",
+      "source_file": "frontend/README.md",
+      "source_location": "L7",
+      "id": "frontend_readme_codeblock_1",
+      "community": 17,
+      "norm_label": "code:bash (npm run dev)"
+    },
+    {
+      "label": "Learn More",
+      "file_type": "document",
+      "source_file": "frontend/README.md",
+      "source_location": "L23",
+      "id": "frontend_readme_learn_more",
+      "community": 17,
+      "norm_label": "learn more"
+    },
+    {
+      "label": "Deploy on Vercel",
+      "file_type": "document",
+      "source_file": "frontend/README.md",
+      "source_location": "L32",
+      "id": "frontend_readme_deploy_on_vercel",
+      "community": 17,
+      "norm_label": "deploy on vercel"
+    },
+    {
       "label": "NLP Project Development Guide",
       "file_type": "document",
       "source_file": "README.md",
@@ -1020,9 +1317,9 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "id": "readme_nlp_project",
       "community": 6,
-      "norm_label": "nlp project development guide"
+      "norm_label": "nlp project development guide",
+      "id": "readme_nlp_project"
     },
     {
       "label": "Frontend (Next.js)",
@@ -1033,9 +1330,9 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "id": "frontend_app",
       "community": 6,
-      "norm_label": "frontend (next.js)"
+      "norm_label": "frontend (next.js)",
+      "id": "frontend_app"
     },
     {
       "label": "CMS (Sanity Studio)",
@@ -1046,9 +1343,9 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "id": "cms_backend",
       "community": 6,
-      "norm_label": "cms (sanity studio)"
+      "norm_label": "cms (sanity studio)",
+      "id": "cms_backend"
     },
     {
       "label": "Graphify Knowledge Graph",
@@ -1059,9 +1356,9 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "id": "graphify_out",
       "community": 6,
-      "norm_label": "graphify knowledge graph"
+      "norm_label": "graphify knowledge graph",
+      "id": "graphify_out"
     },
     {
       "label": "Graphify CLI",
@@ -1072,22 +1369,9 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "id": "graphify_cli",
       "community": 6,
-      "norm_label": "graphify cli"
-    },
-    {
-      "label": "MCP Server Configuration",
-      "file_type": "code",
-      "source_file": ".agents/mcp_config.json",
-      "source_location": null,
-      "source_url": null,
-      "captured_at": null,
-      "author": null,
-      "contributor": null,
-      "id": "mcp_config",
-      "community": 6,
-      "norm_label": "mcp server configuration"
+      "norm_label": "graphify cli",
+      "id": "graphify_cli"
     },
     {
       "label": "Sanity Studio Runtime Index",
@@ -1098,9 +1382,9 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "id": "sanity_runtime_index",
       "community": 6,
-      "norm_label": "sanity studio runtime index"
+      "norm_label": "sanity studio runtime index",
+      "id": "sanity_runtime_index"
     },
     {
       "label": "Next.js Agent Rules",
@@ -1111,9 +1395,9 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "id": "frontend_agents_rules",
       "community": 6,
-      "norm_label": "next.js agent rules"
+      "norm_label": "next.js agent rules",
+      "id": "frontend_agents_rules"
     },
     {
       "label": "Claude Configuration",
@@ -1124,9 +1408,9 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "id": "frontend_claude_config",
       "community": 6,
-      "norm_label": "claude configuration"
+      "norm_label": "claude configuration",
+      "id": "frontend_claude_config"
     }
   ],
   "links": [
@@ -1137,9 +1421,9 @@
       "source_file": "cms/sanity.config.ts",
       "source_location": "L4",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "cms_sanity_config_ts",
-      "target": "cms_schematypes_index_ts",
-      "confidence_score": 1.0
+      "target": "cms_schematypes_index_ts"
     },
     {
       "relation": "imports",
@@ -1148,9 +1432,9 @@
       "source_file": "cms/sanity.config.ts",
       "source_location": "L4",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "cms_sanity_config_ts",
-      "target": "schematypes_index_schematypes",
-      "confidence_score": 1.0
+      "target": "schematypes_index_schematypes"
     },
     {
       "relation": "imports_from",
@@ -1159,9 +1443,9 @@
       "source_file": "cms/.sanity/runtime/app.js",
       "source_location": "L5",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "cms_sanity_runtime_app_js",
-      "target": "cms_sanity_config_ts",
-      "confidence_score": 1.0
+      "target": "cms_sanity_config_ts"
     },
     {
       "relation": "contains",
@@ -1169,9 +1453,9 @@
       "source_file": "frontend/eslint.config.mjs",
       "source_location": "L5",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "frontend_eslint_config_mjs",
-      "target": "cms_eslint_config_mjs",
-      "confidence_score": 1.0
+      "target": "cms_eslint_config_mjs"
     },
     {
       "relation": "contains",
@@ -1179,9 +1463,9 @@
       "source_file": "frontend/package.json",
       "source_location": "L22",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "frontend_package_devdependencies",
-      "target": "cms_eslint_config_mjs",
-      "confidence_score": 1.0
+      "target": "cms_eslint_config_mjs"
     },
     {
       "relation": "contains",
@@ -1189,9 +1473,9 @@
       "source_file": "cms/tsconfig.json",
       "source_location": "L2",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "cms_tsconfig_json",
-      "target": "cms_tsconfig_compileroptions",
-      "confidence_score": 1.0
+      "target": "cms_tsconfig_compileroptions"
     },
     {
       "relation": "contains",
@@ -1199,9 +1483,9 @@
       "source_file": "cms/tsconfig.json",
       "source_location": "L16",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "cms_tsconfig_json",
-      "target": "cms_tsconfig_exclude",
-      "confidence_score": 1.0
+      "target": "cms_tsconfig_exclude"
     },
     {
       "relation": "contains",
@@ -1209,9 +1493,9 @@
       "source_file": "cms/tsconfig.json",
       "source_location": "L15",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "cms_tsconfig_json",
-      "target": "cms_tsconfig_include",
-      "confidence_score": 1.0
+      "target": "cms_tsconfig_include"
     },
     {
       "relation": "contains",
@@ -1219,9 +1503,9 @@
       "source_file": "cms/tsconfig.json",
       "source_location": "L5",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "cms_tsconfig_compileroptions",
-      "target": "cms_tsconfig_compileroptions_allowjs",
-      "confidence_score": 1.0
+      "target": "cms_tsconfig_compileroptions_allowjs"
     },
     {
       "relation": "contains",
@@ -1229,9 +1513,9 @@
       "source_file": "cms/tsconfig.json",
       "source_location": "L8",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "cms_tsconfig_compileroptions",
-      "target": "cms_tsconfig_compileroptions_forceconsistentcasinginfilenames",
-      "confidence_score": 1.0
+      "target": "cms_tsconfig_compileroptions_forceconsistentcasinginfilenames"
     },
     {
       "relation": "contains",
@@ -1239,9 +1523,9 @@
       "source_file": "cms/tsconfig.json",
       "source_location": "L13",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "cms_tsconfig_compileroptions",
-      "target": "cms_tsconfig_compileroptions_incremental",
-      "confidence_score": 1.0
+      "target": "cms_tsconfig_compileroptions_incremental"
     },
     {
       "relation": "contains",
@@ -1249,9 +1533,9 @@
       "source_file": "cms/tsconfig.json",
       "source_location": "L11",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "cms_tsconfig_compileroptions",
-      "target": "cms_tsconfig_compileroptions_isolatedmodules",
-      "confidence_score": 1.0
+      "target": "cms_tsconfig_compileroptions_isolatedmodules"
     },
     {
       "relation": "contains",
@@ -1259,9 +1543,9 @@
       "source_file": "cms/tsconfig.json",
       "source_location": "L12",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "cms_tsconfig_compileroptions",
-      "target": "cms_tsconfig_compileroptions_jsx",
-      "confidence_score": 1.0
+      "target": "cms_tsconfig_compileroptions_jsx"
     },
     {
       "relation": "contains",
@@ -1269,9 +1553,9 @@
       "source_file": "cms/tsconfig.json",
       "source_location": "L4",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "cms_tsconfig_compileroptions",
-      "target": "cms_tsconfig_compileroptions_lib",
-      "confidence_score": 1.0
+      "target": "cms_tsconfig_compileroptions_lib"
     },
     {
       "relation": "contains",
@@ -1279,9 +1563,9 @@
       "source_file": "cms/tsconfig.json",
       "source_location": "L9",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "cms_tsconfig_compileroptions",
-      "target": "cms_tsconfig_compileroptions_module",
-      "confidence_score": 1.0
+      "target": "cms_tsconfig_compileroptions_module"
     },
     {
       "relation": "contains",
@@ -1289,9 +1573,9 @@
       "source_file": "cms/tsconfig.json",
       "source_location": "L10",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "cms_tsconfig_compileroptions",
-      "target": "cms_tsconfig_compileroptions_moduledetection",
-      "confidence_score": 1.0
+      "target": "cms_tsconfig_compileroptions_moduledetection"
     },
     {
       "relation": "contains",
@@ -1299,9 +1583,9 @@
       "source_file": "cms/tsconfig.json",
       "source_location": "L6",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "cms_tsconfig_compileroptions",
-      "target": "cms_tsconfig_compileroptions_skiplibcheck",
-      "confidence_score": 1.0
+      "target": "cms_tsconfig_compileroptions_skiplibcheck"
     },
     {
       "relation": "contains",
@@ -1309,9 +1593,9 @@
       "source_file": "cms/tsconfig.json",
       "source_location": "L7",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "cms_tsconfig_compileroptions",
-      "target": "cms_tsconfig_compileroptions_strict",
-      "confidence_score": 1.0
+      "target": "cms_tsconfig_compileroptions_strict"
     },
     {
       "relation": "contains",
@@ -1319,9 +1603,9 @@
       "source_file": "cms/tsconfig.json",
       "source_location": "L3",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "cms_tsconfig_compileroptions",
-      "target": "cms_tsconfig_compileroptions_target",
-      "confidence_score": 1.0
+      "target": "cms_tsconfig_compileroptions_target"
     },
     {
       "relation": "contains",
@@ -1329,9 +1613,9 @@
       "source_file": "cms/package.json",
       "source_location": "L17",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "cms_package_json",
-      "target": "cms_package_dependencies",
-      "confidence_score": 1.0
+      "target": "cms_package_dependencies"
     },
     {
       "relation": "contains",
@@ -1339,9 +1623,9 @@
       "source_file": "cms/package.json",
       "source_location": "L24",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "cms_package_json",
-      "target": "cms_package_devdependencies",
-      "confidence_score": 1.0
+      "target": "cms_package_devdependencies"
     },
     {
       "relation": "contains",
@@ -1349,9 +1633,9 @@
       "source_file": "cms/package.json",
       "source_location": "L14",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "cms_package_json",
-      "target": "cms_package_keywords",
-      "confidence_score": 1.0
+      "target": "cms_package_keywords"
     },
     {
       "relation": "contains",
@@ -1359,9 +1643,9 @@
       "source_file": "cms/package.json",
       "source_location": "L6",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "cms_package_json",
-      "target": "cms_package_license",
-      "confidence_score": 1.0
+      "target": "cms_package_license"
     },
     {
       "relation": "contains",
@@ -1369,9 +1653,9 @@
       "source_file": "cms/package.json",
       "source_location": "L5",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "cms_package_json",
-      "target": "cms_package_main",
-      "confidence_score": 1.0
+      "target": "cms_package_main"
     },
     {
       "relation": "contains",
@@ -1379,9 +1663,9 @@
       "source_file": "cms/package.json",
       "source_location": "L2",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "cms_package_json",
-      "target": "cms_package_name",
-      "confidence_score": 1.0
+      "target": "cms_package_name"
     },
     {
       "relation": "contains",
@@ -1389,9 +1673,9 @@
       "source_file": "cms/package.json",
       "source_location": "L31",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "cms_package_json",
-      "target": "cms_package_prettier",
-      "confidence_score": 1.0
+      "target": "cms_package_prettier"
     },
     {
       "relation": "contains",
@@ -1399,9 +1683,9 @@
       "source_file": "cms/package.json",
       "source_location": "L3",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "cms_package_json",
-      "target": "cms_package_private",
-      "confidence_score": 1.0
+      "target": "cms_package_private"
     },
     {
       "relation": "contains",
@@ -1409,9 +1693,9 @@
       "source_file": "cms/package.json",
       "source_location": "L7",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "cms_package_json",
-      "target": "cms_package_scripts",
-      "confidence_score": 1.0
+      "target": "cms_package_scripts"
     },
     {
       "relation": "contains",
@@ -1419,9 +1703,9 @@
       "source_file": "cms/package.json",
       "source_location": "L4",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "cms_package_json",
-      "target": "cms_package_version",
-      "confidence_score": 1.0
+      "target": "cms_package_version"
     },
     {
       "relation": "contains",
@@ -1429,9 +1713,9 @@
       "source_file": "cms/package.json",
       "source_location": "L8",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "cms_package_scripts",
-      "target": "cms_package_scripts_build",
-      "confidence_score": 1.0
+      "target": "cms_package_scripts_build"
     },
     {
       "relation": "contains",
@@ -1439,9 +1723,9 @@
       "source_file": "cms/package.json",
       "source_location": "L9",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "cms_package_scripts",
-      "target": "cms_package_scripts_deploy",
-      "confidence_score": 1.0
+      "target": "cms_package_scripts_deploy"
     },
     {
       "relation": "contains",
@@ -1449,9 +1733,9 @@
       "source_file": "cms/package.json",
       "source_location": "L10",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "cms_package_scripts",
-      "target": "cms_package_scripts_deploy_graphql",
-      "confidence_score": 1.0
+      "target": "cms_package_scripts_deploy_graphql"
     },
     {
       "relation": "contains",
@@ -1459,9 +1743,9 @@
       "source_file": "cms/package.json",
       "source_location": "L11",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "cms_package_scripts",
-      "target": "cms_package_scripts_dev",
-      "confidence_score": 1.0
+      "target": "cms_package_scripts_dev"
     },
     {
       "relation": "contains",
@@ -1469,9 +1753,9 @@
       "source_file": "cms/package.json",
       "source_location": "L12",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "cms_package_scripts",
-      "target": "cms_package_scripts_start",
-      "confidence_score": 1.0
+      "target": "cms_package_scripts_start"
     },
     {
       "relation": "contains",
@@ -1479,9 +1763,9 @@
       "source_file": "cms/package.json",
       "source_location": "L19",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "cms_package_dependencies",
-      "target": "cms_package_dependencies_react",
-      "confidence_score": 1.0
+      "target": "cms_package_dependencies_react"
     },
     {
       "relation": "contains",
@@ -1489,9 +1773,9 @@
       "source_file": "cms/package.json",
       "source_location": "L20",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "cms_package_dependencies",
-      "target": "cms_package_dependencies_react_dom",
-      "confidence_score": 1.0
+      "target": "cms_package_dependencies_react_dom"
     },
     {
       "relation": "contains",
@@ -1499,9 +1783,9 @@
       "source_file": "cms/package.json",
       "source_location": "L21",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "cms_package_dependencies",
-      "target": "cms_package_dependencies_sanity",
-      "confidence_score": 1.0
+      "target": "cms_package_dependencies_sanity"
     },
     {
       "relation": "contains",
@@ -1509,9 +1793,9 @@
       "source_file": "cms/package.json",
       "source_location": "L18",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "cms_package_dependencies",
-      "target": "cms_package_dependencies_sanity_vision",
-      "confidence_score": 1.0
+      "target": "cms_package_dependencies_sanity_vision"
     },
     {
       "relation": "contains",
@@ -1519,9 +1803,9 @@
       "source_file": "cms/package.json",
       "source_location": "L22",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "cms_package_dependencies",
-      "target": "cms_package_dependencies_styled_components",
-      "confidence_score": 1.0
+      "target": "cms_package_dependencies_styled_components"
     },
     {
       "relation": "contains",
@@ -1529,39 +1813,9 @@
       "source_file": "cms/package.json",
       "source_location": "L27",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "cms_package_devdependencies",
-      "target": "cms_package_devdependencies_eslint",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "cms/package.json",
-      "source_location": "L25",
-      "weight": 1.0,
-      "source": "cms_package_devdependencies",
-      "target": "cms_package_devdependencies_sanity_eslint_config_studio",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "cms/package.json",
-      "source_location": "L26",
-      "weight": 1.0,
-      "source": "cms_package_devdependencies",
-      "target": "cms_package_devdependencies_types_react",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "cms/package.json",
-      "source_location": "L29",
-      "weight": 1.0,
-      "source": "cms_package_devdependencies",
-      "target": "cms_package_devdependencies_typescript",
-      "confidence_score": 1.0
+      "target": "cms_package_devdependencies_eslint"
     },
     {
       "relation": "contains",
@@ -1570,8 +1824,48 @@
       "source_location": "L28",
       "weight": 1.0,
       "source": "cms_package_devdependencies",
-      "target": "cms_package_prettier",
+      "target": "cms_package_devdependencies_prettier",
       "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "cms/package.json",
+      "source_location": "L25",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "cms_package_devdependencies",
+      "target": "cms_package_devdependencies_sanity_eslint_config_studio"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "cms/package.json",
+      "source_location": "L26",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "cms_package_devdependencies",
+      "target": "cms_package_devdependencies_types_react"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "cms/package.json",
+      "source_location": "L29",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "cms_package_devdependencies",
+      "target": "cms_package_devdependencies_typescript"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "cms/package.json",
+      "source_location": "L28",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "cms_package_devdependencies",
+      "target": "cms_package_prettier"
     },
     {
       "relation": "contains",
@@ -1579,9 +1873,9 @@
       "source_file": "frontend/package.json",
       "source_location": "L20",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "frontend_package_devdependencies",
-      "target": "cms_package_devdependencies_types_react",
-      "confidence_score": 1.0
+      "target": "cms_package_devdependencies_types_react"
     },
     {
       "relation": "contains",
@@ -1589,9 +1883,9 @@
       "source_file": "cms/package.json",
       "source_location": "L32",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "cms_package_prettier",
-      "target": "cms_package_prettier_bracketspacing",
-      "confidence_score": 1.0
+      "target": "cms_package_prettier_bracketspacing"
     },
     {
       "relation": "contains",
@@ -1599,9 +1893,9 @@
       "source_file": "cms/package.json",
       "source_location": "L33",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "cms_package_prettier",
-      "target": "cms_package_prettier_printwidth",
-      "confidence_score": 1.0
+      "target": "cms_package_prettier_printwidth"
     },
     {
       "relation": "contains",
@@ -1609,9 +1903,9 @@
       "source_file": "cms/package.json",
       "source_location": "L34",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "cms_package_prettier",
-      "target": "cms_package_prettier_semi",
-      "confidence_score": 1.0
+      "target": "cms_package_prettier_semi"
     },
     {
       "relation": "contains",
@@ -1619,9 +1913,9 @@
       "source_file": "cms/package.json",
       "source_location": "L35",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "cms_package_prettier",
-      "target": "cms_package_prettier_singlequote",
-      "confidence_score": 1.0
+      "target": "cms_package_prettier_singlequote"
     },
     {
       "relation": "contains",
@@ -1629,9 +1923,9 @@
       "source_file": "cms/schemaTypes/postType.ts",
       "source_location": "L2",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "cms_schematypes_posttype_ts",
-      "target": "schematypes_posttype_posttype",
-      "confidence_score": 1.0
+      "target": "schematypes_posttype_posttype"
     },
     {
       "relation": "contains",
@@ -1639,9 +1933,9 @@
       "source_file": "cms/schemaTypes/diagnosisType.ts",
       "source_location": "L3",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "cms_schematypes_diagnosistype_ts",
-      "target": "schematypes_diagnosistype_diagnosis",
-      "confidence_score": 1.0
+      "target": "schematypes_diagnosistype_diagnosis"
     },
     {
       "relation": "imports_from",
@@ -1650,9 +1944,9 @@
       "source_file": "cms/schemaTypes/index.ts",
       "source_location": "L4",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "cms_schematypes_index_ts",
-      "target": "cms_schematypes_diagnosistype_ts",
-      "confidence_score": 1.0
+      "target": "cms_schematypes_diagnosistype_ts"
     },
     {
       "relation": "imports",
@@ -1661,9 +1955,9 @@
       "source_file": "cms/schemaTypes/index.ts",
       "source_location": "L4",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "cms_schematypes_index_ts",
-      "target": "schematypes_diagnosistype_diagnosis",
-      "confidence_score": 1.0
+      "target": "schematypes_diagnosistype_diagnosis"
     },
     {
       "relation": "imports_from",
@@ -1672,9 +1966,9 @@
       "source_file": "cms/schemaTypes/index.ts",
       "source_location": "L3",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "cms_schematypes_index_ts",
-      "target": "cms_schematypes_replytype_ts",
-      "confidence_score": 1.0
+      "target": "cms_schematypes_replytype_ts"
     },
     {
       "relation": "contains",
@@ -1682,9 +1976,9 @@
       "source_file": "cms/schemaTypes/replyType.ts",
       "source_location": "L3",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "cms_schematypes_replytype_ts",
-      "target": "schematypes_replytype_reply",
-      "confidence_score": 1.0
+      "target": "schematypes_replytype_reply"
     },
     {
       "relation": "imports",
@@ -1693,9 +1987,9 @@
       "source_file": "cms/schemaTypes/index.ts",
       "source_location": "L3",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "cms_schematypes_index_ts",
-      "target": "schematypes_replytype_reply",
-      "confidence_score": 1.0
+      "target": "schematypes_replytype_reply"
     },
     {
       "relation": "imports_from",
@@ -1704,9 +1998,9 @@
       "source_file": "cms/schemaTypes/index.ts",
       "source_location": "L1",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "cms_schematypes_index_ts",
-      "target": "cms_schematypes_scenariotype_ts",
-      "confidence_score": 1.0
+      "target": "cms_schematypes_scenariotype_ts"
     },
     {
       "relation": "imports_from",
@@ -1715,8 +2009,19 @@
       "source_file": "cms/schemaTypes/index.ts",
       "source_location": "L2",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "cms_schematypes_index_ts",
-      "target": "cms_schematypes_stagetype_ts",
+      "target": "cms_schematypes_stagetype_ts"
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "cms/schemaTypes/index.ts",
+      "source_location": "L5",
+      "weight": 1.0,
+      "source": "cms_schematypes_index_ts",
+      "target": "cms_schematypes_valuetype_ts",
       "confidence_score": 1.0
     },
     {
@@ -1725,9 +2030,9 @@
       "source_file": "cms/schemaTypes/index.ts",
       "source_location": "L6",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "cms_schematypes_index_ts",
-      "target": "schematypes_index_schematypes",
-      "confidence_score": 1.0
+      "target": "schematypes_index_schematypes"
     },
     {
       "relation": "imports",
@@ -1736,9 +2041,9 @@
       "source_file": "cms/schemaTypes/index.ts",
       "source_location": "L1",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "cms_schematypes_index_ts",
-      "target": "schematypes_scenariotype_scenario",
-      "confidence_score": 1.0
+      "target": "schematypes_scenariotype_scenario"
     },
     {
       "relation": "imports",
@@ -1747,8 +2052,29 @@
       "source_file": "cms/schemaTypes/index.ts",
       "source_location": "L2",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "cms_schematypes_index_ts",
-      "target": "schematypes_stagetype_stage",
+      "target": "schematypes_stagetype_stage"
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "cms/schemaTypes/index.ts",
+      "source_location": "L5",
+      "weight": 1.0,
+      "source": "cms_schematypes_index_ts",
+      "target": "schematypes_valuetype_valuetype",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "cms/schemaTypes/valueType.ts",
+      "source_location": "L3",
+      "weight": 1.0,
+      "source": "cms_schematypes_valuetype_ts",
+      "target": "schematypes_valuetype_valuetype",
       "confidence_score": 1.0
     },
     {
@@ -1757,9 +2083,9 @@
       "source_file": "cms/schemaTypes/stageType.ts",
       "source_location": "L3",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "cms_schematypes_stagetype_ts",
-      "target": "schematypes_stagetype_stage",
-      "confidence_score": 1.0
+      "target": "schematypes_stagetype_stage"
     },
     {
       "relation": "contains",
@@ -1767,8 +2093,18 @@
       "source_file": "cms/schemaTypes/scenarioType.ts",
       "source_location": "L3",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "cms_schematypes_scenariotype_ts",
-      "target": "schematypes_scenariotype_scenario",
+      "target": "schematypes_scenariotype_scenario"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "frontend/eslint.config.mjs",
+      "source_location": "L5",
+      "weight": 1.0,
+      "source": "frontend_eslint_config_mjs",
+      "target": "frontend_eslint_config_eslintconfig",
       "confidence_score": 1.0
     },
     {
@@ -1777,9 +2113,9 @@
       "source_file": "frontend/tsconfig.json",
       "source_location": "L2",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "frontend_tsconfig_json",
-      "target": "frontend_tsconfig_compileroptions",
-      "confidence_score": 1.0
+      "target": "frontend_tsconfig_compileroptions"
     },
     {
       "relation": "contains",
@@ -1787,9 +2123,9 @@
       "source_file": "frontend/tsconfig.json",
       "source_location": "L33",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "frontend_tsconfig_json",
-      "target": "frontend_tsconfig_exclude",
-      "confidence_score": 1.0
+      "target": "frontend_tsconfig_exclude"
     },
     {
       "relation": "contains",
@@ -1797,9 +2133,9 @@
       "source_file": "frontend/tsconfig.json",
       "source_location": "L25",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "frontend_tsconfig_json",
-      "target": "frontend_tsconfig_include",
-      "confidence_score": 1.0
+      "target": "frontend_tsconfig_include"
     },
     {
       "relation": "contains",
@@ -1807,9 +2143,9 @@
       "source_file": "frontend/tsconfig.json",
       "source_location": "L5",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "frontend_tsconfig_compileroptions",
-      "target": "frontend_tsconfig_compileroptions_allowjs",
-      "confidence_score": 1.0
+      "target": "frontend_tsconfig_compileroptions_allowjs"
     },
     {
       "relation": "contains",
@@ -1817,9 +2153,9 @@
       "source_file": "frontend/tsconfig.json",
       "source_location": "L9",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "frontend_tsconfig_compileroptions",
-      "target": "frontend_tsconfig_compileroptions_esmoduleinterop",
-      "confidence_score": 1.0
+      "target": "frontend_tsconfig_compileroptions_esmoduleinterop"
     },
     {
       "relation": "contains",
@@ -1827,9 +2163,9 @@
       "source_file": "frontend/tsconfig.json",
       "source_location": "L15",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "frontend_tsconfig_compileroptions",
-      "target": "frontend_tsconfig_compileroptions_incremental",
-      "confidence_score": 1.0
+      "target": "frontend_tsconfig_compileroptions_incremental"
     },
     {
       "relation": "contains",
@@ -1837,9 +2173,9 @@
       "source_file": "frontend/tsconfig.json",
       "source_location": "L13",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "frontend_tsconfig_compileroptions",
-      "target": "frontend_tsconfig_compileroptions_isolatedmodules",
-      "confidence_score": 1.0
+      "target": "frontend_tsconfig_compileroptions_isolatedmodules"
     },
     {
       "relation": "contains",
@@ -1847,9 +2183,9 @@
       "source_file": "frontend/tsconfig.json",
       "source_location": "L14",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "frontend_tsconfig_compileroptions",
-      "target": "frontend_tsconfig_compileroptions_jsx",
-      "confidence_score": 1.0
+      "target": "frontend_tsconfig_compileroptions_jsx"
     },
     {
       "relation": "contains",
@@ -1857,9 +2193,9 @@
       "source_file": "frontend/tsconfig.json",
       "source_location": "L4",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "frontend_tsconfig_compileroptions",
-      "target": "frontend_tsconfig_compileroptions_lib",
-      "confidence_score": 1.0
+      "target": "frontend_tsconfig_compileroptions_lib"
     },
     {
       "relation": "contains",
@@ -1867,9 +2203,9 @@
       "source_file": "frontend/tsconfig.json",
       "source_location": "L10",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "frontend_tsconfig_compileroptions",
-      "target": "frontend_tsconfig_compileroptions_module",
-      "confidence_score": 1.0
+      "target": "frontend_tsconfig_compileroptions_module"
     },
     {
       "relation": "contains",
@@ -1877,9 +2213,9 @@
       "source_file": "frontend/tsconfig.json",
       "source_location": "L11",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "frontend_tsconfig_compileroptions",
-      "target": "frontend_tsconfig_compileroptions_moduleresolution",
-      "confidence_score": 1.0
+      "target": "frontend_tsconfig_compileroptions_moduleresolution"
     },
     {
       "relation": "contains",
@@ -1887,9 +2223,9 @@
       "source_file": "frontend/tsconfig.json",
       "source_location": "L8",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "frontend_tsconfig_compileroptions",
-      "target": "frontend_tsconfig_compileroptions_noemit",
-      "confidence_score": 1.0
+      "target": "frontend_tsconfig_compileroptions_noemit"
     },
     {
       "relation": "contains",
@@ -1897,9 +2233,9 @@
       "source_file": "frontend/tsconfig.json",
       "source_location": "L21",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "frontend_tsconfig_compileroptions",
-      "target": "frontend_tsconfig_compileroptions_paths",
-      "confidence_score": 1.0
+      "target": "frontend_tsconfig_compileroptions_paths"
     },
     {
       "relation": "contains",
@@ -1907,9 +2243,9 @@
       "source_file": "frontend/tsconfig.json",
       "source_location": "L16",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "frontend_tsconfig_compileroptions",
-      "target": "frontend_tsconfig_compileroptions_plugins",
-      "confidence_score": 1.0
+      "target": "frontend_tsconfig_compileroptions_plugins"
     },
     {
       "relation": "contains",
@@ -1917,9 +2253,9 @@
       "source_file": "frontend/tsconfig.json",
       "source_location": "L12",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "frontend_tsconfig_compileroptions",
-      "target": "frontend_tsconfig_compileroptions_resolvejsonmodule",
-      "confidence_score": 1.0
+      "target": "frontend_tsconfig_compileroptions_resolvejsonmodule"
     },
     {
       "relation": "contains",
@@ -1927,9 +2263,9 @@
       "source_file": "frontend/tsconfig.json",
       "source_location": "L6",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "frontend_tsconfig_compileroptions",
-      "target": "frontend_tsconfig_compileroptions_skiplibcheck",
-      "confidence_score": 1.0
+      "target": "frontend_tsconfig_compileroptions_skiplibcheck"
     },
     {
       "relation": "contains",
@@ -1937,9 +2273,9 @@
       "source_file": "frontend/tsconfig.json",
       "source_location": "L7",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "frontend_tsconfig_compileroptions",
-      "target": "frontend_tsconfig_compileroptions_strict",
-      "confidence_score": 1.0
+      "target": "frontend_tsconfig_compileroptions_strict"
     },
     {
       "relation": "contains",
@@ -1947,9 +2283,9 @@
       "source_file": "frontend/tsconfig.json",
       "source_location": "L3",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "frontend_tsconfig_compileroptions",
-      "target": "frontend_tsconfig_compileroptions_target",
-      "confidence_score": 1.0
+      "target": "frontend_tsconfig_compileroptions_target"
     },
     {
       "relation": "contains",
@@ -1957,8 +2293,18 @@
       "source_file": "frontend/tsconfig.json",
       "source_location": "L22",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "frontend_tsconfig_compileroptions_paths",
-      "target": "frontend_tsconfig_paths",
+      "target": "frontend_tsconfig_paths"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "frontend/next.config.ts",
+      "source_location": "L3",
+      "weight": 1.0,
+      "source": "frontend_next_config_ts",
+      "target": "frontend_next_config_nextconfig",
       "confidence_score": 1.0
     },
     {
@@ -1967,9 +2313,9 @@
       "source_file": "frontend/postcss.config.mjs",
       "source_location": "L1",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "frontend_postcss_config_mjs",
-      "target": "frontend_postcss_config_config",
-      "confidence_score": 1.0
+      "target": "frontend_postcss_config_config"
     },
     {
       "relation": "contains",
@@ -1977,9 +2323,9 @@
       "source_file": "frontend/package.json",
       "source_location": "L11",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "frontend_package_json",
-      "target": "frontend_package_dependencies",
-      "confidence_score": 1.0
+      "target": "frontend_package_dependencies"
     },
     {
       "relation": "contains",
@@ -1987,9 +2333,9 @@
       "source_file": "frontend/package.json",
       "source_location": "L16",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "frontend_package_json",
-      "target": "frontend_package_devdependencies",
-      "confidence_score": 1.0
+      "target": "frontend_package_devdependencies"
     },
     {
       "relation": "contains",
@@ -1997,9 +2343,9 @@
       "source_file": "frontend/package.json",
       "source_location": "L2",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "frontend_package_json",
-      "target": "frontend_package_name",
-      "confidence_score": 1.0
+      "target": "frontend_package_name"
     },
     {
       "relation": "contains",
@@ -2007,9 +2353,9 @@
       "source_file": "frontend/package.json",
       "source_location": "L4",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "frontend_package_json",
-      "target": "frontend_package_private",
-      "confidence_score": 1.0
+      "target": "frontend_package_private"
     },
     {
       "relation": "contains",
@@ -2017,9 +2363,9 @@
       "source_file": "frontend/package.json",
       "source_location": "L5",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "frontend_package_json",
-      "target": "frontend_package_scripts",
-      "confidence_score": 1.0
+      "target": "frontend_package_scripts"
     },
     {
       "relation": "contains",
@@ -2027,9 +2373,9 @@
       "source_file": "frontend/package.json",
       "source_location": "L3",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "frontend_package_json",
-      "target": "frontend_package_version",
-      "confidence_score": 1.0
+      "target": "frontend_package_version"
     },
     {
       "relation": "contains",
@@ -2037,9 +2383,9 @@
       "source_file": "frontend/package.json",
       "source_location": "L7",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "frontend_package_scripts",
-      "target": "frontend_package_scripts_build",
-      "confidence_score": 1.0
+      "target": "frontend_package_scripts_build"
     },
     {
       "relation": "contains",
@@ -2047,9 +2393,9 @@
       "source_file": "frontend/package.json",
       "source_location": "L6",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "frontend_package_scripts",
-      "target": "frontend_package_scripts_dev",
-      "confidence_score": 1.0
+      "target": "frontend_package_scripts_dev"
     },
     {
       "relation": "contains",
@@ -2057,9 +2403,9 @@
       "source_file": "frontend/package.json",
       "source_location": "L9",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "frontend_package_scripts",
-      "target": "frontend_package_scripts_lint",
-      "confidence_score": 1.0
+      "target": "frontend_package_scripts_lint"
     },
     {
       "relation": "contains",
@@ -2067,9 +2413,9 @@
       "source_file": "frontend/package.json",
       "source_location": "L8",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "frontend_package_scripts",
-      "target": "frontend_package_scripts_start",
-      "confidence_score": 1.0
+      "target": "frontend_package_scripts_start"
     },
     {
       "relation": "contains",
@@ -2077,9 +2423,9 @@
       "source_file": "frontend/package.json",
       "source_location": "L12",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "frontend_package_dependencies",
-      "target": "frontend_package_dependencies_next",
-      "confidence_score": 1.0
+      "target": "frontend_package_dependencies_next"
     },
     {
       "relation": "contains",
@@ -2087,9 +2433,9 @@
       "source_file": "frontend/package.json",
       "source_location": "L13",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "frontend_package_dependencies",
-      "target": "frontend_package_dependencies_react",
-      "confidence_score": 1.0
+      "target": "frontend_package_dependencies_react"
     },
     {
       "relation": "contains",
@@ -2097,9 +2443,9 @@
       "source_file": "frontend/package.json",
       "source_location": "L14",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "frontend_package_dependencies",
-      "target": "frontend_package_dependencies_react_dom",
-      "confidence_score": 1.0
+      "target": "frontend_package_dependencies_react_dom"
     },
     {
       "relation": "contains",
@@ -2107,8 +2453,18 @@
       "source_file": "frontend/package.json",
       "source_location": "L21",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "frontend_package_devdependencies",
-      "target": "frontend_package_devdependencies_eslint",
+      "target": "frontend_package_devdependencies_eslint"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "frontend/package.json",
+      "source_location": "L22",
+      "weight": 1.0,
+      "source": "frontend_package_devdependencies",
+      "target": "frontend_package_devdependencies_eslint_config_next",
       "confidence_score": 1.0
     },
     {
@@ -2117,9 +2473,9 @@
       "source_file": "frontend/package.json",
       "source_location": "L23",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "frontend_package_devdependencies",
-      "target": "frontend_package_devdependencies_tailwindcss",
-      "confidence_score": 1.0
+      "target": "frontend_package_devdependencies_tailwindcss"
     },
     {
       "relation": "contains",
@@ -2127,9 +2483,9 @@
       "source_file": "frontend/package.json",
       "source_location": "L17",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "frontend_package_devdependencies",
-      "target": "frontend_package_devdependencies_tailwindcss_postcss",
-      "confidence_score": 1.0
+      "target": "frontend_package_devdependencies_tailwindcss_postcss"
     },
     {
       "relation": "contains",
@@ -2137,9 +2493,9 @@
       "source_file": "frontend/package.json",
       "source_location": "L18",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "frontend_package_devdependencies",
-      "target": "frontend_package_devdependencies_types_node",
-      "confidence_score": 1.0
+      "target": "frontend_package_devdependencies_types_node"
     },
     {
       "relation": "contains",
@@ -2147,8 +2503,18 @@
       "source_file": "frontend/package.json",
       "source_location": "L19",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "frontend_package_devdependencies",
-      "target": "frontend_package_devdependencies_types_react",
+      "target": "frontend_package_devdependencies_types_react"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "frontend/package.json",
+      "source_location": "L20",
+      "weight": 1.0,
+      "source": "frontend_package_devdependencies",
+      "target": "frontend_package_devdependencies_types_react_dom",
       "confidence_score": 1.0
     },
     {
@@ -2157,9 +2523,9 @@
       "source_file": "frontend/package.json",
       "source_location": "L24",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "frontend_package_devdependencies",
-      "target": "frontend_package_devdependencies_typescript",
-      "confidence_score": 1.0
+      "target": "frontend_package_devdependencies_typescript"
     },
     {
       "relation": "contains",
@@ -2167,9 +2533,9 @@
       "source_file": "frontend/app/page.tsx",
       "source_location": "L3",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "frontend_app_page_tsx",
-      "target": "app_page_home",
-      "confidence_score": 1.0
+      "target": "app_page_home"
     },
     {
       "relation": "contains",
@@ -2177,9 +2543,9 @@
       "source_file": "frontend/app/layout.tsx",
       "source_location": "L10",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "frontend_app_layout_tsx",
-      "target": "app_layout_geistmono",
-      "confidence_score": 1.0
+      "target": "app_layout_geistmono"
     },
     {
       "relation": "contains",
@@ -2187,9 +2553,9 @@
       "source_file": "frontend/app/layout.tsx",
       "source_location": "L5",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "frontend_app_layout_tsx",
-      "target": "app_layout_geistsans",
-      "confidence_score": 1.0
+      "target": "app_layout_geistsans"
     },
     {
       "relation": "contains",
@@ -2197,9 +2563,9 @@
       "source_file": "frontend/app/layout.tsx",
       "source_location": "L15",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "frontend_app_layout_tsx",
-      "target": "app_layout_metadata",
-      "confidence_score": 1.0
+      "target": "app_layout_metadata"
     },
     {
       "relation": "contains",
@@ -2207,8 +2573,218 @@
       "source_file": "frontend/app/layout.tsx",
       "source_location": "L20",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "frontend_app_layout_tsx",
-      "target": "app_layout_rootlayout",
+      "target": "app_layout_rootlayout"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "README.md",
+      "source_location": "L1",
+      "weight": 1.0,
+      "source": "readme_md",
+      "target": "nlp_project_readme_nlp_project_development_guide",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "README.md",
+      "source_location": "L11",
+      "weight": 1.0,
+      "source": "nlp_project_readme_nlp_project_development_guide",
+      "target": "nlp_project_readme_development_setup",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "README.md",
+      "source_location": "L43",
+      "weight": 1.0,
+      "source": "nlp_project_readme_nlp_project_development_guide",
+      "target": "nlp_project_readme_graphify_ide_integration_for_the_team",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "README.md",
+      "source_location": "L5",
+      "weight": 1.0,
+      "source": "nlp_project_readme_nlp_project_development_guide",
+      "target": "nlp_project_readme_project_structure",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "README.md",
+      "source_location": "L13",
+      "weight": 1.0,
+      "source": "nlp_project_readme_development_setup",
+      "target": "nlp_project_readme_cms_sanity_studio",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "README.md",
+      "source_location": "L28",
+      "weight": 1.0,
+      "source": "nlp_project_readme_development_setup",
+      "target": "nlp_project_readme_frontend_next_js",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "README.md",
+      "source_location": "L15",
+      "weight": 1.0,
+      "source": "nlp_project_readme_cms_sanity_studio",
+      "target": "nlp_project_readme_codeblock_1",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "README.md",
+      "source_location": "L19",
+      "weight": 1.0,
+      "source": "nlp_project_readme_cms_sanity_studio",
+      "target": "nlp_project_readme_codeblock_2",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "README.md",
+      "source_location": "L23",
+      "weight": 1.0,
+      "source": "nlp_project_readme_cms_sanity_studio",
+      "target": "nlp_project_readme_codeblock_3",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "README.md",
+      "source_location": "L30",
+      "weight": 1.0,
+      "source": "nlp_project_readme_frontend_next_js",
+      "target": "nlp_project_readme_codeblock_4",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "README.md",
+      "source_location": "L34",
+      "weight": 1.0,
+      "source": "nlp_project_readme_frontend_next_js",
+      "target": "nlp_project_readme_codeblock_5",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "README.md",
+      "source_location": "L38",
+      "weight": 1.0,
+      "source": "nlp_project_readme_frontend_next_js",
+      "target": "nlp_project_readme_codeblock_6",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "README.md",
+      "source_location": "L47",
+      "weight": 1.0,
+      "source": "nlp_project_readme_graphify_ide_integration_for_the_team",
+      "target": "nlp_project_readme_setting_up_graphify",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "README.md",
+      "source_location": "L53",
+      "weight": 1.0,
+      "source": "nlp_project_readme_setting_up_graphify",
+      "target": "nlp_project_readme_codeblock_7",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "README.md",
+      "source_location": "L58",
+      "weight": 1.0,
+      "source": "nlp_project_readme_setting_up_graphify",
+      "target": "nlp_project_readme_codeblock_8",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "cms/README.md",
+      "source_location": "L1",
+      "weight": 1.0,
+      "source": "cms_readme_md",
+      "target": "cms_readme_sanity_clean_content_studio",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "frontend/AGENTS.md",
+      "source_location": "L3",
+      "weight": 1.0,
+      "source": "frontend_agents_md",
+      "target": "frontend_agents_this_is_not_the_next_js_you_know",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "frontend/README.md",
+      "source_location": "L32",
+      "weight": 1.0,
+      "source": "frontend_readme_md",
+      "target": "frontend_readme_deploy_on_vercel",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "frontend/README.md",
+      "source_location": "L3",
+      "weight": 1.0,
+      "source": "frontend_readme_md",
+      "target": "frontend_readme_getting_started",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "frontend/README.md",
+      "source_location": "L23",
+      "weight": 1.0,
+      "source": "frontend_readme_md",
+      "target": "frontend_readme_learn_more",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "frontend/README.md",
+      "source_location": "L7",
+      "weight": 1.0,
+      "source": "frontend_readme_getting_started",
+      "target": "frontend_readme_codeblock_1",
       "confidence_score": 1.0
     },
     {
@@ -2250,16 +2826,6 @@
       "weight": 1.0,
       "source": "readme_nlp_project",
       "target": "graphify_out"
-    },
-    {
-      "relation": "references",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "README.md",
-      "source_location": null,
-      "weight": 1.0,
-      "source": "readme_nlp_project",
-      "target": "mcp_config"
     },
     {
       "relation": "references",
