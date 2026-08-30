@@ -1,4 +1,5 @@
 import { defineField, defineType } from 'sanity'
+import { ScenarioUrlDisplay } from '../components/UrlDisplay'
 
 export const scenario = defineType({
   name: 'scenario',
@@ -45,6 +46,15 @@ export const scenario = defineType({
       type: 'slug',
       options: { source: 'title' },
       validation: (rule) => rule.required(),
+    }),
+    defineField({
+      name: 'fullUrl',
+      title: 'Deelbare URL',
+      description: 'Stuur deze link naar deelnemers',
+      type: 'string',
+      components: {
+        input: ScenarioUrlDisplay,
+      },
     }),
     defineField({
       name: 'prologue',

@@ -1,4 +1,5 @@
 import {defineField, defineType} from 'sanity'
+import {BatchUrlDisplay} from '../components/UrlDisplay'
 
 export const batch = defineType({
   name: 'batch',
@@ -21,6 +22,15 @@ export const batch = defineType({
         slugify: (source) => source,
       },
       validation: (rule) => rule.required(),
+    }),
+    defineField({
+      name: 'fullUrl',
+      title: 'Deelbare URL',
+      description: 'Stuur deze link naar deelnemers',
+      type: 'string',
+      components: {
+        input: BatchUrlDisplay,
+      },
     }),
   ],
 })
