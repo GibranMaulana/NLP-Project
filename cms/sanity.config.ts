@@ -2,6 +2,8 @@ import {defineConfig} from 'sanity'
 import {structureTool} from 'sanity/structure'
 import {visionTool} from '@sanity/vision'
 import {schemaTypes} from './schemaTypes'
+import {publishBatchWithScenariosAction} from './actions/publishBatchAction'
+import {attachAllDiagnosesAction} from './actions/attachDiagnosesAction'
 
 export default defineConfig({
   name: 'default',
@@ -10,9 +12,38 @@ export default defineConfig({
   projectId: 'v8udsf47',
   dataset: 'production',
 
-  plugins: [structureTool(), visionTool()],
+  plugins: [
+    structureTool({
+      structure: (S) =>
+        S.list()
+          .title('Content')
+          .items([
+            S.listItem()
+              .title('Settings')
+              .child(S.document().schemaType('settings').documentId('settings')),
+            S.divider(),
+            ...S.documentTypeListItems().filter(
+              (listItem) => !['settings'].includes(listItem.getId() as string)
+            ),
+          ]),
+    }),
+    visionTool(),
+  ],
 
   schema: {
     types: schemaTypes,
   },
+
+  document: {
+    actions: (prev, context) => {
+      if (context.schemaType === 'batch') {
+        return [...prev, publishBatchWithScenariosAction]
+      }
+      if (context.schemaType === 'scenario') {
+        return [...prev, attachAllDiagnosesAction]
+      }
+      return prev
+    },
+  },
 })
+

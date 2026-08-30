@@ -2,43 +2,43 @@ import { defineField, defineType } from "sanity";
 
 export const stage = defineType({
   name: "stage",
-  title: "Fase",
+  title: "Stage",
   type: "object",
   fields: [
     defineField({
       name: "title",
-      title: "Fasetitel",
+      title: "Stage Title",
       type: "string",
-      description: "bijv., 'Fase 1: Jebakan Generalisasi'",
+      description: "e.g., 'Babak 1: Jebakan Generalisasi'",
       validation: (rule) => rule.required(),
     }),
     defineField({
       name: "speaker",
-      title: "Spreker / NPC-naam",
+      title: "Speaker / NPC Name",
       type: "string",
-      description: "bijv., 'Rina - VP Sales'",
+      description: "e.g., 'Rina - VP Sales'",
     }),
     defineField({
       name: "botPrompt",
-      title: "Bot-prompt",
+      title: "Bot Prompt",
       type: "text",
       rows: 4,
       validation: (rule) => rule.required(),
     }),
     defineField({
       name: "replies",
-      title: "Reacties",
+      title: "Replies",
       type: "array",
       of: [{ type: "reply" }],
       validation: (rule) =>
         rule.custom((replies: any) => {
           if (!replies || replies.length !== 3) {
-            return 'U moet precies 3 reacties opgeven.'
+            return 'You must provide exactly 3 replies.'
           }
           const categories = replies.map((r: any) => r.valueType?._ref).filter(Boolean)
           const uniqueCategories = new Set(categories)
           if (uniqueCategories.size !== 3) {
-            return 'Elke reactie moet een unieke Categorie / Patroontype hebben (geen duplicaten).'
+            return 'Each reply must have a unique Category / Pattern Type (no duplicates).'
           }
           return true
         }),

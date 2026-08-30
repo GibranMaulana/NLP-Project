@@ -2,21 +2,21 @@ import { defineField, defineType } from "sanity";
 
 export const valueType = defineType({
   name: "valueType",
-  title: "Waardetype / Patroon",
+  title: "Value Type / Pattern",
   type: "document",
   fields: [
     defineField({
       name: "title",
-      title: "Titel",
+      title: "Title",
       type: "string",
-      description: "bijv. 'Meta Challenge (Tepat)'",
+      description: "e.g. 'Meta Challenge (Tepat)'",
       validation: (rule) => rule.required(),
     }),
     defineField({
       name: "value",
-      title: "Waarde / ID",
+      title: "Value / ID",
       type: "string",
-      description: "bijv. 'meta_challenge'",
+      description: "e.g. 'meta_challenge'",
       validation: (rule) => rule.required(),
     }),
   ],
