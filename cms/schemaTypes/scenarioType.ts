@@ -1,4 +1,4 @@
-import {defineField, defineType} from 'sanity'
+import { defineField, defineType } from 'sanity'
 
 export const scenario = defineType({
   name: 'scenario',
@@ -30,7 +30,7 @@ export const scenario = defineType({
       title: 'Batch',
       description: 'De batch waartoe dit scenario behoort',
       type: 'reference',
-      to: [{type: 'batch'}],
+      to: [{ type: 'batch' }],
       validation: (rule) => rule.required(),
     }),
     defineField({
@@ -43,7 +43,7 @@ export const scenario = defineType({
       name: 'slug',
       title: 'Slug',
       type: 'slug',
-      options: {source: 'title'},
+      options: { source: 'title' },
       validation: (rule) => rule.required(),
     }),
     defineField({
@@ -51,14 +51,14 @@ export const scenario = defineType({
       title: 'Proloog',
       description: 'Inleidend verhaal of context voor dit scenario',
       type: 'array',
-      of: [{type: 'block'}],
+      of: [{ type: 'block' }],
     }),
     defineField({
       name: 'stages',
       title: 'Fasen',
       description: 'De lineaire voortgang van het gesprek',
       type: 'array',
-      of: [{type: 'stage'}],
+      of: [{ type: 'stage' }],
       validation: (rule) => rule.required().min(1),
     }),
     defineField({
@@ -67,7 +67,7 @@ export const scenario = defineType({
       type: 'array',
       of: [{
         type: 'reference',
-        to: [{type: 'diagnosis'}]
+        to: [{ type: 'diagnosis' }]
       }],
       validation: (rule) =>
         rule.required().min(1).max(7).custom((diagnoses: any[] | undefined) => {

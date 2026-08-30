@@ -3,10 +3,10 @@
   "1": "cms/package.json",
   "2": "compilerOptions",
   "3": "frontend/package.json",
-  "4": "index.ts",
+  "4": "sanity",
   "5": "devDependencies",
   "6": "NLP Project Development Guide",
-  "7": "dependencies",
+  "7": "backup/index.ts",
   "8": "devDependencies",
   "9": "include",
   "10": "layout.tsx",
@@ -20,5 +20,6 @@
   "18": "cms/README.md",
   "19": "AGENTS.md",
   "20": "CLAUDE.md",
-  "21": "sanity.cli.ts"
+  "21": "sanity.cli.ts",
+  "22": "scripts"
 }

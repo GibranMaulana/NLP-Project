@@ -1,16 +1,16 @@
-# Graph Report - NLP-Project  (2026-08-29)
+# Graph Report - NLP-Project  (2026-08-30)
 
 ## Corpus Check
-- 24 files · ~2,408 words
+- 32 files · ~3,356 words
 - Verdict: corpus is large enough that graph structure adds value.
 
 ## Summary
-- 186 nodes · 182 edges · 22 communities (17 shown, 5 thin omitted)
-- Extraction: 99% EXTRACTED · 1% INFERRED · 0% AMBIGUOUS · INFERRED: 1 edges (avg confidence: 0.8)
+- 202 nodes · 213 edges · 23 communities (18 shown, 5 thin omitted)
+- Extraction: 100% EXTRACTED · 0% INFERRED · 0% AMBIGUOUS · INFERRED: 1 edges (avg confidence: 0.8)
 - Token cost: 0 input · 0 output
 
 ## Graph Freshness
-- Built from commit: `7a504880`
+- Built from commit: `066a3ce3`
 - Run `git rev-parse HEAD` and compare to check if the graph is stale.
 - Run `graphify update .` after code changes (no API cost).
 
@@ -19,10 +19,10 @@
 - cms/package.json
 - compilerOptions
 - frontend/package.json
-- index.ts
+- sanity
 - devDependencies
 - NLP Project Development Guide
-- dependencies
+- backup/index.ts
 - devDependencies
 - include
 - layout.tsx
@@ -33,18 +33,19 @@
 - frontend/README.md
 - cms/README.md
 - AGENTS.md
+- scripts
 
 ## God Nodes (most connected - your core abstractions)
 1. `compilerOptions` - 16 edges
-2. `compilerOptions` - 12 edges
-3. `sanity` - 8 edges
+2. `sanity` - 15 edges
+3. `compilerOptions` - 12 edges
 4. `NLP Project Development Guide` - 8 edges
 5. `include` - 7 edges
 6. `scripts` - 6 edges
 7. `prettier` - 5 edges
 8. `scripts` - 5 edges
 9. `lib` - 4 edges
-10. `lib` - 4 edges
+10. `CMS (Sanity Studio)` - 4 edges
 
 ## Surprising Connections (you probably didn't know these)
 - `NLP Project Development Guide` --references--> `CMS (Sanity Studio)`  [EXTRACTED]
@@ -59,15 +60,15 @@
 ## Import Cycles
 - None detected.
 
-## Communities (22 total, 5 thin omitted)
+## Communities (23 total, 5 thin omitted)
 
 ### Community 0 - "compilerOptions"
 Cohesion: 0.11
 Nodes (19): compilerOptions, allowJs, esModuleInterop, incremental, isolatedModules, jsx, lib, module (+11 more)
 
 ### Community 1 - "cms/package.json"
-Cohesion: 0.12
-Nodes (16): license, main, name, prettier, bracketSpacing, printWidth, semi, singleQuote (+8 more)
+Cohesion: 0.09
+Nodes (22): dependencies, react, react-dom, sanity, @sanity/vision, styled-components, react, react-dom (+14 more)
 
 ### Community 2 - "compilerOptions"
 Cohesion: 0.10
@@ -77,9 +78,9 @@ Nodes (20): compilerOptions, allowJs, forceConsistentCasingInFileNames, incremen
 Cohesion: 0.12
 Nodes (15): dependencies, next, react, react-dom, react, react-dom, name, private (+7 more)
 
-### Community 4 - "index.ts"
-Cohesion: 0.20
-Nodes (9): keywords, diagnosis, schemaTypes, postType, reply, scenario, stage, valueType (+1 more)
+### Community 4 - "sanity"
+Cohesion: 0.21
+Nodes (9): publishBatchWithScenariosAction(), batch, diagnosis, schemaTypes, reply, scenario, stage, valueType (+1 more)
 
 ### Community 5 - "devDependencies"
 Cohesion: 0.12
@@ -89,9 +90,9 @@ Nodes (17): eslint-config-next, devDependencies, eslint, eslint-config-next, tai
 Cohesion: 0.17
 Nodes (12): CMS (Sanity Studio), Next.js Agent Rules, Frontend (Next.js), Claude Configuration, Graphify CLI, Graphify Knowledge Graph, code:bash (graphify), code:bash (graphify hook install) (+4 more)
 
-### Community 7 - "dependencies"
-Cohesion: 0.18
-Nodes (11): dependencies, react, react-dom, sanity, @sanity/vision, styled-components, react, react-dom (+3 more)
+### Community 7 - "backup/index.ts"
+Cohesion: 0.21
+Nodes (7): batch, diagnosis, schemaTypes, reply, scenario, stage, valueType
 
 ### Community 8 - "devDependencies"
 Cohesion: 0.18
@@ -113,24 +114,28 @@ Nodes (9): CMS (Sanity Studio), code:bash (cd cms), code:bash (npm install), cod
 Cohesion: 0.40
 Nodes (4): code:bash (npm run dev), Deploy on Vercel, Getting Started, Learn More
 
+### Community 22 - "scripts"
+Cohesion: 0.33
+Nodes (6): scripts, build, deploy, deploy-graphql, dev, start
+
 ## Knowledge Gaps
-- **105 isolated node(s):** `name`, `private`, `version`, `main`, `license` (+100 more)
+- **105 isolated node(s):** `schemaTypes`, `allowJs`, `esModuleInterop`, `incremental`, `isolatedModules` (+100 more)
   These have ≤1 connection - possible missing edges or undocumented components.
 - **5 thin communities (<3 nodes) omitted from report** — run `graphify query` to explore isolated nodes.
 
 ## Suggested Questions
 _Questions this graph is uniquely positioned to answer:_
 
-- **Why does `keywords` connect `index.ts` to `cms/package.json`?**
-  _High betweenness centrality (0.037) - this node is a cross-community bridge._
-- **Why does `dependencies` connect `dependencies` to `cms/package.json`?**
-  _High betweenness centrality (0.029) - this node is a cross-community bridge._
-- **What connects `name`, `private`, `version` to the rest of the system?**
+- **Why does `sanity` connect `sanity` to `cms/package.json`, `backup/index.ts`?**
+  _High betweenness centrality (0.075) - this node is a cross-community bridge._
+- **Why does `keywords` connect `cms/package.json` to `sanity`?**
+  _High betweenness centrality (0.062) - this node is a cross-community bridge._
+- **What connects `schemaTypes`, `allowJs`, `esModuleInterop` to the rest of the system?**
   _105 weakly-connected nodes found - possible documentation gaps or missing edges._
 - **Should `compilerOptions` be split into smaller, more focused modules?**
   _Cohesion score 0.10526315789473684 - nodes in this community are weakly interconnected._
 - **Should `cms/package.json` be split into smaller, more focused modules?**
-  _Cohesion score 0.11764705882352941 - nodes in this community are weakly interconnected._
+  _Cohesion score 0.08695652173913043 - nodes in this community are weakly interconnected._
 - **Should `compilerOptions` be split into smaller, more focused modules?**
   _Cohesion score 0.09523809523809523 - nodes in this community are weakly interconnected._
 - **Should `frontend/package.json` be split into smaller, more focused modules?**
