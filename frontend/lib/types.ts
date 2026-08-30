@@ -40,6 +40,7 @@ export interface Scenario {
 export interface PlayScenario {
   title: string;
   slug: string;
+  prologue?: PortableTextBlock[];
   stages: Stage[];
   diagnoses?: Diagnosis[];
 }

@@ -1,29 +1,39 @@
 "use client";
 
-import { useEffect, useState, useRef, useCallback } from "react";
-import { useRouter } from "next/navigation";
-import { PortableText } from "@portabletext/react";
-import type { Scenario } from "@/lib/types";
-import type { PortableTextComponents } from "@portabletext/react";
+import { useEffect, useState, useCallback, useRef } from "react";
+import Link from "next/link";
+import { useRouter, useParams } from "next/navigation";
+import { PortableText, type PortableTextComponents } from "@portabletext/react";
+import type { PlayScenario } from "@/lib/types";
 
-/* ── Cinematic Portable Text Overrides ─────────────────── */
+interface Props {
+  scenario: PlayScenario;
+  onContinue?: () => void;
+}
 
 const prologueComponents: PortableTextComponents = {
   block: {
     normal: ({ children }) => (
-      <p className="mb-7 text-lg leading-[1.85] text-[#c8c8d4] sm:text-xl sm:leading-[1.9] md:text-[21px] md:leading-[1.85]">
+      <p className="mb-6 font-sans text-lg font-light leading-[1.85] text-[#c8c8d4] sm:text-xl sm:leading-[1.9] md:text-[21px] last:mb-0">
         {children}
       </p>
     ),
-    blockquote: ({ children }) => (
-      <blockquote className="my-8 border-l-2 border-[#F46B3C]/50 py-2 pl-6 font-serif-editorial text-xl italic text-[#E9E7F5] sm:text-2xl">
+    h2: ({ children }) => (
+      <h2 className="mb-4 mt-8 font-serif-editorial text-2xl font-normal tracking-tight text-[#E9E7F5] sm:text-3xl first:mt-0">
         {children}
-      </blockquote>
+      </h2>
     ),
     h3: ({ children }) => (
-      <h3 className="mb-4 mt-10 font-serif-editorial text-2xl font-semibold tracking-tight text-[#E9E7F5] sm:text-3xl">
+      <h3 className="mb-3 mt-6 font-serif-editorial text-xl font-normal text-[#E9E7F5] sm:text-2xl first:mt-0">
         {children}
       </h3>
+    ),
+    blockquote: ({ children }) => (
+      <blockquote className="my-8 border-l-2 border-[#F46B3C]/70 pl-6 italic text-[#E9E7F5]/90 sm:pl-8">
+        <p className="font-serif-editorial text-xl leading-relaxed sm:text-2xl">
+          {children}
+        </p>
+      </blockquote>
     ),
   },
   marks: {
@@ -31,23 +41,18 @@ const prologueComponents: PortableTextComponents = {
       <strong className="font-semibold text-[#E9E7F5]">{children}</strong>
     ),
     em: ({ children }) => (
-      <em className="font-serif-editorial italic text-[#F46B3C]/90">
-        {children}
-      </em>
+      <em className="italic text-[#E9E7F5]/90">{children}</em>
     ),
   },
 };
 
-/* ── Component ─────────────────────────────────────────── */
-
-interface Props {
-  scenario: Scenario;
-  onContinue?: () => void;
-}
-
 export default function ScenarioPrologue({ scenario, onContinue }: Props) {
   const router = useRouter();
-  const [visibleSections, setVisibleSections] = useState<Set<string>>(new Set());
+  const params = useParams();
+  const batchId = params?.batchId as string;
+  const [visibleSections, setVisibleSections] = useState<Set<string>>(
+    new Set()
+  );
   const reducedMotion = useRef(false);
 
   useEffect(() => {
@@ -55,7 +60,7 @@ export default function ScenarioPrologue({ scenario, onContinue }: Props) {
       "(prefers-reduced-motion: reduce)"
     ).matches;
 
-    const storageKey = `nlp_prologue_seen_${scenario.slug}`;
+    const storageKey = `seen_prologue_${scenario.slug}`;
     const hasSeen = sessionStorage.getItem(storageKey);
 
     if (reducedMotion.current || hasSeen) {
@@ -79,7 +84,7 @@ export default function ScenarioPrologue({ scenario, onContinue }: Props) {
     ];
 
     return () => timers.forEach(clearTimeout);
-  }, []);
+  }, [scenario.slug]);
 
   const handleContinue = useCallback(() => {
     if (onContinue) {
@@ -106,47 +111,61 @@ export default function ScenarioPrologue({ scenario, onContinue }: Props) {
         <div className="absolute inset-0 bg-[radial-gradient(ellipse_40%_30%_at_50%_90%,rgba(244,107,60,0.04)_0%,transparent_60%)]" />
       </div>
 
+      {/* ── Fixed Top Left Back to Batch (Parallel with top-right language switcher) ─── */}
+      <div className="fixed top-4 left-4 sm:top-5 sm:left-6 z-50 pointer-events-auto">
+        <Link
+          href={batchId ? `/b/${batchId}` : "/"}
+          className="group inline-flex items-center gap-2 rounded-full border border-[#292477]/50 bg-[#16161e]/90 px-4 py-2 text-xs font-semibold uppercase tracking-wider text-[#a0a0b0] shadow-lg backdrop-blur-md transition-all duration-200 hover:border-[#F46B3C]/50 hover:bg-[#292477]/30 hover:text-white"
+        >
+          <svg
+            className="h-3.5 w-3.5 transition-transform duration-200 group-hover:-translate-x-1"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke="currentColor"
+            strokeWidth={2.2}
+          >
+            <path strokeLinecap="round" strokeLinejoin="round" d="M10.5 19.5 3 12m0 0 7.5-7.5M3 12h18" />
+          </svg>
+          <span>Terug naar Batch</span>
+        </Link>
+      </div>
+
       {/* ── Content ──────────────────────────────────────── */}
-      <article className="relative z-10 flex w-full max-w-[780px] flex-1 flex-col px-6 py-20 sm:px-10 md:py-28 lg:py-32">
-
-        {/* ── Header / Title Section ────────────────────── */}
-        <header className="mb-14 sm:mb-18 md:mb-20">
-          {/* Chapter Number */}
-          <div
-            className={`mb-3 transition-all duration-700 ${
-              vis("number") ? "cin-animate-fade-in" : "opacity-0"
-            }`}
-          >
-            <span className="text-[11px] font-semibold uppercase tracking-[0.35em] text-[#6a6a7a]">
-              01
+      <article className="relative z-10 flex w-full max-w-[780px] flex-1 flex-col px-6 py-20 sm:px-10 md:py-24 lg:py-28">
+        {/* ── Header ───────────────────────────────────────── */}
+        <header className="mb-14 sm:mb-18 md:mb-20 text-center">
+          {/* Eyebrow / Scenario Label */}
+          <div className="mb-5 flex items-center justify-center gap-3">
+            <span
+              className={`text-xs font-semibold uppercase tracking-[0.3em] text-[#F46B3C] transition-all duration-700 ${
+                vis("number") ? "cin-animate-fade-up" : "opacity-0 translate-y-2"
+              }`}
+            >
+              Scenario
+            </span>
+            <span
+              className={`h-1 w-1 rounded-full bg-[#F46B3C]/50 transition-opacity duration-700 ${
+                vis("number") ? "opacity-100" : "opacity-0"
+              }`}
+              aria-hidden="true"
+            />
+            <span
+              className={`text-xs font-medium uppercase tracking-[0.25em] text-[#6a6a7e] transition-all duration-700 ${
+                vis("eyebrow") ? "cin-animate-fade-up" : "opacity-0 translate-y-2"
+              }`}
+            >
+              Gesprekssimulatie
             </span>
           </div>
 
-          {/* Eyebrow Labels */}
-          <div
-            className={`mb-6 flex items-center gap-3 transition-all duration-700 ${
-              vis("eyebrow") ? "cin-animate-fade-in" : "opacity-0"
+          {/* Title */}
+          <h1
+            className={`title-glow mb-8 font-serif-editorial text-4xl font-normal leading-[1.12] tracking-tight text-[#E9E7F5] transition-all duration-[900ms] sm:text-5xl md:text-6xl lg:text-[68px] ${
+              vis("title") ? "cin-animate-title" : "opacity-0 translate-y-4"
             }`}
           >
-            <span className="text-[11px] font-bold uppercase tracking-[0.3em] text-[#6a6a7a]">
-              Pengenalan
-            </span>
-            <span className="h-[3px] w-[3px] rounded-full bg-[#F46B3C]" aria-hidden="true" />
-            <span className="text-[11px] font-semibold uppercase tracking-[0.25em] text-[#E9E7F5]/60">
-              Skenario
-            </span>
-          </div>
-
-          {/* Main Title */}
-          <div
-            className={`mb-8 transition-all duration-[800ms] ${
-              vis("title") ? "cin-animate-fade-up" : "opacity-0 translate-y-5"
-            }`}
-          >
-            <h1 className="title-glow font-serif-editorial text-[2.75rem] font-normal leading-[1.08] tracking-tight text-[#E9E7F5] sm:text-6xl sm:leading-[1.06] md:text-7xl lg:text-8xl">
-              {scenario.title}
-            </h1>
-          </div>
+            {scenario.title}
+          </h1>
 
           {/* Divider */}
           <div
@@ -163,7 +182,7 @@ export default function ScenarioPrologue({ scenario, onContinue }: Props) {
 
         {/* ── Narrative Prologue Body ─────────────────────── */}
         <section
-          aria-label="Proloog Skenario"
+          aria-label="Scenario Prologue"
           className={`flex-1 pt-2 transition-all duration-[800ms] ${
             vis("prologue") ? "cin-animate-fade-up" : "opacity-0 translate-y-4"
           }`}
@@ -176,7 +195,7 @@ export default function ScenarioPrologue({ scenario, onContinue }: Props) {
           ) : (
             <div className="space-y-7">
               <p className="text-lg leading-[1.85] text-[#c8c8d4] sm:text-xl sm:leading-[1.9] md:text-[21px]">
-                Bersiaplah untuk memasuki skenario ini…
+                Bereid u voor om dit scenario te betreden…
               </p>
             </div>
           )}
@@ -195,7 +214,7 @@ export default function ScenarioPrologue({ scenario, onContinue }: Props) {
               boxShadow: "0 8px 32px -6px rgba(244, 107, 60, 0.4), 0 0 80px -20px rgba(244, 107, 60, 0.15)",
             }}
           >
-            <span>Lanjut ke Percakapan</span>
+            <span>Ga door naar Gesprek</span>
             <svg
               className="h-5 w-5 transition-transform duration-300 group-hover:translate-x-1"
               fill="none"

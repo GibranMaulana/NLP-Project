@@ -18,6 +18,7 @@ export const SCENARIO_PLAY_QUERY = `
   *[_type == "scenario" && (slug.current == $slug || _id == $slug)][0]{
     title,
     "slug": slug.current,
+    prologue,
     stages[]{
       _key,
       title,
@@ -48,6 +49,7 @@ export const DEFAULT_SCENARIO_PLAY_QUERY = `
   *[_type == "scenario"][0]{
     title,
     "slug": slug.current,
+    prologue,
     stages[]{
       _key,
       title,
@@ -100,5 +102,12 @@ export const BATCH_BY_SLUG_QUERY = `
   *[_type == "batch" && slug.current == $batchId][0]{
     title,
     "slug": slug.current
+  }
+`;
+
+export const BUSINESS_LINK_QUERY = `
+  *[_type == "business"][0]{
+    titel,
+    businessLink
   }
 `;

@@ -61,11 +61,7 @@ export default function LanguageToggle({ className = "" }: Props) {
   };
 
   if (!mounted) {
-    return (
-      <div
-        className={`inline-flex h-9 w-[190px] animate-pulse rounded-full border border-[#292477]/30 bg-[#111116]/80 ${className}`}
-      />
-    );
+    return null;
   }
 
   return (

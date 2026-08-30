@@ -23,13 +23,14 @@ interface PageProps {
 export default async function BatchPage({ params }: PageProps) {
   const { batchId } = await params;
   
-  const batch = await sanityClient.fetch<BatchItem | null>(BATCH_BY_SLUG_QUERY, { batchId });
+  const [batch, scenarios] = await Promise.all([
+    sanityClient.fetch<BatchItem | null>(BATCH_BY_SLUG_QUERY, { batchId }),
+    sanityClient.fetch<ScenarioItem[]>(BATCH_SCENARIOS_QUERY, { batchId }),
+  ]);
   
   if (!batch) {
     notFound();
   }
-
-  const scenarios = await sanityClient.fetch<ScenarioItem[]>(BATCH_SCENARIOS_QUERY, { batchId });
 
   return (
     <div className="cinematic-grain cinematic-vignette relative flex min-h-dvh flex-col items-center bg-[#111116] px-6 py-20 text-[#e8e8ec] sm:px-10 md:py-28">
@@ -48,9 +49,9 @@ export default async function BatchPage({ params }: PageProps) {
             NLP Training Platform
           </span>
           <span className="h-[3px] w-[3px] rounded-full bg-[#F46B3C]" />
-          <Link href="/" className="text-[11px] font-semibold uppercase tracking-[0.25em] text-[#E9E7F5]/60 hover:text-white transition">
-            Kembali ke Beranda
-          </Link>
+          <span className="text-[11px] font-semibold uppercase tracking-[0.25em] text-[#E9E7F5]/60">
+            Meta Model Scenarios
+          </span>
         </div>
 
         {/* Title */}
@@ -59,7 +60,7 @@ export default async function BatchPage({ params }: PageProps) {
         </h1>
 
         <p className="mb-12 max-w-xl text-base text-[#a0a0b0] sm:text-lg">
-          Pilih skenario studi kasus interaktif dalam {batch.title} untuk melatih kepekaan pola Meta Model.
+          Selecteer een interactieve casus in {batch.title} om uw Meta Model gevoeligheid te trainen.
         </p>
 
         {/* Scenarios Grid */}
@@ -73,11 +74,11 @@ export default async function BatchPage({ params }: PageProps) {
                 <div>
                   <div className="mb-3 flex items-center justify-between">
                     <span className="text-xs font-semibold uppercase tracking-wider text-[#F46B3C]">
-                      Skenario 0{i + 1}
+                      Scenario 0{i + 1}
                     </span>
                     {sc.stagesCount !== undefined && (
                       <span className="rounded-full border border-[#292477]/50 bg-[#292477]/20 px-2.5 py-0.5 text-[10px] font-medium text-[#a0a0b0]">
-                        {sc.stagesCount} Babak
+                        {sc.stagesCount} {sc.stagesCount === 1 ? "Fase" : "Fasen"}
                       </span>
                     )}
                   </div>
@@ -92,7 +93,7 @@ export default async function BatchPage({ params }: PageProps) {
                     href={`/b/${batch.slug}/${sc.slug}`}
                     className="inline-flex flex-1 items-center justify-center gap-2 rounded-full bg-[#F46B3C] px-4 py-2.5 text-xs font-medium text-white shadow transition hover:bg-[#E0592B]"
                   >
-                    <span>Mulai Percakapan</span>
+                    <span>Start Gesprek</span>
                     <span>→</span>
                   </Link>
                 </div>
@@ -100,7 +101,7 @@ export default async function BatchPage({ params }: PageProps) {
             ))
           ) : (
             <div className="col-span-full rounded-2xl border border-[#292477]/40 bg-[#1a1a24]/60 p-8 text-center text-[#a0a0b0]">
-              Belum ada skenario di batch ini.
+              Geen scenario's gevonden in deze batch.
             </div>
           )}
         </div>
