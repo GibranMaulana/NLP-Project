@@ -29,14 +29,14 @@ export default function RootLayout({
       lang="nl"
       className={`${playfair.variable} ${inter.variable} h-full antialiased`}
     >
-      <body className="min-h-full flex flex-col font-sans bg-[#111116] text-[#e8e8ec]" suppressHydrationWarning>
+      <body className="min-h-full flex flex-col font-sans bg-[#111116] text-[#e8e8ec]">
         {/* Global Floating Language Switcher */}
         <header className="fixed top-5 right-6 z-50 pointer-events-auto">
           <LanguageToggle />
         </header>
 
         {/* Main Application Content */}
-        <main className="flex-1 flex flex-col" suppressHydrationWarning>{children}</main>
+        <main className="flex-1 flex flex-col">{children}</main>
 
         {/* Global Google Translate Client Script & CSS overrides */}
         <GoogleTranslate />
