@@ -1,0 +1,45 @@
+{
+  "scenarioId": "example-bahasa-indoneisa",
+  "title": "Evaluasi Proyek Aurora",
+  "stage": "Babak 1: Klarifikasi Keterlambatan Sprint",
+  "npc": {
+    "name": "Maya",
+    "role": "Project Lead",
+    "avatar": "👩‍💼",
+    "status": "Sedang mengetik..."
+  },
+  "initialMessages": [
+    {
+      "id": "m1",
+      "sender": "npc",
+      "text": "Hai, terima kasih sudah menyempatkan waktu untuk bertemu pagi ini.",
+      "timestamp": "09:00"
+    },
+    {
+      "id": "m2",
+      "sender": "npc",
+      "text": "Aku ingin membahas kendala sprint minggu ini. Ada beberapa modul utama yang berpotensi tertunda jika kita tidak segera menyesuaikan alokasi tim.",
+      "timestamp": "09:01"
+    }
+  ],
+  "suggestedResponses": [
+    {
+      "id": "r1",
+      "label": "Tanya detail modul",
+      "text": "Bisa tolong jelaskan modul mana yang paling krusial dan apa akar masalah utamanya?",
+      "npcReply": "Modul autentikasi dan sinkronisasi data real-time. Tim backend kesulitan menangani beban websocket baru."
+    },
+    {
+      "id": "r2",
+      "label": "Tawarkan restrukturisasi prioritas",
+      "text": "Mari kita tinjau kembali prioritas backlog bersama-sama agar tim tidak terbebani berlebihan.",
+      "npcReply": "Itu solusi yang sangat bagus. Kita bisa menunda fitur ekspor PDF ke sprint berikutnya untuk fokus pada stabilitas inti."
+    },
+    {
+      "id": "r3",
+      "label": "Tanyakan estimasi dampak",
+      "text": "Seberapa besar dampak keterlambatan ini terhadap jadwal rilis kepada klien bulan depan?",
+      "npcReply": "Jika kita putuskan penyesuaian hari ini, dampaknya minimal dan kita tetap bisa rilis tepat waktu."
+    }
+  ]
+}
