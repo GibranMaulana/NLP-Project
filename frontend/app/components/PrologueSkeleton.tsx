@@ -1,7 +1,12 @@
 export default function PrologueSkeleton() {
   return (
-    <main className="cinematic-grain cinematic-vignette relative flex min-h-dvh flex-col items-center bg-[#111116] text-[#E9E7F5]">
-      <div className="relative z-10 flex w-full max-w-[780px] flex-1 flex-col px-6 py-20 sm:px-10 md:py-28 lg:py-32">
+    <main className="loading-screen cinematic-grain cinematic-vignette relative flex min-h-dvh flex-col items-center bg-[#111116] text-[#E9E7F5]">
+      {/* Top Left Nav skeleton */}
+      <div className="fixed top-4 left-4 sm:top-5 sm:left-6 z-50">
+        <div className="prologue-shimmer h-8 w-36 rounded-full" />
+      </div>
+
+      <div className="relative z-10 flex w-full max-w-[780px] flex-1 flex-col px-6 py-20 sm:px-10 md:py-24 lg:py-28">
         {/* Chapter number skeleton */}
         <div className="mb-4">
           <div className="prologue-shimmer h-3 w-8 rounded-full" />
@@ -38,7 +43,7 @@ export default function PrologueSkeleton() {
           <div className="prologue-shimmer h-5 w-3/4 rounded" />
         </div>
       </div>
-      <span className="sr-only">Loading cinematic scenario prologue…</span>
+      <span className="sr-only">Cinematische scenario proloog laden…</span>
     </main>
   );
 }

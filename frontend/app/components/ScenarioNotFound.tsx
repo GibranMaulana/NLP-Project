@@ -23,11 +23,11 @@ export default function ScenarioNotFound() {
         </div>
 
         <h1 className="title-glow mb-3 font-serif-editorial text-3xl font-semibold tracking-tight text-[#E9E7F5] sm:text-4xl">
-          Scenario niet gevonden
+          Scenario Niet Gevonden
         </h1>
 
         <p className="mb-8 max-w-sm text-base leading-relaxed text-[#a0a0b0]">
-          Het scenario dat je zoekt bestaat niet of is mogelijk verwijderd.
+          Het scenario dat u zoekt bestaat niet of is verplaatst.
         </p>
 
         <Link
@@ -51,7 +51,7 @@ export default function ScenarioNotFound() {
               d="M10.5 19.5 3 12m0 0 7.5-7.5M3 12h18"
             />
           </svg>
-          Terug naar scenario&apos;s
+          Terug naar Home
         </Link>
       </div>
     </main>
