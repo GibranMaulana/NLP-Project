@@ -4,510 +4,6 @@
   "graph": {},
   "nodes": [
     {
-      "label": "sanity.cli.ts",
-      "file_type": "code",
-      "source_file": "cms/sanity.cli.ts",
-      "source_location": "L1",
-      "id": "cms_sanity_cli_ts",
-      "community": 24,
-      "norm_label": "sanity.cli.ts"
-    },
-    {
-      "label": "sanity.config.ts",
-      "file_type": "code",
-      "source_file": "cms/sanity.config.ts",
-      "source_location": "L1",
-      "id": "cms_sanity_config_ts",
-      "community": 28,
-      "norm_label": "sanity.config.ts"
-    },
-    {
-      "label": "eslint.config.mjs",
-      "file_type": "code",
-      "source_file": "cms/eslint.config.mjs",
-      "source_location": "L1",
-      "id": "cms_eslint_config_mjs",
-      "community": 25,
-      "norm_label": "eslint.config.mjs"
-    },
-    {
-      "label": "tsconfig.json",
-      "file_type": "code",
-      "source_file": "cms/tsconfig.json",
-      "source_location": "L1",
-      "id": "cms_tsconfig_json",
-      "community": 7,
-      "norm_label": "tsconfig.json"
-    },
-    {
-      "label": "compilerOptions",
-      "file_type": "code",
-      "source_file": "cms/tsconfig.json",
-      "source_location": "L2",
-      "id": "cms_tsconfig_compileroptions",
-      "community": 7,
-      "norm_label": "compileroptions"
-    },
-    {
-      "label": "target",
-      "file_type": "code",
-      "source_file": "cms/tsconfig.json",
-      "source_location": "L3",
-      "id": "cms_tsconfig_compileroptions_target",
-      "community": 7,
-      "norm_label": "target"
-    },
-    {
-      "label": "lib",
-      "file_type": "code",
-      "source_file": "cms/tsconfig.json",
-      "source_location": "L4",
-      "id": "cms_tsconfig_compileroptions_lib",
-      "community": 7,
-      "norm_label": "lib"
-    },
-    {
-      "label": "allowJs",
-      "file_type": "code",
-      "source_file": "cms/tsconfig.json",
-      "source_location": "L5",
-      "id": "cms_tsconfig_compileroptions_allowjs",
-      "community": 7,
-      "norm_label": "allowjs"
-    },
-    {
-      "label": "skipLibCheck",
-      "file_type": "code",
-      "source_file": "cms/tsconfig.json",
-      "source_location": "L6",
-      "id": "cms_tsconfig_compileroptions_skiplibcheck",
-      "community": 7,
-      "norm_label": "skiplibcheck"
-    },
-    {
-      "label": "strict",
-      "file_type": "code",
-      "source_file": "cms/tsconfig.json",
-      "source_location": "L7",
-      "id": "cms_tsconfig_compileroptions_strict",
-      "community": 7,
-      "norm_label": "strict"
-    },
-    {
-      "label": "forceConsistentCasingInFileNames",
-      "file_type": "code",
-      "source_file": "cms/tsconfig.json",
-      "source_location": "L8",
-      "id": "cms_tsconfig_compileroptions_forceconsistentcasinginfilenames",
-      "community": 7,
-      "norm_label": "forceconsistentcasinginfilenames"
-    },
-    {
-      "label": "module",
-      "file_type": "code",
-      "source_file": "cms/tsconfig.json",
-      "source_location": "L9",
-      "id": "cms_tsconfig_compileroptions_module",
-      "community": 7,
-      "norm_label": "module"
-    },
-    {
-      "label": "moduleDetection",
-      "file_type": "code",
-      "source_file": "cms/tsconfig.json",
-      "source_location": "L10",
-      "id": "cms_tsconfig_compileroptions_moduledetection",
-      "community": 7,
-      "norm_label": "moduledetection"
-    },
-    {
-      "label": "isolatedModules",
-      "file_type": "code",
-      "source_file": "cms/tsconfig.json",
-      "source_location": "L11",
-      "id": "cms_tsconfig_compileroptions_isolatedmodules",
-      "community": 7,
-      "norm_label": "isolatedmodules"
-    },
-    {
-      "label": "jsx",
-      "file_type": "code",
-      "source_file": "cms/tsconfig.json",
-      "source_location": "L12",
-      "id": "cms_tsconfig_compileroptions_jsx",
-      "community": 7,
-      "norm_label": "jsx"
-    },
-    {
-      "label": "incremental",
-      "file_type": "code",
-      "source_file": "cms/tsconfig.json",
-      "source_location": "L13",
-      "id": "cms_tsconfig_compileroptions_incremental",
-      "community": 7,
-      "norm_label": "incremental"
-    },
-    {
-      "label": "include",
-      "file_type": "code",
-      "source_file": "cms/tsconfig.json",
-      "source_location": "L15",
-      "id": "cms_tsconfig_include",
-      "community": 7,
-      "norm_label": "include"
-    },
-    {
-      "label": "exclude",
-      "file_type": "code",
-      "source_file": "cms/tsconfig.json",
-      "source_location": "L16",
-      "id": "cms_tsconfig_exclude",
-      "community": 7,
-      "norm_label": "exclude"
-    },
-    {
-      "label": "package.json",
-      "file_type": "code",
-      "source_file": "cms/package.json",
-      "source_location": "L1",
-      "id": "cms_package_json",
-      "community": 0,
-      "norm_label": "package.json"
-    },
-    {
-      "label": "name",
-      "file_type": "code",
-      "source_file": "cms/package.json",
-      "source_location": "L2",
-      "id": "cms_package_name",
-      "community": 0,
-      "norm_label": "name"
-    },
-    {
-      "label": "private",
-      "file_type": "code",
-      "source_file": "cms/package.json",
-      "source_location": "L3",
-      "id": "cms_package_private",
-      "community": 0,
-      "norm_label": "private"
-    },
-    {
-      "label": "version",
-      "file_type": "code",
-      "source_file": "cms/package.json",
-      "source_location": "L4",
-      "id": "cms_package_version",
-      "community": 0,
-      "norm_label": "version"
-    },
-    {
-      "label": "main",
-      "file_type": "code",
-      "source_file": "cms/package.json",
-      "source_location": "L5",
-      "id": "cms_package_main",
-      "community": 0,
-      "norm_label": "main"
-    },
-    {
-      "label": "license",
-      "file_type": "code",
-      "source_file": "cms/package.json",
-      "source_location": "L6",
-      "id": "cms_package_license",
-      "community": 0,
-      "norm_label": "license"
-    },
-    {
-      "label": "scripts",
-      "file_type": "code",
-      "source_file": "cms/package.json",
-      "source_location": "L7",
-      "id": "cms_package_scripts",
-      "community": 0,
-      "norm_label": "scripts"
-    },
-    {
-      "label": "build",
-      "file_type": "code",
-      "source_file": "cms/package.json",
-      "source_location": "L8",
-      "id": "cms_package_scripts_build",
-      "community": 0,
-      "norm_label": "build"
-    },
-    {
-      "label": "deploy",
-      "file_type": "code",
-      "source_file": "cms/package.json",
-      "source_location": "L9",
-      "id": "cms_package_scripts_deploy",
-      "community": 0,
-      "norm_label": "deploy"
-    },
-    {
-      "label": "deploy-graphql",
-      "file_type": "code",
-      "source_file": "cms/package.json",
-      "source_location": "L10",
-      "id": "cms_package_scripts_deploy_graphql",
-      "community": 0,
-      "norm_label": "deploy-graphql"
-    },
-    {
-      "label": "dev",
-      "file_type": "code",
-      "source_file": "cms/package.json",
-      "source_location": "L11",
-      "id": "cms_package_scripts_dev",
-      "community": 0,
-      "norm_label": "dev"
-    },
-    {
-      "label": "start",
-      "file_type": "code",
-      "source_file": "cms/package.json",
-      "source_location": "L12",
-      "id": "cms_package_scripts_start",
-      "community": 0,
-      "norm_label": "start"
-    },
-    {
-      "label": "keywords",
-      "file_type": "code",
-      "source_file": "cms/package.json",
-      "source_location": "L14",
-      "id": "cms_package_keywords",
-      "community": 0,
-      "norm_label": "keywords"
-    },
-    {
-      "label": "dependencies",
-      "file_type": "code",
-      "source_file": "cms/package.json",
-      "source_location": "L17",
-      "id": "cms_package_dependencies",
-      "community": 0,
-      "norm_label": "dependencies"
-    },
-    {
-      "label": "@sanity/vision",
-      "file_type": "code",
-      "source_file": "cms/package.json",
-      "source_location": "L18",
-      "id": "cms_package_dependencies_sanity_vision",
-      "community": 0,
-      "norm_label": "@sanity/vision"
-    },
-    {
-      "label": "@xyflow/react",
-      "file_type": "code",
-      "source_file": "cms/package.json",
-      "source_location": "L19",
-      "id": "cms_package_dependencies_xyflow_react",
-      "community": 0,
-      "norm_label": "@xyflow/react"
-    },
-    {
-      "label": "react",
-      "file_type": "code",
-      "source_file": "cms/package.json",
-      "source_location": "L20",
-      "id": "cms_package_dependencies_react",
-      "community": 0,
-      "norm_label": "react"
-    },
-    {
-      "label": "react-dom",
-      "file_type": "code",
-      "source_file": "cms/package.json",
-      "source_location": "L21",
-      "id": "cms_package_dependencies_react_dom",
-      "community": 0,
-      "norm_label": "react-dom"
-    },
-    {
-      "label": "sanity",
-      "file_type": "code",
-      "source_file": "cms/package.json",
-      "source_location": "L22",
-      "id": "cms_package_dependencies_sanity",
-      "community": 0,
-      "norm_label": "sanity"
-    },
-    {
-      "label": "styled-components",
-      "file_type": "code",
-      "source_file": "cms/package.json",
-      "source_location": "L23",
-      "id": "cms_package_dependencies_styled_components",
-      "community": 0,
-      "norm_label": "styled-components"
-    },
-    {
-      "label": "devDependencies",
-      "file_type": "code",
-      "source_file": "cms/package.json",
-      "source_location": "L25",
-      "id": "cms_package_devdependencies",
-      "community": 0,
-      "norm_label": "devdependencies"
-    },
-    {
-      "label": "@sanity/eslint-config-studio",
-      "file_type": "code",
-      "source_file": "cms/package.json",
-      "source_location": "L26",
-      "id": "cms_package_devdependencies_sanity_eslint_config_studio",
-      "community": 0,
-      "norm_label": "@sanity/eslint-config-studio"
-    },
-    {
-      "label": "@types/react",
-      "file_type": "code",
-      "source_file": "cms/package.json",
-      "source_location": "L27",
-      "id": "cms_package_devdependencies_types_react",
-      "community": 0,
-      "norm_label": "@types/react"
-    },
-    {
-      "label": "eslint",
-      "file_type": "code",
-      "source_file": "cms/package.json",
-      "source_location": "L28",
-      "id": "cms_package_devdependencies_eslint",
-      "community": 0,
-      "norm_label": "eslint"
-    },
-    {
-      "label": "prettier",
-      "file_type": "code",
-      "source_file": "cms/package.json",
-      "source_location": "L29",
-      "id": "cms_package_devdependencies_prettier",
-      "community": 0,
-      "norm_label": "prettier"
-    },
-    {
-      "label": "typescript",
-      "file_type": "code",
-      "source_file": "cms/package.json",
-      "source_location": "L30",
-      "id": "cms_package_devdependencies_typescript",
-      "community": 0,
-      "norm_label": "typescript"
-    },
-    {
-      "label": "prettier",
-      "file_type": "code",
-      "source_file": "cms/package.json",
-      "source_location": "L32",
-      "id": "cms_package_prettier",
-      "community": 0,
-      "norm_label": "prettier"
-    },
-    {
-      "label": "bracketSpacing",
-      "file_type": "code",
-      "source_file": "cms/package.json",
-      "source_location": "L33",
-      "id": "cms_package_prettier_bracketspacing",
-      "community": 0,
-      "norm_label": "bracketspacing"
-    },
-    {
-      "label": "printWidth",
-      "file_type": "code",
-      "source_file": "cms/package.json",
-      "source_location": "L34",
-      "id": "cms_package_prettier_printwidth",
-      "community": 0,
-      "norm_label": "printwidth"
-    },
-    {
-      "label": "semi",
-      "file_type": "code",
-      "source_file": "cms/package.json",
-      "source_location": "L35",
-      "id": "cms_package_prettier_semi",
-      "community": 0,
-      "norm_label": "semi"
-    },
-    {
-      "label": "singleQuote",
-      "file_type": "code",
-      "source_file": "cms/package.json",
-      "source_location": "L36",
-      "id": "cms_package_prettier_singlequote",
-      "community": 0,
-      "norm_label": "singlequote"
-    },
-    {
-      "label": "UrlDisplay.tsx",
-      "file_type": "code",
-      "source_file": "cms/components/UrlDisplay.tsx",
-      "source_location": "L1",
-      "id": "cms_components_urldisplay_tsx",
-      "community": 2,
-      "norm_label": "urldisplay.tsx"
-    },
-    {
-      "label": "CopyUrlCard()",
-      "file_type": "code",
-      "source_file": "cms/components/UrlDisplay.tsx",
-      "source_location": "L9",
-      "id": "components_urldisplay_copyurlcard",
-      "community": 2,
-      "norm_label": "copyurlcard()"
-    },
-    {
-      "label": "getBaseUrl()",
-      "file_type": "code",
-      "source_file": "cms/components/UrlDisplay.tsx",
-      "source_location": "L35",
-      "id": "components_urldisplay_getbaseurl",
-      "community": 2,
-      "norm_label": "getbaseurl()"
-    },
-    {
-      "label": "BatchUrlDisplay()",
-      "file_type": "code",
-      "source_file": "cms/components/UrlDisplay.tsx",
-      "source_location": "L58",
-      "id": "components_urldisplay_batchurldisplay",
-      "community": 2,
-      "norm_label": "batchurldisplay()"
-    },
-    {
-      "label": "ScenarioUrlDisplay()",
-      "file_type": "code",
-      "source_file": "cms/components/UrlDisplay.tsx",
-      "source_location": "L71",
-      "id": "components_urldisplay_scenariourldisplay",
-      "community": 2,
-      "norm_label": "scenariourldisplay()"
-    },
-    {
-      "label": "index.ts",
-      "file_type": "code",
-      "source_file": "cms/plugins/branchEditor/index.ts",
-      "source_location": "L1",
-      "id": "cms_plugins_brancheditor_index_ts",
-      "community": 28,
-      "norm_label": "index.ts"
-    },
-    {
-      "label": "branchEditorTool",
-      "file_type": "code",
-      "source_file": "cms/plugins/branchEditor/index.ts",
-      "source_location": "L4",
-      "id": "brancheditor_index_brancheditortool",
-      "community": 28,
-      "norm_label": "brancheditortool"
-    },
-    {
       "label": "BranchEditorTool.tsx",
       "file_type": "code",
       "source_file": "cms/plugins/branchEditor/BranchEditorTool.tsx",
@@ -520,208 +16,37 @@
       "label": "BranchEditorTool()",
       "file_type": "code",
       "source_file": "cms/plugins/branchEditor/BranchEditorTool.tsx",
-      "source_location": "L12",
+      "source_location": "L22",
       "id": "brancheditor_brancheditortool_brancheditortool",
       "community": 28,
       "norm_label": "brancheditortool()"
     },
     {
-      "label": "AddScenarioDialog.tsx",
+      "label": "ManageDiagnosesDialog.tsx",
       "file_type": "code",
-      "source_file": "cms/plugins/branchEditor/components/AddScenarioDialog.tsx",
+      "source_file": "cms/plugins/branchEditor/components/ManageDiagnosesDialog.tsx",
       "source_location": "L1",
-      "id": "cms_plugins_brancheditor_components_addscenariodialog_tsx",
+      "id": "cms_plugins_brancheditor_components_managediagnosesdialog_tsx",
       "community": 28,
-      "norm_label": "addscenariodialog.tsx"
+      "norm_label": "managediagnosesdialog.tsx"
     },
     {
-      "label": "AddScenarioDialogProps",
+      "label": "ManageDiagnosesDialogProps",
       "file_type": "code",
-      "source_file": "cms/plugins/branchEditor/components/AddScenarioDialog.tsx",
+      "source_file": "cms/plugins/branchEditor/components/ManageDiagnosesDialog.tsx",
       "source_location": "L4",
-      "id": "components_addscenariodialog_addscenariodialogprops",
+      "id": "components_managediagnosesdialog_managediagnosesdialogprops",
       "community": 28,
-      "norm_label": "addscenariodialogprops"
+      "norm_label": "managediagnosesdialogprops"
     },
     {
-      "label": "AddScenarioDialog()",
+      "label": "ManageDiagnosesDialog()",
       "file_type": "code",
-      "source_file": "cms/plugins/branchEditor/components/AddScenarioDialog.tsx",
-      "source_location": "L16",
-      "id": "components_addscenariodialog_addscenariodialog",
+      "source_file": "cms/plugins/branchEditor/components/ManageDiagnosesDialog.tsx",
+      "source_location": "L13",
+      "id": "components_managediagnosesdialog_managediagnosesdialog",
       "community": 28,
-      "norm_label": "addscenariodialog()"
-    },
-    {
-      "label": "StageNode.tsx",
-      "file_type": "code",
-      "source_file": "cms/plugins/branchEditor/components/StageNode.tsx",
-      "source_location": "L1",
-      "id": "cms_plugins_brancheditor_components_stagenode_tsx",
-      "community": 28,
-      "norm_label": "stagenode.tsx"
-    },
-    {
-      "label": "StageNode()",
-      "file_type": "code",
-      "source_file": "cms/plugins/branchEditor/components/StageNode.tsx",
-      "source_location": "L5",
-      "id": "components_stagenode_stagenode",
-      "community": 28,
-      "norm_label": "stagenode()"
-    },
-    {
-      "label": "EditStageDialog.tsx",
-      "file_type": "code",
-      "source_file": "cms/plugins/branchEditor/components/EditStageDialog.tsx",
-      "source_location": "L1",
-      "id": "cms_plugins_brancheditor_components_editstagedialog_tsx",
-      "community": 28,
-      "norm_label": "editstagedialog.tsx"
-    },
-    {
-      "label": "EditStageDialogProps",
-      "file_type": "code",
-      "source_file": "cms/plugins/branchEditor/components/EditStageDialog.tsx",
-      "source_location": "L6",
-      "id": "components_editstagedialog_editstagedialogprops",
-      "community": 28,
-      "norm_label": "editstagedialogprops"
-    },
-    {
-      "label": "EditStageDialog()",
-      "file_type": "code",
-      "source_file": "cms/plugins/branchEditor/components/EditStageDialog.tsx",
-      "source_location": "L16",
-      "id": "components_editstagedialog_editstagedialog",
-      "community": 28,
-      "norm_label": "editstagedialog()"
-    },
-    {
-      "label": "businessLinkType.ts",
-      "file_type": "code",
-      "source_file": "cms/schemaTypes/businessLinkType.ts",
-      "source_location": "L1",
-      "id": "cms_schematypes_businesslinktype_ts",
-      "community": 2,
-      "norm_label": "businesslinktype.ts"
-    },
-    {
-      "label": "business",
-      "file_type": "code",
-      "source_file": "cms/schemaTypes/businessLinkType.ts",
-      "source_location": "L3",
-      "id": "schematypes_businesslinktype_business",
-      "community": 2,
-      "norm_label": "business"
-    },
-    {
-      "label": "diagnosisType.ts",
-      "file_type": "code",
-      "source_file": "cms/schemaTypes/diagnosisType.ts",
-      "source_location": "L1",
-      "id": "cms_schematypes_diagnosistype_ts",
-      "community": 2,
-      "norm_label": "diagnosistype.ts"
-    },
-    {
-      "label": "diagnosis",
-      "file_type": "code",
-      "source_file": "cms/schemaTypes/diagnosisType.ts",
-      "source_location": "L3",
-      "id": "schematypes_diagnosistype_diagnosis",
-      "community": 2,
-      "norm_label": "diagnosis"
-    },
-    {
-      "label": "replyType.ts",
-      "file_type": "code",
-      "source_file": "cms/schemaTypes/replyType.ts",
-      "source_location": "L1",
-      "id": "cms_schematypes_replytype_ts",
-      "community": 2,
-      "norm_label": "replytype.ts"
-    },
-    {
-      "label": "reply",
-      "file_type": "code",
-      "source_file": "cms/schemaTypes/replyType.ts",
-      "source_location": "L3",
-      "id": "schematypes_replytype_reply",
-      "community": 2,
-      "norm_label": "reply"
-    },
-    {
-      "label": "index.ts",
-      "file_type": "code",
-      "source_file": "cms/schemaTypes/index.ts",
-      "source_location": "L1",
-      "id": "cms_schematypes_index_ts",
-      "community": 2,
-      "norm_label": "index.ts"
-    },
-    {
-      "label": "schemaTypes",
-      "file_type": "code",
-      "source_file": "cms/schemaTypes/index.ts",
-      "source_location": "L10",
-      "id": "schematypes_index_schematypes",
-      "community": 28,
-      "norm_label": "schematypes"
-    },
-    {
-      "label": "settingsType.ts",
-      "file_type": "code",
-      "source_file": "cms/schemaTypes/settingsType.ts",
-      "source_location": "L1",
-      "id": "cms_schematypes_settingstype_ts",
-      "community": 2,
-      "norm_label": "settingstype.ts"
-    },
-    {
-      "label": "settings",
-      "file_type": "code",
-      "source_file": "cms/schemaTypes/settingsType.ts",
-      "source_location": "L3",
-      "id": "schematypes_settingstype_settings",
-      "community": 2,
-      "norm_label": "settings"
-    },
-    {
-      "label": "valueType.ts",
-      "file_type": "code",
-      "source_file": "cms/schemaTypes/valueType.ts",
-      "source_location": "L1",
-      "id": "cms_schematypes_valuetype_ts",
-      "community": 2,
-      "norm_label": "valuetype.ts"
-    },
-    {
-      "label": "valueType",
-      "file_type": "code",
-      "source_file": "cms/schemaTypes/valueType.ts",
-      "source_location": "L3",
-      "id": "schematypes_valuetype_valuetype",
-      "community": 2,
-      "norm_label": "valuetype"
-    },
-    {
-      "label": "batchType.ts",
-      "file_type": "code",
-      "source_file": "cms/schemaTypes/batchType.ts",
-      "source_location": "L1",
-      "id": "cms_schematypes_batchtype_ts",
-      "community": 2,
-      "norm_label": "batchtype.ts"
-    },
-    {
-      "label": "batch",
-      "file_type": "code",
-      "source_file": "cms/schemaTypes/batchType.ts",
-      "source_location": "L4",
-      "id": "schematypes_batchtype_batch",
-      "community": 2,
-      "norm_label": "batch"
+      "norm_label": "managediagnosesdialog()"
     },
     {
       "label": "stageType.ts",
@@ -742,1789 +67,2663 @@
       "norm_label": "stage"
     },
     {
+      "label": "sanity.cli.ts",
+      "file_type": "code",
+      "source_file": "cms/sanity.cli.ts",
+      "source_location": "L1",
+      "community": 24,
+      "norm_label": "sanity.cli.ts",
+      "id": "cms_sanity_cli_ts"
+    },
+    {
+      "label": "sanity.config.ts",
+      "file_type": "code",
+      "source_file": "cms/sanity.config.ts",
+      "source_location": "L1",
+      "community": 28,
+      "norm_label": "sanity.config.ts",
+      "id": "cms_sanity_config_ts"
+    },
+    {
+      "label": "eslint.config.mjs",
+      "file_type": "code",
+      "source_file": "cms/eslint.config.mjs",
+      "source_location": "L1",
+      "community": 25,
+      "norm_label": "eslint.config.mjs",
+      "id": "cms_eslint_config_mjs"
+    },
+    {
+      "label": "tsconfig.json",
+      "file_type": "code",
+      "source_file": "cms/tsconfig.json",
+      "source_location": "L1",
+      "community": 7,
+      "norm_label": "tsconfig.json",
+      "id": "cms_tsconfig_json"
+    },
+    {
+      "label": "compilerOptions",
+      "file_type": "code",
+      "source_file": "cms/tsconfig.json",
+      "source_location": "L2",
+      "community": 7,
+      "norm_label": "compileroptions",
+      "id": "cms_tsconfig_compileroptions"
+    },
+    {
+      "label": "target",
+      "file_type": "code",
+      "source_file": "cms/tsconfig.json",
+      "source_location": "L3",
+      "community": 7,
+      "norm_label": "target",
+      "id": "cms_tsconfig_compileroptions_target"
+    },
+    {
+      "label": "lib",
+      "file_type": "code",
+      "source_file": "cms/tsconfig.json",
+      "source_location": "L4",
+      "community": 7,
+      "norm_label": "lib",
+      "id": "cms_tsconfig_compileroptions_lib"
+    },
+    {
+      "label": "allowJs",
+      "file_type": "code",
+      "source_file": "cms/tsconfig.json",
+      "source_location": "L5",
+      "community": 7,
+      "norm_label": "allowjs",
+      "id": "cms_tsconfig_compileroptions_allowjs"
+    },
+    {
+      "label": "skipLibCheck",
+      "file_type": "code",
+      "source_file": "cms/tsconfig.json",
+      "source_location": "L6",
+      "community": 7,
+      "norm_label": "skiplibcheck",
+      "id": "cms_tsconfig_compileroptions_skiplibcheck"
+    },
+    {
+      "label": "strict",
+      "file_type": "code",
+      "source_file": "cms/tsconfig.json",
+      "source_location": "L7",
+      "community": 7,
+      "norm_label": "strict",
+      "id": "cms_tsconfig_compileroptions_strict"
+    },
+    {
+      "label": "forceConsistentCasingInFileNames",
+      "file_type": "code",
+      "source_file": "cms/tsconfig.json",
+      "source_location": "L8",
+      "community": 7,
+      "norm_label": "forceconsistentcasinginfilenames",
+      "id": "cms_tsconfig_compileroptions_forceconsistentcasinginfilenames"
+    },
+    {
+      "label": "module",
+      "file_type": "code",
+      "source_file": "cms/tsconfig.json",
+      "source_location": "L9",
+      "community": 7,
+      "norm_label": "module",
+      "id": "cms_tsconfig_compileroptions_module"
+    },
+    {
+      "label": "moduleDetection",
+      "file_type": "code",
+      "source_file": "cms/tsconfig.json",
+      "source_location": "L10",
+      "community": 7,
+      "norm_label": "moduledetection",
+      "id": "cms_tsconfig_compileroptions_moduledetection"
+    },
+    {
+      "label": "isolatedModules",
+      "file_type": "code",
+      "source_file": "cms/tsconfig.json",
+      "source_location": "L11",
+      "community": 7,
+      "norm_label": "isolatedmodules",
+      "id": "cms_tsconfig_compileroptions_isolatedmodules"
+    },
+    {
+      "label": "jsx",
+      "file_type": "code",
+      "source_file": "cms/tsconfig.json",
+      "source_location": "L12",
+      "community": 7,
+      "norm_label": "jsx",
+      "id": "cms_tsconfig_compileroptions_jsx"
+    },
+    {
+      "label": "incremental",
+      "file_type": "code",
+      "source_file": "cms/tsconfig.json",
+      "source_location": "L13",
+      "community": 7,
+      "norm_label": "incremental",
+      "id": "cms_tsconfig_compileroptions_incremental"
+    },
+    {
+      "label": "include",
+      "file_type": "code",
+      "source_file": "cms/tsconfig.json",
+      "source_location": "L15",
+      "community": 7,
+      "norm_label": "include",
+      "id": "cms_tsconfig_include"
+    },
+    {
+      "label": "exclude",
+      "file_type": "code",
+      "source_file": "cms/tsconfig.json",
+      "source_location": "L16",
+      "community": 7,
+      "norm_label": "exclude",
+      "id": "cms_tsconfig_exclude"
+    },
+    {
+      "label": "package.json",
+      "file_type": "code",
+      "source_file": "cms/package.json",
+      "source_location": "L1",
+      "community": 0,
+      "norm_label": "package.json",
+      "id": "cms_package_json"
+    },
+    {
+      "label": "name",
+      "file_type": "code",
+      "source_file": "cms/package.json",
+      "source_location": "L2",
+      "community": 0,
+      "norm_label": "name",
+      "id": "cms_package_name"
+    },
+    {
+      "label": "private",
+      "file_type": "code",
+      "source_file": "cms/package.json",
+      "source_location": "L3",
+      "community": 0,
+      "norm_label": "private",
+      "id": "cms_package_private"
+    },
+    {
+      "label": "version",
+      "file_type": "code",
+      "source_file": "cms/package.json",
+      "source_location": "L4",
+      "community": 0,
+      "norm_label": "version",
+      "id": "cms_package_version"
+    },
+    {
+      "label": "main",
+      "file_type": "code",
+      "source_file": "cms/package.json",
+      "source_location": "L5",
+      "community": 0,
+      "norm_label": "main",
+      "id": "cms_package_main"
+    },
+    {
+      "label": "license",
+      "file_type": "code",
+      "source_file": "cms/package.json",
+      "source_location": "L6",
+      "community": 0,
+      "norm_label": "license",
+      "id": "cms_package_license"
+    },
+    {
+      "label": "scripts",
+      "file_type": "code",
+      "source_file": "cms/package.json",
+      "source_location": "L7",
+      "community": 0,
+      "norm_label": "scripts",
+      "id": "cms_package_scripts"
+    },
+    {
+      "label": "build",
+      "file_type": "code",
+      "source_file": "cms/package.json",
+      "source_location": "L8",
+      "community": 0,
+      "norm_label": "build",
+      "id": "cms_package_scripts_build"
+    },
+    {
+      "label": "deploy",
+      "file_type": "code",
+      "source_file": "cms/package.json",
+      "source_location": "L9",
+      "community": 0,
+      "norm_label": "deploy",
+      "id": "cms_package_scripts_deploy"
+    },
+    {
+      "label": "deploy-graphql",
+      "file_type": "code",
+      "source_file": "cms/package.json",
+      "source_location": "L10",
+      "community": 0,
+      "norm_label": "deploy-graphql",
+      "id": "cms_package_scripts_deploy_graphql"
+    },
+    {
+      "label": "dev",
+      "file_type": "code",
+      "source_file": "cms/package.json",
+      "source_location": "L11",
+      "community": 0,
+      "norm_label": "dev",
+      "id": "cms_package_scripts_dev"
+    },
+    {
+      "label": "start",
+      "file_type": "code",
+      "source_file": "cms/package.json",
+      "source_location": "L12",
+      "community": 0,
+      "norm_label": "start",
+      "id": "cms_package_scripts_start"
+    },
+    {
+      "label": "keywords",
+      "file_type": "code",
+      "source_file": "cms/package.json",
+      "source_location": "L14",
+      "community": 0,
+      "norm_label": "keywords",
+      "id": "cms_package_keywords"
+    },
+    {
+      "label": "dependencies",
+      "file_type": "code",
+      "source_file": "cms/package.json",
+      "source_location": "L17",
+      "community": 0,
+      "norm_label": "dependencies",
+      "id": "cms_package_dependencies"
+    },
+    {
+      "label": "@sanity/vision",
+      "file_type": "code",
+      "source_file": "cms/package.json",
+      "source_location": "L18",
+      "community": 0,
+      "norm_label": "@sanity/vision",
+      "id": "cms_package_dependencies_sanity_vision"
+    },
+    {
+      "label": "@xyflow/react",
+      "file_type": "code",
+      "source_file": "cms/package.json",
+      "source_location": "L19",
+      "community": 0,
+      "norm_label": "@xyflow/react",
+      "id": "cms_package_dependencies_xyflow_react"
+    },
+    {
+      "label": "react",
+      "file_type": "code",
+      "source_file": "cms/package.json",
+      "source_location": "L20",
+      "community": 0,
+      "norm_label": "react",
+      "id": "cms_package_dependencies_react"
+    },
+    {
+      "label": "react-dom",
+      "file_type": "code",
+      "source_file": "cms/package.json",
+      "source_location": "L21",
+      "community": 0,
+      "norm_label": "react-dom",
+      "id": "cms_package_dependencies_react_dom"
+    },
+    {
+      "label": "sanity",
+      "file_type": "code",
+      "source_file": "cms/package.json",
+      "source_location": "L22",
+      "community": 0,
+      "norm_label": "sanity",
+      "id": "cms_package_dependencies_sanity"
+    },
+    {
+      "label": "styled-components",
+      "file_type": "code",
+      "source_file": "cms/package.json",
+      "source_location": "L23",
+      "community": 0,
+      "norm_label": "styled-components",
+      "id": "cms_package_dependencies_styled_components"
+    },
+    {
+      "label": "devDependencies",
+      "file_type": "code",
+      "source_file": "cms/package.json",
+      "source_location": "L25",
+      "community": 0,
+      "norm_label": "devdependencies",
+      "id": "cms_package_devdependencies"
+    },
+    {
+      "label": "@sanity/eslint-config-studio",
+      "file_type": "code",
+      "source_file": "cms/package.json",
+      "source_location": "L26",
+      "community": 0,
+      "norm_label": "@sanity/eslint-config-studio",
+      "id": "cms_package_devdependencies_sanity_eslint_config_studio"
+    },
+    {
+      "label": "@types/react",
+      "file_type": "code",
+      "source_file": "cms/package.json",
+      "source_location": "L27",
+      "community": 0,
+      "norm_label": "@types/react",
+      "id": "cms_package_devdependencies_types_react"
+    },
+    {
+      "label": "eslint",
+      "file_type": "code",
+      "source_file": "cms/package.json",
+      "source_location": "L28",
+      "community": 0,
+      "norm_label": "eslint",
+      "id": "cms_package_devdependencies_eslint"
+    },
+    {
+      "label": "prettier",
+      "file_type": "code",
+      "source_file": "cms/package.json",
+      "source_location": "L29",
+      "community": 0,
+      "norm_label": "prettier",
+      "id": "cms_package_devdependencies_prettier"
+    },
+    {
+      "label": "typescript",
+      "file_type": "code",
+      "source_file": "cms/package.json",
+      "source_location": "L30",
+      "community": 0,
+      "norm_label": "typescript",
+      "id": "cms_package_devdependencies_typescript"
+    },
+    {
+      "label": "prettier",
+      "file_type": "code",
+      "source_file": "cms/package.json",
+      "source_location": "L32",
+      "community": 0,
+      "norm_label": "prettier",
+      "id": "cms_package_prettier"
+    },
+    {
+      "label": "bracketSpacing",
+      "file_type": "code",
+      "source_file": "cms/package.json",
+      "source_location": "L33",
+      "community": 0,
+      "norm_label": "bracketspacing",
+      "id": "cms_package_prettier_bracketspacing"
+    },
+    {
+      "label": "printWidth",
+      "file_type": "code",
+      "source_file": "cms/package.json",
+      "source_location": "L34",
+      "community": 0,
+      "norm_label": "printwidth",
+      "id": "cms_package_prettier_printwidth"
+    },
+    {
+      "label": "semi",
+      "file_type": "code",
+      "source_file": "cms/package.json",
+      "source_location": "L35",
+      "community": 0,
+      "norm_label": "semi",
+      "id": "cms_package_prettier_semi"
+    },
+    {
+      "label": "singleQuote",
+      "file_type": "code",
+      "source_file": "cms/package.json",
+      "source_location": "L36",
+      "community": 0,
+      "norm_label": "singlequote",
+      "id": "cms_package_prettier_singlequote"
+    },
+    {
+      "label": "UrlDisplay.tsx",
+      "file_type": "code",
+      "source_file": "cms/components/UrlDisplay.tsx",
+      "source_location": "L1",
+      "community": 2,
+      "norm_label": "urldisplay.tsx",
+      "id": "cms_components_urldisplay_tsx"
+    },
+    {
+      "label": "CopyUrlCard()",
+      "file_type": "code",
+      "source_file": "cms/components/UrlDisplay.tsx",
+      "source_location": "L9",
+      "community": 2,
+      "norm_label": "copyurlcard()",
+      "id": "components_urldisplay_copyurlcard"
+    },
+    {
+      "label": "getBaseUrl()",
+      "file_type": "code",
+      "source_file": "cms/components/UrlDisplay.tsx",
+      "source_location": "L35",
+      "community": 2,
+      "norm_label": "getbaseurl()",
+      "id": "components_urldisplay_getbaseurl"
+    },
+    {
+      "label": "BatchUrlDisplay()",
+      "file_type": "code",
+      "source_file": "cms/components/UrlDisplay.tsx",
+      "source_location": "L58",
+      "community": 2,
+      "norm_label": "batchurldisplay()",
+      "id": "components_urldisplay_batchurldisplay"
+    },
+    {
+      "label": "ScenarioUrlDisplay()",
+      "file_type": "code",
+      "source_file": "cms/components/UrlDisplay.tsx",
+      "source_location": "L71",
+      "community": 2,
+      "norm_label": "scenariourldisplay()",
+      "id": "components_urldisplay_scenariourldisplay"
+    },
+    {
+      "label": "index.ts",
+      "file_type": "code",
+      "source_file": "cms/plugins/branchEditor/index.ts",
+      "source_location": "L1",
+      "community": 28,
+      "norm_label": "index.ts",
+      "id": "cms_plugins_brancheditor_index_ts"
+    },
+    {
+      "label": "branchEditorTool",
+      "file_type": "code",
+      "source_file": "cms/plugins/branchEditor/index.ts",
+      "source_location": "L4",
+      "community": 28,
+      "norm_label": "brancheditortool",
+      "id": "brancheditor_index_brancheditortool"
+    },
+    {
+      "label": "AddScenarioDialog.tsx",
+      "file_type": "code",
+      "source_file": "cms/plugins/branchEditor/components/AddScenarioDialog.tsx",
+      "source_location": "L1",
+      "community": 28,
+      "norm_label": "addscenariodialog.tsx",
+      "id": "cms_plugins_brancheditor_components_addscenariodialog_tsx"
+    },
+    {
+      "label": "AddScenarioDialogProps",
+      "file_type": "code",
+      "source_file": "cms/plugins/branchEditor/components/AddScenarioDialog.tsx",
+      "source_location": "L4",
+      "community": 28,
+      "norm_label": "addscenariodialogprops",
+      "id": "components_addscenariodialog_addscenariodialogprops"
+    },
+    {
+      "label": "AddScenarioDialog()",
+      "file_type": "code",
+      "source_file": "cms/plugins/branchEditor/components/AddScenarioDialog.tsx",
+      "source_location": "L16",
+      "community": 28,
+      "norm_label": "addscenariodialog()",
+      "id": "components_addscenariodialog_addscenariodialog"
+    },
+    {
+      "label": "StageNode.tsx",
+      "file_type": "code",
+      "source_file": "cms/plugins/branchEditor/components/StageNode.tsx",
+      "source_location": "L1",
+      "community": 28,
+      "norm_label": "stagenode.tsx",
+      "id": "cms_plugins_brancheditor_components_stagenode_tsx"
+    },
+    {
+      "label": "StageNode()",
+      "file_type": "code",
+      "source_file": "cms/plugins/branchEditor/components/StageNode.tsx",
+      "source_location": "L5",
+      "community": 28,
+      "norm_label": "stagenode()",
+      "id": "components_stagenode_stagenode"
+    },
+    {
+      "label": "EditStageDialog.tsx",
+      "file_type": "code",
+      "source_file": "cms/plugins/branchEditor/components/EditStageDialog.tsx",
+      "source_location": "L1",
+      "community": 28,
+      "norm_label": "editstagedialog.tsx",
+      "id": "cms_plugins_brancheditor_components_editstagedialog_tsx"
+    },
+    {
+      "label": "EditStageDialogProps",
+      "file_type": "code",
+      "source_file": "cms/plugins/branchEditor/components/EditStageDialog.tsx",
+      "source_location": "L6",
+      "community": 28,
+      "norm_label": "editstagedialogprops",
+      "id": "components_editstagedialog_editstagedialogprops"
+    },
+    {
+      "label": "EditStageDialog()",
+      "file_type": "code",
+      "source_file": "cms/plugins/branchEditor/components/EditStageDialog.tsx",
+      "source_location": "L16",
+      "community": 28,
+      "norm_label": "editstagedialog()",
+      "id": "components_editstagedialog_editstagedialog"
+    },
+    {
+      "label": "businessLinkType.ts",
+      "file_type": "code",
+      "source_file": "cms/schemaTypes/businessLinkType.ts",
+      "source_location": "L1",
+      "community": 2,
+      "norm_label": "businesslinktype.ts",
+      "id": "cms_schematypes_businesslinktype_ts"
+    },
+    {
+      "label": "business",
+      "file_type": "code",
+      "source_file": "cms/schemaTypes/businessLinkType.ts",
+      "source_location": "L3",
+      "community": 2,
+      "norm_label": "business",
+      "id": "schematypes_businesslinktype_business"
+    },
+    {
+      "label": "diagnosisType.ts",
+      "file_type": "code",
+      "source_file": "cms/schemaTypes/diagnosisType.ts",
+      "source_location": "L1",
+      "community": 2,
+      "norm_label": "diagnosistype.ts",
+      "id": "cms_schematypes_diagnosistype_ts"
+    },
+    {
+      "label": "diagnosis",
+      "file_type": "code",
+      "source_file": "cms/schemaTypes/diagnosisType.ts",
+      "source_location": "L3",
+      "community": 2,
+      "norm_label": "diagnosis",
+      "id": "schematypes_diagnosistype_diagnosis"
+    },
+    {
+      "label": "replyType.ts",
+      "file_type": "code",
+      "source_file": "cms/schemaTypes/replyType.ts",
+      "source_location": "L1",
+      "community": 2,
+      "norm_label": "replytype.ts",
+      "id": "cms_schematypes_replytype_ts"
+    },
+    {
+      "label": "reply",
+      "file_type": "code",
+      "source_file": "cms/schemaTypes/replyType.ts",
+      "source_location": "L3",
+      "community": 2,
+      "norm_label": "reply",
+      "id": "schematypes_replytype_reply"
+    },
+    {
+      "label": "index.ts",
+      "file_type": "code",
+      "source_file": "cms/schemaTypes/index.ts",
+      "source_location": "L1",
+      "community": 2,
+      "norm_label": "index.ts",
+      "id": "cms_schematypes_index_ts"
+    },
+    {
+      "label": "schemaTypes",
+      "file_type": "code",
+      "source_file": "cms/schemaTypes/index.ts",
+      "source_location": "L10",
+      "community": 28,
+      "norm_label": "schematypes",
+      "id": "schematypes_index_schematypes"
+    },
+    {
+      "label": "settingsType.ts",
+      "file_type": "code",
+      "source_file": "cms/schemaTypes/settingsType.ts",
+      "source_location": "L1",
+      "community": 2,
+      "norm_label": "settingstype.ts",
+      "id": "cms_schematypes_settingstype_ts"
+    },
+    {
+      "label": "settings",
+      "file_type": "code",
+      "source_file": "cms/schemaTypes/settingsType.ts",
+      "source_location": "L3",
+      "community": 2,
+      "norm_label": "settings",
+      "id": "schematypes_settingstype_settings"
+    },
+    {
+      "label": "valueType.ts",
+      "file_type": "code",
+      "source_file": "cms/schemaTypes/valueType.ts",
+      "source_location": "L1",
+      "community": 2,
+      "norm_label": "valuetype.ts",
+      "id": "cms_schematypes_valuetype_ts"
+    },
+    {
+      "label": "valueType",
+      "file_type": "code",
+      "source_file": "cms/schemaTypes/valueType.ts",
+      "source_location": "L3",
+      "community": 2,
+      "norm_label": "valuetype",
+      "id": "schematypes_valuetype_valuetype"
+    },
+    {
+      "label": "batchType.ts",
+      "file_type": "code",
+      "source_file": "cms/schemaTypes/batchType.ts",
+      "source_location": "L1",
+      "community": 2,
+      "norm_label": "batchtype.ts",
+      "id": "cms_schematypes_batchtype_ts"
+    },
+    {
+      "label": "batch",
+      "file_type": "code",
+      "source_file": "cms/schemaTypes/batchType.ts",
+      "source_location": "L4",
+      "community": 2,
+      "norm_label": "batch",
+      "id": "schematypes_batchtype_batch"
+    },
+    {
       "label": "scenarioType.ts",
       "file_type": "code",
       "source_file": "cms/schemaTypes/scenarioType.ts",
       "source_location": "L1",
-      "id": "cms_schematypes_scenariotype_ts",
       "community": 2,
-      "norm_label": "scenariotype.ts"
+      "norm_label": "scenariotype.ts",
+      "id": "cms_schematypes_scenariotype_ts"
     },
     {
       "label": "scenario",
       "file_type": "code",
       "source_file": "cms/schemaTypes/scenarioType.ts",
       "source_location": "L4",
-      "id": "schematypes_scenariotype_scenario",
       "community": 2,
-      "norm_label": "scenario"
+      "norm_label": "scenario",
+      "id": "schematypes_scenariotype_scenario"
     },
     {
       "label": "diagnosisType.ts",
       "file_type": "code",
       "source_file": "cms/schemaTypes/backup/diagnosisType.ts",
       "source_location": "L1",
-      "id": "cms_schematypes_backup_diagnosistype_ts",
       "community": 8,
-      "norm_label": "diagnosistype.ts"
+      "norm_label": "diagnosistype.ts",
+      "id": "cms_schematypes_backup_diagnosistype_ts"
     },
     {
       "label": "diagnosis",
       "file_type": "code",
       "source_file": "cms/schemaTypes/backup/diagnosisType.ts",
       "source_location": "L3",
-      "id": "backup_diagnosistype_diagnosis",
       "community": 8,
-      "norm_label": "diagnosis"
+      "norm_label": "diagnosis",
+      "id": "backup_diagnosistype_diagnosis"
     },
     {
       "label": "replyType.ts",
       "file_type": "code",
       "source_file": "cms/schemaTypes/backup/replyType.ts",
       "source_location": "L1",
-      "id": "cms_schematypes_backup_replytype_ts",
       "community": 8,
-      "norm_label": "replytype.ts"
+      "norm_label": "replytype.ts",
+      "id": "cms_schematypes_backup_replytype_ts"
     },
     {
       "label": "reply",
       "file_type": "code",
       "source_file": "cms/schemaTypes/backup/replyType.ts",
       "source_location": "L3",
-      "id": "backup_replytype_reply",
       "community": 8,
-      "norm_label": "reply"
+      "norm_label": "reply",
+      "id": "backup_replytype_reply"
     },
     {
       "label": "index.ts",
       "file_type": "code",
       "source_file": "cms/schemaTypes/backup/index.ts",
       "source_location": "L1",
-      "id": "cms_schematypes_backup_index_ts",
       "community": 8,
-      "norm_label": "index.ts"
+      "norm_label": "index.ts",
+      "id": "cms_schematypes_backup_index_ts"
     },
     {
       "label": "schemaTypes",
       "file_type": "code",
       "source_file": "cms/schemaTypes/backup/index.ts",
       "source_location": "L8",
-      "id": "backup_index_schematypes",
       "community": 8,
-      "norm_label": "schematypes"
+      "norm_label": "schematypes",
+      "id": "backup_index_schematypes"
     },
     {
       "label": "valueType.ts",
       "file_type": "code",
       "source_file": "cms/schemaTypes/backup/valueType.ts",
       "source_location": "L1",
-      "id": "cms_schematypes_backup_valuetype_ts",
       "community": 8,
-      "norm_label": "valuetype.ts"
+      "norm_label": "valuetype.ts",
+      "id": "cms_schematypes_backup_valuetype_ts"
     },
     {
       "label": "valueType",
       "file_type": "code",
       "source_file": "cms/schemaTypes/backup/valueType.ts",
       "source_location": "L3",
-      "id": "backup_valuetype_valuetype",
       "community": 8,
-      "norm_label": "valuetype"
+      "norm_label": "valuetype",
+      "id": "backup_valuetype_valuetype"
     },
     {
       "label": "batchType.ts",
       "file_type": "code",
       "source_file": "cms/schemaTypes/backup/batchType.ts",
       "source_location": "L1",
-      "id": "cms_schematypes_backup_batchtype_ts",
       "community": 8,
-      "norm_label": "batchtype.ts"
+      "norm_label": "batchtype.ts",
+      "id": "cms_schematypes_backup_batchtype_ts"
     },
     {
       "label": "batch",
       "file_type": "code",
       "source_file": "cms/schemaTypes/backup/batchType.ts",
       "source_location": "L3",
-      "id": "backup_batchtype_batch",
       "community": 8,
-      "norm_label": "batch"
+      "norm_label": "batch",
+      "id": "backup_batchtype_batch"
     },
     {
       "label": "stageType.ts",
       "file_type": "code",
       "source_file": "cms/schemaTypes/backup/stageType.ts",
       "source_location": "L1",
-      "id": "cms_schematypes_backup_stagetype_ts",
       "community": 8,
-      "norm_label": "stagetype.ts"
+      "norm_label": "stagetype.ts",
+      "id": "cms_schematypes_backup_stagetype_ts"
     },
     {
       "label": "stage",
       "file_type": "code",
       "source_file": "cms/schemaTypes/backup/stageType.ts",
       "source_location": "L3",
-      "id": "backup_stagetype_stage",
       "community": 8,
-      "norm_label": "stage"
+      "norm_label": "stage",
+      "id": "backup_stagetype_stage"
     },
     {
       "label": "scenarioType.ts",
       "file_type": "code",
       "source_file": "cms/schemaTypes/backup/scenarioType.ts",
       "source_location": "L1",
-      "id": "cms_schematypes_backup_scenariotype_ts",
       "community": 8,
-      "norm_label": "scenariotype.ts"
+      "norm_label": "scenariotype.ts",
+      "id": "cms_schematypes_backup_scenariotype_ts"
     },
     {
       "label": "scenario",
       "file_type": "code",
       "source_file": "cms/schemaTypes/backup/scenarioType.ts",
       "source_location": "L3",
-      "id": "backup_scenariotype_scenario",
       "community": 8,
-      "norm_label": "scenario"
+      "norm_label": "scenario",
+      "id": "backup_scenariotype_scenario"
     },
     {
       "label": "app.js",
       "file_type": "code",
       "source_file": "cms/.sanity/runtime/app.js",
       "source_location": "L1",
-      "id": "cms_sanity_runtime_app_js",
       "community": 28,
-      "norm_label": "app.js"
+      "norm_label": "app.js",
+      "id": "cms_sanity_runtime_app_js"
     },
     {
       "label": "publishBatchAction.ts",
       "file_type": "code",
       "source_file": "cms/actions/publishBatchAction.ts",
       "source_location": "L1",
-      "id": "cms_actions_publishbatchaction_ts",
       "community": 28,
-      "norm_label": "publishbatchaction.ts"
+      "norm_label": "publishbatchaction.ts",
+      "id": "cms_actions_publishbatchaction_ts"
     },
     {
       "label": "publishBatchWithScenariosAction()",
       "file_type": "code",
       "source_file": "cms/actions/publishBatchAction.ts",
       "source_location": "L4",
-      "id": "actions_publishbatchaction_publishbatchwithscenariosaction",
       "community": 28,
-      "norm_label": "publishbatchwithscenariosaction()"
+      "norm_label": "publishbatchwithscenariosaction()",
+      "id": "actions_publishbatchaction_publishbatchwithscenariosaction"
     },
     {
       "label": "attachDiagnosesAction.ts",
       "file_type": "code",
       "source_file": "cms/actions/attachDiagnosesAction.ts",
       "source_location": "L1",
-      "id": "cms_actions_attachdiagnosesaction_ts",
       "community": 28,
-      "norm_label": "attachdiagnosesaction.ts"
+      "norm_label": "attachdiagnosesaction.ts",
+      "id": "cms_actions_attachdiagnosesaction_ts"
     },
     {
       "label": "attachAllDiagnosesAction()",
       "file_type": "code",
       "source_file": "cms/actions/attachDiagnosesAction.ts",
       "source_location": "L4",
-      "id": "actions_attachdiagnosesaction_attachalldiagnosesaction",
       "community": 28,
-      "norm_label": "attachalldiagnosesaction()"
+      "norm_label": "attachalldiagnosesaction()",
+      "id": "actions_attachdiagnosesaction_attachalldiagnosesaction"
     },
     {
       "label": "eslint.config.mjs",
       "file_type": "code",
       "source_file": "frontend/eslint.config.mjs",
       "source_location": "L1",
-      "id": "frontend_eslint_config_mjs",
       "community": 21,
-      "norm_label": "eslint.config.mjs"
+      "norm_label": "eslint.config.mjs",
+      "id": "frontend_eslint_config_mjs"
     },
     {
       "label": "eslintConfig",
       "file_type": "code",
       "source_file": "frontend/eslint.config.mjs",
       "source_location": "L5",
-      "id": "frontend_eslint_config_eslintconfig",
       "community": 21,
-      "norm_label": "eslintconfig"
+      "norm_label": "eslintconfig",
+      "id": "frontend_eslint_config_eslintconfig"
     },
     {
       "label": "next-env.d.ts",
       "file_type": "code",
       "source_file": "frontend/next-env.d.ts",
       "source_location": "L1",
-      "id": "frontend_next_env_d_ts",
       "community": 26,
-      "norm_label": "next-env.d.ts"
+      "norm_label": "next-env.d.ts",
+      "id": "frontend_next_env_d_ts"
     },
     {
       "label": "tsconfig.json",
       "file_type": "code",
       "source_file": "frontend/tsconfig.json",
       "source_location": "L1",
-      "id": "frontend_tsconfig_json",
       "community": 5,
-      "norm_label": "tsconfig.json"
+      "norm_label": "tsconfig.json",
+      "id": "frontend_tsconfig_json"
     },
     {
       "label": "compilerOptions",
       "file_type": "code",
       "source_file": "frontend/tsconfig.json",
       "source_location": "L2",
-      "id": "frontend_tsconfig_compileroptions",
       "community": 5,
-      "norm_label": "compileroptions"
+      "norm_label": "compileroptions",
+      "id": "frontend_tsconfig_compileroptions"
     },
     {
       "label": "target",
       "file_type": "code",
       "source_file": "frontend/tsconfig.json",
       "source_location": "L3",
-      "id": "frontend_tsconfig_compileroptions_target",
       "community": 5,
-      "norm_label": "target"
+      "norm_label": "target",
+      "id": "frontend_tsconfig_compileroptions_target"
     },
     {
       "label": "lib",
       "file_type": "code",
       "source_file": "frontend/tsconfig.json",
       "source_location": "L4",
-      "id": "frontend_tsconfig_compileroptions_lib",
       "community": 5,
-      "norm_label": "lib"
+      "norm_label": "lib",
+      "id": "frontend_tsconfig_compileroptions_lib"
     },
     {
       "label": "allowJs",
       "file_type": "code",
       "source_file": "frontend/tsconfig.json",
       "source_location": "L5",
-      "id": "frontend_tsconfig_compileroptions_allowjs",
       "community": 5,
-      "norm_label": "allowjs"
+      "norm_label": "allowjs",
+      "id": "frontend_tsconfig_compileroptions_allowjs"
     },
     {
       "label": "skipLibCheck",
       "file_type": "code",
       "source_file": "frontend/tsconfig.json",
       "source_location": "L6",
-      "id": "frontend_tsconfig_compileroptions_skiplibcheck",
       "community": 5,
-      "norm_label": "skiplibcheck"
+      "norm_label": "skiplibcheck",
+      "id": "frontend_tsconfig_compileroptions_skiplibcheck"
     },
     {
       "label": "strict",
       "file_type": "code",
       "source_file": "frontend/tsconfig.json",
       "source_location": "L7",
-      "id": "frontend_tsconfig_compileroptions_strict",
       "community": 5,
-      "norm_label": "strict"
+      "norm_label": "strict",
+      "id": "frontend_tsconfig_compileroptions_strict"
     },
     {
       "label": "noEmit",
       "file_type": "code",
       "source_file": "frontend/tsconfig.json",
       "source_location": "L8",
-      "id": "frontend_tsconfig_compileroptions_noemit",
       "community": 5,
-      "norm_label": "noemit"
+      "norm_label": "noemit",
+      "id": "frontend_tsconfig_compileroptions_noemit"
     },
     {
       "label": "esModuleInterop",
       "file_type": "code",
       "source_file": "frontend/tsconfig.json",
       "source_location": "L9",
-      "id": "frontend_tsconfig_compileroptions_esmoduleinterop",
       "community": 5,
-      "norm_label": "esmoduleinterop"
+      "norm_label": "esmoduleinterop",
+      "id": "frontend_tsconfig_compileroptions_esmoduleinterop"
     },
     {
       "label": "module",
       "file_type": "code",
       "source_file": "frontend/tsconfig.json",
       "source_location": "L10",
-      "id": "frontend_tsconfig_compileroptions_module",
       "community": 5,
-      "norm_label": "module"
+      "norm_label": "module",
+      "id": "frontend_tsconfig_compileroptions_module"
     },
     {
       "label": "moduleResolution",
       "file_type": "code",
       "source_file": "frontend/tsconfig.json",
       "source_location": "L11",
-      "id": "frontend_tsconfig_compileroptions_moduleresolution",
       "community": 5,
-      "norm_label": "moduleresolution"
+      "norm_label": "moduleresolution",
+      "id": "frontend_tsconfig_compileroptions_moduleresolution"
     },
     {
       "label": "resolveJsonModule",
       "file_type": "code",
       "source_file": "frontend/tsconfig.json",
       "source_location": "L12",
-      "id": "frontend_tsconfig_compileroptions_resolvejsonmodule",
       "community": 5,
-      "norm_label": "resolvejsonmodule"
+      "norm_label": "resolvejsonmodule",
+      "id": "frontend_tsconfig_compileroptions_resolvejsonmodule"
     },
     {
       "label": "isolatedModules",
       "file_type": "code",
       "source_file": "frontend/tsconfig.json",
       "source_location": "L13",
-      "id": "frontend_tsconfig_compileroptions_isolatedmodules",
       "community": 5,
-      "norm_label": "isolatedmodules"
+      "norm_label": "isolatedmodules",
+      "id": "frontend_tsconfig_compileroptions_isolatedmodules"
     },
     {
       "label": "jsx",
       "file_type": "code",
       "source_file": "frontend/tsconfig.json",
       "source_location": "L14",
-      "id": "frontend_tsconfig_compileroptions_jsx",
       "community": 5,
-      "norm_label": "jsx"
+      "norm_label": "jsx",
+      "id": "frontend_tsconfig_compileroptions_jsx"
     },
     {
       "label": "incremental",
       "file_type": "code",
       "source_file": "frontend/tsconfig.json",
       "source_location": "L15",
-      "id": "frontend_tsconfig_compileroptions_incremental",
       "community": 5,
-      "norm_label": "incremental"
+      "norm_label": "incremental",
+      "id": "frontend_tsconfig_compileroptions_incremental"
     },
     {
       "label": "plugins",
       "file_type": "code",
       "source_file": "frontend/tsconfig.json",
       "source_location": "L16",
-      "id": "frontend_tsconfig_compileroptions_plugins",
       "community": 5,
-      "norm_label": "plugins"
+      "norm_label": "plugins",
+      "id": "frontend_tsconfig_compileroptions_plugins"
     },
     {
       "label": "paths",
       "file_type": "code",
       "source_file": "frontend/tsconfig.json",
       "source_location": "L21",
-      "id": "frontend_tsconfig_compileroptions_paths",
       "community": 5,
-      "norm_label": "paths"
+      "norm_label": "paths",
+      "id": "frontend_tsconfig_compileroptions_paths"
     },
     {
       "label": "@/*",
       "file_type": "code",
       "source_file": "frontend/tsconfig.json",
       "source_location": "L22",
-      "id": "frontend_tsconfig_paths",
       "community": 5,
-      "norm_label": "@/*"
+      "norm_label": "@/*",
+      "id": "frontend_tsconfig_paths"
     },
     {
       "label": "include",
       "file_type": "code",
       "source_file": "frontend/tsconfig.json",
       "source_location": "L25",
-      "id": "frontend_tsconfig_include",
       "community": 5,
-      "norm_label": "include"
+      "norm_label": "include",
+      "id": "frontend_tsconfig_include"
     },
     {
       "label": "exclude",
       "file_type": "code",
       "source_file": "frontend/tsconfig.json",
       "source_location": "L33",
-      "id": "frontend_tsconfig_exclude",
       "community": 5,
-      "norm_label": "exclude"
+      "norm_label": "exclude",
+      "id": "frontend_tsconfig_exclude"
     },
     {
       "label": "next.config.ts",
       "file_type": "code",
       "source_file": "frontend/next.config.ts",
       "source_location": "L1",
-      "id": "frontend_next_config_ts",
       "community": 22,
-      "norm_label": "next.config.ts"
+      "norm_label": "next.config.ts",
+      "id": "frontend_next_config_ts"
     },
     {
       "label": "nextConfig",
       "file_type": "code",
       "source_file": "frontend/next.config.ts",
       "source_location": "L3",
-      "id": "frontend_next_config_nextconfig",
       "community": 22,
-      "norm_label": "nextconfig"
+      "norm_label": "nextconfig",
+      "id": "frontend_next_config_nextconfig"
     },
     {
       "label": "postcss.config.mjs",
       "file_type": "code",
       "source_file": "frontend/postcss.config.mjs",
       "source_location": "L1",
-      "id": "frontend_postcss_config_mjs",
       "community": 23,
-      "norm_label": "postcss.config.mjs"
+      "norm_label": "postcss.config.mjs",
+      "id": "frontend_postcss_config_mjs"
     },
     {
       "label": "config",
       "file_type": "code",
       "source_file": "frontend/postcss.config.mjs",
       "source_location": "L1",
-      "id": "frontend_postcss_config_config",
       "community": 23,
-      "norm_label": "config"
+      "norm_label": "config",
+      "id": "frontend_postcss_config_config"
     },
     {
       "label": "package.json",
       "file_type": "code",
       "source_file": "frontend/package.json",
       "source_location": "L1",
-      "id": "frontend_package_json",
       "community": 3,
-      "norm_label": "package.json"
+      "norm_label": "package.json",
+      "id": "frontend_package_json"
     },
     {
       "label": "name",
       "file_type": "code",
       "source_file": "frontend/package.json",
       "source_location": "L2",
-      "id": "frontend_package_name",
       "community": 3,
-      "norm_label": "name"
+      "norm_label": "name",
+      "id": "frontend_package_name"
     },
     {
       "label": "version",
       "file_type": "code",
       "source_file": "frontend/package.json",
       "source_location": "L3",
-      "id": "frontend_package_version",
       "community": 3,
-      "norm_label": "version"
+      "norm_label": "version",
+      "id": "frontend_package_version"
     },
     {
       "label": "private",
       "file_type": "code",
       "source_file": "frontend/package.json",
       "source_location": "L4",
-      "id": "frontend_package_private",
       "community": 3,
-      "norm_label": "private"
+      "norm_label": "private",
+      "id": "frontend_package_private"
     },
     {
       "label": "scripts",
       "file_type": "code",
       "source_file": "frontend/package.json",
       "source_location": "L5",
-      "id": "frontend_package_scripts",
       "community": 3,
-      "norm_label": "scripts"
+      "norm_label": "scripts",
+      "id": "frontend_package_scripts"
     },
     {
       "label": "dev",
       "file_type": "code",
       "source_file": "frontend/package.json",
       "source_location": "L6",
-      "id": "frontend_package_scripts_dev",
       "community": 3,
-      "norm_label": "dev"
+      "norm_label": "dev",
+      "id": "frontend_package_scripts_dev"
     },
     {
       "label": "build",
       "file_type": "code",
       "source_file": "frontend/package.json",
       "source_location": "L7",
-      "id": "frontend_package_scripts_build",
       "community": 3,
-      "norm_label": "build"
+      "norm_label": "build",
+      "id": "frontend_package_scripts_build"
     },
     {
       "label": "start",
       "file_type": "code",
       "source_file": "frontend/package.json",
       "source_location": "L8",
-      "id": "frontend_package_scripts_start",
       "community": 3,
-      "norm_label": "start"
+      "norm_label": "start",
+      "id": "frontend_package_scripts_start"
     },
     {
       "label": "lint",
       "file_type": "code",
       "source_file": "frontend/package.json",
       "source_location": "L9",
-      "id": "frontend_package_scripts_lint",
       "community": 3,
-      "norm_label": "lint"
+      "norm_label": "lint",
+      "id": "frontend_package_scripts_lint"
     },
     {
       "label": "dependencies",
       "file_type": "code",
       "source_file": "frontend/package.json",
       "source_location": "L11",
-      "id": "frontend_package_dependencies",
       "community": 3,
-      "norm_label": "dependencies"
+      "norm_label": "dependencies",
+      "id": "frontend_package_dependencies"
     },
     {
       "label": "@portabletext/react",
       "file_type": "code",
       "source_file": "frontend/package.json",
       "source_location": "L12",
-      "id": "frontend_package_dependencies_portabletext_react",
       "community": 3,
-      "norm_label": "@portabletext/react"
+      "norm_label": "@portabletext/react",
+      "id": "frontend_package_dependencies_portabletext_react"
     },
     {
       "label": "@sanity/client",
       "file_type": "code",
       "source_file": "frontend/package.json",
       "source_location": "L13",
-      "id": "frontend_package_dependencies_sanity_client",
       "community": 3,
-      "norm_label": "@sanity/client"
+      "norm_label": "@sanity/client",
+      "id": "frontend_package_dependencies_sanity_client"
     },
     {
       "label": "next",
       "file_type": "code",
       "source_file": "frontend/package.json",
       "source_location": "L14",
-      "id": "frontend_package_dependencies_next",
       "community": 3,
-      "norm_label": "next"
+      "norm_label": "next",
+      "id": "frontend_package_dependencies_next"
     },
     {
       "label": "react",
       "file_type": "code",
       "source_file": "frontend/package.json",
       "source_location": "L15",
-      "id": "frontend_package_dependencies_react",
       "community": 3,
-      "norm_label": "react"
+      "norm_label": "react",
+      "id": "frontend_package_dependencies_react"
     },
     {
       "label": "react-dom",
       "file_type": "code",
       "source_file": "frontend/package.json",
       "source_location": "L16",
-      "id": "frontend_package_dependencies_react_dom",
       "community": 3,
-      "norm_label": "react-dom"
+      "norm_label": "react-dom",
+      "id": "frontend_package_dependencies_react_dom"
     },
     {
       "label": "devDependencies",
       "file_type": "code",
       "source_file": "frontend/package.json",
       "source_location": "L18",
-      "id": "frontend_package_devdependencies",
       "community": 3,
-      "norm_label": "devdependencies"
+      "norm_label": "devdependencies",
+      "id": "frontend_package_devdependencies"
     },
     {
       "label": "@tailwindcss/postcss",
       "file_type": "code",
       "source_file": "frontend/package.json",
       "source_location": "L19",
-      "id": "frontend_package_devdependencies_tailwindcss_postcss",
       "community": 3,
-      "norm_label": "@tailwindcss/postcss"
+      "norm_label": "@tailwindcss/postcss",
+      "id": "frontend_package_devdependencies_tailwindcss_postcss"
     },
     {
       "label": "@types/node",
       "file_type": "code",
       "source_file": "frontend/package.json",
       "source_location": "L20",
-      "id": "frontend_package_devdependencies_types_node",
       "community": 3,
-      "norm_label": "@types/node"
+      "norm_label": "@types/node",
+      "id": "frontend_package_devdependencies_types_node"
     },
     {
       "label": "@types/react",
       "file_type": "code",
       "source_file": "frontend/package.json",
       "source_location": "L21",
-      "id": "frontend_package_devdependencies_types_react",
       "community": 3,
-      "norm_label": "@types/react"
+      "norm_label": "@types/react",
+      "id": "frontend_package_devdependencies_types_react"
     },
     {
       "label": "@types/react-dom",
       "file_type": "code",
       "source_file": "frontend/package.json",
       "source_location": "L22",
-      "id": "frontend_package_devdependencies_types_react_dom",
       "community": 3,
-      "norm_label": "@types/react-dom"
+      "norm_label": "@types/react-dom",
+      "id": "frontend_package_devdependencies_types_react_dom"
     },
     {
       "label": "eslint",
       "file_type": "code",
       "source_file": "frontend/package.json",
       "source_location": "L23",
-      "id": "frontend_package_devdependencies_eslint",
       "community": 3,
-      "norm_label": "eslint"
+      "norm_label": "eslint",
+      "id": "frontend_package_devdependencies_eslint"
     },
     {
       "label": "eslint-config-next",
       "file_type": "code",
       "source_file": "frontend/package.json",
       "source_location": "L24",
-      "id": "frontend_package_devdependencies_eslint_config_next",
       "community": 3,
-      "norm_label": "eslint-config-next"
+      "norm_label": "eslint-config-next",
+      "id": "frontend_package_devdependencies_eslint_config_next"
     },
     {
       "label": "tailwindcss",
       "file_type": "code",
       "source_file": "frontend/package.json",
       "source_location": "L25",
-      "id": "frontend_package_devdependencies_tailwindcss",
       "community": 3,
-      "norm_label": "tailwindcss"
+      "norm_label": "tailwindcss",
+      "id": "frontend_package_devdependencies_tailwindcss"
     },
     {
       "label": "typescript",
       "file_type": "code",
       "source_file": "frontend/package.json",
       "source_location": "L26",
-      "id": "frontend_package_devdependencies_typescript",
       "community": 3,
-      "norm_label": "typescript"
+      "norm_label": "typescript",
+      "id": "frontend_package_devdependencies_typescript"
     },
     {
       "label": "sanity.ts",
       "file_type": "code",
       "source_file": "frontend/lib/sanity.ts",
       "source_location": "L1",
-      "id": "frontend_lib_sanity_ts",
       "community": 1,
-      "norm_label": "sanity.ts"
+      "norm_label": "sanity.ts",
+      "id": "frontend_lib_sanity_ts"
     },
     {
       "label": "sanityClient",
       "file_type": "code",
       "source_file": "frontend/lib/sanity.ts",
       "source_location": "L3",
-      "id": "lib_sanity_sanityclient",
       "community": 1,
-      "norm_label": "sanityclient"
+      "norm_label": "sanityclient",
+      "id": "lib_sanity_sanityclient"
     },
     {
       "label": "queries.ts",
       "file_type": "code",
       "source_file": "frontend/lib/queries.ts",
       "source_location": "L1",
-      "id": "frontend_lib_queries_ts",
       "community": 1,
-      "norm_label": "queries.ts"
+      "norm_label": "queries.ts",
+      "id": "frontend_lib_queries_ts"
     },
     {
       "label": "types.ts",
       "file_type": "code",
       "source_file": "frontend/lib/types.ts",
       "source_location": "L1",
-      "id": "frontend_lib_types_ts",
       "community": 4,
-      "norm_label": "types.ts"
+      "norm_label": "types.ts",
+      "id": "frontend_lib_types_ts"
     },
     {
       "label": "ValueType",
       "file_type": "code",
       "source_file": "frontend/lib/types.ts",
       "source_location": "L3",
-      "id": "lib_types_valuetype",
       "community": 4,
-      "norm_label": "valuetype"
+      "norm_label": "valuetype",
+      "id": "lib_types_valuetype"
     },
     {
       "label": "Reply",
       "file_type": "code",
       "source_file": "frontend/lib/types.ts",
       "source_location": "L8",
-      "id": "lib_types_reply",
       "community": 4,
-      "norm_label": "reply"
+      "norm_label": "reply",
+      "id": "lib_types_reply"
     },
     {
       "label": "Stage",
       "file_type": "code",
       "source_file": "frontend/lib/types.ts",
       "source_location": "L14",
-      "id": "lib_types_stage",
       "community": 4,
-      "norm_label": "stage"
+      "norm_label": "stage",
+      "id": "lib_types_stage"
     },
     {
       "label": "Diagnosis",
       "file_type": "code",
       "source_file": "frontend/lib/types.ts",
       "source_location": "L22",
-      "id": "lib_types_diagnosis",
       "community": 4,
-      "norm_label": "diagnosis"
+      "norm_label": "diagnosis",
+      "id": "lib_types_diagnosis"
     },
     {
       "label": "Scenario",
       "file_type": "code",
       "source_file": "frontend/lib/types.ts",
       "source_location": "L34",
-      "id": "lib_types_scenario",
       "community": 4,
-      "norm_label": "scenario"
+      "norm_label": "scenario",
+      "id": "lib_types_scenario"
     },
     {
       "label": "PlayScenario",
       "file_type": "code",
       "source_file": "frontend/lib/types.ts",
       "source_location": "L40",
-      "id": "lib_types_playscenario",
       "community": 4,
-      "norm_label": "playscenario"
+      "norm_label": "playscenario",
+      "id": "lib_types_playscenario"
     },
     {
       "label": "error.tsx",
       "file_type": "code",
       "source_file": "frontend/app/error.tsx",
       "source_location": "L1",
-      "id": "frontend_app_error_tsx",
       "community": 15,
-      "norm_label": "error.tsx"
+      "norm_label": "error.tsx",
+      "id": "frontend_app_error_tsx"
     },
     {
       "label": "ErrorProps",
       "file_type": "code",
       "source_file": "frontend/app/error.tsx",
       "source_location": "L6",
-      "id": "app_error_errorprops",
       "community": 15,
-      "norm_label": "errorprops"
+      "norm_label": "errorprops",
+      "id": "app_error_errorprops"
     },
     {
       "label": "GlobalErrorBoundary()",
       "file_type": "code",
       "source_file": "frontend/app/error.tsx",
       "source_location": "L11",
-      "id": "app_error_globalerrorboundary",
       "community": 15,
-      "norm_label": "globalerrorboundary()"
+      "norm_label": "globalerrorboundary()",
+      "id": "app_error_globalerrorboundary"
     },
     {
       "label": "page.tsx",
       "file_type": "code",
       "source_file": "frontend/app/page.tsx",
       "source_location": "L1",
-      "id": "frontend_app_page_tsx",
       "community": 1,
-      "norm_label": "page.tsx"
+      "norm_label": "page.tsx",
+      "id": "frontend_app_page_tsx"
     },
     {
       "label": "BatchItem",
       "file_type": "code",
       "source_file": "frontend/app/page.tsx",
       "source_location": "L7",
-      "id": "app_page_batchitem",
       "community": 1,
-      "norm_label": "batchitem"
+      "norm_label": "batchitem",
+      "id": "app_page_batchitem"
     },
     {
       "label": "Settings",
       "file_type": "code",
       "source_file": "frontend/app/page.tsx",
       "source_location": "L13",
-      "id": "app_page_settings",
       "community": 1,
-      "norm_label": "settings"
+      "norm_label": "settings",
+      "id": "app_page_settings"
     },
     {
       "label": "Home()",
       "file_type": "code",
       "source_file": "frontend/app/page.tsx",
       "source_location": "L17",
-      "id": "app_page_home",
       "community": 1,
-      "norm_label": "home()"
+      "norm_label": "home()",
+      "id": "app_page_home"
     },
     {
       "label": "not-found.tsx",
       "file_type": "code",
       "source_file": "frontend/app/not-found.tsx",
       "source_location": "L1",
-      "id": "frontend_app_not_found_tsx",
       "community": 1,
-      "norm_label": "not-found.tsx"
+      "norm_label": "not-found.tsx",
+      "id": "frontend_app_not_found_tsx"
     },
     {
       "label": "NotFound()",
       "file_type": "code",
       "source_file": "frontend/app/not-found.tsx",
       "source_location": "L3",
-      "id": "app_not_found_notfound",
       "community": 1,
-      "norm_label": "notfound()"
+      "norm_label": "notfound()",
+      "id": "app_not_found_notfound"
     },
     {
       "label": "loading.tsx",
       "file_type": "code",
       "source_file": "frontend/app/loading.tsx",
       "source_location": "L1",
-      "id": "frontend_app_loading_tsx",
       "community": 16,
-      "norm_label": "loading.tsx"
+      "norm_label": "loading.tsx",
+      "id": "frontend_app_loading_tsx"
     },
     {
       "label": "HomeLoading()",
       "file_type": "code",
       "source_file": "frontend/app/loading.tsx",
       "source_location": "L1",
-      "id": "app_loading_homeloading",
       "community": 16,
-      "norm_label": "homeloading()"
+      "norm_label": "homeloading()",
+      "id": "app_loading_homeloading"
     },
     {
       "label": "layout.tsx",
       "file_type": "code",
       "source_file": "frontend/app/layout.tsx",
       "source_location": "L1",
-      "id": "frontend_app_layout_tsx",
       "community": 9,
-      "norm_label": "layout.tsx"
+      "norm_label": "layout.tsx",
+      "id": "frontend_app_layout_tsx"
     },
     {
       "label": "playfair",
       "file_type": "code",
       "source_file": "frontend/app/layout.tsx",
       "source_location": "L7",
-      "id": "app_layout_playfair",
       "community": 9,
-      "norm_label": "playfair"
+      "norm_label": "playfair",
+      "id": "app_layout_playfair"
     },
     {
       "label": "inter",
       "file_type": "code",
       "source_file": "frontend/app/layout.tsx",
       "source_location": "L13",
-      "id": "app_layout_inter",
       "community": 9,
-      "norm_label": "inter"
+      "norm_label": "inter",
+      "id": "app_layout_inter"
     },
     {
       "label": "metadata",
       "file_type": "code",
       "source_file": "frontend/app/layout.tsx",
       "source_location": "L19",
-      "id": "app_layout_metadata",
       "community": 9,
-      "norm_label": "metadata"
+      "norm_label": "metadata",
+      "id": "app_layout_metadata"
     },
     {
       "label": "RootLayout()",
       "file_type": "code",
       "source_file": "frontend/app/layout.tsx",
       "source_location": "L24",
-      "id": "app_layout_rootlayout",
       "community": 9,
-      "norm_label": "rootlayout()"
+      "norm_label": "rootlayout()",
+      "id": "app_layout_rootlayout"
     },
     {
       "label": "PlayChatBox.tsx",
       "file_type": "code",
       "source_file": "frontend/app/components/PlayChatBox.tsx",
       "source_location": "L1",
-      "id": "frontend_app_components_playchatbox_tsx",
       "community": 4,
-      "norm_label": "playchatbox.tsx"
+      "norm_label": "playchatbox.tsx",
+      "id": "frontend_app_components_playchatbox_tsx"
     },
     {
       "label": "Message",
       "file_type": "code",
       "source_file": "frontend/app/components/PlayChatBox.tsx",
       "source_location": "L9",
-      "id": "components_playchatbox_message",
       "community": 4,
-      "norm_label": "message"
+      "norm_label": "message",
+      "id": "components_playchatbox_message"
     },
     {
       "label": "StoredChatState",
       "file_type": "code",
       "source_file": "frontend/app/components/PlayChatBox.tsx",
       "source_location": "L18",
-      "id": "components_playchatbox_storedchatstate",
       "community": 4,
-      "norm_label": "storedchatstate"
+      "norm_label": "storedchatstate",
+      "id": "components_playchatbox_storedchatstate"
     },
     {
       "label": "Props",
       "file_type": "code",
       "source_file": "frontend/app/components/PlayChatBox.tsx",
       "source_location": "L25",
-      "id": "components_playchatbox_props",
       "community": 4,
-      "norm_label": "props"
+      "norm_label": "props",
+      "id": "components_playchatbox_props"
     },
     {
       "label": "PlayChatBox()",
       "file_type": "code",
       "source_file": "frontend/app/components/PlayChatBox.tsx",
       "source_location": "L30",
-      "id": "components_playchatbox_playchatbox",
       "community": 4,
-      "norm_label": "playchatbox()"
+      "norm_label": "playchatbox()",
+      "id": "components_playchatbox_playchatbox"
     },
     {
       "label": "LanguageToggle.tsx",
       "file_type": "code",
       "source_file": "frontend/app/components/LanguageToggle.tsx",
       "source_location": "L1",
-      "id": "frontend_app_components_languagetoggle_tsx",
       "community": 9,
-      "norm_label": "languagetoggle.tsx"
+      "norm_label": "languagetoggle.tsx",
+      "id": "frontend_app_components_languagetoggle_tsx"
     },
     {
       "label": "Language",
       "file_type": "code",
       "source_file": "frontend/app/components/LanguageToggle.tsx",
       "source_location": "L5",
-      "id": "components_languagetoggle_language",
       "community": 9,
-      "norm_label": "language"
+      "norm_label": "language",
+      "id": "components_languagetoggle_language"
     },
     {
       "label": "Props",
       "file_type": "code",
       "source_file": "frontend/app/components/LanguageToggle.tsx",
       "source_location": "L7",
-      "id": "components_languagetoggle_props",
       "community": 9,
-      "norm_label": "props"
+      "norm_label": "props",
+      "id": "components_languagetoggle_props"
     },
     {
       "label": "LanguageToggle()",
       "file_type": "code",
       "source_file": "frontend/app/components/LanguageToggle.tsx",
       "source_location": "L11",
-      "id": "components_languagetoggle_languagetoggle",
       "community": 9,
-      "norm_label": "languagetoggle()"
+      "norm_label": "languagetoggle()",
+      "id": "components_languagetoggle_languagetoggle"
     },
     {
       "label": "DiagnosisResult.tsx",
       "file_type": "code",
       "source_file": "frontend/app/components/DiagnosisResult.tsx",
       "source_location": "L1",
-      "id": "frontend_app_components_diagnosisresult_tsx",
       "community": 4,
-      "norm_label": "diagnosisresult.tsx"
+      "norm_label": "diagnosisresult.tsx",
+      "id": "frontend_app_components_diagnosisresult_tsx"
     },
     {
       "label": "Props",
       "file_type": "code",
       "source_file": "frontend/app/components/DiagnosisResult.tsx",
       "source_location": "L8",
-      "id": "components_diagnosisresult_props",
       "community": 4,
-      "norm_label": "props"
+      "norm_label": "props",
+      "id": "components_diagnosisresult_props"
     },
     {
       "label": "DiagnosisResult()",
       "file_type": "code",
       "source_file": "frontend/app/components/DiagnosisResult.tsx",
       "source_location": "L14",
-      "id": "components_diagnosisresult_diagnosisresult",
       "community": 4,
-      "norm_label": "diagnosisresult()"
+      "norm_label": "diagnosisresult()",
+      "id": "components_diagnosisresult_diagnosisresult"
     },
     {
       "label": "ScenarioNotFound.tsx",
       "file_type": "code",
       "source_file": "frontend/app/components/ScenarioNotFound.tsx",
       "source_location": "L1",
-      "id": "frontend_app_components_scenarionotfound_tsx",
       "community": 1,
-      "norm_label": "scenarionotfound.tsx"
+      "norm_label": "scenarionotfound.tsx",
+      "id": "frontend_app_components_scenarionotfound_tsx"
     },
     {
       "label": "ScenarioNotFound()",
       "file_type": "code",
       "source_file": "frontend/app/components/ScenarioNotFound.tsx",
       "source_location": "L3",
-      "id": "components_scenarionotfound_scenarionotfound",
       "community": 1,
-      "norm_label": "scenarionotfound()"
+      "norm_label": "scenarionotfound()",
+      "id": "components_scenarionotfound_scenarionotfound"
     },
     {
       "label": "ScenarioPrologue.tsx",
       "file_type": "code",
       "source_file": "frontend/app/components/ScenarioPrologue.tsx",
       "source_location": "L1",
-      "id": "frontend_app_components_scenarioprologue_tsx",
       "community": 4,
-      "norm_label": "scenarioprologue.tsx"
+      "norm_label": "scenarioprologue.tsx",
+      "id": "frontend_app_components_scenarioprologue_tsx"
     },
     {
       "label": "Props",
       "file_type": "code",
       "source_file": "frontend/app/components/ScenarioPrologue.tsx",
       "source_location": "L9",
-      "id": "components_scenarioprologue_props",
       "community": 4,
-      "norm_label": "props"
+      "norm_label": "props",
+      "id": "components_scenarioprologue_props"
     },
     {
       "label": "prologueComponents",
       "file_type": "code",
       "source_file": "frontend/app/components/ScenarioPrologue.tsx",
       "source_location": "L14",
-      "id": "components_scenarioprologue_prologuecomponents",
       "community": 4,
-      "norm_label": "prologuecomponents"
+      "norm_label": "prologuecomponents",
+      "id": "components_scenarioprologue_prologuecomponents"
     },
     {
       "label": "ScenarioPrologue()",
       "file_type": "code",
       "source_file": "frontend/app/components/ScenarioPrologue.tsx",
       "source_location": "L49",
-      "id": "components_scenarioprologue_scenarioprologue",
       "community": 4,
-      "norm_label": "scenarioprologue()"
+      "norm_label": "scenarioprologue()",
+      "id": "components_scenarioprologue_scenarioprologue"
     },
     {
       "label": "PrologueSkeleton.tsx",
       "file_type": "code",
       "source_file": "frontend/app/components/PrologueSkeleton.tsx",
       "source_location": "L1",
-      "id": "frontend_app_components_prologueskeleton_tsx",
       "community": 14,
-      "norm_label": "prologueskeleton.tsx"
+      "norm_label": "prologueskeleton.tsx",
+      "id": "frontend_app_components_prologueskeleton_tsx"
     },
     {
       "label": "PrologueSkeleton()",
       "file_type": "code",
       "source_file": "frontend/app/components/PrologueSkeleton.tsx",
       "source_location": "L1",
-      "id": "components_prologueskeleton_prologueskeleton",
       "community": 14,
-      "norm_label": "prologueskeleton()"
+      "norm_label": "prologueskeleton()",
+      "id": "components_prologueskeleton_prologueskeleton"
     },
     {
       "label": "GoogleTranslate.tsx",
       "file_type": "code",
       "source_file": "frontend/app/components/GoogleTranslate.tsx",
       "source_location": "L1",
-      "id": "frontend_app_components_googletranslate_tsx",
       "community": 9,
-      "norm_label": "googletranslate.tsx"
+      "norm_label": "googletranslate.tsx",
+      "id": "frontend_app_components_googletranslate_tsx"
     },
     {
       "label": "Window",
       "file_type": "code",
       "source_file": "frontend/app/components/GoogleTranslate.tsx",
       "source_location": "L6",
-      "id": "components_googletranslate_window",
       "community": 9,
-      "norm_label": "window"
+      "norm_label": "window",
+      "id": "components_googletranslate_window"
     },
     {
       "label": "GoogleTranslate()",
       "file_type": "code",
       "source_file": "frontend/app/components/GoogleTranslate.tsx",
       "source_location": "L24",
-      "id": "components_googletranslate_googletranslate",
       "community": 9,
-      "norm_label": "googletranslate()"
+      "norm_label": "googletranslate()",
+      "id": "components_googletranslate_googletranslate"
     },
     {
       "label": "ScenarioContainer.tsx",
       "file_type": "code",
       "source_file": "frontend/app/components/ScenarioContainer.tsx",
       "source_location": "L1",
-      "id": "frontend_app_components_scenariocontainer_tsx",
       "community": 4,
-      "norm_label": "scenariocontainer.tsx"
+      "norm_label": "scenariocontainer.tsx",
+      "id": "frontend_app_components_scenariocontainer_tsx"
     },
     {
       "label": "Props",
       "file_type": "code",
       "source_file": "frontend/app/components/ScenarioContainer.tsx",
       "source_location": "L8",
-      "id": "components_scenariocontainer_props",
       "community": 4,
-      "norm_label": "props"
+      "norm_label": "props",
+      "id": "components_scenariocontainer_props"
     },
     {
       "label": "ScenarioContainer()",
       "file_type": "code",
       "source_file": "frontend/app/components/ScenarioContainer.tsx",
       "source_location": "L12",
-      "id": "components_scenariocontainer_scenariocontainer",
       "community": 4,
-      "norm_label": "scenariocontainer()"
+      "norm_label": "scenariocontainer()",
+      "id": "components_scenariocontainer_scenariocontainer"
     },
     {
       "label": "page.tsx",
       "file_type": "code",
       "source_file": "frontend/app/b/[batchId]/page.tsx",
       "source_location": "L1",
-      "id": "frontend_app_b_batchid_page_tsx",
       "community": 1,
-      "norm_label": "page.tsx"
+      "norm_label": "page.tsx",
+      "id": "frontend_app_b_batchid_page_tsx"
     },
     {
       "label": "ScenarioItem",
       "file_type": "code",
       "source_file": "frontend/app/b/[batchId]/page.tsx",
       "source_location": "L8",
-      "id": "batchid_page_scenarioitem",
       "community": 1,
-      "norm_label": "scenarioitem"
+      "norm_label": "scenarioitem",
+      "id": "batchid_page_scenarioitem"
     },
     {
       "label": "BatchItem",
       "file_type": "code",
       "source_file": "frontend/app/b/[batchId]/page.tsx",
       "source_location": "L14",
-      "id": "batchid_page_batchitem",
       "community": 1,
-      "norm_label": "batchitem"
+      "norm_label": "batchitem",
+      "id": "batchid_page_batchitem"
     },
     {
       "label": "PageProps",
       "file_type": "code",
       "source_file": "frontend/app/b/[batchId]/page.tsx",
       "source_location": "L19",
-      "id": "batchid_page_pageprops",
       "community": 1,
-      "norm_label": "pageprops"
+      "norm_label": "pageprops",
+      "id": "batchid_page_pageprops"
     },
     {
       "label": "BatchPage()",
       "file_type": "code",
       "source_file": "frontend/app/b/[batchId]/page.tsx",
       "source_location": "L23",
-      "id": "batchid_page_batchpage",
       "community": 1,
-      "norm_label": "batchpage()"
+      "norm_label": "batchpage()",
+      "id": "batchid_page_batchpage"
     },
     {
       "label": "loading.tsx",
       "file_type": "code",
       "source_file": "frontend/app/b/[batchId]/loading.tsx",
       "source_location": "L1",
-      "id": "frontend_app_b_batchid_loading_tsx",
       "community": 17,
-      "norm_label": "loading.tsx"
+      "norm_label": "loading.tsx",
+      "id": "frontend_app_b_batchid_loading_tsx"
     },
     {
       "label": "BatchLoading()",
       "file_type": "code",
       "source_file": "frontend/app/b/[batchId]/loading.tsx",
       "source_location": "L1",
-      "id": "batchid_loading_batchloading",
       "community": 17,
-      "norm_label": "batchloading()"
+      "norm_label": "batchloading()",
+      "id": "batchid_loading_batchloading"
     },
     {
       "label": "page.tsx",
       "file_type": "code",
       "source_file": "frontend/app/b/[batchId]/[slug]/page.tsx",
       "source_location": "L1",
-      "id": "frontend_app_b_batchid_slug_page_tsx",
       "community": 1,
-      "norm_label": "page.tsx"
+      "norm_label": "page.tsx",
+      "id": "frontend_app_b_batchid_slug_page_tsx"
     },
     {
       "label": "PageProps",
       "file_type": "code",
       "source_file": "frontend/app/b/[batchId]/[slug]/page.tsx",
       "source_location": "L11",
-      "id": "slug_page_pageprops",
       "community": 1,
-      "norm_label": "pageprops"
+      "norm_label": "pageprops",
+      "id": "slug_page_pageprops"
     },
     {
       "label": "getPlayScenario",
       "file_type": "code",
       "source_file": "frontend/app/b/[batchId]/[slug]/page.tsx",
       "source_location": "L15",
-      "id": "slug_page_getplayscenario",
       "community": 1,
-      "norm_label": "getplayscenario"
+      "norm_label": "getplayscenario",
+      "id": "slug_page_getplayscenario"
     },
     {
       "label": "generateMetadata()",
       "file_type": "code",
       "source_file": "frontend/app/b/[batchId]/[slug]/page.tsx",
       "source_location": "L19",
-      "id": "slug_page_generatemetadata",
       "community": 1,
-      "norm_label": "generatemetadata()"
+      "norm_label": "generatemetadata()",
+      "id": "slug_page_generatemetadata"
     },
     {
       "label": "ScenarioPlayPage()",
       "file_type": "code",
       "source_file": "frontend/app/b/[batchId]/[slug]/page.tsx",
       "source_location": "L37",
-      "id": "slug_page_scenarioplaypage",
       "community": 1,
-      "norm_label": "scenarioplaypage()"
+      "norm_label": "scenarioplaypage()",
+      "id": "slug_page_scenarioplaypage"
     },
     {
       "label": "loading.tsx",
       "file_type": "code",
       "source_file": "frontend/app/b/[batchId]/[slug]/loading.tsx",
       "source_location": "L1",
-      "id": "frontend_app_b_batchid_slug_loading_tsx",
       "community": 14,
-      "norm_label": "loading.tsx"
+      "norm_label": "loading.tsx",
+      "id": "frontend_app_b_batchid_slug_loading_tsx"
     },
     {
       "label": "ScenarioLoading()",
       "file_type": "code",
       "source_file": "frontend/app/b/[batchId]/[slug]/loading.tsx",
       "source_location": "L3",
-      "id": "slug_loading_scenarioloading",
       "community": 14,
-      "norm_label": "scenarioloading()"
+      "norm_label": "scenarioloading()",
+      "id": "slug_loading_scenarioloading"
     },
     {
       "label": "page.tsx",
       "file_type": "code",
       "source_file": "frontend/app/b/[batchId]/[slug]/diagnosis/page.tsx",
       "source_location": "L1",
-      "id": "frontend_app_b_batchid_slug_diagnosis_page_tsx",
       "community": 1,
-      "norm_label": "page.tsx"
+      "norm_label": "page.tsx",
+      "id": "frontend_app_b_batchid_slug_diagnosis_page_tsx"
     },
     {
       "label": "PageProps",
       "file_type": "code",
       "source_file": "frontend/app/b/[batchId]/[slug]/diagnosis/page.tsx",
       "source_location": "L11",
-      "id": "diagnosis_page_pageprops",
       "community": 1,
-      "norm_label": "pageprops"
+      "norm_label": "pageprops",
+      "id": "diagnosis_page_pageprops"
     },
     {
       "label": "getPlayScenario",
       "file_type": "code",
       "source_file": "frontend/app/b/[batchId]/[slug]/diagnosis/page.tsx",
       "source_location": "L15",
-      "id": "diagnosis_page_getplayscenario",
       "community": 1,
-      "norm_label": "getplayscenario"
+      "norm_label": "getplayscenario",
+      "id": "diagnosis_page_getplayscenario"
     },
     {
       "label": "getBusinessLink",
       "file_type": "code",
       "source_file": "frontend/app/b/[batchId]/[slug]/diagnosis/page.tsx",
       "source_location": "L19",
-      "id": "diagnosis_page_getbusinesslink",
       "community": 1,
-      "norm_label": "getbusinesslink"
+      "norm_label": "getbusinesslink",
+      "id": "diagnosis_page_getbusinesslink"
     },
     {
       "label": "generateMetadata()",
       "file_type": "code",
       "source_file": "frontend/app/b/[batchId]/[slug]/diagnosis/page.tsx",
       "source_location": "L28",
-      "id": "diagnosis_page_generatemetadata",
       "community": 1,
-      "norm_label": "generatemetadata()"
+      "norm_label": "generatemetadata()",
+      "id": "diagnosis_page_generatemetadata"
     },
     {
       "label": "ScenarioDiagnosisPage()",
       "file_type": "code",
       "source_file": "frontend/app/b/[batchId]/[slug]/diagnosis/page.tsx",
       "source_location": "L48",
-      "id": "diagnosis_page_scenariodiagnosispage",
       "community": 1,
-      "norm_label": "scenariodiagnosispage()"
+      "norm_label": "scenariodiagnosispage()",
+      "id": "diagnosis_page_scenariodiagnosispage"
     },
     {
       "label": "loading.tsx",
       "file_type": "code",
       "source_file": "frontend/app/b/[batchId]/[slug]/diagnosis/loading.tsx",
       "source_location": "L1",
-      "id": "frontend_app_b_batchid_slug_diagnosis_loading_tsx",
       "community": 20,
-      "norm_label": "loading.tsx"
+      "norm_label": "loading.tsx",
+      "id": "frontend_app_b_batchid_slug_diagnosis_loading_tsx"
     },
     {
       "label": "DiagnosisLoading()",
       "file_type": "code",
       "source_file": "frontend/app/b/[batchId]/[slug]/diagnosis/loading.tsx",
       "source_location": "L1",
-      "id": "diagnosis_loading_diagnosisloading",
       "community": 20,
-      "norm_label": "diagnosisloading()"
+      "norm_label": "diagnosisloading()",
+      "id": "diagnosis_loading_diagnosisloading"
     },
     {
       "label": "DECISION_NOTE_EN.md",
       "file_type": "document",
       "source_file": "DECISION_NOTE_EN.md",
       "source_location": "L1",
-      "id": "decision_note_en_md",
       "community": 12,
-      "norm_label": "decision_note_en.md"
+      "norm_label": "decision_note_en.md",
+      "id": "decision_note_en_md"
     },
     {
       "label": "1-Page Decision Note: Beleef NLP \u2014 The Executive Language Mirror",
       "file_type": "document",
       "source_file": "DECISION_NOTE_EN.md",
       "source_location": "L1",
-      "id": "nlp_project_decision_note_en_1_page_decision_note_beleef_nlp_the_executive_language_mirror",
       "community": 12,
-      "norm_label": "1-page decision note: beleef nlp \u2014 the executive language mirror"
+      "norm_label": "1-page decision note: beleef nlp \u2014 the executive language mirror",
+      "id": "nlp_project_decision_note_en_1_page_decision_note_beleef_nlp_the_executive_language_mirror"
     },
     {
       "label": "1. The Core Problem & Strategic Insight",
       "file_type": "document",
       "source_file": "DECISION_NOTE_EN.md",
       "source_location": "L9",
-      "id": "nlp_project_decision_note_en_1_the_core_problem_strategic_insight",
       "community": 12,
-      "norm_label": "1. the core problem & strategic insight"
+      "norm_label": "1. the core problem & strategic insight",
+      "id": "nlp_project_decision_note_en_1_the_core_problem_strategic_insight"
     },
     {
       "label": "2. Chosen Context & Design Commitment",
       "file_type": "document",
       "source_file": "DECISION_NOTE_EN.md",
       "source_location": "L16",
-      "id": "nlp_project_decision_note_en_2_chosen_context_design_commitment",
       "community": 12,
-      "norm_label": "2. chosen context & design commitment"
+      "norm_label": "2. chosen context & design commitment",
+      "id": "nlp_project_decision_note_en_2_chosen_context_design_commitment"
     },
     {
       "label": "3. Core Interaction Mechanism: The Meta Model Matrix",
       "file_type": "document",
       "source_file": "DECISION_NOTE_EN.md",
       "source_location": "L23",
-      "id": "nlp_project_decision_note_en_3_core_interaction_mechanism_the_meta_model_matrix",
       "community": 12,
-      "norm_label": "3. core interaction mechanism: the meta model matrix"
+      "norm_label": "3. core interaction mechanism: the meta model matrix",
+      "id": "nlp_project_decision_note_en_3_core_interaction_mechanism_the_meta_model_matrix"
     },
     {
       "label": "4. The \"Harsh Truth\" Reflection & 7-Combination Diagnosis",
       "file_type": "document",
       "source_file": "DECISION_NOTE_EN.md",
       "source_location": "L31",
-      "id": "nlp_project_decision_note_en_4_the_harsh_truth_reflection_7_combination_diagnosis",
       "community": 12,
-      "norm_label": "4. the \"harsh truth\" reflection & 7-combination diagnosis"
+      "norm_label": "4. the \"harsh truth\" reflection & 7-combination diagnosis",
+      "id": "nlp_project_decision_note_en_4_the_harsh_truth_reflection_7_combination_diagnosis"
     },
     {
       "label": "5. Technical Architecture & Enterprise Scalability",
       "file_type": "document",
       "source_file": "DECISION_NOTE_EN.md",
       "source_location": "L38",
-      "id": "nlp_project_decision_note_en_5_technical_architecture_enterprise_scalability",
       "community": 12,
-      "norm_label": "5. technical architecture & enterprise scalability"
+      "norm_label": "5. technical architecture & enterprise scalability",
+      "id": "nlp_project_decision_note_en_5_technical_architecture_enterprise_scalability"
     },
     {
       "label": "6. Business Impact for Het NLP Instituut",
       "file_type": "document",
       "source_file": "DECISION_NOTE_EN.md",
       "source_location": "L45",
-      "id": "nlp_project_decision_note_en_6_business_impact_for_het_nlp_instituut",
       "community": 12,
-      "norm_label": "6. business impact for het nlp instituut"
+      "norm_label": "6. business impact for het nlp instituut",
+      "id": "nlp_project_decision_note_en_6_business_impact_for_het_nlp_instituut"
     },
     {
       "label": "DECISION_NOTE.md",
       "file_type": "document",
       "source_file": "DECISION_NOTE.md",
       "source_location": "L1",
-      "id": "decision_note_md",
       "community": 11,
-      "norm_label": "decision_note.md"
+      "norm_label": "decision_note.md",
+      "id": "decision_note_md"
     },
     {
       "label": "1-Page Decision Note: Beleef NLP \u2014 De Leiderschaps-Taalspiegel",
       "file_type": "document",
       "source_file": "DECISION_NOTE.md",
       "source_location": "L1",
-      "id": "nlp_project_decision_note_1_page_decision_note_beleef_nlp_de_leiderschaps_taalspiegel",
       "community": 11,
-      "norm_label": "1-page decision note: beleef nlp \u2014 de leiderschaps-taalspiegel"
+      "norm_label": "1-page decision note: beleef nlp \u2014 de leiderschaps-taalspiegel",
+      "id": "nlp_project_decision_note_1_page_decision_note_beleef_nlp_de_leiderschaps_taalspiegel"
     },
     {
       "label": "1. Het Kernprobleem & Strategisch Inzicht",
       "file_type": "document",
       "source_file": "DECISION_NOTE.md",
       "source_location": "L9",
-      "id": "nlp_project_decision_note_1_het_kernprobleem_strategisch_inzicht",
       "community": 11,
-      "norm_label": "1. het kernprobleem & strategisch inzicht"
+      "norm_label": "1. het kernprobleem & strategisch inzicht",
+      "id": "nlp_project_decision_note_1_het_kernprobleem_strategisch_inzicht"
     },
     {
       "label": "2. Gekozen Context & Ontwerpkeuzes",
       "file_type": "document",
       "source_file": "DECISION_NOTE.md",
       "source_location": "L16",
-      "id": "nlp_project_decision_note_2_gekozen_context_ontwerpkeuzes",
       "community": 11,
-      "norm_label": "2. gekozen context & ontwerpkeuzes"
+      "norm_label": "2. gekozen context & ontwerpkeuzes",
+      "id": "nlp_project_decision_note_2_gekozen_context_ontwerpkeuzes"
     },
     {
       "label": "3. Interactief Kernmechanisme: De Meta-Model Matrix",
       "file_type": "document",
       "source_file": "DECISION_NOTE.md",
       "source_location": "L23",
-      "id": "nlp_project_decision_note_3_interactief_kernmechanisme_de_meta_model_matrix",
       "community": 11,
-      "norm_label": "3. interactief kernmechanisme: de meta-model matrix"
+      "norm_label": "3. interactief kernmechanisme: de meta-model matrix",
+      "id": "nlp_project_decision_note_3_interactief_kernmechanisme_de_meta_model_matrix"
     },
     {
       "label": "4. De \"Harsh Truth\" Reflectie & 7-Combinaties Diagnose",
       "file_type": "document",
       "source_file": "DECISION_NOTE.md",
       "source_location": "L31",
-      "id": "nlp_project_decision_note_4_de_harsh_truth_reflectie_7_combinaties_diagnose",
       "community": 11,
-      "norm_label": "4. de \"harsh truth\" reflectie & 7-combinaties diagnose"
+      "norm_label": "4. de \"harsh truth\" reflectie & 7-combinaties diagnose",
+      "id": "nlp_project_decision_note_4_de_harsh_truth_reflectie_7_combinaties_diagnose"
     },
     {
       "label": "5. Technische Architectuur & Schaalbaarheid",
       "file_type": "document",
       "source_file": "DECISION_NOTE.md",
       "source_location": "L38",
-      "id": "nlp_project_decision_note_5_technische_architectuur_schaalbaarheid",
       "community": 11,
-      "norm_label": "5. technische architectuur & schaalbaarheid"
+      "norm_label": "5. technische architectuur & schaalbaarheid",
+      "id": "nlp_project_decision_note_5_technische_architectuur_schaalbaarheid"
     },
     {
       "label": "6. Zakelijke Impact voor Het NLP Instituut",
       "file_type": "document",
       "source_file": "DECISION_NOTE.md",
       "source_location": "L45",
-      "id": "nlp_project_decision_note_6_zakelijke_impact_voor_het_nlp_instituut",
       "community": 11,
-      "norm_label": "6. zakelijke impact voor het nlp instituut"
+      "norm_label": "6. zakelijke impact voor het nlp instituut",
+      "id": "nlp_project_decision_note_6_zakelijke_impact_voor_het_nlp_instituut"
     },
     {
       "label": "README.md",
       "file_type": "document",
       "source_file": "README.md",
       "source_location": "L1",
-      "id": "readme_md",
       "community": 6,
-      "norm_label": "readme.md"
+      "norm_label": "readme.md",
+      "id": "readme_md"
     },
     {
       "label": "Beleef NLP \u2014 De Leiderschaps-Taalspiegel (The Executive Language Mirror)",
       "file_type": "document",
       "source_file": "README.md",
       "source_location": "L1",
-      "id": "nlp_project_readme_beleef_nlp_de_leiderschaps_taalspiegel_the_executive_language_mirror",
       "community": 6,
-      "norm_label": "beleef nlp \u2014 de leiderschaps-taalspiegel (the executive language mirror)"
+      "norm_label": "beleef nlp \u2014 de leiderschaps-taalspiegel (the executive language mirror)",
+      "id": "nlp_project_readme_beleef_nlp_de_leiderschaps_taalspiegel_the_executive_language_mirror"
     },
     {
       "label": "\ud83d\udcd1 Executive Decision Notes",
       "file_type": "document",
       "source_file": "README.md",
       "source_location": "L13",
-      "id": "nlp_project_readme_executive_decision_notes",
       "community": 6,
-      "norm_label": "\ud83d\udcd1 executive decision notes"
+      "norm_label": "\ud83d\udcd1 executive decision notes",
+      "id": "nlp_project_readme_executive_decision_notes"
     },
     {
       "label": "\ud83c\udfaf Project Overview & Philosophy",
       "file_type": "document",
       "source_file": "README.md",
       "source_location": "L22",
-      "id": "nlp_project_readme_project_overview_philosophy",
       "community": 6,
-      "norm_label": "\ud83c\udfaf project overview & philosophy"
+      "norm_label": "\ud83c\udfaf project overview & philosophy",
+      "id": "nlp_project_readme_project_overview_philosophy"
     },
     {
       "label": "\ud83c\udfd7\ufe0f Architecture & Tech Stack",
       "file_type": "document",
       "source_file": "README.md",
       "source_location": "L37",
-      "id": "nlp_project_readme_architecture_tech_stack",
       "community": 6,
-      "norm_label": "\ud83c\udfd7\ufe0f architecture & tech stack"
+      "norm_label": "\ud83c\udfd7\ufe0f architecture & tech stack",
+      "id": "nlp_project_readme_architecture_tech_stack"
     },
     {
       "label": "code:block1 (NLP-Project/)",
       "file_type": "document",
       "source_file": "README.md",
       "source_location": "L39",
-      "id": "nlp_project_readme_codeblock_1",
       "community": 6,
-      "norm_label": "code:block1 (nlp-project/)"
+      "norm_label": "code:block1 (nlp-project/)",
+      "id": "nlp_project_readme_codeblock_1"
     },
     {
       "label": "\u2728 Key Features & UX Innovations",
       "file_type": "document",
       "source_file": "README.md",
       "source_location": "L75",
-      "id": "nlp_project_readme_key_features_ux_innovations",
       "community": 6,
-      "norm_label": "\u2728 key features & ux innovations"
+      "norm_label": "\u2728 key features & ux innovations",
+      "id": "nlp_project_readme_key_features_ux_innovations"
     },
     {
       "label": "1. \ud83c\udfac Cinematic Narrative Prologue",
       "file_type": "document",
       "source_file": "README.md",
       "source_location": "L77",
-      "id": "nlp_project_readme_1_cinematic_narrative_prologue",
       "community": 6,
-      "norm_label": "1. \ud83c\udfac cinematic narrative prologue"
+      "norm_label": "1. \ud83c\udfac cinematic narrative prologue",
+      "id": "nlp_project_readme_1_cinematic_narrative_prologue"
     },
     {
       "label": "2. \ud83d\udcac Pinned App-Like Chat Simulator",
       "file_type": "document",
       "source_file": "README.md",
       "source_location": "L82",
-      "id": "nlp_project_readme_2_pinned_app_like_chat_simulator",
       "community": 6,
-      "norm_label": "2. \ud83d\udcac pinned app-like chat simulator"
+      "norm_label": "2. \ud83d\udcac pinned app-like chat simulator",
+      "id": "nlp_project_readme_2_pinned_app_like_chat_simulator"
     },
     {
       "label": "3. \ud83e\udde0 7-Combination Diagnostic Algorithm",
       "file_type": "document",
       "source_file": "README.md",
       "source_location": "L88",
-      "id": "nlp_project_readme_3_7_combination_diagnostic_algorithm",
       "community": 6,
-      "norm_label": "3. \ud83e\udde0 7-combination diagnostic algorithm"
+      "norm_label": "3. \ud83e\udde0 7-combination diagnostic algorithm",
+      "id": "nlp_project_readme_3_7_combination_diagnostic_algorithm"
     },
     {
       "label": "4. \u26a1 Blazing Fast Performance",
       "file_type": "document",
       "source_file": "README.md",
       "source_location": "L96",
-      "id": "nlp_project_readme_4_blazing_fast_performance",
       "community": 6,
-      "norm_label": "4. \u26a1 blazing fast performance"
+      "norm_label": "4. \u26a1 blazing fast performance",
+      "id": "nlp_project_readme_4_blazing_fast_performance"
     },
     {
       "label": "5. \ud83d\udd17 Dynamic Sanity Business Link",
       "file_type": "document",
       "source_file": "README.md",
       "source_location": "L102",
-      "id": "nlp_project_readme_5_dynamic_sanity_business_link",
       "community": 6,
-      "norm_label": "5. \ud83d\udd17 dynamic sanity business link"
+      "norm_label": "5. \ud83d\udd17 dynamic sanity business link",
+      "id": "nlp_project_readme_5_dynamic_sanity_business_link"
     },
     {
       "label": "\ud83d\ude80 Quickstart & Local Setup",
       "file_type": "document",
       "source_file": "README.md",
       "source_location": "L107",
-      "id": "nlp_project_readme_quickstart_local_setup",
       "community": 6,
-      "norm_label": "\ud83d\ude80 quickstart & local setup"
+      "norm_label": "\ud83d\ude80 quickstart & local setup",
+      "id": "nlp_project_readme_quickstart_local_setup"
     },
     {
       "label": "Prerequisites",
       "file_type": "document",
       "source_file": "README.md",
       "source_location": "L109",
-      "id": "nlp_project_readme_prerequisites",
       "community": 6,
-      "norm_label": "prerequisites"
+      "norm_label": "prerequisites",
+      "id": "nlp_project_readme_prerequisites"
     },
     {
       "label": "1. Clone Repository",
       "file_type": "document",
       "source_file": "README.md",
       "source_location": "L113",
-      "id": "nlp_project_readme_1_clone_repository",
       "community": 6,
-      "norm_label": "1. clone repository"
+      "norm_label": "1. clone repository",
+      "id": "nlp_project_readme_1_clone_repository"
     },
     {
       "label": "code:bash (git clone https://github.com/GibranMaulana/NLP-Project.git)",
       "file_type": "document",
       "source_file": "README.md",
       "source_location": "L114",
-      "id": "nlp_project_readme_codeblock_2",
       "community": 6,
-      "norm_label": "code:bash (git clone https://github.com/gibranmaulana/nlp-project.git)"
+      "norm_label": "code:bash (git clone https://github.com/gibranmaulana/nlp-project.git)",
+      "id": "nlp_project_readme_codeblock_2"
     },
     {
       "label": "2. CMS Setup (Sanity Studio)",
       "file_type": "document",
       "source_file": "README.md",
       "source_location": "L119",
-      "id": "nlp_project_readme_2_cms_setup_sanity_studio",
       "community": 6,
-      "norm_label": "2. cms setup (sanity studio)"
+      "norm_label": "2. cms setup (sanity studio)",
+      "id": "nlp_project_readme_2_cms_setup_sanity_studio"
     },
     {
       "label": "code:bash (cd cms)",
       "file_type": "document",
       "source_file": "README.md",
       "source_location": "L120",
-      "id": "nlp_project_readme_codeblock_3",
       "community": 6,
-      "norm_label": "code:bash (cd cms)"
+      "norm_label": "code:bash (cd cms)",
+      "id": "nlp_project_readme_codeblock_3"
     },
     {
       "label": "3. Frontend Setup (Next.js)",
       "file_type": "document",
       "source_file": "README.md",
       "source_location": "L127",
-      "id": "nlp_project_readme_3_frontend_setup_next_js",
       "community": 6,
-      "norm_label": "3. frontend setup (next.js)"
+      "norm_label": "3. frontend setup (next.js)",
+      "id": "nlp_project_readme_3_frontend_setup_next_js"
     },
     {
       "label": "code:bash (cd ../frontend)",
       "file_type": "document",
       "source_file": "README.md",
       "source_location": "L128",
-      "id": "nlp_project_readme_codeblock_4",
       "community": 6,
-      "norm_label": "code:bash (cd ../frontend)"
+      "norm_label": "code:bash (cd ../frontend)",
+      "id": "nlp_project_readme_codeblock_4"
     },
     {
       "label": "code:env (NEXT_PUBLIC_SANITY_PROJECT_ID=v8udsf47)",
       "file_type": "document",
       "source_file": "README.md",
       "source_location": "L134",
-      "id": "nlp_project_readme_codeblock_5",
       "community": 6,
-      "norm_label": "code:env (next_public_sanity_project_id=v8udsf47)"
+      "norm_label": "code:env (next_public_sanity_project_id=v8udsf47)",
+      "id": "nlp_project_readme_codeblock_5"
     },
     {
       "label": "code:bash (npm run dev)",
       "file_type": "document",
       "source_file": "README.md",
       "source_location": "L141",
-      "id": "nlp_project_readme_codeblock_6",
       "community": 6,
-      "norm_label": "code:bash (npm run dev)"
+      "norm_label": "code:bash (npm run dev)",
+      "id": "nlp_project_readme_codeblock_6"
     },
     {
       "label": "\u270d\ufe0f Content Management in Sanity Studio",
       "file_type": "document",
       "source_file": "README.md",
       "source_location": "L148",
-      "id": "nlp_project_readme_content_management_in_sanity_studio",
       "community": 6,
-      "norm_label": "\u270d\ufe0f content management in sanity studio"
+      "norm_label": "\u270d\ufe0f content management in sanity studio",
+      "id": "nlp_project_readme_content_management_in_sanity_studio"
     },
     {
       "label": "\ud83d\udd0d Graphify Codebase Topology",
       "file_type": "document",
       "source_file": "README.md",
       "source_location": "L160",
-      "id": "nlp_project_readme_graphify_codebase_topology",
       "community": 6,
-      "norm_label": "\ud83d\udd0d graphify codebase topology"
+      "norm_label": "\ud83d\udd0d graphify codebase topology",
+      "id": "nlp_project_readme_graphify_codebase_topology"
     },
     {
       "label": "code:bash (graphify update .)",
       "file_type": "document",
       "source_file": "README.md",
       "source_location": "L165",
-      "id": "nlp_project_readme_codeblock_7",
       "community": 6,
-      "norm_label": "code:bash (graphify update .)"
+      "norm_label": "code:bash (graphify update .)",
+      "id": "nlp_project_readme_codeblock_7"
     },
     {
       "label": "\ud83d\udc65 Contributors & License",
       "file_type": "document",
       "source_file": "README.md",
       "source_location": "L173",
-      "id": "nlp_project_readme_contributors_license",
       "community": 6,
-      "norm_label": "\ud83d\udc65 contributors & license"
+      "norm_label": "\ud83d\udc65 contributors & license",
+      "id": "nlp_project_readme_contributors_license"
     },
     {
       "label": "README.md",
       "file_type": "document",
       "source_file": "cms/README.md",
       "source_location": "L1",
-      "id": "cms_readme_md",
       "community": 18,
-      "norm_label": "readme.md"
+      "norm_label": "readme.md",
+      "id": "cms_readme_md"
     },
     {
       "label": "Sanity Clean Content Studio",
       "file_type": "document",
       "source_file": "cms/README.md",
       "source_location": "L1",
-      "id": "cms_readme_sanity_clean_content_studio",
       "community": 18,
-      "norm_label": "sanity clean content studio"
+      "norm_label": "sanity clean content studio",
+      "id": "cms_readme_sanity_clean_content_studio"
     },
     {
       "label": "AGENTS.md",
       "file_type": "document",
       "source_file": "frontend/AGENTS.md",
       "source_location": "L1",
-      "id": "frontend_agents_md",
       "community": 19,
-      "norm_label": "agents.md"
+      "norm_label": "agents.md",
+      "id": "frontend_agents_md"
     },
     {
       "label": "This is NOT the Next.js you know",
       "file_type": "document",
       "source_file": "frontend/AGENTS.md",
       "source_location": "L3",
-      "id": "frontend_agents_this_is_not_the_next_js_you_know",
       "community": 19,
-      "norm_label": "this is not the next.js you know"
+      "norm_label": "this is not the next.js you know",
+      "id": "frontend_agents_this_is_not_the_next_js_you_know"
     },
     {
       "label": "CLAUDE.md",
       "file_type": "document",
       "source_file": "frontend/CLAUDE.md",
       "source_location": "L1",
-      "id": "frontend_claude_md",
       "community": 27,
-      "norm_label": "claude.md"
+      "norm_label": "claude.md",
+      "id": "frontend_claude_md"
     },
     {
       "label": "README.md",
       "file_type": "document",
       "source_file": "frontend/README.md",
       "source_location": "L1",
-      "id": "frontend_readme_md",
       "community": 13,
-      "norm_label": "readme.md"
+      "norm_label": "readme.md",
+      "id": "frontend_readme_md"
     },
     {
       "label": "Getting Started",
       "file_type": "document",
       "source_file": "frontend/README.md",
       "source_location": "L3",
-      "id": "frontend_readme_getting_started",
       "community": 13,
-      "norm_label": "getting started"
+      "norm_label": "getting started",
+      "id": "frontend_readme_getting_started"
     },
     {
       "label": "code:bash (npm run dev)",
       "file_type": "document",
       "source_file": "frontend/README.md",
       "source_location": "L7",
-      "id": "frontend_readme_codeblock_1",
       "community": 13,
-      "norm_label": "code:bash (npm run dev)"
+      "norm_label": "code:bash (npm run dev)",
+      "id": "frontend_readme_codeblock_1"
     },
     {
       "label": "Learn More",
       "file_type": "document",
       "source_file": "frontend/README.md",
       "source_location": "L23",
-      "id": "frontend_readme_learn_more",
       "community": 13,
-      "norm_label": "learn more"
+      "norm_label": "learn more",
+      "id": "frontend_readme_learn_more"
     },
     {
       "label": "Deploy on Vercel",
       "file_type": "document",
       "source_file": "frontend/README.md",
       "source_location": "L32",
-      "id": "frontend_readme_deploy_on_vercel",
       "community": 13,
-      "norm_label": "deploy on vercel"
+      "norm_label": "deploy on vercel",
+      "id": "frontend_readme_deploy_on_vercel"
     }
   ],
   "links": [
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "cms/plugins/branchEditor/BranchEditorTool.tsx",
+      "source_location": "L12",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "cms_plugins_brancheditor_brancheditortool_tsx",
+      "target": "brancheditor_brancheditortool_brancheditortool"
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "cms/plugins/branchEditor/BranchEditorTool.tsx",
+      "source_location": "L9",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "cms_plugins_brancheditor_brancheditortool_tsx",
+      "target": "cms_plugins_brancheditor_components_addscenariodialog_tsx"
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "cms/plugins/branchEditor/BranchEditorTool.tsx",
+      "source_location": "L10",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "cms_plugins_brancheditor_brancheditortool_tsx",
+      "target": "cms_plugins_brancheditor_components_editstagedialog_tsx"
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "cms/plugins/branchEditor/BranchEditorTool.tsx",
+      "source_location": "L20",
+      "weight": 1.0,
+      "source": "cms_plugins_brancheditor_brancheditortool_tsx",
+      "target": "cms_plugins_brancheditor_components_managediagnosesdialog_tsx",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "cms/plugins/branchEditor/BranchEditorTool.tsx",
+      "source_location": "L8",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "cms_plugins_brancheditor_brancheditortool_tsx",
+      "target": "cms_plugins_brancheditor_components_stagenode_tsx"
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "cms/plugins/branchEditor/BranchEditorTool.tsx",
+      "source_location": "L9",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "cms_plugins_brancheditor_brancheditortool_tsx",
+      "target": "components_addscenariodialog_addscenariodialog"
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "cms/plugins/branchEditor/BranchEditorTool.tsx",
+      "source_location": "L10",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "cms_plugins_brancheditor_brancheditortool_tsx",
+      "target": "components_editstagedialog_editstagedialog"
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "cms/plugins/branchEditor/BranchEditorTool.tsx",
+      "source_location": "L20",
+      "weight": 1.0,
+      "source": "cms_plugins_brancheditor_brancheditortool_tsx",
+      "target": "components_managediagnosesdialog_managediagnosesdialog",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "cms/plugins/branchEditor/BranchEditorTool.tsx",
+      "source_location": "L8",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "cms_plugins_brancheditor_brancheditortool_tsx",
+      "target": "components_stagenode_stagenode"
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "cms/plugins/branchEditor/index.ts",
+      "source_location": "L2",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "cms_plugins_brancheditor_index_ts",
+      "target": "cms_plugins_brancheditor_brancheditortool_tsx"
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "cms/plugins/branchEditor/index.ts",
+      "source_location": "L2",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "cms_plugins_brancheditor_index_ts",
+      "target": "brancheditor_brancheditortool_brancheditortool"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "cms/plugins/branchEditor/components/ManageDiagnosesDialog.tsx",
+      "source_location": "L13",
+      "weight": 1.0,
+      "source": "cms_plugins_brancheditor_components_managediagnosesdialog_tsx",
+      "target": "components_managediagnosesdialog_managediagnosesdialog",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "cms/plugins/branchEditor/components/ManageDiagnosesDialog.tsx",
+      "source_location": "L4",
+      "weight": 1.0,
+      "source": "cms_plugins_brancheditor_components_managediagnosesdialog_tsx",
+      "target": "components_managediagnosesdialog_managediagnosesdialogprops",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "cms/schemaTypes/index.ts",
+      "source_location": "L3",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "cms_schematypes_index_ts",
+      "target": "cms_schematypes_stagetype_ts"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "cms/schemaTypes/stageType.ts",
+      "source_location": "L3",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "cms_schematypes_stagetype_ts",
+      "target": "schematypes_stagetype_stage"
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "cms/schemaTypes/index.ts",
+      "source_location": "L3",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "cms_schematypes_index_ts",
+      "target": "schematypes_stagetype_stage"
+    },
     {
       "relation": "imports",
       "context": "import",
@@ -2554,9 +2753,9 @@
       "source_file": "cms/sanity.config.ts",
       "source_location": "L7",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "cms_sanity_config_ts",
-      "target": "brancheditor_index_brancheditortool",
-      "confidence_score": 1.0
+      "target": "brancheditor_index_brancheditortool"
     },
     {
       "relation": "imports_from",
@@ -2587,9 +2786,9 @@
       "source_file": "cms/sanity.config.ts",
       "source_location": "L7",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "cms_sanity_config_ts",
-      "target": "cms_plugins_brancheditor_index_ts",
-      "confidence_score": 1.0
+      "target": "cms_plugins_brancheditor_index_ts"
     },
     {
       "relation": "imports_from",
@@ -2970,9 +3169,9 @@
       "source_file": "cms/package.json",
       "source_location": "L19",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "cms_package_dependencies",
-      "target": "cms_package_dependencies_xyflow_react",
-      "confidence_score": 1.0
+      "target": "cms_package_dependencies_xyflow_react"
     },
     {
       "relation": "contains",
@@ -3171,112 +3370,14 @@
       "target": "components_urldisplay_scenariourldisplay"
     },
     {
-      "relation": "imports",
-      "context": "import",
-      "confidence": "EXTRACTED",
-      "source_file": "cms/plugins/branchEditor/index.ts",
-      "source_location": "L2",
-      "weight": 1.0,
-      "source": "cms_plugins_brancheditor_index_ts",
-      "target": "brancheditor_brancheditortool_brancheditortool",
-      "confidence_score": 1.0
-    },
-    {
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "cms/plugins/branchEditor/index.ts",
       "source_location": "L4",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "cms_plugins_brancheditor_index_ts",
-      "target": "brancheditor_index_brancheditortool",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "imports_from",
-      "context": "import",
-      "confidence": "EXTRACTED",
-      "source_file": "cms/plugins/branchEditor/index.ts",
-      "source_location": "L2",
-      "weight": 1.0,
-      "source": "cms_plugins_brancheditor_index_ts",
-      "target": "cms_plugins_brancheditor_brancheditortool_tsx",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "cms/plugins/branchEditor/BranchEditorTool.tsx",
-      "source_location": "L12",
-      "weight": 1.0,
-      "source": "cms_plugins_brancheditor_brancheditortool_tsx",
-      "target": "brancheditor_brancheditortool_brancheditortool",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "imports_from",
-      "context": "import",
-      "confidence": "EXTRACTED",
-      "source_file": "cms/plugins/branchEditor/BranchEditorTool.tsx",
-      "source_location": "L9",
-      "weight": 1.0,
-      "source": "cms_plugins_brancheditor_brancheditortool_tsx",
-      "target": "cms_plugins_brancheditor_components_addscenariodialog_tsx",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "imports_from",
-      "context": "import",
-      "confidence": "EXTRACTED",
-      "source_file": "cms/plugins/branchEditor/BranchEditorTool.tsx",
-      "source_location": "L10",
-      "weight": 1.0,
-      "source": "cms_plugins_brancheditor_brancheditortool_tsx",
-      "target": "cms_plugins_brancheditor_components_editstagedialog_tsx",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "imports_from",
-      "context": "import",
-      "confidence": "EXTRACTED",
-      "source_file": "cms/plugins/branchEditor/BranchEditorTool.tsx",
-      "source_location": "L8",
-      "weight": 1.0,
-      "source": "cms_plugins_brancheditor_brancheditortool_tsx",
-      "target": "cms_plugins_brancheditor_components_stagenode_tsx",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "imports",
-      "context": "import",
-      "confidence": "EXTRACTED",
-      "source_file": "cms/plugins/branchEditor/BranchEditorTool.tsx",
-      "source_location": "L9",
-      "weight": 1.0,
-      "source": "cms_plugins_brancheditor_brancheditortool_tsx",
-      "target": "components_addscenariodialog_addscenariodialog",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "imports",
-      "context": "import",
-      "confidence": "EXTRACTED",
-      "source_file": "cms/plugins/branchEditor/BranchEditorTool.tsx",
-      "source_location": "L10",
-      "weight": 1.0,
-      "source": "cms_plugins_brancheditor_brancheditortool_tsx",
-      "target": "components_editstagedialog_editstagedialog",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "imports",
-      "context": "import",
-      "confidence": "EXTRACTED",
-      "source_file": "cms/plugins/branchEditor/BranchEditorTool.tsx",
-      "source_location": "L8",
-      "weight": 1.0,
-      "source": "cms_plugins_brancheditor_brancheditortool_tsx",
-      "target": "components_stagenode_stagenode",
-      "confidence_score": 1.0
+      "target": "brancheditor_index_brancheditortool"
     },
     {
       "relation": "contains",
@@ -3284,9 +3385,9 @@
       "source_file": "cms/plugins/branchEditor/components/AddScenarioDialog.tsx",
       "source_location": "L16",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "cms_plugins_brancheditor_components_addscenariodialog_tsx",
-      "target": "components_addscenariodialog_addscenariodialog",
-      "confidence_score": 1.0
+      "target": "components_addscenariodialog_addscenariodialog"
     },
     {
       "relation": "contains",
@@ -3294,9 +3395,9 @@
       "source_file": "cms/plugins/branchEditor/components/AddScenarioDialog.tsx",
       "source_location": "L4",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "cms_plugins_brancheditor_components_addscenariodialog_tsx",
-      "target": "components_addscenariodialog_addscenariodialogprops",
-      "confidence_score": 1.0
+      "target": "components_addscenariodialog_addscenariodialogprops"
     },
     {
       "relation": "contains",
@@ -3304,9 +3405,9 @@
       "source_file": "cms/plugins/branchEditor/components/StageNode.tsx",
       "source_location": "L5",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "cms_plugins_brancheditor_components_stagenode_tsx",
-      "target": "components_stagenode_stagenode",
-      "confidence_score": 1.0
+      "target": "components_stagenode_stagenode"
     },
     {
       "relation": "contains",
@@ -3314,9 +3415,9 @@
       "source_file": "cms/plugins/branchEditor/components/EditStageDialog.tsx",
       "source_location": "L16",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "cms_plugins_brancheditor_components_editstagedialog_tsx",
-      "target": "components_editstagedialog_editstagedialog",
-      "confidence_score": 1.0
+      "target": "components_editstagedialog_editstagedialog"
     },
     {
       "relation": "contains",
@@ -3324,9 +3425,9 @@
       "source_file": "cms/plugins/branchEditor/components/EditStageDialog.tsx",
       "source_location": "L6",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "cms_plugins_brancheditor_components_editstagedialog_tsx",
-      "target": "components_editstagedialog_editstagedialogprops",
-      "confidence_score": 1.0
+      "target": "components_editstagedialog_editstagedialogprops"
     },
     {
       "relation": "contains",
@@ -3462,17 +3563,6 @@
       "context": "import",
       "confidence": "EXTRACTED",
       "source_file": "cms/schemaTypes/index.ts",
-      "source_location": "L3",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "cms_schematypes_index_ts",
-      "target": "cms_schematypes_stagetype_ts"
-    },
-    {
-      "relation": "imports_from",
-      "context": "import",
-      "confidence": "EXTRACTED",
-      "source_file": "cms/schemaTypes/index.ts",
       "source_location": "L6",
       "weight": 1.0,
       "confidence_score": 1.0,
@@ -3527,17 +3617,6 @@
       "context": "import",
       "confidence": "EXTRACTED",
       "source_file": "cms/schemaTypes/index.ts",
-      "source_location": "L3",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "cms_schematypes_index_ts",
-      "target": "schematypes_stagetype_stage"
-    },
-    {
-      "relation": "imports",
-      "context": "import",
-      "confidence": "EXTRACTED",
-      "source_file": "cms/schemaTypes/index.ts",
       "source_location": "L6",
       "weight": 1.0,
       "confidence_score": 1.0,
@@ -3573,16 +3652,6 @@
       "confidence_score": 1.0,
       "source": "cms_schematypes_batchtype_ts",
       "target": "schematypes_batchtype_batch"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "cms/schemaTypes/stageType.ts",
-      "source_location": "L3",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "cms_schematypes_stagetype_ts",
-      "target": "schematypes_stagetype_stage"
     },
     {
       "relation": "contains",
@@ -5744,5 +5813,5 @@
     }
   ],
   "hyperedges": [],
-  "built_at_commit": "1f4c366ff0e56f8fdaba9f257be7a1a4d7dc2d83"
+  "built_at_commit": "9985c45b21ca78842dece0a5ec11a3576a89bac2"
 }
