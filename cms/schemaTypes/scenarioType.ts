@@ -64,8 +64,16 @@ export const scenario = defineType({
       of: [{ type: 'block' }],
     }),
     defineField({
+      name: 'initialTension',
+      title: 'Tensi Awal (Starting Tension)',
+      description: 'Tensi awal karakter saat percakapan dimulai (0 = Tenang, 1 = Mulai Tegang, 2 = Sangat Panas). Rekomendasi: 1.',
+      type: 'number',
+      initialValue: 1,
+      validation: (rule) => rule.required().min(0),
+    }),
+    defineField({
       name: 'maxTension',
-      title: 'Maximale Spanning',
+      title: 'Maximale Spanning (Max Tension)',
       description: 'Batas toleransi ketegangan sebelum karakter memutus percakapan (Game Over). Rekomendasi: 3.',
       type: 'number',
       initialValue: 3,

@@ -11,10 +11,12 @@ interface EditStageDialogProps {
   valueTypes: any[]
   isSaving: boolean
   onSave: () => void
+  onDelete?: () => void
+  allStages?: any[]
 }
 
 export function EditStageDialog({
-  isOpen, onClose, editingStage, setEditingStage, valueTypes, isSaving, onSave
+  isOpen, onClose, editingStage, setEditingStage, valueTypes, isSaving, onSave, onDelete, allStages
 }: EditStageDialogProps) {
   if (!isOpen || !editingStage) return null
 
@@ -37,6 +39,7 @@ export function EditStageDialog({
                 padding={4}
                 value={editingStage.title || ''} 
                 onChange={e => setEditingStage({...editingStage, title: e.currentTarget.value})} 
+                placeholder="Stage title"
                 style={{ background: '#0f172a', color: '#fff', border: '1px solid #1e293b' }}
               />
             </Box>
@@ -48,6 +51,7 @@ export function EditStageDialog({
                 padding={4}
                 value={editingStage.speaker || ''} 
                 onChange={e => setEditingStage({...editingStage, speaker: e.currentTarget.value})} 
+                placeholder="NPC Name"
                 style={{ background: '#0f172a', color: '#fff', border: '1px solid #1e293b' }}
               />
             </Box>
@@ -75,6 +79,7 @@ export function EditStageDialog({
               value={editingStage.botPrompt || ''} 
               onChange={e => setEditingStage({...editingStage, botPrompt: e.currentTarget.value})} 
               rows={4} 
+              placeholder="Dialog NPC..."
               style={{ background: '#0f172a', color: '#fff', border: '1px solid #1e293b' }}
             />
           </Box>
@@ -158,7 +163,7 @@ export function EditStageDialog({
                           <Label size={0} style={{ color: '#94a3b8' }}>Tension Effect</Label>
                         </Box>
                         <Select 
-                          padding={3} value={reply.tensionEffect || 0}
+                          padding={3} value={reply.tensionEffect !== undefined ? reply.tensionEffect : 0}
                           onChange={e => {
                             const newReplies = [...editingStage.replies]
                             newReplies[index].tensionEffect = Number(e.currentTarget.value)
@@ -166,9 +171,11 @@ export function EditStageDialog({
                           }}
                           style={{ background: '#0f172a', color: '#fff', border: '1px solid #334155' }}
                         >
-                          <option value="0">0 (Netral)</option>
+                          <option value="-2">-2 (Sangat Menenangkan)</option>
                           <option value="-1">-1 (Menenangkan)</option>
+                          <option value="0">0 (Netral)</option>
                           <option value="1">+1 (Memicu Emosi)</option>
+                          <option value="2">+2 (Sangat Memicu Emosi)</option>
                         </Select>
                       </Box>
                       <Box flex={2}>
@@ -204,15 +211,75 @@ export function EditStageDialog({
                         style={{ background: '#0f172a', color: '#fff', border: '1px solid #334155' }}
                       />
                     </Box>
+
+                    {/* Connection / Sambungan Alur */}
+                    <Flex align="center" justify="space-between" padding={3} style={{ background: '#0f172a', borderRadius: '6px', border: '1px solid #334155' }}>
+                      <Flex align="center" gap={2}>
+                        <span style={{ fontSize: '14px' }}>🔗</span>
+                        <Text size={0} style={{ color: '#94a3b8' }}>Sambungan Tujuan:</Text>
+                        <Text size={1} weight="bold" style={{ color: reply.nextStage ? '#60a5fa' : '#64748b' }}>
+                          {reply.nextStage
+                            ? (allStages?.find((s: any) => s._key === reply.nextStage)?.title || `Fase (${reply.nextStage})`)
+                            : '(Belum terhubung / Akhir Babak)'}
+                        </Text>
+                      </Flex>
+                      {reply.nextStage ? (
+                        <Button
+                          text="Putuskan Sambungan ✕"
+                          tone="critical"
+                          mode="ghost"
+                          onClick={() => {
+                            const newReplies = [...editingStage.replies]
+                            delete newReplies[index].nextStage
+                            setEditingStage({...editingStage, replies: newReplies})
+                          }}
+                          style={{ borderColor: 'rgba(239, 68, 68, 0.4)' }}
+                        />
+                      ) : (
+                        <Select
+                          padding={2}
+                          value=""
+                          onChange={e => {
+                            if (!e.currentTarget.value) return
+                            const newReplies = [...editingStage.replies]
+                            newReplies[index].nextStage = e.currentTarget.value
+                            setEditingStage({...editingStage, replies: newReplies})
+                          }}
+                          style={{ background: '#1e293b', color: '#cbd5e1', border: '1px solid #334155', maxWidth: '190px' }}
+                        >
+                          <option value="">+ Sambungkan ke...</option>
+                          {allStages
+                            ?.filter((s: any) => s._key !== editingStage._key)
+                            .map((s: any) => (
+                              <option key={s._key} value={s._key}>
+                                {s.title}
+                              </option>
+                            ))}
+                        </Select>
+                      )}
+                    </Flex>
                   </Flex>
                 </Card>
               ))}
             </Flex>
           </Card>
 
-          <Flex justify="flex-end" gap={2}>
-            <Button text="Cancel" mode="ghost" onClick={onClose} style={{ color: '#94a3b8' }} />
-            <Button text={isSaving ? "Saving..." : "Save Stage"} tone="primary" onClick={onSave} disabled={isSaving || !editingStage.title} />
+          <Flex justify="space-between" align="center" style={{ width: '100%' }}>
+            {onDelete ? (
+              <Button 
+                text="Hapus Babak" 
+                icon={TrashIcon} 
+                tone="critical" 
+                mode="ghost" 
+                onClick={onDelete}
+                disabled={isSaving}
+                style={{ borderColor: 'rgba(239, 68, 68, 0.4)' }}
+              />
+            ) : <Box />}
+            <Flex gap={2}>
+              <Button text="Batal" mode="ghost" onClick={onClose} style={{ color: '#94a3b8' }} />
+              <Button text={isSaving ? "Menyimpan..." : "Simpan"} tone="primary" onClick={onSave} disabled={isSaving || !editingStage.title} />
+            </Flex>
           </Flex>
         </Flex>
       </Box>

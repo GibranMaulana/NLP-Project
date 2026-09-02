@@ -1,5 +1,5 @@
 import React from 'react'
-import { Box, Stack, Select, Button, Dialog, TextInput, Label } from '@sanity/ui'
+import { Box, Stack, Select, Button, Dialog, TextInput, Label, Flex } from '@sanity/ui'
 
 interface AddScenarioDialogProps {
   isOpen: boolean
@@ -27,20 +27,22 @@ export function AddScenarioDialog({
       zOffset={1000}
     >
       <Box padding={4}>
-        <Stack space={4}>
+        <Flex direction="column" gap={4}>
           <Box>
-            <Label>Scenario Title</Label>
+            <Box paddingBottom={2}>
+              <Label>Scenario Title</Label>
+            </Box>
             <TextInput 
-              marginTop={2}
               value={newScenarioTitle} 
               onChange={e => setNewScenarioTitle(e.currentTarget.value)} 
               placeholder="e.g. Sales Objection" 
             />
           </Box>
           <Box>
-            <Label>Select Batch</Label>
+            <Box paddingBottom={2}>
+              <Label>Select Batch</Label>
+            </Box>
             <Select 
-              marginTop={2}
               value={selectedBatchId} 
               onChange={e => setSelectedBatchId(e.currentTarget.value)}
               disabled={batches.length === 0}
@@ -54,7 +56,7 @@ export function AddScenarioDialog({
             onClick={onCreate} 
             disabled={isCreating || !newScenarioTitle || !selectedBatchId}
           />
-        </Stack>
+        </Flex>
       </Box>
     </Dialog>
   )

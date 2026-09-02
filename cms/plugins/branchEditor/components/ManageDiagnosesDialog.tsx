@@ -41,7 +41,7 @@ export function ManageDiagnosesDialog({
       width={1}
     >
       <Box padding={5} style={{ background: '#020617', color: '#f8fafc' }}>
-        <Stack space={5}>
+        <Flex direction="column" gap={5}>
           <Box paddingY={2}>
             <Box paddingBottom={3}>
               <Label style={{ color: '#94a3b8' }}>Select Possible Outcomes</Label>
@@ -113,7 +113,7 @@ export function ManageDiagnosesDialog({
               disabled={isSaving} 
             />
           </Flex>
-        </Stack>
+        </Flex>
       </Box>
     </Dialog>
   )

@@ -19,10 +19,10 @@ export const reply = defineType({
     }),
     defineField({
       name: "nextStage",
-      title: "Volgende Fase (Next Stage Key)",
+      title: "Volgende Fase / Sambungan (Next Stage Key)",
       type: "string",
-      description: "Wordt automatisch beheerd door de Branch Editor.",
-      readOnly: true,
+      fieldset: "mechanic",
+      description: "Key babak atau node refleksi yang dituju oleh pilihan jawaban ini. Terhubung otomatis saat menarik garis panah di Branch Editor.",
     }),
     defineField({
       name: "valueType",
@@ -65,9 +65,18 @@ export const reply = defineType({
     defineField({
       name: "tensionEffect",
       title: "Tension Effect (Perubahan Ketegangan)",
-      description: "Pilih dampak jawaban ini: -1 (Menenangkan), 0 (Netral), +1 (Memicu emosi / salah taktik).",
+      description: "Pilih dampak jawaban ini: -2, -1, 0, +1, +2.",
       type: "number",
       fieldset: 'mechanic',
+      options: {
+        list: [
+          { title: "-2 (Sangat Menenangkan)", value: -2 },
+          { title: "-1 (Menenangkan)", value: -1 },
+          { title: "0 (Netral)", value: 0 },
+          { title: "+1 (Memicu Emosi)", value: 1 },
+          { title: "+2 (Sangat Memicu Emosi)", value: 2 },
+        ],
+      },
       initialValue: 0,
       validation: (rule) => rule.required(),
     }),

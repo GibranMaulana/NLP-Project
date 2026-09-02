@@ -63,6 +63,9 @@ export function BranchEditorTool() {
       .then((res) => setAllDiagnoses(res))
   }, [client])
 
+  const handleDeleteStageRef = React.useRef<(key: string) => void>(() => {})
+  const handleDisconnectReplyRef = React.useRef<(stageKey: string, replyKey: string) => void>(() => {})
+
   // Helper to sync local state to React Flow graph safely without losing node positions
   const rebuildGraph = useCallback((currentScenario: any, currentNodes: any[]) => {
     if (!currentScenario || !currentScenario.stages) {
@@ -80,7 +83,17 @@ export function BranchEditorTool() {
         id: stage._key,
         type: 'stage',
         position: existingNode ? existingNode.position : { x: startX, y: startY },
-        data: {title: stage.title, prompt: stage.botPrompt, replies: stage.replies || []},
+        data: {
+          id: stage._key,
+          title: stage.title,
+          prompt: stage.botPrompt,
+          speaker: stage.speaker,
+          phaseType: stage.phaseType,
+          replies: stage.replies || [],
+          onDelete: (key: string) => handleDeleteStageRef.current(key),
+          onDisconnectReply: (stageKey: string, replyKey: string) =>
+            handleDisconnectReplyRef.current(stageKey, replyKey),
+        },
       }
     })
 
@@ -95,7 +108,11 @@ export function BranchEditorTool() {
               sourceHandle: reply._key,
               target: reply.nextStage,
               animated: true,
-              style: {stroke: '#3b82f6', strokeWidth: 2},
+              style: {
+                stroke: '#3b82f6',
+                strokeWidth: 2,
+                cursor: 'pointer',
+              },
             })
           }
         })
@@ -213,6 +230,131 @@ export function BranchEditorTool() {
     }
   }
 
+  const handleDeleteStage = useCallback(
+    async (stageKey: string) => {
+      if (!scenario || !stageKey) return
+      const stageToDelete = scenario.stages?.find((s: any) => s._key === stageKey)
+      const stageName = stageToDelete?.title || 'item ini'
+      if (!window.confirm(`Apakah Anda yakin ingin menghapus "${stageName}" beserta seluruh sambungannya?`)) {
+        return
+      }
+      setIsCreating(true)
+      try {
+        const remainingStages = (scenario.stages || [])
+          .filter((s: any) => s._key !== stageKey)
+          .map((s: any) => {
+            if (!s.replies) return s
+            const cleanedReplies = s.replies.map((r: any) => {
+              if (r.nextStage === stageKey) {
+                const { nextStage, ...rest } = r
+                return rest
+              }
+              return r
+            })
+            return { ...s, replies: cleanedReplies }
+          })
+
+        await client
+          .patch(scenario._id)
+          .set({ stages: remainingStages })
+          .commit()
+
+        const updatedScenario = { ...scenario, stages: remainingStages }
+        setScenario(updatedScenario)
+        rebuildGraph(updatedScenario, nodes)
+        setIsEditStageOpen(false)
+      } catch (err) {
+        console.error('Failed to delete stage', err)
+      } finally {
+        setIsCreating(false)
+      }
+    },
+    [client, scenario, nodes, rebuildGraph]
+  )
+
+  handleDeleteStageRef.current = handleDeleteStage
+
+  const onEdgesDelete = useCallback(
+    async (deletedEdges: any[]) => {
+      if (!scenario || !deletedEdges || deletedEdges.length === 0) return
+      const updatedStages = (scenario.stages || []).map((stage: any) => {
+        if (!stage.replies) return stage
+        const updatedReplies = stage.replies.map((reply: any) => {
+          const isDeleted = deletedEdges.some(
+            (e) => e.source === stage._key && e.sourceHandle === reply._key
+          )
+          if (isDeleted) {
+            const { nextStage, ...rest } = reply
+            return rest
+          }
+          return reply
+        })
+        return { ...stage, replies: updatedReplies }
+      })
+
+      try {
+        await client
+          .patch(scenario._id)
+          .set({ stages: updatedStages })
+          .commit()
+
+        const updatedScenario = { ...scenario, stages: updatedStages }
+        setScenario(updatedScenario)
+      } catch (err) {
+        console.error('Failed to delete edge connection', err)
+      }
+    },
+    [client, scenario]
+  )
+
+  const handleDisconnectReply = useCallback(
+    async (stageKey: string, replyKey: string) => {
+      if (!scenario) return
+      const updatedStages = (scenario.stages || []).map((stage: any) => {
+        if (stage._key !== stageKey || !stage.replies) return stage
+        const updatedReplies = stage.replies.map((reply: any) => {
+          if (reply._key === replyKey) {
+            const { nextStage, ...rest } = reply
+            return rest
+          }
+          return reply
+        })
+        return { ...stage, replies: updatedReplies }
+      })
+
+      try {
+        await client
+          .patch(scenario._id)
+          .set({ stages: updatedStages })
+          .commit()
+
+        const updatedScenario = { ...scenario, stages: updatedStages }
+        setScenario(updatedScenario)
+        rebuildGraph(updatedScenario, nodes)
+      } catch (err) {
+        console.error('Failed to disconnect reply', err)
+      }
+    },
+    [client, scenario, nodes, rebuildGraph]
+  )
+
+  handleDisconnectReplyRef.current = handleDisconnectReply
+
+  const onEdgeClick = useCallback(
+    async (_event: React.MouseEvent, edge: any) => {
+      const sourceStage = scenario?.stages?.find((s: any) => s._key === edge.source)
+      const targetStage = scenario?.stages?.find((s: any) => s._key === edge.target)
+      const reply = sourceStage?.replies?.find((r: any) => r._key === edge.sourceHandle)
+      const replyText = reply?.text ? `"${reply.text.substring(0, 30)}..."` : 'pilihan ini'
+      const targetTitle = targetStage?.title || 'tujuan'
+
+      if (window.confirm(`Putuskan sambungan koneksi dari ${replyText} menuju "${targetTitle}"?`)) {
+        await onEdgesDelete([edge])
+      }
+    },
+    [scenario, onEdgesDelete]
+  )
+
   const handleSaveDiagnoses = async (selectedIds: string[]) => {
     if (!scenario) return
     setIsCreating(true)
@@ -236,7 +378,7 @@ export function BranchEditorTool() {
   const onEdgesChange = useCallback((changes: any) => setEdges((eds) => applyEdgeChanges(changes, eds)), [])
 
   const onNodeDragStop = useCallback(
-    async (_event: React.MouseEvent, node: any) => {
+    async (_event: any, node: any) => {
       if (!scenario) return
       const stageIndex = scenario.stages.findIndex((s: any) => s._key === node.id)
       if (stageIndex === -1) return
@@ -345,8 +487,10 @@ export function BranchEditorTool() {
           edges={edges}
           onNodesChange={onNodesChange}
           onEdgesChange={onEdgesChange}
+          onEdgesDelete={onEdgesDelete}
           onNodeDragStop={onNodeDragStop}
           onConnect={onConnect}
+          onEdgeClick={onEdgeClick}
           nodeTypes={nodeTypes}
           onNodeClick={handleNodeClick}
           fitView
@@ -362,7 +506,6 @@ export function BranchEditorTool() {
               icon={AddIcon}
               tone="primary"
               onClick={handleAddStage}
-              shadow={2}
             />
           </Panel>
           <Panel position="bottom-left">
@@ -372,7 +515,7 @@ export function BranchEditorTool() {
               shadow={3}
               style={{background: '#0f172a', border: '1px solid #1e293b', minWidth: '250px'}}
             >
-              <Stack space={3} gap={3}>
+              <Flex direction="column" gap={3}>
                 <Text weight="bold" size={1} style={{color: '#fff'}}>
                   Possible Outcomes ({scenario?.diagnoses?.length || 0})
                 </Text>
@@ -408,7 +551,7 @@ export function BranchEditorTool() {
                   style={{marginTop: '8px', border: '1px solid #334155', color: '#94a3b8'}}
                   onClick={() => setIsManageDiagnosesOpen(true)}
                 />
-              </Stack>
+              </Flex>
             </Card>
           </Panel>
         </ReactFlow>
@@ -435,6 +578,8 @@ export function BranchEditorTool() {
         valueTypes={valueTypes}
         isSaving={isCreating}
         onSave={handleSaveStage}
+        onDelete={() => handleDeleteStage(editingStage?._key)}
+        allStages={scenario?.stages || []}
       />
 
       <ManageDiagnosesDialog
