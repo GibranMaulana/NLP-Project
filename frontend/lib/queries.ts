@@ -19,14 +19,20 @@ export const SCENARIO_PLAY_QUERY = `
     title,
     "slug": slug.current,
     prologue,
+    maxTension,
     stages[]{
       _key,
       title,
       speaker,
+      phaseType,
       botPrompt,
       replies[]{
         _key,
         text,
+        nextStage,
+        tensionEffect,
+        systemFeedback,
+        npcReaction,
         "valueType": valueType->{
           title,
           description
@@ -50,14 +56,20 @@ export const DEFAULT_SCENARIO_PLAY_QUERY = `
     title,
     "slug": slug.current,
     prologue,
+    maxTension,
     stages[]{
       _key,
       title,
       speaker,
+      phaseType,
       botPrompt,
       replies[]{
         _key,
         text,
+        nextStage,
+        tensionEffect,
+        systemFeedback,
+        npcReaction,
         "valueType": valueType->{
           title,
           description
