@@ -13,6 +13,18 @@ export const stage = defineType({
       validation: (rule) => rule.required(),
     }),
     defineField({
+      name: "x",
+      title: "X Coordinate",
+      type: "number",
+      hidden: true,
+    }),
+    defineField({
+      name: "y",
+      title: "Y Coordinate",
+      type: "number",
+      hidden: true,
+    }),
+    defineField({
       name: "speaker",
       title: "Spreker / NPC-naam",
       type: "string",
