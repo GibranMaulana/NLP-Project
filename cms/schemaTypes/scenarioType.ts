@@ -11,7 +11,7 @@ export const scenario = defineType({
         `*[_type == "diagnosis" && !(_id in path("drafts.**"))]{ _id }`
       )
       if (diagnoses && diagnoses.length > 0) {
-        return {
+        return { 
           diagnoses: diagnoses.map((d) => ({
             _type: 'reference',
             _ref: d._id,
@@ -52,6 +52,14 @@ export const scenario = defineType({
       description: 'Inleidend verhaal of context voor dit scenario',
       type: 'array',
       of: [{ type: 'block' }],
+    }),
+    defineField({
+      name: 'maxTension',
+      title: 'Maximale Spanning',
+      description: 'Batas toleransi ketegangan sebelum karakter memutus percakapan (Game Over). Rekomendasi: 3.',
+      type: 'number',
+      initialValue: 3,
+      validation: (rule) => rule.required().min(1),
     }),
     defineField({
       name: 'stages',

@@ -18,14 +18,19 @@ export const SCENARIO_PLAY_QUERY = `
   *[_type == "scenario" && (slug.current == $slug || _id == $slug)][0]{
     title,
     "slug": slug.current,
+    maxTension,
     stages[]{
       _key,
       title,
       speaker,
+      phaseType,
       botPrompt,
       replies[]{
         _key,
         text,
+        tensionEffect,
+        systemFeedback,
+        npcReaction,
         "valueType": valueType->{
           title,
           description
@@ -48,14 +53,19 @@ export const DEFAULT_SCENARIO_PLAY_QUERY = `
   *[_type == "scenario"][0]{
     title,
     "slug": slug.current,
+    maxTension,
     stages[]{
       _key,
       title,
       speaker,
+      phaseType,
       botPrompt,
       replies[]{
         _key,
         text,
+        tensionEffect,
+        systemFeedback,
+        npcReaction,
         "valueType": valueType->{
           title,
           description

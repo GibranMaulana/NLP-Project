@@ -19,6 +19,20 @@ export const stage = defineType({
       description: "bijv., 'Rina - VP Sales'",
     }),
     defineField({
+      name: 'phaseType',
+      title: 'Fase Type',
+      description: 'Apakah fase ini bertujuan meredam emosi atau membedah logika?',
+      type: 'string',
+      options: {
+        list: [
+          { title: 'Pacing', value: 'Pacing' },
+          { title: 'Leading', value: 'Leading' },
+        ],
+      },
+      initialValue: 'Pacing',
+      validation: (rule) => rule.required(),
+    }),
+    defineField({
       name: "botPrompt",
       title: "Bot-prompt",
       type: "text",
