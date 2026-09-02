@@ -18,7 +18,7 @@
       "source_file": "cms/sanity.config.ts",
       "source_location": "L1",
       "id": "cms_sanity_config_ts",
-      "community": 2,
+      "community": 28,
       "norm_label": "sanity.config.ts"
     },
     {
@@ -301,10 +301,19 @@
       "norm_label": "@sanity/vision"
     },
     {
-      "label": "react",
+      "label": "@xyflow/react",
       "file_type": "code",
       "source_file": "cms/package.json",
       "source_location": "L19",
+      "id": "cms_package_dependencies_xyflow_react",
+      "community": 0,
+      "norm_label": "@xyflow/react"
+    },
+    {
+      "label": "react",
+      "file_type": "code",
+      "source_file": "cms/package.json",
+      "source_location": "L20",
       "id": "cms_package_dependencies_react",
       "community": 0,
       "norm_label": "react"
@@ -313,7 +322,7 @@
       "label": "react-dom",
       "file_type": "code",
       "source_file": "cms/package.json",
-      "source_location": "L20",
+      "source_location": "L21",
       "id": "cms_package_dependencies_react_dom",
       "community": 0,
       "norm_label": "react-dom"
@@ -322,7 +331,7 @@
       "label": "sanity",
       "file_type": "code",
       "source_file": "cms/package.json",
-      "source_location": "L21",
+      "source_location": "L22",
       "id": "cms_package_dependencies_sanity",
       "community": 0,
       "norm_label": "sanity"
@@ -331,7 +340,7 @@
       "label": "styled-components",
       "file_type": "code",
       "source_file": "cms/package.json",
-      "source_location": "L22",
+      "source_location": "L23",
       "id": "cms_package_dependencies_styled_components",
       "community": 0,
       "norm_label": "styled-components"
@@ -340,7 +349,7 @@
       "label": "devDependencies",
       "file_type": "code",
       "source_file": "cms/package.json",
-      "source_location": "L24",
+      "source_location": "L25",
       "id": "cms_package_devdependencies",
       "community": 0,
       "norm_label": "devdependencies"
@@ -349,7 +358,7 @@
       "label": "@sanity/eslint-config-studio",
       "file_type": "code",
       "source_file": "cms/package.json",
-      "source_location": "L25",
+      "source_location": "L26",
       "id": "cms_package_devdependencies_sanity_eslint_config_studio",
       "community": 0,
       "norm_label": "@sanity/eslint-config-studio"
@@ -358,7 +367,7 @@
       "label": "@types/react",
       "file_type": "code",
       "source_file": "cms/package.json",
-      "source_location": "L26",
+      "source_location": "L27",
       "id": "cms_package_devdependencies_types_react",
       "community": 0,
       "norm_label": "@types/react"
@@ -367,7 +376,7 @@
       "label": "eslint",
       "file_type": "code",
       "source_file": "cms/package.json",
-      "source_location": "L27",
+      "source_location": "L28",
       "id": "cms_package_devdependencies_eslint",
       "community": 0,
       "norm_label": "eslint"
@@ -376,7 +385,7 @@
       "label": "prettier",
       "file_type": "code",
       "source_file": "cms/package.json",
-      "source_location": "L28",
+      "source_location": "L29",
       "id": "cms_package_devdependencies_prettier",
       "community": 0,
       "norm_label": "prettier"
@@ -385,7 +394,7 @@
       "label": "typescript",
       "file_type": "code",
       "source_file": "cms/package.json",
-      "source_location": "L29",
+      "source_location": "L30",
       "id": "cms_package_devdependencies_typescript",
       "community": 0,
       "norm_label": "typescript"
@@ -394,7 +403,7 @@
       "label": "prettier",
       "file_type": "code",
       "source_file": "cms/package.json",
-      "source_location": "L31",
+      "source_location": "L32",
       "id": "cms_package_prettier",
       "community": 0,
       "norm_label": "prettier"
@@ -403,7 +412,7 @@
       "label": "bracketSpacing",
       "file_type": "code",
       "source_file": "cms/package.json",
-      "source_location": "L32",
+      "source_location": "L33",
       "id": "cms_package_prettier_bracketspacing",
       "community": 0,
       "norm_label": "bracketspacing"
@@ -412,7 +421,7 @@
       "label": "printWidth",
       "file_type": "code",
       "source_file": "cms/package.json",
-      "source_location": "L33",
+      "source_location": "L34",
       "id": "cms_package_prettier_printwidth",
       "community": 0,
       "norm_label": "printwidth"
@@ -421,7 +430,7 @@
       "label": "semi",
       "file_type": "code",
       "source_file": "cms/package.json",
-      "source_location": "L34",
+      "source_location": "L35",
       "id": "cms_package_prettier_semi",
       "community": 0,
       "norm_label": "semi"
@@ -430,10 +439,163 @@
       "label": "singleQuote",
       "file_type": "code",
       "source_file": "cms/package.json",
-      "source_location": "L35",
+      "source_location": "L36",
       "id": "cms_package_prettier_singlequote",
       "community": 0,
       "norm_label": "singlequote"
+    },
+    {
+      "label": "UrlDisplay.tsx",
+      "file_type": "code",
+      "source_file": "cms/components/UrlDisplay.tsx",
+      "source_location": "L1",
+      "id": "cms_components_urldisplay_tsx",
+      "community": 2,
+      "norm_label": "urldisplay.tsx"
+    },
+    {
+      "label": "CopyUrlCard()",
+      "file_type": "code",
+      "source_file": "cms/components/UrlDisplay.tsx",
+      "source_location": "L9",
+      "id": "components_urldisplay_copyurlcard",
+      "community": 2,
+      "norm_label": "copyurlcard()"
+    },
+    {
+      "label": "getBaseUrl()",
+      "file_type": "code",
+      "source_file": "cms/components/UrlDisplay.tsx",
+      "source_location": "L35",
+      "id": "components_urldisplay_getbaseurl",
+      "community": 2,
+      "norm_label": "getbaseurl()"
+    },
+    {
+      "label": "BatchUrlDisplay()",
+      "file_type": "code",
+      "source_file": "cms/components/UrlDisplay.tsx",
+      "source_location": "L58",
+      "id": "components_urldisplay_batchurldisplay",
+      "community": 2,
+      "norm_label": "batchurldisplay()"
+    },
+    {
+      "label": "ScenarioUrlDisplay()",
+      "file_type": "code",
+      "source_file": "cms/components/UrlDisplay.tsx",
+      "source_location": "L71",
+      "id": "components_urldisplay_scenariourldisplay",
+      "community": 2,
+      "norm_label": "scenariourldisplay()"
+    },
+    {
+      "label": "index.ts",
+      "file_type": "code",
+      "source_file": "cms/plugins/branchEditor/index.ts",
+      "source_location": "L1",
+      "id": "cms_plugins_brancheditor_index_ts",
+      "community": 28,
+      "norm_label": "index.ts"
+    },
+    {
+      "label": "branchEditorTool",
+      "file_type": "code",
+      "source_file": "cms/plugins/branchEditor/index.ts",
+      "source_location": "L4",
+      "id": "brancheditor_index_brancheditortool",
+      "community": 28,
+      "norm_label": "brancheditortool"
+    },
+    {
+      "label": "BranchEditorTool.tsx",
+      "file_type": "code",
+      "source_file": "cms/plugins/branchEditor/BranchEditorTool.tsx",
+      "source_location": "L1",
+      "id": "cms_plugins_brancheditor_brancheditortool_tsx",
+      "community": 28,
+      "norm_label": "brancheditortool.tsx"
+    },
+    {
+      "label": "BranchEditorTool()",
+      "file_type": "code",
+      "source_file": "cms/plugins/branchEditor/BranchEditorTool.tsx",
+      "source_location": "L12",
+      "id": "brancheditor_brancheditortool_brancheditortool",
+      "community": 28,
+      "norm_label": "brancheditortool()"
+    },
+    {
+      "label": "AddScenarioDialog.tsx",
+      "file_type": "code",
+      "source_file": "cms/plugins/branchEditor/components/AddScenarioDialog.tsx",
+      "source_location": "L1",
+      "id": "cms_plugins_brancheditor_components_addscenariodialog_tsx",
+      "community": 28,
+      "norm_label": "addscenariodialog.tsx"
+    },
+    {
+      "label": "AddScenarioDialogProps",
+      "file_type": "code",
+      "source_file": "cms/plugins/branchEditor/components/AddScenarioDialog.tsx",
+      "source_location": "L4",
+      "id": "components_addscenariodialog_addscenariodialogprops",
+      "community": 28,
+      "norm_label": "addscenariodialogprops"
+    },
+    {
+      "label": "AddScenarioDialog()",
+      "file_type": "code",
+      "source_file": "cms/plugins/branchEditor/components/AddScenarioDialog.tsx",
+      "source_location": "L16",
+      "id": "components_addscenariodialog_addscenariodialog",
+      "community": 28,
+      "norm_label": "addscenariodialog()"
+    },
+    {
+      "label": "StageNode.tsx",
+      "file_type": "code",
+      "source_file": "cms/plugins/branchEditor/components/StageNode.tsx",
+      "source_location": "L1",
+      "id": "cms_plugins_brancheditor_components_stagenode_tsx",
+      "community": 28,
+      "norm_label": "stagenode.tsx"
+    },
+    {
+      "label": "StageNode()",
+      "file_type": "code",
+      "source_file": "cms/plugins/branchEditor/components/StageNode.tsx",
+      "source_location": "L5",
+      "id": "components_stagenode_stagenode",
+      "community": 28,
+      "norm_label": "stagenode()"
+    },
+    {
+      "label": "EditStageDialog.tsx",
+      "file_type": "code",
+      "source_file": "cms/plugins/branchEditor/components/EditStageDialog.tsx",
+      "source_location": "L1",
+      "id": "cms_plugins_brancheditor_components_editstagedialog_tsx",
+      "community": 28,
+      "norm_label": "editstagedialog.tsx"
+    },
+    {
+      "label": "EditStageDialogProps",
+      "file_type": "code",
+      "source_file": "cms/plugins/branchEditor/components/EditStageDialog.tsx",
+      "source_location": "L6",
+      "id": "components_editstagedialog_editstagedialogprops",
+      "community": 28,
+      "norm_label": "editstagedialogprops"
+    },
+    {
+      "label": "EditStageDialog()",
+      "file_type": "code",
+      "source_file": "cms/plugins/branchEditor/components/EditStageDialog.tsx",
+      "source_location": "L16",
+      "id": "components_editstagedialog_editstagedialog",
+      "community": 28,
+      "norm_label": "editstagedialog()"
     },
     {
       "label": "businessLinkType.ts",
@@ -504,7 +666,7 @@
       "source_file": "cms/schemaTypes/index.ts",
       "source_location": "L10",
       "id": "schematypes_index_schematypes",
-      "community": 2,
+      "community": 28,
       "norm_label": "schematypes"
     },
     {
@@ -556,7 +718,7 @@
       "label": "batch",
       "file_type": "code",
       "source_file": "cms/schemaTypes/batchType.ts",
-      "source_location": "L3",
+      "source_location": "L4",
       "id": "schematypes_batchtype_batch",
       "community": 2,
       "norm_label": "batch"
@@ -592,7 +754,7 @@
       "label": "scenario",
       "file_type": "code",
       "source_file": "cms/schemaTypes/scenarioType.ts",
-      "source_location": "L3",
+      "source_location": "L4",
       "id": "schematypes_scenariotype_scenario",
       "community": 2,
       "norm_label": "scenario"
@@ -729,7 +891,7 @@
       "source_file": "cms/.sanity/runtime/app.js",
       "source_location": "L1",
       "id": "cms_sanity_runtime_app_js",
-      "community": 2,
+      "community": 28,
       "norm_label": "app.js"
     },
     {
@@ -738,7 +900,7 @@
       "source_file": "cms/actions/publishBatchAction.ts",
       "source_location": "L1",
       "id": "cms_actions_publishbatchaction_ts",
-      "community": 2,
+      "community": 28,
       "norm_label": "publishbatchaction.ts"
     },
     {
@@ -747,7 +909,7 @@
       "source_file": "cms/actions/publishBatchAction.ts",
       "source_location": "L4",
       "id": "actions_publishbatchaction_publishbatchwithscenariosaction",
-      "community": 2,
+      "community": 28,
       "norm_label": "publishbatchwithscenariosaction()"
     },
     {
@@ -756,7 +918,7 @@
       "source_file": "cms/actions/attachDiagnosesAction.ts",
       "source_location": "L1",
       "id": "cms_actions_attachdiagnosesaction_ts",
-      "community": 2,
+      "community": 28,
       "norm_label": "attachdiagnosesaction.ts"
     },
     {
@@ -765,7 +927,7 @@
       "source_file": "cms/actions/attachDiagnosesAction.ts",
       "source_location": "L4",
       "id": "actions_attachdiagnosesaction_attachalldiagnosesaction",
-      "community": 2,
+      "community": 28,
       "norm_label": "attachalldiagnosesaction()"
     },
     {
@@ -2151,7 +2313,7 @@
       "source_file": "README.md",
       "source_location": "L107",
       "id": "nlp_project_readme_quickstart_local_setup",
-      "community": 10,
+      "community": 6,
       "norm_label": "\ud83d\ude80 quickstart & local setup"
     },
     {
@@ -2160,7 +2322,7 @@
       "source_file": "README.md",
       "source_location": "L109",
       "id": "nlp_project_readme_prerequisites",
-      "community": 10,
+      "community": 6,
       "norm_label": "prerequisites"
     },
     {
@@ -2169,7 +2331,7 @@
       "source_file": "README.md",
       "source_location": "L113",
       "id": "nlp_project_readme_1_clone_repository",
-      "community": 10,
+      "community": 6,
       "norm_label": "1. clone repository"
     },
     {
@@ -2178,7 +2340,7 @@
       "source_file": "README.md",
       "source_location": "L114",
       "id": "nlp_project_readme_codeblock_2",
-      "community": 10,
+      "community": 6,
       "norm_label": "code:bash (git clone https://github.com/gibranmaulana/nlp-project.git)"
     },
     {
@@ -2187,7 +2349,7 @@
       "source_file": "README.md",
       "source_location": "L119",
       "id": "nlp_project_readme_2_cms_setup_sanity_studio",
-      "community": 10,
+      "community": 6,
       "norm_label": "2. cms setup (sanity studio)"
     },
     {
@@ -2196,7 +2358,7 @@
       "source_file": "README.md",
       "source_location": "L120",
       "id": "nlp_project_readme_codeblock_3",
-      "community": 10,
+      "community": 6,
       "norm_label": "code:bash (cd cms)"
     },
     {
@@ -2205,7 +2367,7 @@
       "source_file": "README.md",
       "source_location": "L127",
       "id": "nlp_project_readme_3_frontend_setup_next_js",
-      "community": 10,
+      "community": 6,
       "norm_label": "3. frontend setup (next.js)"
     },
     {
@@ -2214,7 +2376,7 @@
       "source_file": "README.md",
       "source_location": "L128",
       "id": "nlp_project_readme_codeblock_4",
-      "community": 10,
+      "community": 6,
       "norm_label": "code:bash (cd ../frontend)"
     },
     {
@@ -2223,7 +2385,7 @@
       "source_file": "README.md",
       "source_location": "L134",
       "id": "nlp_project_readme_codeblock_5",
-      "community": 10,
+      "community": 6,
       "norm_label": "code:env (next_public_sanity_project_id=v8udsf47)"
     },
     {
@@ -2232,7 +2394,7 @@
       "source_file": "README.md",
       "source_location": "L141",
       "id": "nlp_project_readme_codeblock_6",
-      "community": 10,
+      "community": 6,
       "norm_label": "code:bash (npm run dev)"
     },
     {
@@ -2370,9 +2532,9 @@
       "source_file": "cms/sanity.config.ts",
       "source_location": "L6",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "cms_sanity_config_ts",
-      "target": "actions_attachdiagnosesaction_attachalldiagnosesaction",
-      "confidence_score": 1.0
+      "target": "actions_attachdiagnosesaction_attachalldiagnosesaction"
     },
     {
       "relation": "imports",
@@ -2381,8 +2543,19 @@
       "source_file": "cms/sanity.config.ts",
       "source_location": "L5",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "cms_sanity_config_ts",
-      "target": "actions_publishbatchaction_publishbatchwithscenariosaction",
+      "target": "actions_publishbatchaction_publishbatchwithscenariosaction"
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "cms/sanity.config.ts",
+      "source_location": "L7",
+      "weight": 1.0,
+      "source": "cms_sanity_config_ts",
+      "target": "brancheditor_index_brancheditortool",
       "confidence_score": 1.0
     },
     {
@@ -2392,9 +2565,9 @@
       "source_file": "cms/sanity.config.ts",
       "source_location": "L6",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "cms_sanity_config_ts",
-      "target": "cms_actions_attachdiagnosesaction_ts",
-      "confidence_score": 1.0
+      "target": "cms_actions_attachdiagnosesaction_ts"
     },
     {
       "relation": "imports_from",
@@ -2403,8 +2576,19 @@
       "source_file": "cms/sanity.config.ts",
       "source_location": "L5",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "cms_sanity_config_ts",
-      "target": "cms_actions_publishbatchaction_ts",
+      "target": "cms_actions_publishbatchaction_ts"
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "cms/sanity.config.ts",
+      "source_location": "L7",
+      "weight": 1.0,
+      "source": "cms_sanity_config_ts",
+      "target": "cms_plugins_brancheditor_index_ts",
       "confidence_score": 1.0
     },
     {
@@ -2414,9 +2598,9 @@
       "source_file": "cms/sanity.config.ts",
       "source_location": "L4",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "cms_sanity_config_ts",
-      "target": "cms_schematypes_index_ts",
-      "confidence_score": 1.0
+      "target": "cms_schematypes_index_ts"
     },
     {
       "relation": "imports",
@@ -2425,9 +2609,9 @@
       "source_file": "cms/sanity.config.ts",
       "source_location": "L4",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "cms_sanity_config_ts",
-      "target": "schematypes_index_schematypes",
-      "confidence_score": 1.0
+      "target": "schematypes_index_schematypes"
     },
     {
       "relation": "imports_from",
@@ -2436,9 +2620,9 @@
       "source_file": "cms/.sanity/runtime/app.js",
       "source_location": "L5",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "cms_sanity_runtime_app_js",
-      "target": "cms_sanity_config_ts",
-      "confidence_score": 1.0
+      "target": "cms_sanity_config_ts"
     },
     {
       "relation": "contains",
@@ -2446,9 +2630,9 @@
       "source_file": "cms/tsconfig.json",
       "source_location": "L2",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "cms_tsconfig_json",
-      "target": "cms_tsconfig_compileroptions",
-      "confidence_score": 1.0
+      "target": "cms_tsconfig_compileroptions"
     },
     {
       "relation": "contains",
@@ -2456,9 +2640,9 @@
       "source_file": "cms/tsconfig.json",
       "source_location": "L16",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "cms_tsconfig_json",
-      "target": "cms_tsconfig_exclude",
-      "confidence_score": 1.0
+      "target": "cms_tsconfig_exclude"
     },
     {
       "relation": "contains",
@@ -2466,9 +2650,9 @@
       "source_file": "cms/tsconfig.json",
       "source_location": "L15",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "cms_tsconfig_json",
-      "target": "cms_tsconfig_include",
-      "confidence_score": 1.0
+      "target": "cms_tsconfig_include"
     },
     {
       "relation": "contains",
@@ -2476,9 +2660,9 @@
       "source_file": "cms/tsconfig.json",
       "source_location": "L5",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "cms_tsconfig_compileroptions",
-      "target": "cms_tsconfig_compileroptions_allowjs",
-      "confidence_score": 1.0
+      "target": "cms_tsconfig_compileroptions_allowjs"
     },
     {
       "relation": "contains",
@@ -2486,9 +2670,9 @@
       "source_file": "cms/tsconfig.json",
       "source_location": "L8",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "cms_tsconfig_compileroptions",
-      "target": "cms_tsconfig_compileroptions_forceconsistentcasinginfilenames",
-      "confidence_score": 1.0
+      "target": "cms_tsconfig_compileroptions_forceconsistentcasinginfilenames"
     },
     {
       "relation": "contains",
@@ -2496,9 +2680,9 @@
       "source_file": "cms/tsconfig.json",
       "source_location": "L13",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "cms_tsconfig_compileroptions",
-      "target": "cms_tsconfig_compileroptions_incremental",
-      "confidence_score": 1.0
+      "target": "cms_tsconfig_compileroptions_incremental"
     },
     {
       "relation": "contains",
@@ -2506,9 +2690,9 @@
       "source_file": "cms/tsconfig.json",
       "source_location": "L11",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "cms_tsconfig_compileroptions",
-      "target": "cms_tsconfig_compileroptions_isolatedmodules",
-      "confidence_score": 1.0
+      "target": "cms_tsconfig_compileroptions_isolatedmodules"
     },
     {
       "relation": "contains",
@@ -2516,9 +2700,9 @@
       "source_file": "cms/tsconfig.json",
       "source_location": "L12",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "cms_tsconfig_compileroptions",
-      "target": "cms_tsconfig_compileroptions_jsx",
-      "confidence_score": 1.0
+      "target": "cms_tsconfig_compileroptions_jsx"
     },
     {
       "relation": "contains",
@@ -2526,9 +2710,9 @@
       "source_file": "cms/tsconfig.json",
       "source_location": "L4",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "cms_tsconfig_compileroptions",
-      "target": "cms_tsconfig_compileroptions_lib",
-      "confidence_score": 1.0
+      "target": "cms_tsconfig_compileroptions_lib"
     },
     {
       "relation": "contains",
@@ -2536,9 +2720,9 @@
       "source_file": "cms/tsconfig.json",
       "source_location": "L9",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "cms_tsconfig_compileroptions",
-      "target": "cms_tsconfig_compileroptions_module",
-      "confidence_score": 1.0
+      "target": "cms_tsconfig_compileroptions_module"
     },
     {
       "relation": "contains",
@@ -2546,9 +2730,9 @@
       "source_file": "cms/tsconfig.json",
       "source_location": "L10",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "cms_tsconfig_compileroptions",
-      "target": "cms_tsconfig_compileroptions_moduledetection",
-      "confidence_score": 1.0
+      "target": "cms_tsconfig_compileroptions_moduledetection"
     },
     {
       "relation": "contains",
@@ -2556,9 +2740,9 @@
       "source_file": "cms/tsconfig.json",
       "source_location": "L6",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "cms_tsconfig_compileroptions",
-      "target": "cms_tsconfig_compileroptions_skiplibcheck",
-      "confidence_score": 1.0
+      "target": "cms_tsconfig_compileroptions_skiplibcheck"
     },
     {
       "relation": "contains",
@@ -2566,9 +2750,9 @@
       "source_file": "cms/tsconfig.json",
       "source_location": "L7",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "cms_tsconfig_compileroptions",
-      "target": "cms_tsconfig_compileroptions_strict",
-      "confidence_score": 1.0
+      "target": "cms_tsconfig_compileroptions_strict"
     },
     {
       "relation": "contains",
@@ -2576,9 +2760,9 @@
       "source_file": "cms/tsconfig.json",
       "source_location": "L3",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "cms_tsconfig_compileroptions",
-      "target": "cms_tsconfig_compileroptions_target",
-      "confidence_score": 1.0
+      "target": "cms_tsconfig_compileroptions_target"
     },
     {
       "relation": "contains",
@@ -2586,9 +2770,9 @@
       "source_file": "cms/package.json",
       "source_location": "L17",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "cms_package_json",
-      "target": "cms_package_dependencies",
-      "confidence_score": 1.0
+      "target": "cms_package_dependencies"
     },
     {
       "relation": "contains",
@@ -2596,9 +2780,9 @@
       "source_file": "cms/package.json",
       "source_location": "L24",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "cms_package_json",
-      "target": "cms_package_devdependencies",
-      "confidence_score": 1.0
+      "target": "cms_package_devdependencies"
     },
     {
       "relation": "contains",
@@ -2606,9 +2790,9 @@
       "source_file": "cms/package.json",
       "source_location": "L14",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "cms_package_json",
-      "target": "cms_package_keywords",
-      "confidence_score": 1.0
+      "target": "cms_package_keywords"
     },
     {
       "relation": "contains",
@@ -2616,9 +2800,9 @@
       "source_file": "cms/package.json",
       "source_location": "L6",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "cms_package_json",
-      "target": "cms_package_license",
-      "confidence_score": 1.0
+      "target": "cms_package_license"
     },
     {
       "relation": "contains",
@@ -2626,9 +2810,9 @@
       "source_file": "cms/package.json",
       "source_location": "L5",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "cms_package_json",
-      "target": "cms_package_main",
-      "confidence_score": 1.0
+      "target": "cms_package_main"
     },
     {
       "relation": "contains",
@@ -2636,9 +2820,9 @@
       "source_file": "cms/package.json",
       "source_location": "L2",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "cms_package_json",
-      "target": "cms_package_name",
-      "confidence_score": 1.0
+      "target": "cms_package_name"
     },
     {
       "relation": "contains",
@@ -2646,9 +2830,9 @@
       "source_file": "cms/package.json",
       "source_location": "L31",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "cms_package_json",
-      "target": "cms_package_prettier",
-      "confidence_score": 1.0
+      "target": "cms_package_prettier"
     },
     {
       "relation": "contains",
@@ -2656,9 +2840,9 @@
       "source_file": "cms/package.json",
       "source_location": "L3",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "cms_package_json",
-      "target": "cms_package_private",
-      "confidence_score": 1.0
+      "target": "cms_package_private"
     },
     {
       "relation": "contains",
@@ -2666,9 +2850,9 @@
       "source_file": "cms/package.json",
       "source_location": "L7",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "cms_package_json",
-      "target": "cms_package_scripts",
-      "confidence_score": 1.0
+      "target": "cms_package_scripts"
     },
     {
       "relation": "contains",
@@ -2676,9 +2860,9 @@
       "source_file": "cms/package.json",
       "source_location": "L4",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "cms_package_json",
-      "target": "cms_package_version",
-      "confidence_score": 1.0
+      "target": "cms_package_version"
     },
     {
       "relation": "contains",
@@ -2686,9 +2870,9 @@
       "source_file": "cms/package.json",
       "source_location": "L8",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "cms_package_scripts",
-      "target": "cms_package_scripts_build",
-      "confidence_score": 1.0
+      "target": "cms_package_scripts_build"
     },
     {
       "relation": "contains",
@@ -2696,9 +2880,9 @@
       "source_file": "cms/package.json",
       "source_location": "L9",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "cms_package_scripts",
-      "target": "cms_package_scripts_deploy",
-      "confidence_score": 1.0
+      "target": "cms_package_scripts_deploy"
     },
     {
       "relation": "contains",
@@ -2706,9 +2890,9 @@
       "source_file": "cms/package.json",
       "source_location": "L10",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "cms_package_scripts",
-      "target": "cms_package_scripts_deploy_graphql",
-      "confidence_score": 1.0
+      "target": "cms_package_scripts_deploy_graphql"
     },
     {
       "relation": "contains",
@@ -2716,9 +2900,9 @@
       "source_file": "cms/package.json",
       "source_location": "L11",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "cms_package_scripts",
-      "target": "cms_package_scripts_dev",
-      "confidence_score": 1.0
+      "target": "cms_package_scripts_dev"
     },
     {
       "relation": "contains",
@@ -2726,9 +2910,59 @@
       "source_file": "cms/package.json",
       "source_location": "L12",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "cms_package_scripts",
-      "target": "cms_package_scripts_start",
-      "confidence_score": 1.0
+      "target": "cms_package_scripts_start"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "cms/package.json",
+      "source_location": "L19",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "cms_package_dependencies",
+      "target": "cms_package_dependencies_react"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "cms/package.json",
+      "source_location": "L20",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "cms_package_dependencies",
+      "target": "cms_package_dependencies_react_dom"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "cms/package.json",
+      "source_location": "L21",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "cms_package_dependencies",
+      "target": "cms_package_dependencies_sanity"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "cms/package.json",
+      "source_location": "L18",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "cms_package_dependencies",
+      "target": "cms_package_dependencies_sanity_vision"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "cms/package.json",
+      "source_location": "L22",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "cms_package_dependencies",
+      "target": "cms_package_dependencies_styled_components"
     },
     {
       "relation": "contains",
@@ -2737,47 +2971,7 @@
       "source_location": "L19",
       "weight": 1.0,
       "source": "cms_package_dependencies",
-      "target": "cms_package_dependencies_react",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "cms/package.json",
-      "source_location": "L20",
-      "weight": 1.0,
-      "source": "cms_package_dependencies",
-      "target": "cms_package_dependencies_react_dom",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "cms/package.json",
-      "source_location": "L21",
-      "weight": 1.0,
-      "source": "cms_package_dependencies",
-      "target": "cms_package_dependencies_sanity",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "cms/package.json",
-      "source_location": "L18",
-      "weight": 1.0,
-      "source": "cms_package_dependencies",
-      "target": "cms_package_dependencies_sanity_vision",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "cms/package.json",
-      "source_location": "L22",
-      "weight": 1.0,
-      "source": "cms_package_dependencies",
-      "target": "cms_package_dependencies_styled_components",
+      "target": "cms_package_dependencies_xyflow_react",
       "confidence_score": 1.0
     },
     {
@@ -2786,9 +2980,9 @@
       "source_file": "cms/package.json",
       "source_location": "L27",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "cms_package_devdependencies",
-      "target": "cms_package_devdependencies_eslint",
-      "confidence_score": 1.0
+      "target": "cms_package_devdependencies_eslint"
     },
     {
       "relation": "contains",
@@ -2796,9 +2990,9 @@
       "source_file": "cms/package.json",
       "source_location": "L28",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "cms_package_devdependencies",
-      "target": "cms_package_devdependencies_prettier",
-      "confidence_score": 1.0
+      "target": "cms_package_devdependencies_prettier"
     },
     {
       "relation": "contains",
@@ -2806,9 +3000,9 @@
       "source_file": "cms/package.json",
       "source_location": "L25",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "cms_package_devdependencies",
-      "target": "cms_package_devdependencies_sanity_eslint_config_studio",
-      "confidence_score": 1.0
+      "target": "cms_package_devdependencies_sanity_eslint_config_studio"
     },
     {
       "relation": "contains",
@@ -2816,9 +3010,9 @@
       "source_file": "cms/package.json",
       "source_location": "L26",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "cms_package_devdependencies",
-      "target": "cms_package_devdependencies_types_react",
-      "confidence_score": 1.0
+      "target": "cms_package_devdependencies_types_react"
     },
     {
       "relation": "contains",
@@ -2826,9 +3020,9 @@
       "source_file": "cms/package.json",
       "source_location": "L29",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "cms_package_devdependencies",
-      "target": "cms_package_devdependencies_typescript",
-      "confidence_score": 1.0
+      "target": "cms_package_devdependencies_typescript"
     },
     {
       "relation": "contains",
@@ -2836,9 +3030,9 @@
       "source_file": "cms/package.json",
       "source_location": "L32",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "cms_package_prettier",
-      "target": "cms_package_prettier_bracketspacing",
-      "confidence_score": 1.0
+      "target": "cms_package_prettier_bracketspacing"
     },
     {
       "relation": "contains",
@@ -2846,9 +3040,9 @@
       "source_file": "cms/package.json",
       "source_location": "L33",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "cms_package_prettier",
-      "target": "cms_package_prettier_printwidth",
-      "confidence_score": 1.0
+      "target": "cms_package_prettier_printwidth"
     },
     {
       "relation": "contains",
@@ -2856,9 +3050,9 @@
       "source_file": "cms/package.json",
       "source_location": "L34",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "cms_package_prettier",
-      "target": "cms_package_prettier_semi",
-      "confidence_score": 1.0
+      "target": "cms_package_prettier_semi"
     },
     {
       "relation": "contains",
@@ -2866,8 +3060,272 @@
       "source_file": "cms/package.json",
       "source_location": "L35",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "cms_package_prettier",
-      "target": "cms_package_prettier_singlequote",
+      "target": "cms_package_prettier_singlequote"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "cms/components/UrlDisplay.tsx",
+      "source_location": "L58",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "cms_components_urldisplay_tsx",
+      "target": "components_urldisplay_batchurldisplay"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "cms/components/UrlDisplay.tsx",
+      "source_location": "L9",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "cms_components_urldisplay_tsx",
+      "target": "components_urldisplay_copyurlcard"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "cms/components/UrlDisplay.tsx",
+      "source_location": "L35",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "cms_components_urldisplay_tsx",
+      "target": "components_urldisplay_getbaseurl"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "cms/components/UrlDisplay.tsx",
+      "source_location": "L71",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "cms_components_urldisplay_tsx",
+      "target": "components_urldisplay_scenariourldisplay"
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "cms/schemaTypes/batchType.ts",
+      "source_location": "L2",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "cms_schematypes_batchtype_ts",
+      "target": "cms_components_urldisplay_tsx"
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "cms/schemaTypes/scenarioType.ts",
+      "source_location": "L2",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "cms_schematypes_scenariotype_ts",
+      "target": "cms_components_urldisplay_tsx"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "cms/components/UrlDisplay.tsx",
+      "source_location": "L65",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "components_urldisplay_batchurldisplay",
+      "target": "components_urldisplay_getbaseurl"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "cms/components/UrlDisplay.tsx",
+      "source_location": "L94",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "components_urldisplay_scenariourldisplay",
+      "target": "components_urldisplay_getbaseurl"
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "cms/schemaTypes/batchType.ts",
+      "source_location": "L2",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "cms_schematypes_batchtype_ts",
+      "target": "components_urldisplay_batchurldisplay"
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "cms/schemaTypes/scenarioType.ts",
+      "source_location": "L2",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "cms_schematypes_scenariotype_ts",
+      "target": "components_urldisplay_scenariourldisplay"
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "cms/plugins/branchEditor/index.ts",
+      "source_location": "L2",
+      "weight": 1.0,
+      "source": "cms_plugins_brancheditor_index_ts",
+      "target": "brancheditor_brancheditortool_brancheditortool",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "cms/plugins/branchEditor/index.ts",
+      "source_location": "L4",
+      "weight": 1.0,
+      "source": "cms_plugins_brancheditor_index_ts",
+      "target": "brancheditor_index_brancheditortool",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "cms/plugins/branchEditor/index.ts",
+      "source_location": "L2",
+      "weight": 1.0,
+      "source": "cms_plugins_brancheditor_index_ts",
+      "target": "cms_plugins_brancheditor_brancheditortool_tsx",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "cms/plugins/branchEditor/BranchEditorTool.tsx",
+      "source_location": "L12",
+      "weight": 1.0,
+      "source": "cms_plugins_brancheditor_brancheditortool_tsx",
+      "target": "brancheditor_brancheditortool_brancheditortool",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "cms/plugins/branchEditor/BranchEditorTool.tsx",
+      "source_location": "L9",
+      "weight": 1.0,
+      "source": "cms_plugins_brancheditor_brancheditortool_tsx",
+      "target": "cms_plugins_brancheditor_components_addscenariodialog_tsx",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "cms/plugins/branchEditor/BranchEditorTool.tsx",
+      "source_location": "L10",
+      "weight": 1.0,
+      "source": "cms_plugins_brancheditor_brancheditortool_tsx",
+      "target": "cms_plugins_brancheditor_components_editstagedialog_tsx",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "cms/plugins/branchEditor/BranchEditorTool.tsx",
+      "source_location": "L8",
+      "weight": 1.0,
+      "source": "cms_plugins_brancheditor_brancheditortool_tsx",
+      "target": "cms_plugins_brancheditor_components_stagenode_tsx",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "cms/plugins/branchEditor/BranchEditorTool.tsx",
+      "source_location": "L9",
+      "weight": 1.0,
+      "source": "cms_plugins_brancheditor_brancheditortool_tsx",
+      "target": "components_addscenariodialog_addscenariodialog",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "cms/plugins/branchEditor/BranchEditorTool.tsx",
+      "source_location": "L10",
+      "weight": 1.0,
+      "source": "cms_plugins_brancheditor_brancheditortool_tsx",
+      "target": "components_editstagedialog_editstagedialog",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "cms/plugins/branchEditor/BranchEditorTool.tsx",
+      "source_location": "L8",
+      "weight": 1.0,
+      "source": "cms_plugins_brancheditor_brancheditortool_tsx",
+      "target": "components_stagenode_stagenode",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "cms/plugins/branchEditor/components/AddScenarioDialog.tsx",
+      "source_location": "L16",
+      "weight": 1.0,
+      "source": "cms_plugins_brancheditor_components_addscenariodialog_tsx",
+      "target": "components_addscenariodialog_addscenariodialog",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "cms/plugins/branchEditor/components/AddScenarioDialog.tsx",
+      "source_location": "L4",
+      "weight": 1.0,
+      "source": "cms_plugins_brancheditor_components_addscenariodialog_tsx",
+      "target": "components_addscenariodialog_addscenariodialogprops",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "cms/plugins/branchEditor/components/StageNode.tsx",
+      "source_location": "L5",
+      "weight": 1.0,
+      "source": "cms_plugins_brancheditor_components_stagenode_tsx",
+      "target": "components_stagenode_stagenode",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "cms/plugins/branchEditor/components/EditStageDialog.tsx",
+      "source_location": "L16",
+      "weight": 1.0,
+      "source": "cms_plugins_brancheditor_components_editstagedialog_tsx",
+      "target": "components_editstagedialog_editstagedialog",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "cms/plugins/branchEditor/components/EditStageDialog.tsx",
+      "source_location": "L6",
+      "weight": 1.0,
+      "source": "cms_plugins_brancheditor_components_editstagedialog_tsx",
+      "target": "components_editstagedialog_editstagedialogprops",
       "confidence_score": 1.0
     },
     {
@@ -2876,9 +3334,9 @@
       "source_file": "cms/schemaTypes/businessLinkType.ts",
       "source_location": "L3",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "cms_schematypes_businesslinktype_ts",
-      "target": "schematypes_businesslinktype_business",
-      "confidence_score": 1.0
+      "target": "schematypes_businesslinktype_business"
     },
     {
       "relation": "imports_from",
@@ -2887,9 +3345,9 @@
       "source_file": "cms/schemaTypes/index.ts",
       "source_location": "L8",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "cms_schematypes_index_ts",
-      "target": "cms_schematypes_businesslinktype_ts",
-      "confidence_score": 1.0
+      "target": "cms_schematypes_businesslinktype_ts"
     },
     {
       "relation": "imports",
@@ -2898,9 +3356,9 @@
       "source_file": "cms/schemaTypes/index.ts",
       "source_location": "L8",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "cms_schematypes_index_ts",
-      "target": "schematypes_businesslinktype_business",
-      "confidence_score": 1.0
+      "target": "schematypes_businesslinktype_business"
     },
     {
       "relation": "contains",
@@ -2908,9 +3366,9 @@
       "source_file": "cms/schemaTypes/diagnosisType.ts",
       "source_location": "L3",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "cms_schematypes_diagnosistype_ts",
-      "target": "schematypes_diagnosistype_diagnosis",
-      "confidence_score": 1.0
+      "target": "schematypes_diagnosistype_diagnosis"
     },
     {
       "relation": "imports_from",
@@ -2919,9 +3377,9 @@
       "source_file": "cms/schemaTypes/index.ts",
       "source_location": "L5",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "cms_schematypes_index_ts",
-      "target": "cms_schematypes_diagnosistype_ts",
-      "confidence_score": 1.0
+      "target": "cms_schematypes_diagnosistype_ts"
     },
     {
       "relation": "imports",
@@ -2930,9 +3388,9 @@
       "source_file": "cms/schemaTypes/index.ts",
       "source_location": "L5",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "cms_schematypes_index_ts",
-      "target": "schematypes_diagnosistype_diagnosis",
-      "confidence_score": 1.0
+      "target": "schematypes_diagnosistype_diagnosis"
     },
     {
       "relation": "imports_from",
@@ -2941,9 +3399,9 @@
       "source_file": "cms/schemaTypes/index.ts",
       "source_location": "L4",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "cms_schematypes_index_ts",
-      "target": "cms_schematypes_replytype_ts",
-      "confidence_score": 1.0
+      "target": "cms_schematypes_replytype_ts"
     },
     {
       "relation": "contains",
@@ -2951,9 +3409,9 @@
       "source_file": "cms/schemaTypes/replyType.ts",
       "source_location": "L3",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "cms_schematypes_replytype_ts",
-      "target": "schematypes_replytype_reply",
-      "confidence_score": 1.0
+      "target": "schematypes_replytype_reply"
     },
     {
       "relation": "imports",
@@ -2962,9 +3420,9 @@
       "source_file": "cms/schemaTypes/index.ts",
       "source_location": "L4",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "cms_schematypes_index_ts",
-      "target": "schematypes_replytype_reply",
-      "confidence_score": 1.0
+      "target": "schematypes_replytype_reply"
     },
     {
       "relation": "imports_from",
@@ -2973,9 +3431,9 @@
       "source_file": "cms/schemaTypes/index.ts",
       "source_location": "L1",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "cms_schematypes_index_ts",
-      "target": "cms_schematypes_batchtype_ts",
-      "confidence_score": 1.0
+      "target": "cms_schematypes_batchtype_ts"
     },
     {
       "relation": "imports_from",
@@ -2984,9 +3442,9 @@
       "source_file": "cms/schemaTypes/index.ts",
       "source_location": "L2",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "cms_schematypes_index_ts",
-      "target": "cms_schematypes_scenariotype_ts",
-      "confidence_score": 1.0
+      "target": "cms_schematypes_scenariotype_ts"
     },
     {
       "relation": "imports_from",
@@ -2995,9 +3453,9 @@
       "source_file": "cms/schemaTypes/index.ts",
       "source_location": "L7",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "cms_schematypes_index_ts",
-      "target": "cms_schematypes_settingstype_ts",
-      "confidence_score": 1.0
+      "target": "cms_schematypes_settingstype_ts"
     },
     {
       "relation": "imports_from",
@@ -3006,9 +3464,9 @@
       "source_file": "cms/schemaTypes/index.ts",
       "source_location": "L3",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "cms_schematypes_index_ts",
-      "target": "cms_schematypes_stagetype_ts",
-      "confidence_score": 1.0
+      "target": "cms_schematypes_stagetype_ts"
     },
     {
       "relation": "imports_from",
@@ -3017,9 +3475,9 @@
       "source_file": "cms/schemaTypes/index.ts",
       "source_location": "L6",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "cms_schematypes_index_ts",
-      "target": "cms_schematypes_valuetype_ts",
-      "confidence_score": 1.0
+      "target": "cms_schematypes_valuetype_ts"
     },
     {
       "relation": "imports",
@@ -3028,9 +3486,9 @@
       "source_file": "cms/schemaTypes/index.ts",
       "source_location": "L1",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "cms_schematypes_index_ts",
-      "target": "schematypes_batchtype_batch",
-      "confidence_score": 1.0
+      "target": "schematypes_batchtype_batch"
     },
     {
       "relation": "contains",
@@ -3038,9 +3496,9 @@
       "source_file": "cms/schemaTypes/index.ts",
       "source_location": "L10",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "cms_schematypes_index_ts",
-      "target": "schematypes_index_schematypes",
-      "confidence_score": 1.0
+      "target": "schematypes_index_schematypes"
     },
     {
       "relation": "imports",
@@ -3049,9 +3507,9 @@
       "source_file": "cms/schemaTypes/index.ts",
       "source_location": "L2",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "cms_schematypes_index_ts",
-      "target": "schematypes_scenariotype_scenario",
-      "confidence_score": 1.0
+      "target": "schematypes_scenariotype_scenario"
     },
     {
       "relation": "imports",
@@ -3060,9 +3518,9 @@
       "source_file": "cms/schemaTypes/index.ts",
       "source_location": "L7",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "cms_schematypes_index_ts",
-      "target": "schematypes_settingstype_settings",
-      "confidence_score": 1.0
+      "target": "schematypes_settingstype_settings"
     },
     {
       "relation": "imports",
@@ -3071,9 +3529,9 @@
       "source_file": "cms/schemaTypes/index.ts",
       "source_location": "L3",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "cms_schematypes_index_ts",
-      "target": "schematypes_stagetype_stage",
-      "confidence_score": 1.0
+      "target": "schematypes_stagetype_stage"
     },
     {
       "relation": "imports",
@@ -3082,9 +3540,9 @@
       "source_file": "cms/schemaTypes/index.ts",
       "source_location": "L6",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "cms_schematypes_index_ts",
-      "target": "schematypes_valuetype_valuetype",
-      "confidence_score": 1.0
+      "target": "schematypes_valuetype_valuetype"
     },
     {
       "relation": "contains",
@@ -3092,9 +3550,9 @@
       "source_file": "cms/schemaTypes/settingsType.ts",
       "source_location": "L3",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "cms_schematypes_settingstype_ts",
-      "target": "schematypes_settingstype_settings",
-      "confidence_score": 1.0
+      "target": "schematypes_settingstype_settings"
     },
     {
       "relation": "contains",
@@ -3102,9 +3560,9 @@
       "source_file": "cms/schemaTypes/valueType.ts",
       "source_location": "L3",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "cms_schematypes_valuetype_ts",
-      "target": "schematypes_valuetype_valuetype",
-      "confidence_score": 1.0
+      "target": "schematypes_valuetype_valuetype"
     },
     {
       "relation": "contains",
@@ -3112,9 +3570,9 @@
       "source_file": "cms/schemaTypes/batchType.ts",
       "source_location": "L3",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "cms_schematypes_batchtype_ts",
-      "target": "schematypes_batchtype_batch",
-      "confidence_score": 1.0
+      "target": "schematypes_batchtype_batch"
     },
     {
       "relation": "contains",
@@ -3122,9 +3580,9 @@
       "source_file": "cms/schemaTypes/stageType.ts",
       "source_location": "L3",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "cms_schematypes_stagetype_ts",
-      "target": "schematypes_stagetype_stage",
-      "confidence_score": 1.0
+      "target": "schematypes_stagetype_stage"
     },
     {
       "relation": "contains",
@@ -3132,9 +3590,9 @@
       "source_file": "cms/schemaTypes/scenarioType.ts",
       "source_location": "L3",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "cms_schematypes_scenariotype_ts",
-      "target": "schematypes_scenariotype_scenario",
-      "confidence_score": 1.0
+      "target": "schematypes_scenariotype_scenario"
     },
     {
       "relation": "contains",
@@ -3142,9 +3600,9 @@
       "source_file": "cms/schemaTypes/backup/diagnosisType.ts",
       "source_location": "L3",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "cms_schematypes_backup_diagnosistype_ts",
-      "target": "backup_diagnosistype_diagnosis",
-      "confidence_score": 1.0
+      "target": "backup_diagnosistype_diagnosis"
     },
     {
       "relation": "imports_from",
@@ -3153,9 +3611,9 @@
       "source_file": "cms/schemaTypes/backup/index.ts",
       "source_location": "L5",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "cms_schematypes_backup_index_ts",
-      "target": "cms_schematypes_backup_diagnosistype_ts",
-      "confidence_score": 1.0
+      "target": "cms_schematypes_backup_diagnosistype_ts"
     },
     {
       "relation": "imports",
@@ -3164,9 +3622,9 @@
       "source_file": "cms/schemaTypes/backup/index.ts",
       "source_location": "L5",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "cms_schematypes_backup_index_ts",
-      "target": "backup_diagnosistype_diagnosis",
-      "confidence_score": 1.0
+      "target": "backup_diagnosistype_diagnosis"
     },
     {
       "relation": "imports_from",
@@ -3175,9 +3633,9 @@
       "source_file": "cms/schemaTypes/backup/index.ts",
       "source_location": "L4",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "cms_schematypes_backup_index_ts",
-      "target": "cms_schematypes_backup_replytype_ts",
-      "confidence_score": 1.0
+      "target": "cms_schematypes_backup_replytype_ts"
     },
     {
       "relation": "contains",
@@ -3185,9 +3643,9 @@
       "source_file": "cms/schemaTypes/backup/replyType.ts",
       "source_location": "L3",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "cms_schematypes_backup_replytype_ts",
-      "target": "backup_replytype_reply",
-      "confidence_score": 1.0
+      "target": "backup_replytype_reply"
     },
     {
       "relation": "imports",
@@ -3196,9 +3654,9 @@
       "source_file": "cms/schemaTypes/backup/index.ts",
       "source_location": "L4",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "cms_schematypes_backup_index_ts",
-      "target": "backup_replytype_reply",
-      "confidence_score": 1.0
+      "target": "backup_replytype_reply"
     },
     {
       "relation": "imports",
@@ -3207,9 +3665,9 @@
       "source_file": "cms/schemaTypes/backup/index.ts",
       "source_location": "L1",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "cms_schematypes_backup_index_ts",
-      "target": "backup_batchtype_batch",
-      "confidence_score": 1.0
+      "target": "backup_batchtype_batch"
     },
     {
       "relation": "contains",
@@ -3217,9 +3675,9 @@
       "source_file": "cms/schemaTypes/backup/index.ts",
       "source_location": "L8",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "cms_schematypes_backup_index_ts",
-      "target": "backup_index_schematypes",
-      "confidence_score": 1.0
+      "target": "backup_index_schematypes"
     },
     {
       "relation": "imports",
@@ -3228,9 +3686,9 @@
       "source_file": "cms/schemaTypes/backup/index.ts",
       "source_location": "L2",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "cms_schematypes_backup_index_ts",
-      "target": "backup_scenariotype_scenario",
-      "confidence_score": 1.0
+      "target": "backup_scenariotype_scenario"
     },
     {
       "relation": "imports",
@@ -3239,9 +3697,9 @@
       "source_file": "cms/schemaTypes/backup/index.ts",
       "source_location": "L3",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "cms_schematypes_backup_index_ts",
-      "target": "backup_stagetype_stage",
-      "confidence_score": 1.0
+      "target": "backup_stagetype_stage"
     },
     {
       "relation": "imports",
@@ -3250,9 +3708,9 @@
       "source_file": "cms/schemaTypes/backup/index.ts",
       "source_location": "L6",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "cms_schematypes_backup_index_ts",
-      "target": "backup_valuetype_valuetype",
-      "confidence_score": 1.0
+      "target": "backup_valuetype_valuetype"
     },
     {
       "relation": "imports_from",
@@ -3261,9 +3719,9 @@
       "source_file": "cms/schemaTypes/backup/index.ts",
       "source_location": "L1",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "cms_schematypes_backup_index_ts",
-      "target": "cms_schematypes_backup_batchtype_ts",
-      "confidence_score": 1.0
+      "target": "cms_schematypes_backup_batchtype_ts"
     },
     {
       "relation": "imports_from",
@@ -3272,9 +3730,9 @@
       "source_file": "cms/schemaTypes/backup/index.ts",
       "source_location": "L2",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "cms_schematypes_backup_index_ts",
-      "target": "cms_schematypes_backup_scenariotype_ts",
-      "confidence_score": 1.0
+      "target": "cms_schematypes_backup_scenariotype_ts"
     },
     {
       "relation": "imports_from",
@@ -3283,9 +3741,9 @@
       "source_file": "cms/schemaTypes/backup/index.ts",
       "source_location": "L3",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "cms_schematypes_backup_index_ts",
-      "target": "cms_schematypes_backup_stagetype_ts",
-      "confidence_score": 1.0
+      "target": "cms_schematypes_backup_stagetype_ts"
     },
     {
       "relation": "imports_from",
@@ -3294,9 +3752,9 @@
       "source_file": "cms/schemaTypes/backup/index.ts",
       "source_location": "L6",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "cms_schematypes_backup_index_ts",
-      "target": "cms_schematypes_backup_valuetype_ts",
-      "confidence_score": 1.0
+      "target": "cms_schematypes_backup_valuetype_ts"
     },
     {
       "relation": "contains",
@@ -3304,9 +3762,9 @@
       "source_file": "cms/schemaTypes/backup/valueType.ts",
       "source_location": "L3",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "cms_schematypes_backup_valuetype_ts",
-      "target": "backup_valuetype_valuetype",
-      "confidence_score": 1.0
+      "target": "backup_valuetype_valuetype"
     },
     {
       "relation": "contains",
@@ -3314,9 +3772,9 @@
       "source_file": "cms/schemaTypes/backup/batchType.ts",
       "source_location": "L3",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "cms_schematypes_backup_batchtype_ts",
-      "target": "backup_batchtype_batch",
-      "confidence_score": 1.0
+      "target": "backup_batchtype_batch"
     },
     {
       "relation": "contains",
@@ -3324,9 +3782,9 @@
       "source_file": "cms/schemaTypes/backup/stageType.ts",
       "source_location": "L3",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "cms_schematypes_backup_stagetype_ts",
-      "target": "backup_stagetype_stage",
-      "confidence_score": 1.0
+      "target": "backup_stagetype_stage"
     },
     {
       "relation": "contains",
@@ -3334,9 +3792,9 @@
       "source_file": "cms/schemaTypes/backup/scenarioType.ts",
       "source_location": "L3",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "cms_schematypes_backup_scenariotype_ts",
-      "target": "backup_scenariotype_scenario",
-      "confidence_score": 1.0
+      "target": "backup_scenariotype_scenario"
     },
     {
       "relation": "contains",
@@ -3344,9 +3802,9 @@
       "source_file": "cms/actions/publishBatchAction.ts",
       "source_location": "L4",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "cms_actions_publishbatchaction_ts",
-      "target": "actions_publishbatchaction_publishbatchwithscenariosaction",
-      "confidence_score": 1.0
+      "target": "actions_publishbatchaction_publishbatchwithscenariosaction"
     },
     {
       "relation": "contains",
@@ -3354,9 +3812,9 @@
       "source_file": "cms/actions/attachDiagnosesAction.ts",
       "source_location": "L4",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "cms_actions_attachdiagnosesaction_ts",
-      "target": "actions_attachdiagnosesaction_attachalldiagnosesaction",
-      "confidence_score": 1.0
+      "target": "actions_attachdiagnosesaction_attachalldiagnosesaction"
     },
     {
       "relation": "contains",
@@ -3364,9 +3822,9 @@
       "source_file": "frontend/eslint.config.mjs",
       "source_location": "L5",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "frontend_eslint_config_mjs",
-      "target": "frontend_eslint_config_eslintconfig",
-      "confidence_score": 1.0
+      "target": "frontend_eslint_config_eslintconfig"
     },
     {
       "relation": "contains",
@@ -3374,9 +3832,9 @@
       "source_file": "frontend/tsconfig.json",
       "source_location": "L2",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "frontend_tsconfig_json",
-      "target": "frontend_tsconfig_compileroptions",
-      "confidence_score": 1.0
+      "target": "frontend_tsconfig_compileroptions"
     },
     {
       "relation": "contains",
@@ -3384,9 +3842,9 @@
       "source_file": "frontend/tsconfig.json",
       "source_location": "L33",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "frontend_tsconfig_json",
-      "target": "frontend_tsconfig_exclude",
-      "confidence_score": 1.0
+      "target": "frontend_tsconfig_exclude"
     },
     {
       "relation": "contains",
@@ -3394,9 +3852,9 @@
       "source_file": "frontend/tsconfig.json",
       "source_location": "L25",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "frontend_tsconfig_json",
-      "target": "frontend_tsconfig_include",
-      "confidence_score": 1.0
+      "target": "frontend_tsconfig_include"
     },
     {
       "relation": "contains",
@@ -3404,9 +3862,9 @@
       "source_file": "frontend/tsconfig.json",
       "source_location": "L5",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "frontend_tsconfig_compileroptions",
-      "target": "frontend_tsconfig_compileroptions_allowjs",
-      "confidence_score": 1.0
+      "target": "frontend_tsconfig_compileroptions_allowjs"
     },
     {
       "relation": "contains",
@@ -3414,9 +3872,9 @@
       "source_file": "frontend/tsconfig.json",
       "source_location": "L9",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "frontend_tsconfig_compileroptions",
-      "target": "frontend_tsconfig_compileroptions_esmoduleinterop",
-      "confidence_score": 1.0
+      "target": "frontend_tsconfig_compileroptions_esmoduleinterop"
     },
     {
       "relation": "contains",
@@ -3424,9 +3882,9 @@
       "source_file": "frontend/tsconfig.json",
       "source_location": "L15",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "frontend_tsconfig_compileroptions",
-      "target": "frontend_tsconfig_compileroptions_incremental",
-      "confidence_score": 1.0
+      "target": "frontend_tsconfig_compileroptions_incremental"
     },
     {
       "relation": "contains",
@@ -3434,9 +3892,9 @@
       "source_file": "frontend/tsconfig.json",
       "source_location": "L13",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "frontend_tsconfig_compileroptions",
-      "target": "frontend_tsconfig_compileroptions_isolatedmodules",
-      "confidence_score": 1.0
+      "target": "frontend_tsconfig_compileroptions_isolatedmodules"
     },
     {
       "relation": "contains",
@@ -3444,9 +3902,9 @@
       "source_file": "frontend/tsconfig.json",
       "source_location": "L14",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "frontend_tsconfig_compileroptions",
-      "target": "frontend_tsconfig_compileroptions_jsx",
-      "confidence_score": 1.0
+      "target": "frontend_tsconfig_compileroptions_jsx"
     },
     {
       "relation": "contains",
@@ -3454,9 +3912,9 @@
       "source_file": "frontend/tsconfig.json",
       "source_location": "L4",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "frontend_tsconfig_compileroptions",
-      "target": "frontend_tsconfig_compileroptions_lib",
-      "confidence_score": 1.0
+      "target": "frontend_tsconfig_compileroptions_lib"
     },
     {
       "relation": "contains",
@@ -3464,9 +3922,9 @@
       "source_file": "frontend/tsconfig.json",
       "source_location": "L10",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "frontend_tsconfig_compileroptions",
-      "target": "frontend_tsconfig_compileroptions_module",
-      "confidence_score": 1.0
+      "target": "frontend_tsconfig_compileroptions_module"
     },
     {
       "relation": "contains",
@@ -3474,9 +3932,9 @@
       "source_file": "frontend/tsconfig.json",
       "source_location": "L11",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "frontend_tsconfig_compileroptions",
-      "target": "frontend_tsconfig_compileroptions_moduleresolution",
-      "confidence_score": 1.0
+      "target": "frontend_tsconfig_compileroptions_moduleresolution"
     },
     {
       "relation": "contains",
@@ -3484,9 +3942,9 @@
       "source_file": "frontend/tsconfig.json",
       "source_location": "L8",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "frontend_tsconfig_compileroptions",
-      "target": "frontend_tsconfig_compileroptions_noemit",
-      "confidence_score": 1.0
+      "target": "frontend_tsconfig_compileroptions_noemit"
     },
     {
       "relation": "contains",
@@ -3494,9 +3952,9 @@
       "source_file": "frontend/tsconfig.json",
       "source_location": "L21",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "frontend_tsconfig_compileroptions",
-      "target": "frontend_tsconfig_compileroptions_paths",
-      "confidence_score": 1.0
+      "target": "frontend_tsconfig_compileroptions_paths"
     },
     {
       "relation": "contains",
@@ -3504,9 +3962,9 @@
       "source_file": "frontend/tsconfig.json",
       "source_location": "L16",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "frontend_tsconfig_compileroptions",
-      "target": "frontend_tsconfig_compileroptions_plugins",
-      "confidence_score": 1.0
+      "target": "frontend_tsconfig_compileroptions_plugins"
     },
     {
       "relation": "contains",
@@ -3514,9 +3972,9 @@
       "source_file": "frontend/tsconfig.json",
       "source_location": "L12",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "frontend_tsconfig_compileroptions",
-      "target": "frontend_tsconfig_compileroptions_resolvejsonmodule",
-      "confidence_score": 1.0
+      "target": "frontend_tsconfig_compileroptions_resolvejsonmodule"
     },
     {
       "relation": "contains",
@@ -3524,9 +3982,9 @@
       "source_file": "frontend/tsconfig.json",
       "source_location": "L6",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "frontend_tsconfig_compileroptions",
-      "target": "frontend_tsconfig_compileroptions_skiplibcheck",
-      "confidence_score": 1.0
+      "target": "frontend_tsconfig_compileroptions_skiplibcheck"
     },
     {
       "relation": "contains",
@@ -3534,9 +3992,9 @@
       "source_file": "frontend/tsconfig.json",
       "source_location": "L7",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "frontend_tsconfig_compileroptions",
-      "target": "frontend_tsconfig_compileroptions_strict",
-      "confidence_score": 1.0
+      "target": "frontend_tsconfig_compileroptions_strict"
     },
     {
       "relation": "contains",
@@ -3544,9 +4002,9 @@
       "source_file": "frontend/tsconfig.json",
       "source_location": "L3",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "frontend_tsconfig_compileroptions",
-      "target": "frontend_tsconfig_compileroptions_target",
-      "confidence_score": 1.0
+      "target": "frontend_tsconfig_compileroptions_target"
     },
     {
       "relation": "contains",
@@ -3554,9 +4012,9 @@
       "source_file": "frontend/tsconfig.json",
       "source_location": "L22",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "frontend_tsconfig_compileroptions_paths",
-      "target": "frontend_tsconfig_paths",
-      "confidence_score": 1.0
+      "target": "frontend_tsconfig_paths"
     },
     {
       "relation": "contains",
@@ -3564,9 +4022,9 @@
       "source_file": "frontend/next.config.ts",
       "source_location": "L3",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "frontend_next_config_ts",
-      "target": "frontend_next_config_nextconfig",
-      "confidence_score": 1.0
+      "target": "frontend_next_config_nextconfig"
     },
     {
       "relation": "contains",
@@ -3574,9 +4032,9 @@
       "source_file": "frontend/postcss.config.mjs",
       "source_location": "L1",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "frontend_postcss_config_mjs",
-      "target": "frontend_postcss_config_config",
-      "confidence_score": 1.0
+      "target": "frontend_postcss_config_config"
     },
     {
       "relation": "contains",
@@ -3584,9 +4042,9 @@
       "source_file": "frontend/package.json",
       "source_location": "L11",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "frontend_package_json",
-      "target": "frontend_package_dependencies",
-      "confidence_score": 1.0
+      "target": "frontend_package_dependencies"
     },
     {
       "relation": "contains",
@@ -3594,9 +4052,9 @@
       "source_file": "frontend/package.json",
       "source_location": "L18",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "frontend_package_json",
-      "target": "frontend_package_devdependencies",
-      "confidence_score": 1.0
+      "target": "frontend_package_devdependencies"
     },
     {
       "relation": "contains",
@@ -3604,9 +4062,9 @@
       "source_file": "frontend/package.json",
       "source_location": "L2",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "frontend_package_json",
-      "target": "frontend_package_name",
-      "confidence_score": 1.0
+      "target": "frontend_package_name"
     },
     {
       "relation": "contains",
@@ -3614,9 +4072,9 @@
       "source_file": "frontend/package.json",
       "source_location": "L4",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "frontend_package_json",
-      "target": "frontend_package_private",
-      "confidence_score": 1.0
+      "target": "frontend_package_private"
     },
     {
       "relation": "contains",
@@ -3624,9 +4082,9 @@
       "source_file": "frontend/package.json",
       "source_location": "L5",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "frontend_package_json",
-      "target": "frontend_package_scripts",
-      "confidence_score": 1.0
+      "target": "frontend_package_scripts"
     },
     {
       "relation": "contains",
@@ -3634,9 +4092,9 @@
       "source_file": "frontend/package.json",
       "source_location": "L3",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "frontend_package_json",
-      "target": "frontend_package_version",
-      "confidence_score": 1.0
+      "target": "frontend_package_version"
     },
     {
       "relation": "contains",
@@ -3644,9 +4102,9 @@
       "source_file": "frontend/package.json",
       "source_location": "L7",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "frontend_package_scripts",
-      "target": "frontend_package_scripts_build",
-      "confidence_score": 1.0
+      "target": "frontend_package_scripts_build"
     },
     {
       "relation": "contains",
@@ -3654,9 +4112,9 @@
       "source_file": "frontend/package.json",
       "source_location": "L6",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "frontend_package_scripts",
-      "target": "frontend_package_scripts_dev",
-      "confidence_score": 1.0
+      "target": "frontend_package_scripts_dev"
     },
     {
       "relation": "contains",
@@ -3664,9 +4122,9 @@
       "source_file": "frontend/package.json",
       "source_location": "L9",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "frontend_package_scripts",
-      "target": "frontend_package_scripts_lint",
-      "confidence_score": 1.0
+      "target": "frontend_package_scripts_lint"
     },
     {
       "relation": "contains",
@@ -3674,9 +4132,9 @@
       "source_file": "frontend/package.json",
       "source_location": "L8",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "frontend_package_scripts",
-      "target": "frontend_package_scripts_start",
-      "confidence_score": 1.0
+      "target": "frontend_package_scripts_start"
     },
     {
       "relation": "contains",
@@ -3684,9 +4142,9 @@
       "source_file": "frontend/package.json",
       "source_location": "L14",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "frontend_package_dependencies",
-      "target": "frontend_package_dependencies_next",
-      "confidence_score": 1.0
+      "target": "frontend_package_dependencies_next"
     },
     {
       "relation": "contains",
@@ -3694,9 +4152,9 @@
       "source_file": "frontend/package.json",
       "source_location": "L12",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "frontend_package_dependencies",
-      "target": "frontend_package_dependencies_portabletext_react",
-      "confidence_score": 1.0
+      "target": "frontend_package_dependencies_portabletext_react"
     },
     {
       "relation": "contains",
@@ -3704,9 +4162,9 @@
       "source_file": "frontend/package.json",
       "source_location": "L15",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "frontend_package_dependencies",
-      "target": "frontend_package_dependencies_react",
-      "confidence_score": 1.0
+      "target": "frontend_package_dependencies_react"
     },
     {
       "relation": "contains",
@@ -3714,9 +4172,9 @@
       "source_file": "frontend/package.json",
       "source_location": "L16",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "frontend_package_dependencies",
-      "target": "frontend_package_dependencies_react_dom",
-      "confidence_score": 1.0
+      "target": "frontend_package_dependencies_react_dom"
     },
     {
       "relation": "contains",
@@ -3724,9 +4182,9 @@
       "source_file": "frontend/package.json",
       "source_location": "L13",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "frontend_package_dependencies",
-      "target": "frontend_package_dependencies_sanity_client",
-      "confidence_score": 1.0
+      "target": "frontend_package_dependencies_sanity_client"
     },
     {
       "relation": "contains",
@@ -3734,9 +4192,9 @@
       "source_file": "frontend/package.json",
       "source_location": "L23",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "frontend_package_devdependencies",
-      "target": "frontend_package_devdependencies_eslint",
-      "confidence_score": 1.0
+      "target": "frontend_package_devdependencies_eslint"
     },
     {
       "relation": "contains",
@@ -3744,9 +4202,9 @@
       "source_file": "frontend/package.json",
       "source_location": "L24",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "frontend_package_devdependencies",
-      "target": "frontend_package_devdependencies_eslint_config_next",
-      "confidence_score": 1.0
+      "target": "frontend_package_devdependencies_eslint_config_next"
     },
     {
       "relation": "contains",
@@ -3754,9 +4212,9 @@
       "source_file": "frontend/package.json",
       "source_location": "L25",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "frontend_package_devdependencies",
-      "target": "frontend_package_devdependencies_tailwindcss",
-      "confidence_score": 1.0
+      "target": "frontend_package_devdependencies_tailwindcss"
     },
     {
       "relation": "contains",
@@ -3764,9 +4222,9 @@
       "source_file": "frontend/package.json",
       "source_location": "L19",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "frontend_package_devdependencies",
-      "target": "frontend_package_devdependencies_tailwindcss_postcss",
-      "confidence_score": 1.0
+      "target": "frontend_package_devdependencies_tailwindcss_postcss"
     },
     {
       "relation": "contains",
@@ -3774,9 +4232,9 @@
       "source_file": "frontend/package.json",
       "source_location": "L20",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "frontend_package_devdependencies",
-      "target": "frontend_package_devdependencies_types_node",
-      "confidence_score": 1.0
+      "target": "frontend_package_devdependencies_types_node"
     },
     {
       "relation": "contains",
@@ -3784,9 +4242,9 @@
       "source_file": "frontend/package.json",
       "source_location": "L21",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "frontend_package_devdependencies",
-      "target": "frontend_package_devdependencies_types_react",
-      "confidence_score": 1.0
+      "target": "frontend_package_devdependencies_types_react"
     },
     {
       "relation": "contains",
@@ -3794,9 +4252,9 @@
       "source_file": "frontend/package.json",
       "source_location": "L22",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "frontend_package_devdependencies",
-      "target": "frontend_package_devdependencies_types_react_dom",
-      "confidence_score": 1.0
+      "target": "frontend_package_devdependencies_types_react_dom"
     },
     {
       "relation": "contains",
@@ -3804,9 +4262,9 @@
       "source_file": "frontend/package.json",
       "source_location": "L26",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "frontend_package_devdependencies",
-      "target": "frontend_package_devdependencies_typescript",
-      "confidence_score": 1.0
+      "target": "frontend_package_devdependencies_typescript"
     },
     {
       "relation": "imports_from",
@@ -3815,9 +4273,9 @@
       "source_file": "frontend/app/b/[batchId]/page.tsx",
       "source_location": "L2",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "frontend_app_b_batchid_page_tsx",
-      "target": "frontend_lib_sanity_ts",
-      "confidence_score": 1.0
+      "target": "frontend_lib_sanity_ts"
     },
     {
       "relation": "imports_from",
@@ -3826,9 +4284,9 @@
       "source_file": "frontend/app/b/[batchId]/[slug]/diagnosis/page.tsx",
       "source_location": "L3",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "frontend_app_b_batchid_slug_diagnosis_page_tsx",
-      "target": "frontend_lib_sanity_ts",
-      "confidence_score": 1.0
+      "target": "frontend_lib_sanity_ts"
     },
     {
       "relation": "imports_from",
@@ -3837,9 +4295,9 @@
       "source_file": "frontend/app/b/[batchId]/[slug]/page.tsx",
       "source_location": "L3",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "frontend_app_b_batchid_slug_page_tsx",
-      "target": "frontend_lib_sanity_ts",
-      "confidence_score": 1.0
+      "target": "frontend_lib_sanity_ts"
     },
     {
       "relation": "imports_from",
@@ -3848,9 +4306,9 @@
       "source_file": "frontend/app/page.tsx",
       "source_location": "L2",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "frontend_app_page_tsx",
-      "target": "frontend_lib_sanity_ts",
-      "confidence_score": 1.0
+      "target": "frontend_lib_sanity_ts"
     },
     {
       "relation": "contains",
@@ -3858,9 +4316,9 @@
       "source_file": "frontend/lib/sanity.ts",
       "source_location": "L3",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "frontend_lib_sanity_ts",
-      "target": "lib_sanity_sanityclient",
-      "confidence_score": 1.0
+      "target": "lib_sanity_sanityclient"
     },
     {
       "relation": "imports",
@@ -3869,9 +4327,9 @@
       "source_file": "frontend/app/b/[batchId]/page.tsx",
       "source_location": "L2",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "frontend_app_b_batchid_page_tsx",
-      "target": "lib_sanity_sanityclient",
-      "confidence_score": 1.0
+      "target": "lib_sanity_sanityclient"
     },
     {
       "relation": "imports",
@@ -3880,9 +4338,9 @@
       "source_file": "frontend/app/b/[batchId]/[slug]/diagnosis/page.tsx",
       "source_location": "L3",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "frontend_app_b_batchid_slug_diagnosis_page_tsx",
-      "target": "lib_sanity_sanityclient",
-      "confidence_score": 1.0
+      "target": "lib_sanity_sanityclient"
     },
     {
       "relation": "imports",
@@ -3891,9 +4349,9 @@
       "source_file": "frontend/app/b/[batchId]/[slug]/page.tsx",
       "source_location": "L3",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "frontend_app_b_batchid_slug_page_tsx",
-      "target": "lib_sanity_sanityclient",
-      "confidence_score": 1.0
+      "target": "lib_sanity_sanityclient"
     },
     {
       "relation": "imports",
@@ -3902,9 +4360,9 @@
       "source_file": "frontend/app/page.tsx",
       "source_location": "L2",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "frontend_app_page_tsx",
-      "target": "lib_sanity_sanityclient",
-      "confidence_score": 1.0
+      "target": "lib_sanity_sanityclient"
     },
     {
       "relation": "imports_from",
@@ -3913,9 +4371,9 @@
       "source_file": "frontend/app/b/[batchId]/page.tsx",
       "source_location": "L3",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "frontend_app_b_batchid_page_tsx",
-      "target": "frontend_lib_queries_ts",
-      "confidence_score": 1.0
+      "target": "frontend_lib_queries_ts"
     },
     {
       "relation": "imports_from",
@@ -3924,9 +4382,9 @@
       "source_file": "frontend/app/b/[batchId]/[slug]/diagnosis/page.tsx",
       "source_location": "L4",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "frontend_app_b_batchid_slug_diagnosis_page_tsx",
-      "target": "frontend_lib_queries_ts",
-      "confidence_score": 1.0
+      "target": "frontend_lib_queries_ts"
     },
     {
       "relation": "imports_from",
@@ -3935,9 +4393,9 @@
       "source_file": "frontend/app/b/[batchId]/[slug]/page.tsx",
       "source_location": "L4",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "frontend_app_b_batchid_slug_page_tsx",
-      "target": "frontend_lib_queries_ts",
-      "confidence_score": 1.0
+      "target": "frontend_lib_queries_ts"
     },
     {
       "relation": "imports_from",
@@ -3946,9 +4404,9 @@
       "source_file": "frontend/app/page.tsx",
       "source_location": "L3",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "frontend_app_page_tsx",
-      "target": "frontend_lib_queries_ts",
-      "confidence_score": 1.0
+      "target": "frontend_lib_queries_ts"
     },
     {
       "relation": "imports_from",
@@ -3957,9 +4415,9 @@
       "source_file": "frontend/app/b/[batchId]/[slug]/diagnosis/page.tsx",
       "source_location": "L5",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "frontend_app_b_batchid_slug_diagnosis_page_tsx",
-      "target": "frontend_lib_types_ts",
-      "confidence_score": 1.0
+      "target": "frontend_lib_types_ts"
     },
     {
       "relation": "imports_from",
@@ -3968,9 +4426,9 @@
       "source_file": "frontend/app/b/[batchId]/[slug]/page.tsx",
       "source_location": "L5",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "frontend_app_b_batchid_slug_page_tsx",
-      "target": "frontend_lib_types_ts",
-      "confidence_score": 1.0
+      "target": "frontend_lib_types_ts"
     },
     {
       "relation": "imports_from",
@@ -3979,9 +4437,9 @@
       "source_file": "frontend/app/components/DiagnosisResult.tsx",
       "source_location": "L6",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "frontend_app_components_diagnosisresult_tsx",
-      "target": "frontend_lib_types_ts",
-      "confidence_score": 1.0
+      "target": "frontend_lib_types_ts"
     },
     {
       "relation": "imports_from",
@@ -3990,9 +4448,9 @@
       "source_file": "frontend/app/components/PlayChatBox.tsx",
       "source_location": "L6",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "frontend_app_components_playchatbox_tsx",
-      "target": "frontend_lib_types_ts",
-      "confidence_score": 1.0
+      "target": "frontend_lib_types_ts"
     },
     {
       "relation": "imports_from",
@@ -4001,9 +4459,9 @@
       "source_file": "frontend/app/components/ScenarioContainer.tsx",
       "source_location": "L6",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "frontend_app_components_scenariocontainer_tsx",
-      "target": "frontend_lib_types_ts",
-      "confidence_score": 1.0
+      "target": "frontend_lib_types_ts"
     },
     {
       "relation": "imports_from",
@@ -4012,9 +4470,9 @@
       "source_file": "frontend/app/components/ScenarioPrologue.tsx",
       "source_location": "L7",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "frontend_app_components_scenarioprologue_tsx",
-      "target": "frontend_lib_types_ts",
-      "confidence_score": 1.0
+      "target": "frontend_lib_types_ts"
     },
     {
       "relation": "contains",
@@ -4022,9 +4480,9 @@
       "source_file": "frontend/lib/types.ts",
       "source_location": "L22",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "frontend_lib_types_ts",
-      "target": "lib_types_diagnosis",
-      "confidence_score": 1.0
+      "target": "lib_types_diagnosis"
     },
     {
       "relation": "contains",
@@ -4032,9 +4490,9 @@
       "source_file": "frontend/lib/types.ts",
       "source_location": "L40",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "frontend_lib_types_ts",
-      "target": "lib_types_playscenario",
-      "confidence_score": 1.0
+      "target": "lib_types_playscenario"
     },
     {
       "relation": "contains",
@@ -4042,9 +4500,9 @@
       "source_file": "frontend/lib/types.ts",
       "source_location": "L8",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "frontend_lib_types_ts",
-      "target": "lib_types_reply",
-      "confidence_score": 1.0
+      "target": "lib_types_reply"
     },
     {
       "relation": "contains",
@@ -4052,9 +4510,9 @@
       "source_file": "frontend/lib/types.ts",
       "source_location": "L34",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "frontend_lib_types_ts",
-      "target": "lib_types_scenario",
-      "confidence_score": 1.0
+      "target": "lib_types_scenario"
     },
     {
       "relation": "contains",
@@ -4062,9 +4520,9 @@
       "source_file": "frontend/lib/types.ts",
       "source_location": "L14",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "frontend_lib_types_ts",
-      "target": "lib_types_stage",
-      "confidence_score": 1.0
+      "target": "lib_types_stage"
     },
     {
       "relation": "contains",
@@ -4072,9 +4530,9 @@
       "source_file": "frontend/lib/types.ts",
       "source_location": "L3",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "frontend_lib_types_ts",
-      "target": "lib_types_valuetype",
-      "confidence_score": 1.0
+      "target": "lib_types_valuetype"
     },
     {
       "relation": "imports",
@@ -4083,9 +4541,9 @@
       "source_file": "frontend/app/components/PlayChatBox.tsx",
       "source_location": "L6",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "frontend_app_components_playchatbox_tsx",
-      "target": "lib_types_reply",
-      "confidence_score": 1.0
+      "target": "lib_types_reply"
     },
     {
       "relation": "imports",
@@ -4094,9 +4552,9 @@
       "source_file": "frontend/app/components/PlayChatBox.tsx",
       "source_location": "L6",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "frontend_app_components_playchatbox_tsx",
-      "target": "lib_types_stage",
-      "confidence_score": 1.0
+      "target": "lib_types_stage"
     },
     {
       "relation": "references",
@@ -4105,9 +4563,9 @@
       "source_file": "frontend/app/components/DiagnosisResult.tsx",
       "source_location": "L9",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "components_diagnosisresult_props",
-      "target": "lib_types_playscenario",
-      "confidence_score": 1.0
+      "target": "lib_types_playscenario"
     },
     {
       "relation": "references",
@@ -4116,9 +4574,9 @@
       "source_file": "frontend/app/components/PlayChatBox.tsx",
       "source_location": "L26",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "components_playchatbox_props",
-      "target": "lib_types_playscenario",
-      "confidence_score": 1.0
+      "target": "lib_types_playscenario"
     },
     {
       "relation": "references",
@@ -4127,9 +4585,9 @@
       "source_file": "frontend/app/components/ScenarioContainer.tsx",
       "source_location": "L9",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "components_scenariocontainer_props",
-      "target": "lib_types_playscenario",
-      "confidence_score": 1.0
+      "target": "lib_types_playscenario"
     },
     {
       "relation": "references",
@@ -4138,9 +4596,9 @@
       "source_file": "frontend/app/components/ScenarioPrologue.tsx",
       "source_location": "L10",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "components_scenarioprologue_props",
-      "target": "lib_types_playscenario",
-      "confidence_score": 1.0
+      "target": "lib_types_playscenario"
     },
     {
       "relation": "imports",
@@ -4149,9 +4607,9 @@
       "source_file": "frontend/app/b/[batchId]/[slug]/diagnosis/page.tsx",
       "source_location": "L5",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "frontend_app_b_batchid_slug_diagnosis_page_tsx",
-      "target": "lib_types_playscenario",
-      "confidence_score": 1.0
+      "target": "lib_types_playscenario"
     },
     {
       "relation": "imports",
@@ -4160,9 +4618,9 @@
       "source_file": "frontend/app/b/[batchId]/[slug]/page.tsx",
       "source_location": "L5",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "frontend_app_b_batchid_slug_page_tsx",
-      "target": "lib_types_playscenario",
-      "confidence_score": 1.0
+      "target": "lib_types_playscenario"
     },
     {
       "relation": "imports",
@@ -4171,9 +4629,9 @@
       "source_file": "frontend/app/components/DiagnosisResult.tsx",
       "source_location": "L6",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "frontend_app_components_diagnosisresult_tsx",
-      "target": "lib_types_playscenario",
-      "confidence_score": 1.0
+      "target": "lib_types_playscenario"
     },
     {
       "relation": "imports",
@@ -4182,9 +4640,9 @@
       "source_file": "frontend/app/components/PlayChatBox.tsx",
       "source_location": "L6",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "frontend_app_components_playchatbox_tsx",
-      "target": "lib_types_playscenario",
-      "confidence_score": 1.0
+      "target": "lib_types_playscenario"
     },
     {
       "relation": "imports",
@@ -4193,9 +4651,9 @@
       "source_file": "frontend/app/components/ScenarioContainer.tsx",
       "source_location": "L6",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "frontend_app_components_scenariocontainer_tsx",
-      "target": "lib_types_playscenario",
-      "confidence_score": 1.0
+      "target": "lib_types_playscenario"
     },
     {
       "relation": "imports",
@@ -4204,9 +4662,9 @@
       "source_file": "frontend/app/components/ScenarioPrologue.tsx",
       "source_location": "L7",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "frontend_app_components_scenarioprologue_tsx",
-      "target": "lib_types_playscenario",
-      "confidence_score": 1.0
+      "target": "lib_types_playscenario"
     },
     {
       "relation": "contains",
@@ -4214,9 +4672,9 @@
       "source_file": "frontend/app/error.tsx",
       "source_location": "L6",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "frontend_app_error_tsx",
-      "target": "app_error_errorprops",
-      "confidence_score": 1.0
+      "target": "app_error_errorprops"
     },
     {
       "relation": "contains",
@@ -4224,9 +4682,9 @@
       "source_file": "frontend/app/error.tsx",
       "source_location": "L11",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "frontend_app_error_tsx",
-      "target": "app_error_globalerrorboundary",
-      "confidence_score": 1.0
+      "target": "app_error_globalerrorboundary"
     },
     {
       "relation": "contains",
@@ -4234,9 +4692,9 @@
       "source_file": "frontend/app/page.tsx",
       "source_location": "L7",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "frontend_app_page_tsx",
-      "target": "app_page_batchitem",
-      "confidence_score": 1.0
+      "target": "app_page_batchitem"
     },
     {
       "relation": "contains",
@@ -4244,9 +4702,9 @@
       "source_file": "frontend/app/page.tsx",
       "source_location": "L17",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "frontend_app_page_tsx",
-      "target": "app_page_home",
-      "confidence_score": 1.0
+      "target": "app_page_home"
     },
     {
       "relation": "contains",
@@ -4254,9 +4712,9 @@
       "source_file": "frontend/app/page.tsx",
       "source_location": "L13",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "frontend_app_page_tsx",
-      "target": "app_page_settings",
-      "confidence_score": 1.0
+      "target": "app_page_settings"
     },
     {
       "relation": "contains",
@@ -4264,9 +4722,9 @@
       "source_file": "frontend/app/not-found.tsx",
       "source_location": "L3",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "frontend_app_not_found_tsx",
-      "target": "app_not_found_notfound",
-      "confidence_score": 1.0
+      "target": "app_not_found_notfound"
     },
     {
       "relation": "calls",
@@ -4285,9 +4743,9 @@
       "source_file": "frontend/app/loading.tsx",
       "source_location": "L1",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "frontend_app_loading_tsx",
-      "target": "app_loading_homeloading",
-      "confidence_score": 1.0
+      "target": "app_loading_homeloading"
     },
     {
       "relation": "contains",
@@ -4295,9 +4753,9 @@
       "source_file": "frontend/app/layout.tsx",
       "source_location": "L13",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "frontend_app_layout_tsx",
-      "target": "app_layout_inter",
-      "confidence_score": 1.0
+      "target": "app_layout_inter"
     },
     {
       "relation": "contains",
@@ -4305,9 +4763,9 @@
       "source_file": "frontend/app/layout.tsx",
       "source_location": "L19",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "frontend_app_layout_tsx",
-      "target": "app_layout_metadata",
-      "confidence_score": 1.0
+      "target": "app_layout_metadata"
     },
     {
       "relation": "contains",
@@ -4315,9 +4773,9 @@
       "source_file": "frontend/app/layout.tsx",
       "source_location": "L7",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "frontend_app_layout_tsx",
-      "target": "app_layout_playfair",
-      "confidence_score": 1.0
+      "target": "app_layout_playfair"
     },
     {
       "relation": "contains",
@@ -4325,9 +4783,9 @@
       "source_file": "frontend/app/layout.tsx",
       "source_location": "L24",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "frontend_app_layout_tsx",
-      "target": "app_layout_rootlayout",
-      "confidence_score": 1.0
+      "target": "app_layout_rootlayout"
     },
     {
       "relation": "imports_from",
@@ -4336,9 +4794,9 @@
       "source_file": "frontend/app/layout.tsx",
       "source_location": "L4",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "frontend_app_layout_tsx",
-      "target": "frontend_app_components_googletranslate_tsx",
-      "confidence_score": 1.0
+      "target": "frontend_app_components_googletranslate_tsx"
     },
     {
       "relation": "imports_from",
@@ -4347,9 +4805,9 @@
       "source_file": "frontend/app/layout.tsx",
       "source_location": "L5",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "frontend_app_layout_tsx",
-      "target": "frontend_app_components_languagetoggle_tsx",
-      "confidence_score": 1.0
+      "target": "frontend_app_components_languagetoggle_tsx"
     },
     {
       "relation": "contains",
@@ -4357,9 +4815,9 @@
       "source_file": "frontend/app/components/PlayChatBox.tsx",
       "source_location": "L9",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "frontend_app_components_playchatbox_tsx",
-      "target": "components_playchatbox_message",
-      "confidence_score": 1.0
+      "target": "components_playchatbox_message"
     },
     {
       "relation": "contains",
@@ -4367,9 +4825,9 @@
       "source_file": "frontend/app/components/PlayChatBox.tsx",
       "source_location": "L30",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "frontend_app_components_playchatbox_tsx",
-      "target": "components_playchatbox_playchatbox",
-      "confidence_score": 1.0
+      "target": "components_playchatbox_playchatbox"
     },
     {
       "relation": "contains",
@@ -4377,9 +4835,9 @@
       "source_file": "frontend/app/components/PlayChatBox.tsx",
       "source_location": "L25",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "frontend_app_components_playchatbox_tsx",
-      "target": "components_playchatbox_props",
-      "confidence_score": 1.0
+      "target": "components_playchatbox_props"
     },
     {
       "relation": "contains",
@@ -4387,9 +4845,9 @@
       "source_file": "frontend/app/components/PlayChatBox.tsx",
       "source_location": "L18",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "frontend_app_components_playchatbox_tsx",
-      "target": "components_playchatbox_storedchatstate",
-      "confidence_score": 1.0
+      "target": "components_playchatbox_storedchatstate"
     },
     {
       "relation": "imports_from",
@@ -4398,9 +4856,9 @@
       "source_file": "frontend/app/components/PlayChatBox.tsx",
       "source_location": "L7",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "frontend_app_components_playchatbox_tsx",
-      "target": "frontend_app_components_languagetoggle_tsx",
-      "confidence_score": 1.0
+      "target": "frontend_app_components_languagetoggle_tsx"
     },
     {
       "relation": "imports_from",
@@ -4409,9 +4867,9 @@
       "source_file": "frontend/app/components/ScenarioContainer.tsx",
       "source_location": "L5",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "frontend_app_components_scenariocontainer_tsx",
-      "target": "frontend_app_components_playchatbox_tsx",
-      "confidence_score": 1.0
+      "target": "frontend_app_components_playchatbox_tsx"
     },
     {
       "relation": "contains",
@@ -4419,9 +4877,9 @@
       "source_file": "frontend/app/components/LanguageToggle.tsx",
       "source_location": "L5",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "frontend_app_components_languagetoggle_tsx",
-      "target": "components_languagetoggle_language",
-      "confidence_score": 1.0
+      "target": "components_languagetoggle_language"
     },
     {
       "relation": "contains",
@@ -4429,9 +4887,9 @@
       "source_file": "frontend/app/components/LanguageToggle.tsx",
       "source_location": "L11",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "frontend_app_components_languagetoggle_tsx",
-      "target": "components_languagetoggle_languagetoggle",
-      "confidence_score": 1.0
+      "target": "components_languagetoggle_languagetoggle"
     },
     {
       "relation": "contains",
@@ -4439,9 +4897,9 @@
       "source_file": "frontend/app/components/LanguageToggle.tsx",
       "source_location": "L7",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "frontend_app_components_languagetoggle_tsx",
-      "target": "components_languagetoggle_props",
-      "confidence_score": 1.0
+      "target": "components_languagetoggle_props"
     },
     {
       "relation": "imports_from",
@@ -4450,9 +4908,9 @@
       "source_file": "frontend/app/b/[batchId]/[slug]/diagnosis/page.tsx",
       "source_location": "L7",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "frontend_app_b_batchid_slug_diagnosis_page_tsx",
-      "target": "frontend_app_components_diagnosisresult_tsx",
-      "confidence_score": 1.0
+      "target": "frontend_app_components_diagnosisresult_tsx"
     },
     {
       "relation": "contains",
@@ -4460,9 +4918,9 @@
       "source_file": "frontend/app/components/DiagnosisResult.tsx",
       "source_location": "L14",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "frontend_app_components_diagnosisresult_tsx",
-      "target": "components_diagnosisresult_diagnosisresult",
-      "confidence_score": 1.0
+      "target": "components_diagnosisresult_diagnosisresult"
     },
     {
       "relation": "contains",
@@ -4470,9 +4928,9 @@
       "source_file": "frontend/app/components/DiagnosisResult.tsx",
       "source_location": "L8",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "frontend_app_components_diagnosisresult_tsx",
-      "target": "components_diagnosisresult_props",
-      "confidence_score": 1.0
+      "target": "components_diagnosisresult_props"
     },
     {
       "relation": "imports_from",
@@ -4481,9 +4939,9 @@
       "source_file": "frontend/app/b/[batchId]/[slug]/diagnosis/page.tsx",
       "source_location": "L6",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "frontend_app_b_batchid_slug_diagnosis_page_tsx",
-      "target": "frontend_app_components_scenarionotfound_tsx",
-      "confidence_score": 1.0
+      "target": "frontend_app_components_scenarionotfound_tsx"
     },
     {
       "relation": "imports_from",
@@ -4492,9 +4950,9 @@
       "source_file": "frontend/app/b/[batchId]/[slug]/page.tsx",
       "source_location": "L7",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "frontend_app_b_batchid_slug_page_tsx",
-      "target": "frontend_app_components_scenarionotfound_tsx",
-      "confidence_score": 1.0
+      "target": "frontend_app_components_scenarionotfound_tsx"
     },
     {
       "relation": "contains",
@@ -4502,9 +4960,9 @@
       "source_file": "frontend/app/components/ScenarioNotFound.tsx",
       "source_location": "L3",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "frontend_app_components_scenarionotfound_tsx",
-      "target": "components_scenarionotfound_scenarionotfound",
-      "confidence_score": 1.0
+      "target": "components_scenarionotfound_scenarionotfound"
     },
     {
       "relation": "imports_from",
@@ -4513,9 +4971,9 @@
       "source_file": "frontend/app/components/ScenarioContainer.tsx",
       "source_location": "L4",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "frontend_app_components_scenariocontainer_tsx",
-      "target": "frontend_app_components_scenarioprologue_tsx",
-      "confidence_score": 1.0
+      "target": "frontend_app_components_scenarioprologue_tsx"
     },
     {
       "relation": "contains",
@@ -4523,9 +4981,9 @@
       "source_file": "frontend/app/components/ScenarioPrologue.tsx",
       "source_location": "L14",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "frontend_app_components_scenarioprologue_tsx",
-      "target": "components_scenarioprologue_prologuecomponents",
-      "confidence_score": 1.0
+      "target": "components_scenarioprologue_prologuecomponents"
     },
     {
       "relation": "contains",
@@ -4533,9 +4991,9 @@
       "source_file": "frontend/app/components/ScenarioPrologue.tsx",
       "source_location": "L9",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "frontend_app_components_scenarioprologue_tsx",
-      "target": "components_scenarioprologue_props",
-      "confidence_score": 1.0
+      "target": "components_scenarioprologue_props"
     },
     {
       "relation": "contains",
@@ -4543,9 +5001,9 @@
       "source_file": "frontend/app/components/ScenarioPrologue.tsx",
       "source_location": "L49",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "frontend_app_components_scenarioprologue_tsx",
-      "target": "components_scenarioprologue_scenarioprologue",
-      "confidence_score": 1.0
+      "target": "components_scenarioprologue_scenarioprologue"
     },
     {
       "relation": "imports_from",
@@ -4554,9 +5012,9 @@
       "source_file": "frontend/app/b/[batchId]/[slug]/loading.tsx",
       "source_location": "L1",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "frontend_app_b_batchid_slug_loading_tsx",
-      "target": "frontend_app_components_prologueskeleton_tsx",
-      "confidence_score": 1.0
+      "target": "frontend_app_components_prologueskeleton_tsx"
     },
     {
       "relation": "contains",
@@ -4564,9 +5022,9 @@
       "source_file": "frontend/app/components/PrologueSkeleton.tsx",
       "source_location": "L1",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "frontend_app_components_prologueskeleton_tsx",
-      "target": "components_prologueskeleton_prologueskeleton",
-      "confidence_score": 1.0
+      "target": "components_prologueskeleton_prologueskeleton"
     },
     {
       "relation": "contains",
@@ -4574,9 +5032,9 @@
       "source_file": "frontend/app/components/GoogleTranslate.tsx",
       "source_location": "L24",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "frontend_app_components_googletranslate_tsx",
-      "target": "components_googletranslate_googletranslate",
-      "confidence_score": 1.0
+      "target": "components_googletranslate_googletranslate"
     },
     {
       "relation": "contains",
@@ -4584,9 +5042,9 @@
       "source_file": "frontend/app/components/GoogleTranslate.tsx",
       "source_location": "L6",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "frontend_app_components_googletranslate_tsx",
-      "target": "components_googletranslate_window",
-      "confidence_score": 1.0
+      "target": "components_googletranslate_window"
     },
     {
       "relation": "imports_from",
@@ -4595,9 +5053,9 @@
       "source_file": "frontend/app/b/[batchId]/[slug]/page.tsx",
       "source_location": "L6",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "frontend_app_b_batchid_slug_page_tsx",
-      "target": "frontend_app_components_scenariocontainer_tsx",
-      "confidence_score": 1.0
+      "target": "frontend_app_components_scenariocontainer_tsx"
     },
     {
       "relation": "contains",
@@ -4605,9 +5063,9 @@
       "source_file": "frontend/app/components/ScenarioContainer.tsx",
       "source_location": "L8",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "frontend_app_components_scenariocontainer_tsx",
-      "target": "components_scenariocontainer_props",
-      "confidence_score": 1.0
+      "target": "components_scenariocontainer_props"
     },
     {
       "relation": "contains",
@@ -4615,9 +5073,9 @@
       "source_file": "frontend/app/components/ScenarioContainer.tsx",
       "source_location": "L12",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "frontend_app_components_scenariocontainer_tsx",
-      "target": "components_scenariocontainer_scenariocontainer",
-      "confidence_score": 1.0
+      "target": "components_scenariocontainer_scenariocontainer"
     },
     {
       "relation": "contains",
@@ -4625,9 +5083,9 @@
       "source_file": "frontend/app/b/[batchId]/page.tsx",
       "source_location": "L14",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "frontend_app_b_batchid_page_tsx",
-      "target": "batchid_page_batchitem",
-      "confidence_score": 1.0
+      "target": "batchid_page_batchitem"
     },
     {
       "relation": "contains",
@@ -4635,9 +5093,9 @@
       "source_file": "frontend/app/b/[batchId]/page.tsx",
       "source_location": "L23",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "frontend_app_b_batchid_page_tsx",
-      "target": "batchid_page_batchpage",
-      "confidence_score": 1.0
+      "target": "batchid_page_batchpage"
     },
     {
       "relation": "contains",
@@ -4645,9 +5103,9 @@
       "source_file": "frontend/app/b/[batchId]/page.tsx",
       "source_location": "L19",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "frontend_app_b_batchid_page_tsx",
-      "target": "batchid_page_pageprops",
-      "confidence_score": 1.0
+      "target": "batchid_page_pageprops"
     },
     {
       "relation": "contains",
@@ -4655,9 +5113,9 @@
       "source_file": "frontend/app/b/[batchId]/page.tsx",
       "source_location": "L8",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "frontend_app_b_batchid_page_tsx",
-      "target": "batchid_page_scenarioitem",
-      "confidence_score": 1.0
+      "target": "batchid_page_scenarioitem"
     },
     {
       "relation": "contains",
@@ -4665,9 +5123,9 @@
       "source_file": "frontend/app/b/[batchId]/loading.tsx",
       "source_location": "L1",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "frontend_app_b_batchid_loading_tsx",
-      "target": "batchid_loading_batchloading",
-      "confidence_score": 1.0
+      "target": "batchid_loading_batchloading"
     },
     {
       "relation": "contains",
@@ -4675,9 +5133,9 @@
       "source_file": "frontend/app/b/[batchId]/[slug]/page.tsx",
       "source_location": "L19",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "frontend_app_b_batchid_slug_page_tsx",
-      "target": "slug_page_generatemetadata",
-      "confidence_score": 1.0
+      "target": "slug_page_generatemetadata"
     },
     {
       "relation": "contains",
@@ -4685,9 +5143,9 @@
       "source_file": "frontend/app/b/[batchId]/[slug]/page.tsx",
       "source_location": "L15",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "frontend_app_b_batchid_slug_page_tsx",
-      "target": "slug_page_getplayscenario",
-      "confidence_score": 1.0
+      "target": "slug_page_getplayscenario"
     },
     {
       "relation": "contains",
@@ -4695,9 +5153,9 @@
       "source_file": "frontend/app/b/[batchId]/[slug]/page.tsx",
       "source_location": "L11",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "frontend_app_b_batchid_slug_page_tsx",
-      "target": "slug_page_pageprops",
-      "confidence_score": 1.0
+      "target": "slug_page_pageprops"
     },
     {
       "relation": "contains",
@@ -4705,9 +5163,9 @@
       "source_file": "frontend/app/b/[batchId]/[slug]/page.tsx",
       "source_location": "L37",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "frontend_app_b_batchid_slug_page_tsx",
-      "target": "slug_page_scenarioplaypage",
-      "confidence_score": 1.0
+      "target": "slug_page_scenarioplaypage"
     },
     {
       "relation": "calls",
@@ -4716,9 +5174,9 @@
       "source_file": "frontend/app/b/[batchId]/[slug]/page.tsx",
       "source_location": "L23",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "slug_page_generatemetadata",
-      "target": "slug_page_getplayscenario",
-      "confidence_score": 1.0
+      "target": "slug_page_getplayscenario"
     },
     {
       "relation": "calls",
@@ -4727,9 +5185,9 @@
       "source_file": "frontend/app/b/[batchId]/[slug]/page.tsx",
       "source_location": "L39",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "slug_page_scenarioplaypage",
-      "target": "slug_page_getplayscenario",
-      "confidence_score": 1.0
+      "target": "slug_page_getplayscenario"
     },
     {
       "relation": "contains",
@@ -4737,9 +5195,9 @@
       "source_file": "frontend/app/b/[batchId]/[slug]/loading.tsx",
       "source_location": "L3",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "frontend_app_b_batchid_slug_loading_tsx",
-      "target": "slug_loading_scenarioloading",
-      "confidence_score": 1.0
+      "target": "slug_loading_scenarioloading"
     },
     {
       "relation": "contains",
@@ -4747,9 +5205,9 @@
       "source_file": "frontend/app/b/[batchId]/[slug]/diagnosis/page.tsx",
       "source_location": "L28",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "frontend_app_b_batchid_slug_diagnosis_page_tsx",
-      "target": "diagnosis_page_generatemetadata",
-      "confidence_score": 1.0
+      "target": "diagnosis_page_generatemetadata"
     },
     {
       "relation": "contains",
@@ -4757,9 +5215,9 @@
       "source_file": "frontend/app/b/[batchId]/[slug]/diagnosis/page.tsx",
       "source_location": "L19",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "frontend_app_b_batchid_slug_diagnosis_page_tsx",
-      "target": "diagnosis_page_getbusinesslink",
-      "confidence_score": 1.0
+      "target": "diagnosis_page_getbusinesslink"
     },
     {
       "relation": "contains",
@@ -4767,9 +5225,9 @@
       "source_file": "frontend/app/b/[batchId]/[slug]/diagnosis/page.tsx",
       "source_location": "L15",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "frontend_app_b_batchid_slug_diagnosis_page_tsx",
-      "target": "diagnosis_page_getplayscenario",
-      "confidence_score": 1.0
+      "target": "diagnosis_page_getplayscenario"
     },
     {
       "relation": "contains",
@@ -4777,9 +5235,9 @@
       "source_file": "frontend/app/b/[batchId]/[slug]/diagnosis/page.tsx",
       "source_location": "L11",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "frontend_app_b_batchid_slug_diagnosis_page_tsx",
-      "target": "diagnosis_page_pageprops",
-      "confidence_score": 1.0
+      "target": "diagnosis_page_pageprops"
     },
     {
       "relation": "contains",
@@ -4787,9 +5245,9 @@
       "source_file": "frontend/app/b/[batchId]/[slug]/diagnosis/page.tsx",
       "source_location": "L48",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "frontend_app_b_batchid_slug_diagnosis_page_tsx",
-      "target": "diagnosis_page_scenariodiagnosispage",
-      "confidence_score": 1.0
+      "target": "diagnosis_page_scenariodiagnosispage"
     },
     {
       "relation": "calls",
@@ -4798,9 +5256,9 @@
       "source_file": "frontend/app/b/[batchId]/[slug]/diagnosis/page.tsx",
       "source_location": "L34",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "diagnosis_page_generatemetadata",
-      "target": "diagnosis_page_getplayscenario",
-      "confidence_score": 1.0
+      "target": "diagnosis_page_getplayscenario"
     },
     {
       "relation": "calls",
@@ -4809,9 +5267,9 @@
       "source_file": "frontend/app/b/[batchId]/[slug]/diagnosis/page.tsx",
       "source_location": "L53",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "diagnosis_page_scenariodiagnosispage",
-      "target": "diagnosis_page_getplayscenario",
-      "confidence_score": 1.0
+      "target": "diagnosis_page_getplayscenario"
     },
     {
       "relation": "calls",
@@ -4820,9 +5278,9 @@
       "source_file": "frontend/app/b/[batchId]/[slug]/diagnosis/page.tsx",
       "source_location": "L54",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "diagnosis_page_scenariodiagnosispage",
-      "target": "diagnosis_page_getbusinesslink",
-      "confidence_score": 1.0
+      "target": "diagnosis_page_getbusinesslink"
     },
     {
       "relation": "contains",
@@ -4830,9 +5288,9 @@
       "source_file": "frontend/app/b/[batchId]/[slug]/diagnosis/loading.tsx",
       "source_location": "L1",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "frontend_app_b_batchid_slug_diagnosis_loading_tsx",
-      "target": "diagnosis_loading_diagnosisloading",
-      "confidence_score": 1.0
+      "target": "diagnosis_loading_diagnosisloading"
     },
     {
       "relation": "contains",
@@ -4840,9 +5298,9 @@
       "source_file": "DECISION_NOTE_EN.md",
       "source_location": "L1",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "decision_note_en_md",
-      "target": "nlp_project_decision_note_en_1_page_decision_note_beleef_nlp_the_executive_language_mirror",
-      "confidence_score": 1.0
+      "target": "nlp_project_decision_note_en_1_page_decision_note_beleef_nlp_the_executive_language_mirror"
     },
     {
       "relation": "contains",
@@ -4850,9 +5308,9 @@
       "source_file": "DECISION_NOTE_EN.md",
       "source_location": "L9",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "nlp_project_decision_note_en_1_page_decision_note_beleef_nlp_the_executive_language_mirror",
-      "target": "nlp_project_decision_note_en_1_the_core_problem_strategic_insight",
-      "confidence_score": 1.0
+      "target": "nlp_project_decision_note_en_1_the_core_problem_strategic_insight"
     },
     {
       "relation": "contains",
@@ -4860,9 +5318,9 @@
       "source_file": "DECISION_NOTE_EN.md",
       "source_location": "L16",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "nlp_project_decision_note_en_1_page_decision_note_beleef_nlp_the_executive_language_mirror",
-      "target": "nlp_project_decision_note_en_2_chosen_context_design_commitment",
-      "confidence_score": 1.0
+      "target": "nlp_project_decision_note_en_2_chosen_context_design_commitment"
     },
     {
       "relation": "contains",
@@ -4870,9 +5328,9 @@
       "source_file": "DECISION_NOTE_EN.md",
       "source_location": "L23",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "nlp_project_decision_note_en_1_page_decision_note_beleef_nlp_the_executive_language_mirror",
-      "target": "nlp_project_decision_note_en_3_core_interaction_mechanism_the_meta_model_matrix",
-      "confidence_score": 1.0
+      "target": "nlp_project_decision_note_en_3_core_interaction_mechanism_the_meta_model_matrix"
     },
     {
       "relation": "contains",
@@ -4880,9 +5338,9 @@
       "source_file": "DECISION_NOTE_EN.md",
       "source_location": "L31",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "nlp_project_decision_note_en_1_page_decision_note_beleef_nlp_the_executive_language_mirror",
-      "target": "nlp_project_decision_note_en_4_the_harsh_truth_reflection_7_combination_diagnosis",
-      "confidence_score": 1.0
+      "target": "nlp_project_decision_note_en_4_the_harsh_truth_reflection_7_combination_diagnosis"
     },
     {
       "relation": "contains",
@@ -4890,9 +5348,9 @@
       "source_file": "DECISION_NOTE_EN.md",
       "source_location": "L38",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "nlp_project_decision_note_en_1_page_decision_note_beleef_nlp_the_executive_language_mirror",
-      "target": "nlp_project_decision_note_en_5_technical_architecture_enterprise_scalability",
-      "confidence_score": 1.0
+      "target": "nlp_project_decision_note_en_5_technical_architecture_enterprise_scalability"
     },
     {
       "relation": "contains",
@@ -4900,9 +5358,9 @@
       "source_file": "DECISION_NOTE_EN.md",
       "source_location": "L45",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "nlp_project_decision_note_en_1_page_decision_note_beleef_nlp_the_executive_language_mirror",
-      "target": "nlp_project_decision_note_en_6_business_impact_for_het_nlp_instituut",
-      "confidence_score": 1.0
+      "target": "nlp_project_decision_note_en_6_business_impact_for_het_nlp_instituut"
     },
     {
       "relation": "contains",
@@ -4910,9 +5368,9 @@
       "source_file": "DECISION_NOTE.md",
       "source_location": "L1",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "decision_note_md",
-      "target": "nlp_project_decision_note_1_page_decision_note_beleef_nlp_de_leiderschaps_taalspiegel",
-      "confidence_score": 1.0
+      "target": "nlp_project_decision_note_1_page_decision_note_beleef_nlp_de_leiderschaps_taalspiegel"
     },
     {
       "relation": "contains",
@@ -4920,9 +5378,9 @@
       "source_file": "DECISION_NOTE.md",
       "source_location": "L9",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "nlp_project_decision_note_1_page_decision_note_beleef_nlp_de_leiderschaps_taalspiegel",
-      "target": "nlp_project_decision_note_1_het_kernprobleem_strategisch_inzicht",
-      "confidence_score": 1.0
+      "target": "nlp_project_decision_note_1_het_kernprobleem_strategisch_inzicht"
     },
     {
       "relation": "contains",
@@ -4930,9 +5388,9 @@
       "source_file": "DECISION_NOTE.md",
       "source_location": "L16",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "nlp_project_decision_note_1_page_decision_note_beleef_nlp_de_leiderschaps_taalspiegel",
-      "target": "nlp_project_decision_note_2_gekozen_context_ontwerpkeuzes",
-      "confidence_score": 1.0
+      "target": "nlp_project_decision_note_2_gekozen_context_ontwerpkeuzes"
     },
     {
       "relation": "contains",
@@ -4940,9 +5398,9 @@
       "source_file": "DECISION_NOTE.md",
       "source_location": "L23",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "nlp_project_decision_note_1_page_decision_note_beleef_nlp_de_leiderschaps_taalspiegel",
-      "target": "nlp_project_decision_note_3_interactief_kernmechanisme_de_meta_model_matrix",
-      "confidence_score": 1.0
+      "target": "nlp_project_decision_note_3_interactief_kernmechanisme_de_meta_model_matrix"
     },
     {
       "relation": "contains",
@@ -4950,9 +5408,9 @@
       "source_file": "DECISION_NOTE.md",
       "source_location": "L31",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "nlp_project_decision_note_1_page_decision_note_beleef_nlp_de_leiderschaps_taalspiegel",
-      "target": "nlp_project_decision_note_4_de_harsh_truth_reflectie_7_combinaties_diagnose",
-      "confidence_score": 1.0
+      "target": "nlp_project_decision_note_4_de_harsh_truth_reflectie_7_combinaties_diagnose"
     },
     {
       "relation": "contains",
@@ -4960,9 +5418,9 @@
       "source_file": "DECISION_NOTE.md",
       "source_location": "L38",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "nlp_project_decision_note_1_page_decision_note_beleef_nlp_de_leiderschaps_taalspiegel",
-      "target": "nlp_project_decision_note_5_technische_architectuur_schaalbaarheid",
-      "confidence_score": 1.0
+      "target": "nlp_project_decision_note_5_technische_architectuur_schaalbaarheid"
     },
     {
       "relation": "contains",
@@ -4970,9 +5428,9 @@
       "source_file": "DECISION_NOTE.md",
       "source_location": "L45",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "nlp_project_decision_note_1_page_decision_note_beleef_nlp_de_leiderschaps_taalspiegel",
-      "target": "nlp_project_decision_note_6_zakelijke_impact_voor_het_nlp_instituut",
-      "confidence_score": 1.0
+      "target": "nlp_project_decision_note_6_zakelijke_impact_voor_het_nlp_instituut"
     },
     {
       "relation": "contains",
@@ -4980,9 +5438,9 @@
       "source_file": "README.md",
       "source_location": "L1",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "readme_md",
-      "target": "nlp_project_readme_beleef_nlp_de_leiderschaps_taalspiegel_the_executive_language_mirror",
-      "confidence_score": 1.0
+      "target": "nlp_project_readme_beleef_nlp_de_leiderschaps_taalspiegel_the_executive_language_mirror"
     },
     {
       "relation": "contains",
@@ -4990,9 +5448,9 @@
       "source_file": "README.md",
       "source_location": "L37",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "nlp_project_readme_beleef_nlp_de_leiderschaps_taalspiegel_the_executive_language_mirror",
-      "target": "nlp_project_readme_architecture_tech_stack",
-      "confidence_score": 1.0
+      "target": "nlp_project_readme_architecture_tech_stack"
     },
     {
       "relation": "contains",
@@ -5000,9 +5458,9 @@
       "source_file": "README.md",
       "source_location": "L148",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "nlp_project_readme_beleef_nlp_de_leiderschaps_taalspiegel_the_executive_language_mirror",
-      "target": "nlp_project_readme_content_management_in_sanity_studio",
-      "confidence_score": 1.0
+      "target": "nlp_project_readme_content_management_in_sanity_studio"
     },
     {
       "relation": "contains",
@@ -5010,9 +5468,9 @@
       "source_file": "README.md",
       "source_location": "L173",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "nlp_project_readme_beleef_nlp_de_leiderschaps_taalspiegel_the_executive_language_mirror",
-      "target": "nlp_project_readme_contributors_license",
-      "confidence_score": 1.0
+      "target": "nlp_project_readme_contributors_license"
     },
     {
       "relation": "contains",
@@ -5020,9 +5478,9 @@
       "source_file": "README.md",
       "source_location": "L13",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "nlp_project_readme_beleef_nlp_de_leiderschaps_taalspiegel_the_executive_language_mirror",
-      "target": "nlp_project_readme_executive_decision_notes",
-      "confidence_score": 1.0
+      "target": "nlp_project_readme_executive_decision_notes"
     },
     {
       "relation": "contains",
@@ -5030,9 +5488,9 @@
       "source_file": "README.md",
       "source_location": "L160",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "nlp_project_readme_beleef_nlp_de_leiderschaps_taalspiegel_the_executive_language_mirror",
-      "target": "nlp_project_readme_graphify_codebase_topology",
-      "confidence_score": 1.0
+      "target": "nlp_project_readme_graphify_codebase_topology"
     },
     {
       "relation": "contains",
@@ -5040,9 +5498,9 @@
       "source_file": "README.md",
       "source_location": "L75",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "nlp_project_readme_beleef_nlp_de_leiderschaps_taalspiegel_the_executive_language_mirror",
-      "target": "nlp_project_readme_key_features_ux_innovations",
-      "confidence_score": 1.0
+      "target": "nlp_project_readme_key_features_ux_innovations"
     },
     {
       "relation": "contains",
@@ -5050,9 +5508,9 @@
       "source_file": "README.md",
       "source_location": "L22",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "nlp_project_readme_beleef_nlp_de_leiderschaps_taalspiegel_the_executive_language_mirror",
-      "target": "nlp_project_readme_project_overview_philosophy",
-      "confidence_score": 1.0
+      "target": "nlp_project_readme_project_overview_philosophy"
     },
     {
       "relation": "contains",
@@ -5060,9 +5518,9 @@
       "source_file": "README.md",
       "source_location": "L107",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "nlp_project_readme_beleef_nlp_de_leiderschaps_taalspiegel_the_executive_language_mirror",
-      "target": "nlp_project_readme_quickstart_local_setup",
-      "confidence_score": 1.0
+      "target": "nlp_project_readme_quickstart_local_setup"
     },
     {
       "relation": "contains",
@@ -5070,9 +5528,9 @@
       "source_file": "README.md",
       "source_location": "L39",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "nlp_project_readme_architecture_tech_stack",
-      "target": "nlp_project_readme_codeblock_1",
-      "confidence_score": 1.0
+      "target": "nlp_project_readme_codeblock_1"
     },
     {
       "relation": "contains",
@@ -5080,9 +5538,9 @@
       "source_file": "README.md",
       "source_location": "L77",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "nlp_project_readme_key_features_ux_innovations",
-      "target": "nlp_project_readme_1_cinematic_narrative_prologue",
-      "confidence_score": 1.0
+      "target": "nlp_project_readme_1_cinematic_narrative_prologue"
     },
     {
       "relation": "contains",
@@ -5090,9 +5548,9 @@
       "source_file": "README.md",
       "source_location": "L82",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "nlp_project_readme_key_features_ux_innovations",
-      "target": "nlp_project_readme_2_pinned_app_like_chat_simulator",
-      "confidence_score": 1.0
+      "target": "nlp_project_readme_2_pinned_app_like_chat_simulator"
     },
     {
       "relation": "contains",
@@ -5100,9 +5558,9 @@
       "source_file": "README.md",
       "source_location": "L88",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "nlp_project_readme_key_features_ux_innovations",
-      "target": "nlp_project_readme_3_7_combination_diagnostic_algorithm",
-      "confidence_score": 1.0
+      "target": "nlp_project_readme_3_7_combination_diagnostic_algorithm"
     },
     {
       "relation": "contains",
@@ -5110,9 +5568,9 @@
       "source_file": "README.md",
       "source_location": "L96",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "nlp_project_readme_key_features_ux_innovations",
-      "target": "nlp_project_readme_4_blazing_fast_performance",
-      "confidence_score": 1.0
+      "target": "nlp_project_readme_4_blazing_fast_performance"
     },
     {
       "relation": "contains",
@@ -5120,9 +5578,9 @@
       "source_file": "README.md",
       "source_location": "L102",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "nlp_project_readme_key_features_ux_innovations",
-      "target": "nlp_project_readme_5_dynamic_sanity_business_link",
-      "confidence_score": 1.0
+      "target": "nlp_project_readme_5_dynamic_sanity_business_link"
     },
     {
       "relation": "contains",
@@ -5130,9 +5588,9 @@
       "source_file": "README.md",
       "source_location": "L113",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "nlp_project_readme_quickstart_local_setup",
-      "target": "nlp_project_readme_1_clone_repository",
-      "confidence_score": 1.0
+      "target": "nlp_project_readme_1_clone_repository"
     },
     {
       "relation": "contains",
@@ -5140,9 +5598,9 @@
       "source_file": "README.md",
       "source_location": "L119",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "nlp_project_readme_quickstart_local_setup",
-      "target": "nlp_project_readme_2_cms_setup_sanity_studio",
-      "confidence_score": 1.0
+      "target": "nlp_project_readme_2_cms_setup_sanity_studio"
     },
     {
       "relation": "contains",
@@ -5150,9 +5608,9 @@
       "source_file": "README.md",
       "source_location": "L127",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "nlp_project_readme_quickstart_local_setup",
-      "target": "nlp_project_readme_3_frontend_setup_next_js",
-      "confidence_score": 1.0
+      "target": "nlp_project_readme_3_frontend_setup_next_js"
     },
     {
       "relation": "contains",
@@ -5160,9 +5618,9 @@
       "source_file": "README.md",
       "source_location": "L109",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "nlp_project_readme_quickstart_local_setup",
-      "target": "nlp_project_readme_prerequisites",
-      "confidence_score": 1.0
+      "target": "nlp_project_readme_prerequisites"
     },
     {
       "relation": "contains",
@@ -5170,9 +5628,9 @@
       "source_file": "README.md",
       "source_location": "L114",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "nlp_project_readme_1_clone_repository",
-      "target": "nlp_project_readme_codeblock_2",
-      "confidence_score": 1.0
+      "target": "nlp_project_readme_codeblock_2"
     },
     {
       "relation": "contains",
@@ -5180,9 +5638,9 @@
       "source_file": "README.md",
       "source_location": "L120",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "nlp_project_readme_2_cms_setup_sanity_studio",
-      "target": "nlp_project_readme_codeblock_3",
-      "confidence_score": 1.0
+      "target": "nlp_project_readme_codeblock_3"
     },
     {
       "relation": "contains",
@@ -5190,9 +5648,9 @@
       "source_file": "README.md",
       "source_location": "L128",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "nlp_project_readme_3_frontend_setup_next_js",
-      "target": "nlp_project_readme_codeblock_4",
-      "confidence_score": 1.0
+      "target": "nlp_project_readme_codeblock_4"
     },
     {
       "relation": "contains",
@@ -5200,9 +5658,9 @@
       "source_file": "README.md",
       "source_location": "L134",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "nlp_project_readme_3_frontend_setup_next_js",
-      "target": "nlp_project_readme_codeblock_5",
-      "confidence_score": 1.0
+      "target": "nlp_project_readme_codeblock_5"
     },
     {
       "relation": "contains",
@@ -5210,9 +5668,9 @@
       "source_file": "README.md",
       "source_location": "L141",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "nlp_project_readme_3_frontend_setup_next_js",
-      "target": "nlp_project_readme_codeblock_6",
-      "confidence_score": 1.0
+      "target": "nlp_project_readme_codeblock_6"
     },
     {
       "relation": "contains",
@@ -5220,9 +5678,9 @@
       "source_file": "README.md",
       "source_location": "L165",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "nlp_project_readme_graphify_codebase_topology",
-      "target": "nlp_project_readme_codeblock_7",
-      "confidence_score": 1.0
+      "target": "nlp_project_readme_codeblock_7"
     },
     {
       "relation": "contains",
@@ -5230,9 +5688,9 @@
       "source_file": "cms/README.md",
       "source_location": "L1",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "cms_readme_md",
-      "target": "cms_readme_sanity_clean_content_studio",
-      "confidence_score": 1.0
+      "target": "cms_readme_sanity_clean_content_studio"
     },
     {
       "relation": "contains",
@@ -5240,9 +5698,9 @@
       "source_file": "frontend/AGENTS.md",
       "source_location": "L3",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "frontend_agents_md",
-      "target": "frontend_agents_this_is_not_the_next_js_you_know",
-      "confidence_score": 1.0
+      "target": "frontend_agents_this_is_not_the_next_js_you_know"
     },
     {
       "relation": "contains",
@@ -5250,9 +5708,9 @@
       "source_file": "frontend/README.md",
       "source_location": "L32",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "frontend_readme_md",
-      "target": "frontend_readme_deploy_on_vercel",
-      "confidence_score": 1.0
+      "target": "frontend_readme_deploy_on_vercel"
     },
     {
       "relation": "contains",
@@ -5260,9 +5718,9 @@
       "source_file": "frontend/README.md",
       "source_location": "L3",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "frontend_readme_md",
-      "target": "frontend_readme_getting_started",
-      "confidence_score": 1.0
+      "target": "frontend_readme_getting_started"
     },
     {
       "relation": "contains",
@@ -5270,9 +5728,9 @@
       "source_file": "frontend/README.md",
       "source_location": "L23",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "frontend_readme_md",
-      "target": "frontend_readme_learn_more",
-      "confidence_score": 1.0
+      "target": "frontend_readme_learn_more"
     },
     {
       "relation": "contains",
@@ -5280,11 +5738,11 @@
       "source_file": "frontend/README.md",
       "source_location": "L7",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "frontend_readme_getting_started",
-      "target": "frontend_readme_codeblock_1",
-      "confidence_score": 1.0
+      "target": "frontend_readme_codeblock_1"
     }
   ],
   "hyperedges": [],
-  "built_at_commit": "be015a1db2ba5cf577370e6c5bd52f380dc5c7d5"
+  "built_at_commit": "1f4c366ff0e56f8fdaba9f257be7a1a4d7dc2d83"
 }

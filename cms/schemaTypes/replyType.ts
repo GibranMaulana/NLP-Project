@@ -12,6 +12,13 @@ export const reply = defineType({
       validation: (rule) => rule.required(),
     }),
     defineField({
+      name: "nextStage",
+      title: "Volgende Fase (Next Stage Key)",
+      type: "string",
+      description: "Wordt automatisch beheerd door de Branch Editor.",
+      readOnly: true,
+    }),
+    defineField({
       name: "valueType",
       title: "Categorie / Patroontype",
       type: "reference",
