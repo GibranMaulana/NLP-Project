@@ -20,6 +20,8 @@ interface StoredChatState {
   messages: Message[];
   isCompleted: boolean;
   selectedPatterns: string[];
+  tension?: number;
+  isEarlyTerminated?: boolean;
 }
 
 interface Props {
@@ -32,11 +34,16 @@ export default function PlayChatBox({ scenario, onRestart }: Props) {
   const batchId = params.batchId as string;
   const storageKey = `nlp_chat_state_${scenario.slug}`;
 
+  const initialTension = scenario.initialTension ?? 1;
+  const maxTension = scenario.maxTension ?? 3;
+
   const [currentStageIndex, setCurrentStageIndex] = useState(0);
   const [messages, setMessages] = useState<Message[]>([]);
   const [isTyping, setIsTyping] = useState(false);
   const [isCompleted, setIsCompleted] = useState(false);
   const [selectedPatterns, setSelectedPatterns] = useState<string[]>([]);
+  const [tension, setTension] = useState(initialTension);
+  const [isEarlyTerminated, setIsEarlyTerminated] = useState(false);
   const [isInitialized, setIsInitialized] = useState(false);
   const messagesEndRef = useRef<HTMLDivElement>(null);
 
@@ -62,6 +69,8 @@ export default function PlayChatBox({ scenario, onRestart }: Props) {
           setMessages(parsed.messages);
           setIsCompleted(parsed.isCompleted ?? false);
           setSelectedPatterns(parsed.selectedPatterns ?? []);
+          setTension(parsed.tension ?? initialTension);
+          setIsEarlyTerminated(parsed.isEarlyTerminated ?? false);
           setIsInitialized(true);
           return;
         }
@@ -84,9 +93,11 @@ export default function PlayChatBox({ scenario, onRestart }: Props) {
       setCurrentStageIndex(0);
       setIsCompleted(false);
       setSelectedPatterns([]);
+      setTension(initialTension);
+      setIsEarlyTerminated(false);
     }
     setIsInitialized(true);
-  }, [scenario.slug, storageKey]);
+  }, [scenario.slug, storageKey, initialTension]);
 
   // 2. Persist state on every change once initialized
   useEffect(() => {
@@ -97,12 +108,14 @@ export default function PlayChatBox({ scenario, onRestart }: Props) {
         messages,
         isCompleted,
         selectedPatterns,
+        tension,
+        isEarlyTerminated,
       };
       sessionStorage.setItem(storageKey, JSON.stringify(stateToStore));
     } catch {
       // ignore storage quota errors
     }
-  }, [currentStageIndex, messages, isCompleted, selectedPatterns, isInitialized, storageKey]);
+  }, [currentStageIndex, messages, isCompleted, selectedPatterns, tension, isEarlyTerminated, isInitialized, storageKey]);
 
   const scrollToBottom = () => {
     messagesEndRef.current?.scrollIntoView({ behavior: "smooth" });
@@ -132,6 +145,8 @@ export default function PlayChatBox({ scenario, onRestart }: Props) {
       setMessages([initialNpcMsg]);
       setIsCompleted(false);
       setSelectedPatterns([]);
+      setTension(initialTension);
+      setIsEarlyTerminated(false);
       setIsTyping(false);
     }
 
@@ -145,6 +160,9 @@ export default function PlayChatBox({ scenario, onRestart }: Props) {
 
     const timeStr = getFormattedTime();
     const patternTitle = reply.valueType?.title;
+    const effect = reply.tensionEffect ?? 0;
+    const newTension = Math.max(0, Math.min(maxTension, tension + effect));
+    setTension(newTension);
 
     // 1. Add User message
     const userMsg: Message = {
@@ -164,10 +182,93 @@ export default function PlayChatBox({ scenario, onRestart }: Props) {
 
     setMessages((prev) => [...prev, userMsg]);
 
-    const nextIndex = currentStageIndex + 1;
+    // 2. CHECK: Jika tensi mencapai puncak (>= maxTension), picu skenario & ending krisis author!
+    if (newTension >= maxTension) {
+      setIsTyping(true);
+      setTimeout(() => {
+        setIsTyping(false);
 
-    // 2. Advance to next stage or finish
-    if (nextIndex < stages.length) {
+        // 1. Prioritaskan cabang spesifik dari pilihan jawaban terakhir (reply.nextStage)
+        // Jika tidak ada garis cabang di jawaban ini, gunakan fallback maxTensionTargetStage skenario
+        const targetStageKey = reply.nextStage || scenario.maxTensionTargetStage;
+        const targetEndingStageIndex = targetStageKey
+          ? stages.findIndex((s) => s._key === targetStageKey)
+          : -1;
+
+        if (targetEndingStageIndex !== -1 && targetEndingStageIndex !== currentStageIndex) {
+          // Ada babak tujuan (baik dari cabang balasan ini, maupun dari maxTensionTargetStage)
+          const endingStage = stages[targetEndingStageIndex];
+          setCurrentStageIndex(targetEndingStageIndex);
+
+          const crisisMsgs: Message[] = [];
+          const angerDialogue =
+            reply.npcReaction ||
+            scenario.maxTensionDialogue ||
+            "Cukup! Saya tidak bisa melanjutkan pembicaraan seperti ini lagi.";
+
+          crisisMsgs.push({
+            id: `npc-crisis-${Date.now()}`,
+            sender: "npc",
+            speakerName: speakerName,
+            text: angerDialogue,
+            timestamp: getFormattedTime(),
+          });
+
+          crisisMsgs.push({
+            id: `npc-stage-ending-${Date.now()}`,
+            sender: "npc",
+            speakerName: endingStage.speaker || speakerName,
+            text: endingStage.botPrompt,
+            timestamp: getFormattedTime(),
+          });
+
+          setMessages((prev) => [...prev, ...crisisMsgs]);
+
+          // Jika babak ending ini adalah babak akhir (tidak memiliki balasan), selesaikan obrolan
+          if (!endingStage.replies || endingStage.replies.length === 0) {
+            setIsCompleted(true);
+            setIsEarlyTerminated(true);
+          }
+        } else {
+          // Skenario penghentian langsung (Walkout)
+          const terminationMsgs: Message[] = [];
+          const angerDialogue =
+            reply.npcReaction ||
+            scenario.maxTensionDialogue ||
+            "Cukup! Saya tidak bisa melanjutkan pembicaraan seperti ini lagi. Kita selesai di sini.";
+
+          terminationMsgs.push({
+            id: `npc-breakdown-${Date.now()}`,
+            sender: "npc",
+            speakerName: speakerName,
+            text: angerDialogue,
+            timestamp: getFormattedTime(),
+          });
+
+          terminationMsgs.push({
+            id: `sys-alert-${Date.now()}`,
+            sender: "npc",
+            speakerName: "System",
+            text: `⚠️ PERCAKAPAN TERHENTI: Tingkat tensi mencapai batas maksimal (${newTension}/${maxTension}). Emosi lawan bicara memuncak dan pembicaraan tidak dapat dilanjutkan.`,
+            timestamp: getFormattedTime(),
+          });
+
+          setMessages((prev) => [...prev, ...terminationMsgs]);
+          setIsCompleted(true);
+          setIsEarlyTerminated(true);
+        }
+      }, 900);
+      return;
+    }
+
+    // 3. Normal progression: Check nextStage branching from Branch Editor
+    let targetStageIndex = -1;
+    if (reply.nextStage) {
+      targetStageIndex = stages.findIndex((s) => s._key === reply.nextStage);
+    }
+    const nextIndex = targetStageIndex !== -1 ? targetStageIndex : currentStageIndex + 1;
+
+    if (nextIndex < stages.length && nextIndex >= 0) {
       setIsTyping(true);
       const nextStage = stages[nextIndex];
 
@@ -175,18 +276,40 @@ export default function PlayChatBox({ scenario, onRestart }: Props) {
         setIsTyping(false);
         setCurrentStageIndex(nextIndex);
 
-        const nextNpcMsg: Message = {
+        const newMsgs: Message[] = [];
+
+        // If reply has NPC spontaneous reaction, show it before botPrompt
+        if (reply.npcReaction) {
+          newMsgs.push({
+            id: `npc-reaction-${Date.now()}`,
+            sender: "npc",
+            speakerName: speakerName,
+            text: reply.npcReaction,
+            timestamp: getFormattedTime(),
+          });
+        }
+
+        // Next stage prompt
+        newMsgs.push({
           id: `npc-stage-${nextStage._key || nextIndex}-${Date.now()}`,
           sender: "npc",
           speakerName: nextStage.speaker || "Character",
           text: nextStage.botPrompt,
           timestamp: getFormattedTime(),
-        };
+        });
 
-        setMessages((prev) => [...prev, nextNpcMsg]);
-      }, 1100);
+        setMessages((prev) => [...prev, ...newMsgs]);
+
+        // Jika nextStage adalah Babak Krisis (Walkout) atau terminal tanpa balasan:
+        if (nextStage.phaseType === 'Crisis' || (!nextStage.replies || nextStage.replies.length === 0)) {
+          setIsCompleted(true);
+          if (nextStage.phaseType === 'Crisis' || newTension >= maxTension) {
+            setIsEarlyTerminated(true);
+          }
+        }
+      }, 900);
     } else {
-      // Completed all stages
+      // Completed all stages normally
       setIsTyping(true);
       setTimeout(() => {
         setIsTyping(false);
@@ -196,12 +319,12 @@ export default function PlayChatBox({ scenario, onRestart }: Props) {
           id: `npc-complete-${Date.now()}`,
           sender: "npc",
           speakerName: speakerName,
-          text: "Bedankt voor uw antwoorden. Dit gesprek is nu afgerond.",
+          text: reply.npcReaction || "Bedankt voor uw antwoorden. Dit gesprek is nu afgerond.",
           timestamp: getFormattedTime(),
         };
 
         setMessages((prev) => [...prev, finalNpcMsg]);
-      }, 1000);
+      }, 900);
     }
   };
 
@@ -238,6 +361,46 @@ export default function PlayChatBox({ scenario, onRestart }: Props) {
             </div>
           </div>
 
+          {/* Center: Tension Meter */}
+          <div 
+            className={`flex items-center gap-2 px-3 py-1.5 rounded-full border transition-colors duration-300 ${
+              tension >= maxTension
+                ? 'bg-rose-950/40 border-rose-500/60 shadow-[0_0_12px_rgba(244,63,94,0.3)]'
+                : tension >= maxTension - 1
+                ? 'bg-amber-950/30 border-amber-500/40'
+                : 'bg-[#1a1a24] border-[#292477]/40'
+            }`}
+          >
+            <span className="text-[11px] font-semibold text-[#a0a0b0]">Tension:</span>
+            <div className="flex gap-1.5 items-center">
+              {Array.from({ length: maxTension }).map((_, idx) => (
+                <span
+                  key={idx}
+                  className={`w-2.5 h-2.5 rounded-full transition-all duration-300 ${
+                    idx < tension
+                      ? tension >= maxTension
+                        ? 'bg-rose-500 shadow-[0_0_8px_rgba(244,63,94,0.9)] animate-pulse'
+                        : tension >= maxTension - 1
+                        ? 'bg-amber-400 shadow-[0_0_6px_rgba(251,191,36,0.6)]'
+                        : 'bg-emerald-400'
+                      : 'bg-slate-700/60'
+                  }`}
+                />
+              ))}
+            </div>
+            <span
+              className={`text-[11px] font-bold ${
+                tension >= maxTension
+                  ? 'text-rose-400 animate-pulse'
+                  : tension >= maxTension - 1
+                  ? 'text-amber-300'
+                  : 'text-emerald-400'
+              }`}
+            >
+              {tension}/{maxTension}
+            </span>
+          </div>
+
           {/* Right: Reset + Language Switcher */}
           <div className="chat-header-lang flex items-center gap-2 sm:gap-3">
             {/* Reset Button */}
@@ -256,6 +419,21 @@ export default function PlayChatBox({ scenario, onRestart }: Props) {
           </div>
         </div>
       </header>
+
+      {/* ── Main Quest Objective Banner ───────────────────── */}
+      {scenario.mainQuest && (
+        <div className="relative z-15 w-full border-b border-[#292477]/40 bg-[#161622]/95 px-4 py-2 sm:px-6 backdrop-blur-sm shadow-sm">
+          <div className="mx-auto flex max-w-3xl items-center gap-2.5 text-xs">
+
+            <span className="font-bold uppercase tracking-wider text-[#F46B3C] shrink-0 text-[10px] sm:text-xs">
+              Misi Utama:
+            </span>
+            <p className="truncate text-[#E9E7F5] font-medium leading-tight" title={scenario.mainQuest}>
+              {scenario.mainQuest}
+            </p>
+          </div>
+        </div>
+      )}
 
       {/* ── Scrollable Chat Messages Area ─────────────────── */}
       <main className="relative z-10 mx-auto flex w-full max-w-3xl flex-1 flex-col overflow-hidden px-4 sm:px-6">
@@ -369,7 +547,14 @@ export default function PlayChatBox({ scenario, onRestart }: Props) {
 
           {isCompleted && (
             <div className="flex flex-col sm:flex-row items-center justify-between gap-3 py-1">
-              <p className="text-sm text-[#a0a0b0]">Het gesprek is afgerond.</p>
+              <div className="flex items-center gap-2">
+
+                <p className={`text-sm font-semibold ${isEarlyTerminated ? 'text-rose-400' : 'text-[#a0a0b0]'}`}>
+                  {isEarlyTerminated
+                    ? 'Percakapan Terhenti: Tensi emosi memuncak (Walkout)!'
+                    : 'Het gesprek is afgerond.'}
+                </p>
+              </div>
               <Link
                 href={`/b/${batchId}/${scenario.slug}/diagnosis`}
                 className="w-full sm:w-auto inline-flex items-center justify-center gap-2 rounded-full bg-[#F46B3C] px-6 py-2.5 text-sm font-semibold text-white shadow-md transition hover:bg-[#E0592B]"

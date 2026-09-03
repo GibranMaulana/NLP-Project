@@ -4,6 +4,7 @@ import {visionTool} from '@sanity/vision'
 import {schemaTypes} from './schemaTypes'
 import {publishBatchWithScenariosAction} from './actions/publishBatchAction'
 import {attachAllDiagnosesAction} from './actions/attachDiagnosesAction'
+import {branchEditorTool} from './plugins/branchEditor'
 
 export default defineConfig({
   name: 'default',
@@ -28,6 +29,7 @@ export default defineConfig({
           ]),
     }),
     visionTool(),
+    branchEditorTool(),
   ],
 
   schema: {
