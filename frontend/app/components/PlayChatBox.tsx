@@ -45,6 +45,12 @@ export default function PlayChatBox({ scenario, onRestart }: Props) {
   const [tension, setTension] = useState(initialTension);
   const [isEarlyTerminated, setIsEarlyTerminated] = useState(false);
   const [isInitialized, setIsInitialized] = useState(false);
+  const [showCrisisContext, setShowCrisisContext] = useState(false);
+  const [choiceHistory, setChoiceHistory] = useState<Array<{
+    stageTitle: string;
+    replyText: string;
+    patternType: string;
+  }>>([]);
   const messagesEndRef = useRef<HTMLDivElement>(null);
 
   const stages = scenario.stages || [];
@@ -329,6 +335,21 @@ export default function PlayChatBox({ scenario, onRestart }: Props) {
   };
 
   const currentReplies = currentStage?.replies || [];
+
+  // Calculate pattern distribution for real-time meter
+  let distortionCount = 0;
+  let generalizationCount = 0;
+  let deletionCount = 0;
+
+  selectedPatterns.forEach((p) => {
+    if (!p) return;
+    const lower = p.toLowerCase();
+    if (lower.includes("distortion") || lower.includes("distorsi")) distortionCount++;
+    else if (lower.includes("generalization") || lower.includes("generalisasi")) generalizationCount++;
+    else if (lower.includes("deletion") || lower.includes("delesi") || lower.includes("penghapusan")) deletionCount++;
+  });
+
+  const totalPatterns = distortionCount + generalizationCount + deletionCount;
 
   return (
     <div className="cinematic-grain cinematic-vignette relative flex h-dvh max-h-dvh flex-col overflow-hidden bg-[#111116] text-[#e8e8ec]">
