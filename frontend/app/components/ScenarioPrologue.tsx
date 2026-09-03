@@ -60,7 +60,7 @@ export default function ScenarioPrologue({ scenario, onContinue }: Props) {
       "(prefers-reduced-motion: reduce)"
     ).matches;
 
-    const storageKey = `seen_prologue_${scenario.slug}`;
+    const storageKey = `nlp_prologue_seen_${scenario.slug}`;
     const hasSeen = sessionStorage.getItem(storageKey);
 
     if (reducedMotion.current || hasSeen) {
@@ -90,9 +90,9 @@ export default function ScenarioPrologue({ scenario, onContinue }: Props) {
     if (onContinue) {
       onContinue();
     } else {
-      router.push(`/scenario/${scenario.slug}/play`);
+      router.push(batchId ? `/b/${batchId}/${scenario.slug}` : `/`);
     }
-  }, [onContinue, router, scenario.slug]);
+  }, [onContinue, router, scenario.slug, batchId]);
 
   const vis = (key: string) => visibleSections.has(key);
 
