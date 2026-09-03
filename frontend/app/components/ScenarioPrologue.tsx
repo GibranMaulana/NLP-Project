@@ -199,6 +199,26 @@ export default function ScenarioPrologue({ scenario, onContinue }: Props) {
               </p>
             </div>
           )}
+
+          {/* ── Main Quest / Objective Card ────────────────── */}
+          {scenario.mainQuest && (
+            <div
+              className={`mt-10 rounded-2xl border border-[#F46B3C]/50 bg-gradient-to-br from-[#1a1a24] via-[#161622] to-[#101016] p-6 sm:p-7 shadow-[0_8px_30px_rgba(0,0,0,0.5)] relative overflow-hidden transition-all duration-[800ms] ${
+                vis("prologue") ? "cin-animate-fade-up" : "opacity-0 translate-y-4"
+              }`}
+            >
+              <div className="absolute top-0 left-0 w-1.5 h-full bg-gradient-to-b from-[#F46B3C] to-[#E0592B]" />
+              <div className="flex items-center gap-2.5 mb-2.5">
+                <span className="text-xl">🎯</span>
+                <span className="text-xs font-bold uppercase tracking-[0.25em] text-[#F46B3C]">
+                  Hoofddoel / Main Quest
+                </span>
+              </div>
+              <p className="text-base sm:text-lg text-[#E9E7F5] font-medium leading-relaxed">
+                {scenario.mainQuest}
+              </p>
+            </div>
+          )}
         </section>
 
         {/* ── Continue CTA ───────────────────────────────── */}

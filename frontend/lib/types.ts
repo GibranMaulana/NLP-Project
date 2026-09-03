@@ -9,12 +9,17 @@ export interface Reply {
   _key?: string;
   text: string;
   valueType?: ValueType;
+  nextStage?: string;
+  tensionEffect?: number;
+  systemFeedback?: string;
+  npcReaction?: string;
 }
 
 export interface Stage {
   _key?: string;
   title: string;
   speaker?: string;
+  phaseType?: string;
   botPrompt: string;
   replies: Reply[];
 }
@@ -35,12 +40,18 @@ export interface Scenario {
   title: string;
   slug: string;
   prologue?: PortableTextBlock[];
+  mainQuest?: string;
 }
 
 export interface PlayScenario {
   title: string;
   slug: string;
   prologue?: PortableTextBlock[];
+  mainQuest?: string;
+  initialTension?: number;
+  maxTension?: number;
+  maxTensionDialogue?: string;
+  maxTensionTargetStage?: string;
   stages: Stage[];
   diagnoses?: Diagnosis[];
 }

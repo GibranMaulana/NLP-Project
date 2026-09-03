@@ -19,7 +19,11 @@ export const SCENARIO_PLAY_QUERY = `
     title,
     "slug": slug.current,
     prologue,
+    mainQuest,
+    initialTension,
     maxTension,
+    maxTensionDialogue,
+    maxTensionTargetStage,
     stages[]{
       _key,
       title,
@@ -56,7 +60,11 @@ export const DEFAULT_SCENARIO_PLAY_QUERY = `
     title,
     "slug": slug.current,
     prologue,
+    mainQuest,
+    initialTension,
     maxTension,
+    maxTensionDialogue,
+    maxTensionTargetStage,
     stages[]{
       _key,
       title,

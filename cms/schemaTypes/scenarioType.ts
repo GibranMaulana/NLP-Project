@@ -64,6 +64,15 @@ export const scenario = defineType({
       of: [{ type: 'block' }],
     }),
     defineField({
+      name: 'mainQuest',
+      title: 'Hoofddoel / Main Quest (Objektif Utama Pemain)',
+      description: 'Misi atau target utama yang harus dicapai pemain dalam percakapan ini berdasarkan latar belakang cerita di Proloog. Ditampilkan sebagai panduan misi sebelum dan saat simulasi berlangsung.',
+      type: 'text',
+      rows: 3,
+      placeholder: 'Contoh: Redam kemarahan Rina dan arahkan percakapan agar menyetujui penundaan tenggat waktu tanpa eskalasi emosi.',
+      validation: (rule) => rule.max(400).required(),
+    }),
+    defineField({
       name: 'initialTension',
       title: 'Tensi Awal (Starting Tension)',
       description: 'Tensi awal karakter saat percakapan dimulai (0 = Tenang, 1 = Mulai Tegang, 2 = Sangat Panas). Rekomendasi: 1.',

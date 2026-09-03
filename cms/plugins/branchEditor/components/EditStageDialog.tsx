@@ -20,26 +20,39 @@ export function EditStageDialog({
 }: EditStageDialogProps) {
   if (!isOpen || !editingStage) return null
 
+  const isCrisis = editingStage.phaseType === 'Crisis'
+
   return (
     <Dialog 
       id="edit-stage-dialog" 
-      header="Edit Stage & Replies" 
+      header={isCrisis ? "⚡ Edit Babak Ending Krisis (Max Tension Walkout)" : "Edit Stage & Replies"} 
       onClose={onClose} 
       zOffset={1000} 
       width={2}
     >
       <Box padding={5} style={{ background: '#020617', color: '#f8fafc' }}>
         <Flex direction="column" gap={5}>
+          {isCrisis && (
+            <Card padding={3} radius={2} style={{ background: 'rgba(239, 68, 68, 0.12)', border: '1px solid rgba(239, 68, 68, 0.4)' }}>
+              <Flex align="center" gap={2}>
+                <span style={{ fontSize: '18px' }}>🛑</span>
+                <Text size={1} style={{ color: '#fca5a5', lineHeight: '1.4' }}>
+                  <strong>Titik Akhir Krisis (Max Tension Walkout):</strong> Babak ini adalah titik henti di mana karakter memutus percakapan. Kalimat di bawah akan menjadi dialog walkout terakhir NPC.
+                </Text>
+              </Flex>
+            </Card>
+          )}
+
           <Flex gap={4} paddingY={2}>
             <Box flex={1}>
               <Box paddingBottom={3}>
-                <Label style={{ color: '#94a3b8' }}>Stage Title</Label>
+                <Label style={{ color: '#94a3b8' }}>{isCrisis ? 'Judul Babak Krisis' : 'Stage Title'}</Label>
               </Box>
               <TextInput 
                 padding={4}
                 value={editingStage.title || ''} 
                 onChange={e => setEditingStage({...editingStage, title: e.currentTarget.value})} 
-                placeholder="Stage title"
+                placeholder={isCrisis ? "Ending: Lawan Bicara Walkout" : "Stage title"}
                 style={{ background: '#0f172a', color: '#fff', border: '1px solid #1e293b' }}
               />
             </Box>
@@ -57,30 +70,33 @@ export function EditStageDialog({
             </Box>
             <Box flex={1}>
               <Box paddingBottom={3}>
-                <Label style={{ color: '#94a3b8' }}>Phase Type</Label>
+                <Label style={{ color: isCrisis ? '#fca5a5' : '#94a3b8' }}>Phase Type</Label>
               </Box>
               <Select 
                 padding={4}
                 value={editingStage.phaseType || 'Pacing'} 
                 onChange={e => setEditingStage({...editingStage, phaseType: e.currentTarget.value})} 
-                style={{ background: '#0f172a', color: '#fff', border: '1px solid #1e293b' }}
+                style={{ background: '#0f172a', color: '#fff', border: isCrisis ? '1px solid #ef4444' : '1px solid #1e293b' }}
               >
                 <option value="Pacing">Pacing (Meredam Emosi)</option>
                 <option value="Leading">Leading (Membedah Logika)</option>
+                <option value="Crisis">Crisis (Titik Ending Krisis / Walkout)</option>
               </Select>
             </Box>
           </Flex>
           <Box paddingY={2}>
             <Box paddingBottom={3}>
-              <Label style={{ color: '#94a3b8' }}>Bot Prompt</Label>
+              <Label style={{ color: isCrisis ? '#fca5a5' : '#94a3b8' }}>
+                {isCrisis ? 'Dialog Kemarahan / Pesan Walkout Akhir NPC' : 'Bot Prompt'}
+              </Label>
             </Box>
             <TextArea 
               padding={4}
               value={editingStage.botPrompt || ''} 
               onChange={e => setEditingStage({...editingStage, botPrompt: e.currentTarget.value})} 
               rows={4} 
-              placeholder="Dialog NPC..."
-              style={{ background: '#0f172a', color: '#fff', border: '1px solid #1e293b' }}
+              placeholder={isCrisis ? "Contoh: Cukup! Sikap Anda benar-benar keterlaluan. Pertemuan ini saya batalkan!" : "Dialog NPC..."}
+              style={{ background: '#0f172a', color: '#fff', border: isCrisis ? '1px solid rgba(239, 68, 68, 0.5)' : '1px solid #1e293b' }}
             />
           </Box>
           
@@ -252,7 +268,7 @@ export function EditStageDialog({
                             ?.filter((s: any) => s._key !== editingStage._key)
                             .map((s: any) => (
                               <option key={s._key} value={s._key}>
-                                {s.title}
+                                {s.phaseType === 'Crisis' ? `⚡ ${s.title} (Ending Krisis)` : s.title}
                               </option>
                             ))}
                         </Select>

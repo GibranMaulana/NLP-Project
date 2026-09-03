@@ -6,6 +6,7 @@ import { Handle, Position } from '@xyflow/react'
 export function StageNode({ data, id }: any) {
   const [isHovered, setIsHovered] = useState(false)
   const nodeKey = id || data?.id
+  const isCrisisNode = data?.phaseType === 'Crisis' || data?.isMaxTensionTarget
 
   return (
     <Card
@@ -18,8 +19,16 @@ export function StageNode({ data, id }: any) {
         width: 380,
         background: isHovered ? '#1e293b' : '#0f172a',
         color: '#f8fafc',
-        border: isHovered ? '1px solid #3b82f6' : '1px solid #1e293b',
-        boxShadow: isHovered ? '0 12px 24px -4px rgba(59, 130, 246, 0.25)' : '0 4px 12px rgba(0, 0, 0, 0.3)',
+        border: isCrisisNode
+          ? '1.5px solid #ef4444'
+          : isHovered
+          ? '1px solid #3b82f6'
+          : '1px solid #1e293b',
+        boxShadow: isCrisisNode
+          ? '0 0 16px rgba(239, 68, 68, 0.35)'
+          : isHovered
+          ? '0 12px 24px -4px rgba(59, 130, 246, 0.25)'
+          : '0 4px 12px rgba(0, 0, 0, 0.3)',
         transform: isHovered ? 'translateY(-3px)' : 'translateY(0)',
         transition: 'all 0.2s cubic-bezier(0.4, 0, 0.2, 1)',
         cursor: 'pointer',
@@ -29,7 +38,7 @@ export function StageNode({ data, id }: any) {
         type="target"
         position={Position.Left}
         style={{
-          background: isHovered ? '#60a5fa' : '#3b82f6',
+          background: isCrisisNode ? '#ef4444' : isHovered ? '#60a5fa' : '#3b82f6',
           border: '2px solid #ffffff',
           width: 13,
           height: 13,
@@ -37,6 +46,13 @@ export function StageNode({ data, id }: any) {
         }}
       />
       <Flex direction="column" gap={4}>
+        {isCrisisNode && (
+          <Box style={{ background: 'rgba(239, 68, 68, 0.15)', border: '1px solid rgba(239, 68, 68, 0.4)', borderRadius: '4px', padding: '4px 8px' }}>
+            <Text size={0} weight="bold" style={{ color: '#fca5a5' }}>
+              ⚡ Titik Ending Krisis (Max Tension Walkout)
+            </Text>
+          </Box>
+        )}
         <Flex align="center" justify="space-between">
           <Text weight="bold" size={2} style={{ color: '#fff' }}>
             {data.title}
@@ -109,8 +125,20 @@ export function StageNode({ data, id }: any) {
             </Card>
           ))}
           {(!data.replies || data.replies.length === 0) && (
-            <Box padding={3} style={{ border: '1px dashed #334155', borderRadius: '6px', textAlign: 'center' }}>
-              <Text size={0} style={{ color: '#64748b' }}>Click to add replies</Text>
+            <Box
+              padding={3}
+              style={{
+                border: isCrisisNode ? '1px dashed rgba(239, 68, 68, 0.4)' : '1px dashed #334155',
+                background: isCrisisNode ? 'rgba(239, 68, 68, 0.06)' : 'transparent',
+                borderRadius: '6px',
+                textAlign: 'center',
+              }}
+            >
+              <Text size={0} style={{ color: isCrisisNode ? '#fca5a5' : '#64748b' }}>
+                {isCrisisNode
+                  ? '🛑 Titik Akhir Obrolan (Percakapan Terhenti di Sini)'
+                  : 'Click to add replies'}
+              </Text>
             </Box>
           )}
         </Flex>

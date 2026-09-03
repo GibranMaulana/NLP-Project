@@ -89,6 +89,7 @@ export function BranchEditorTool() {
           prompt: stage.botPrompt,
           speaker: stage.speaker,
           phaseType: stage.phaseType,
+          isMaxTensionTarget: stage._key === currentScenario.maxTensionTargetStage,
           replies: stage.replies || [],
           onDelete: (key: string) => handleDeleteStageRef.current(key),
           onDisconnectReply: (stageKey: string, replyKey: string) =>
@@ -203,6 +204,31 @@ export function BranchEditorTool() {
       rebuildGraph(updatedScenario, nodes)
     } catch (err) {
       console.error('Failed to add stage', err)
+    }
+  }
+
+  const handleAddCrisisStage = async () => {
+    if (!scenario) return
+    const newStage = {
+      _key: `crisis-${Date.now()}`,
+      _type: 'stage',
+      title: 'Ending Krisis / Walkout',
+      speaker: scenario.stages?.[0]?.speaker || 'NPC',
+      phaseType: 'Crisis',
+      botPrompt: 'Cukup! Sikap Anda benar-benar keterlaluan. Pertemuan ini saya batalkan!',
+      replies: [],
+    }
+    try {
+      await client
+        .patch(scenario._id)
+        .setIfMissing({stages: []})
+        .insert('after', 'stages[-1]', [newStage])
+        .commit()
+      const updatedScenario = {...scenario, stages: [...(scenario.stages || []), newStage]}
+      setScenario(updatedScenario)
+      rebuildGraph(updatedScenario, nodes)
+    } catch (err) {
+      console.error('Failed to add crisis stage', err)
     }
   }
 
@@ -501,12 +527,20 @@ export function BranchEditorTool() {
           <Background color="#334155" gap={16} />
           <Controls />
           <Panel position="top-right">
-            <Button
-              text="New Stage Node"
-              icon={AddIcon}
-              tone="primary"
-              onClick={handleAddStage}
-            />
+            <Flex align="center" gap={3}>
+              <Button
+                text="+ Crisis Ending Node"
+                tone="critical"
+                onClick={handleAddCrisisStage}
+                style={{ borderColor: 'rgba(239, 68, 68, 0.6)', background: 'rgba(239, 68, 68, 0.15)' }}
+              />
+              <Button
+                text="New Stage Node"
+                icon={AddIcon}
+                tone="primary"
+                onClick={handleAddStage}
+              />
+            </Flex>
           </Panel>
           <Panel position="bottom-left">
             <Card
