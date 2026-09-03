@@ -45,16 +45,54 @@ export default function PlayChatBox({ scenario, onRestart }: Props) {
   const batchId = params.batchId as string;
   const storageKey = `nlp_chat_state_${scenario.slug}`;
 
+  const stages = scenario.stages || [];
   const maxTension = scenario.maxTension || 3;
-  const [currentStageIndex, setCurrentStageIndex] = useState(0);
-  const [messages, setMessages] = useState<Message[]>([]);
-  const [currentTension, setCurrentTension] = useState(1);
-  const [chosenReplies, setChosenReplies] = useState<ChosenReplyDetail[]>([]);
+
+  const loadSavedState = (): StoredChatState | null => {
+    if (typeof window === "undefined") return null;
+    try {
+      const saved = sessionStorage.getItem(storageKey);
+      if (saved) {
+        const parsed: StoredChatState = JSON.parse(saved);
+        if (parsed && Array.isArray(parsed.messages) && parsed.messages.length > 0) {
+          return parsed;
+        }
+      }
+    } catch {
+      // ignore parse error
+    }
+    return null;
+  };
+
+  const [initialState] = useState<StoredChatState | null>(loadSavedState);
+
+  const [currentStageIndex, setCurrentStageIndex] = useState(() => initialState?.currentStageIndex ?? 0);
+  const [messages, setMessages] = useState<Message[]>(() => {
+    if (initialState?.messages && initialState.messages.length > 0) {
+      return initialState.messages;
+    }
+    if (stages.length > 0) {
+      const firstStage = stages[0];
+      const now = new Date();
+      const timeStr = `${String(now.getHours()).padStart(2, "0")}:${String(now.getMinutes()).padStart(2, "0")}`;
+      return [
+        {
+          id: `npc-init-${firstStage._key || "0"}-start`,
+          sender: "npc",
+          speakerName: firstStage.speaker || "Character",
+          text: firstStage.botPrompt,
+          timestamp: timeStr,
+        },
+      ];
+    }
+    return [];
+  });
+  const [currentTension, setCurrentTension] = useState(() => initialState?.currentTension ?? 1);
+  const [chosenReplies, setChosenReplies] = useState<ChosenReplyDetail[]>(() => initialState?.chosenReplies ?? []);
   const [isTyping, setIsTyping] = useState(false);
-  const [isCompleted, setIsCompleted] = useState(false);
-  const [selectedPatterns, setSelectedPatterns] = useState<string[]>([]);
+  const [isCompleted, setIsCompleted] = useState(() => initialState?.isCompleted ?? false);
+  const [selectedPatterns, setSelectedPatterns] = useState<string[]>(() => initialState?.selectedPatterns ?? []);
   const [showQuestTooltip, setShowQuestTooltip] = useState(false);
-  const [isInitialized, setIsInitialized] = useState(false);
 
   // Skip Delay State (Persisted in sessionStorage)
   const [skipDelay, setSkipDelay] = useState<boolean>(() => {
@@ -83,7 +121,6 @@ export default function PlayChatBox({ scenario, onRestart }: Props) {
   const messagesEndRef = useRef<HTMLDivElement>(null);
   const chatContainerRef = useRef<HTMLDivElement>(null);
 
-  const stages = scenario.stages || [];
   const currentStage: Stage | undefined = stages[currentStageIndex];
   const speakerName = currentStage?.speaker || "Character";
 
@@ -94,50 +131,8 @@ export default function PlayChatBox({ scenario, onRestart }: Props) {
     ).padStart(2, "0")}`;
   };
 
-  // 1. Initial State Load from sessionStorage or Defaults
+  // 1. Persist state on every change once initialized
   useEffect(() => {
-    try {
-      const saved = sessionStorage.getItem(storageKey);
-      if (saved) {
-        const parsed: StoredChatState = JSON.parse(saved);
-        if (parsed && Array.isArray(parsed.messages) && parsed.messages.length > 0) {
-          setCurrentStageIndex(parsed.currentStageIndex ?? 0);
-          setMessages(parsed.messages);
-          setIsCompleted(parsed.isCompleted ?? false);
-          setSelectedPatterns(parsed.selectedPatterns ?? []);
-          setCurrentTension(parsed.currentTension ?? 1);
-          setChosenReplies(parsed.chosenReplies ?? []);
-          setIsInitialized(true);
-          return;
-        }
-      }
-    } catch {
-      // ignore JSON parse error, fall back to defaults
-    }
-
-    // Default initialization
-    if (stages.length > 0) {
-      const firstStage = stages[0];
-      const initialNpcMsg: Message = {
-        id: `npc-init-${firstStage._key || "0"}-${Date.now()}`,
-        sender: "npc",
-        speakerName: firstStage.speaker || "Character",
-        text: firstStage.botPrompt,
-        timestamp: getFormattedTime(),
-      };
-      setMessages([initialNpcMsg]);
-      setCurrentStageIndex(0);
-      setIsCompleted(false);
-      setSelectedPatterns([]);
-      setCurrentTension(1);
-      setChosenReplies([]);
-    }
-    setIsInitialized(true);
-  }, [scenario.slug, storageKey]);
-
-  // 2. Persist state on every change once initialized
-  useEffect(() => {
-    if (!isInitialized) return;
     try {
       const stateToStore: StoredChatState = {
         currentStageIndex,
@@ -151,25 +146,23 @@ export default function PlayChatBox({ scenario, onRestart }: Props) {
     } catch {
       // ignore storage quota errors
     }
-  }, [currentStageIndex, messages, isCompleted, selectedPatterns, currentTension, chosenReplies, isInitialized, storageKey]);
+  }, [currentStageIndex, messages, isCompleted, selectedPatterns, currentTension, chosenReplies, storageKey]);
 
-  // 3. Auto-Redirect Watcher if current stage has no reply options or completed
+  // 2. Auto-Redirect Watcher if current stage has no reply options or completed
   useEffect(() => {
-    if (!isInitialized || isTyping) return;
+    if (isTyping) return;
 
     // If current stage has 0 replies (final prompt stage) or isCompleted is true, trigger auto-redirect to diagnosis
     const hasNoReplies = currentStage && (!currentStage.replies || currentStage.replies.length === 0);
     
     if (hasNoReplies || isCompleted) {
-      if (!isCompleted) setIsCompleted(true);
-
       const redirectTimer = setTimeout(() => {
         router.push(`/b/${batchId}/${scenario.slug}/diagnosis`);
       }, skipDelay ? 200 : 1500);
 
       return () => clearTimeout(redirectTimer);
     }
-  }, [isInitialized, isTyping, currentStageIndex, currentStage, isCompleted, batchId, scenario.slug, router, skipDelay]);
+  }, [isTyping, currentStage, isCompleted, batchId, scenario.slug, router, skipDelay]);
 
   const scrollToBottom = () => {
     if (chatContainerRef.current) {
@@ -236,7 +229,7 @@ export default function PlayChatBox({ scenario, onRestart }: Props) {
 
     // 1. Add ONLY User message first (User bubble appears immediately)
     const userMsg: Message = {
-      id: `user-${Date.now()}`,
+      id: `user-${reply._key || chosenReplies.length}`,
       sender: "user",
       speakerName: "You",
       text: reply.text,
@@ -245,7 +238,7 @@ export default function PlayChatBox({ scenario, onRestart }: Props) {
     };
     setMessages((prev) => [...prev, userMsg]);
 
-    let updatedPatterns = [...selectedPatterns];
+    const updatedPatterns = [...selectedPatterns];
     if (patternTitle) {
       updatedPatterns.push(patternTitle);
       setSelectedPatterns(updatedPatterns);
