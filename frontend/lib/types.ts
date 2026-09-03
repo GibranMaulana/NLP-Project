@@ -3,15 +3,13 @@ import type { PortableTextBlock } from "@portabletext/react";
 export interface ValueType {
   title: string;
   description?: string;
-  topic?: "meta_model" | "chunking" | "language_openness";
 }
 
 export interface Reply {
   _key?: string;
   text: string;
   valueType?: ValueType;
-  nextStageKey?: string; // Branching: points to next stage._key
-  nextStage?: string; // Legacy/Tension compatibility
+  nextStage?: string; // Branching via main's nextStage field
   tensionEffect?: number;
   systemFeedback?: string;
   npcReaction?: string;
@@ -22,7 +20,6 @@ export interface Stage {
   title: string;
   speaker?: string;
   phaseType?: "Pacing" | "Leading" | string;
-  topicFocus?: "meta_model" | "chunking" | "language_openness" | "mixed"; // NLP topic focus
   botPrompt: string;
   replies: Reply[];
 }
