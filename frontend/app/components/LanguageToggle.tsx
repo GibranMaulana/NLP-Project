@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import { useEffect, useState, useSyncExternalStore } from "react";
 
 type Language = "en" | "nl";
 
@@ -8,32 +8,31 @@ interface Props {
   className?: string;
 }
 
-export default function LanguageToggle({ className = "" }: Props) {
-  const [currentLang, setCurrentLang] = useState<Language>("nl");
-  const [mounted, setMounted] = useState(false);
+const emptySubscribe = () => () => {};
 
-  useEffect(() => {
-    setMounted(true);
-    // Parse googtrans cookie (e.g. /auto/nl or /auto/id or /id/nl)
+export default function LanguageToggle({ className = "" }: Props) {
+  const mounted = useSyncExternalStore(emptySubscribe, () => true, () => false);
+
+  const getInitialLang = (): Language => {
+    if (typeof document === "undefined") return "nl";
     const match = document.cookie.match(/(?:^|;\s*)googtrans=([^;]*)/);
     if (match) {
       const value = decodeURIComponent(match[1]);
-      if (value.endsWith("/en")) {
-        setCurrentLang("en");
-        return;
-      }
-      if (value.endsWith("/nl")) {
-        setCurrentLang("nl");
-        return;
-      }
+      if (value.endsWith("/en")) return "en";
+      if (value.endsWith("/nl")) return "nl";
     }
+    return "nl";
+  };
 
-    // Default to Dutch
-    setCurrentLang("nl");
-    const hostname = window.location.hostname;
-    document.cookie = "googtrans=/auto/nl; path=/;";
-    if (hostname && hostname !== "localhost") {
-      document.cookie = `googtrans=/auto/nl; path=/; domain=.${hostname};`;
+  const [currentLang] = useState<Language>(getInitialLang);
+
+  useEffect(() => {
+    if (typeof window !== "undefined" && !document.cookie.includes("googtrans=")) {
+      const hostname = window.location.hostname;
+      document.cookie = "googtrans=/auto/nl; path=/;";
+      if (hostname && hostname !== "localhost") {
+        document.cookie = `googtrans=/auto/nl; path=/; domain=.${hostname};`;
+      }
     }
   }, []);
 
