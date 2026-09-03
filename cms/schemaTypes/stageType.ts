@@ -54,16 +54,18 @@ export const stage = defineType({
     defineField({
       name: "replies",
       title: "Reacties",
+      description: "Pilihan respons pemain (maksimal 3 per fase).",
       type: "array",
       of: [{ type: "reply" }],
       validation: (rule) =>
-        rule.custom((replies: any) => {
-          if (!replies || replies.length !== 3) {
-            return 'U moet precies 3 reacties opgeven.'
+        rule.max(3).custom((replies: any) => {
+          if (!replies || replies.length === 0) return true
+          if (replies.length > 3) {
+            return 'U mag maximaal 3 reacties opgeven per fase.'
           }
           const categories = replies.map((r: any) => r.valueType?._ref).filter(Boolean)
           const uniqueCategories = new Set(categories)
-          if (uniqueCategories.size !== 3) {
+          if (uniqueCategories.size !== categories.length) {
             return 'Elke reactie moet een unieke Categorie / Patroontype hebben (geen duplicaten).'
           }
           return true
