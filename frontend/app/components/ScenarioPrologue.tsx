@@ -209,7 +209,6 @@ export default function ScenarioPrologue({ scenario, onContinue }: Props) {
             >
               <div className="absolute top-0 left-0 w-1.5 h-full bg-gradient-to-b from-[#F46B3C] to-[#E0592B]" />
               <div className="flex items-center gap-2.5 mb-2.5">
-                <span className="text-xl">🎯</span>
                 <span className="text-xs font-bold uppercase tracking-[0.25em] text-[#F46B3C]">
                   Hoofddoel / Main Quest
                 </span>

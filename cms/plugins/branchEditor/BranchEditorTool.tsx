@@ -35,9 +35,15 @@ export function BranchEditorTool() {
 
   // Modal States
   const [isAddScenarioOpen, setIsAddScenarioOpen] = useState(false)
-  const [newScenarioTitle, setNewScenarioTitle] = useState('')
+  const [newScenarioData, setNewScenarioData] = useState({
+    title: '',
+    batchId: '',
+    mainQuest: '',
+    initialTension: 0,
+    maxTension: 5,
+    maxTensionDialogue: 'Cukup! Sikap Anda benar-benar keterlaluan. Pertemuan ini saya batalkan!'
+  })
   const [batches, setBatches] = useState<any[]>([])
-  const [selectedBatchId, setSelectedBatchId] = useState('')
   const [isCreating, setIsCreating] = useState(false)
 
   const [isEditStageOpen, setIsEditStageOpen] = useState(false)
@@ -73,9 +79,36 @@ export function BranchEditorTool() {
       setEdges([])
       return
     }
+
+    const tensionRanges: Record<string, { min: number; max: number }> = {}
+    currentScenario.stages.forEach((s: any) => {
+      tensionRanges[s._key] = { min: Infinity, max: -Infinity }
+    })
+    
+    const startStage = currentScenario.stages[0]
+    if (startStage) {
+      const dfs = (stageKey: string, currentTension: number, path: Set<string>) => {
+        if (!tensionRanges[stageKey]) return
+        
+        if (currentTension < tensionRanges[stageKey].min) tensionRanges[stageKey].min = currentTension
+        if (currentTension > tensionRanges[stageKey].max) tensionRanges[stageKey].max = currentTension
+        
+        path.add(stageKey)
+        const stage = currentScenario.stages.find((s: any) => s._key === stageKey)
+        if (stage && stage.replies) {
+          stage.replies.forEach((reply: any) => {
+            if (reply.nextStage && !path.has(reply.nextStage)) {
+              const effect = reply.tensionEffect || 0
+              dfs(reply.nextStage, currentTension + effect, new Set(path))
+            }
+          })
+        }
+      }
+      dfs(startStage._key, currentScenario.initialTension || 0, new Set())
+    }
+
     const newNodes = currentScenario.stages.map((stage: any, i: number) => {
       const existingNode = currentNodes.find((n) => n.id === stage._key)
-      // Use existing drag position, OR saved position from DB, OR fallback to horizontal stack
       const startX = typeof stage.x === 'number' ? stage.x : i * 450 + 50
       const startY = typeof stage.y === 'number' ? stage.y : 50
 
@@ -90,6 +123,8 @@ export function BranchEditorTool() {
           speaker: stage.speaker,
           phaseType: stage.phaseType,
           isMaxTensionTarget: stage._key === currentScenario.maxTensionTargetStage,
+          maxTension: currentScenario.maxTension || 5,
+          tensionRange: tensionRanges[stage._key],
           replies: stage.replies || [],
           onDelete: (key: string) => handleDeleteStageRef.current(key),
           onDisconnectReply: (stageKey: string, replyKey: string) =>
@@ -103,14 +138,20 @@ export function BranchEditorTool() {
       if (stage.replies) {
         stage.replies.forEach((reply: any) => {
           if (reply.nextStage) {
+            const tEffect = reply.tensionEffect || 0
             newEdges.push({
-              id: `${stage._key}-${reply._key}-${reply.nextStage}`,
+              id: `${stage._key}-${reply._key}-${reply.nextStage}-t${tEffect}`,
               source: stage._key,
               sourceHandle: reply._key,
               target: reply.nextStage,
               animated: true,
+              label: tEffect !== 0 ? `${tEffect > 0 ? '+' : ''}${tEffect} Tension` : undefined,
+              labelStyle: { fill: tEffect > 0 ? '#fca5a5' : '#6ee7b7', fontWeight: 'bold', fontSize: 11 },
+              labelBgStyle: { fill: '#0f172a', stroke: tEffect > 0 ? 'rgba(239,68,68,0.4)' : 'rgba(16,185,129,0.4)', strokeWidth: 1 },
+              labelBgPadding: [6, 4],
+              labelBgBorderRadius: 4,
               style: {
-                stroke: '#3b82f6',
+                stroke: tEffect > 0 ? '#ef4444' : tEffect < 0 ? '#10b981' : '#3b82f6',
                 strokeWidth: 2,
                 cursor: 'pointer',
               },
@@ -150,18 +191,22 @@ export function BranchEditorTool() {
   }, [isAddScenarioOpen, batches, client])
 
   const handleCreateScenario = async () => {
-    if (!newScenarioTitle || !selectedBatchId) return
+    if (!newScenarioData.title || !newScenarioData.batchId) return
     setIsCreating(true)
     try {
-      const slug = newScenarioTitle
+      const slug = newScenarioData.title
         .toLowerCase()
         .replace(/[^a-z0-9]+/g, '-')
         .replace(/(^-|-$)+/g, '')
       const newDoc = {
         _type: 'scenario',
-        title: newScenarioTitle,
+        title: newScenarioData.title,
         slug: {_type: 'slug', current: slug},
-        batch: {_type: 'reference', _ref: selectedBatchId},
+        batch: {_type: 'reference', _ref: newScenarioData.batchId},
+        mainQuest: newScenarioData.mainQuest,
+        initialTension: newScenarioData.initialTension,
+        maxTension: newScenarioData.maxTension,
+        maxTensionDialogue: newScenarioData.maxTensionDialogue,
         stages: [
           {
             _key: `stage-${Date.now()}`,
@@ -176,7 +221,14 @@ export function BranchEditorTool() {
       setScenarios((prev) => [...prev, created])
       setSelectedScenarioId(created._id)
       setIsAddScenarioOpen(false)
-      setNewScenarioTitle('')
+      setNewScenarioData({
+        title: '',
+        batchId: '',
+        mainQuest: '',
+        initialTension: 0,
+        maxTension: 5,
+        maxTensionDialogue: 'Cukup! Sikap Anda benar-benar keterlaluan. Pertemuan ini saya batalkan!'
+      })
     } catch (err) {
       console.error(err)
     } finally {
@@ -207,30 +259,7 @@ export function BranchEditorTool() {
     }
   }
 
-  const handleAddCrisisStage = async () => {
-    if (!scenario) return
-    const newStage = {
-      _key: `crisis-${Date.now()}`,
-      _type: 'stage',
-      title: 'Ending Krisis / Walkout',
-      speaker: scenario.stages?.[0]?.speaker || 'NPC',
-      phaseType: 'Crisis',
-      botPrompt: 'Cukup! Sikap Anda benar-benar keterlaluan. Pertemuan ini saya batalkan!',
-      replies: [],
-    }
-    try {
-      await client
-        .patch(scenario._id)
-        .setIfMissing({stages: []})
-        .insert('after', 'stages[-1]', [newStage])
-        .commit()
-      const updatedScenario = {...scenario, stages: [...(scenario.stages || []), newStage]}
-      setScenario(updatedScenario)
-      rebuildGraph(updatedScenario, nodes)
-    } catch (err) {
-      console.error('Failed to add crisis stage', err)
-    }
-  }
+
 
   const handleSaveStage = async () => {
     if (!editingStage || !scenario) return
@@ -244,7 +273,7 @@ export function BranchEditorTool() {
         .set({[`stages[${stageIndex}]`]: editingStage})
         .commit()
 
-      const updatedScenario = {...scenario}
+      const updatedScenario = {...scenario, stages: [...scenario.stages]}
       updatedScenario.stages[stageIndex] = editingStage
       setScenario(updatedScenario)
       rebuildGraph(updatedScenario, nodes)
@@ -434,23 +463,22 @@ export function BranchEditorTool() {
     async (params: Connection) => {
       if (!scenario || !params.source || !params.target || !params.sourceHandle) return
 
-      // A reply can only point to ONE next stage. Remove any existing edge from this reply.
-      setEdges((eds) => {
-        const filteredEds = eds.filter(
-          (e) => !(e.source === params.source && e.sourceHandle === params.sourceHandle),
-        )
-        return addEdge(
-          {...params, animated: true, style: {stroke: '#3b82f6', strokeWidth: 2}},
-          filteredEds,
-        )
-      })
-
       const stageIndex = scenario.stages.findIndex((s: any) => s._key === params.source)
       if (stageIndex === -1) return
       const replyIndex = scenario.stages[stageIndex].replies.findIndex(
         (r: any) => r._key === params.sourceHandle,
       )
       if (replyIndex === -1) return
+
+      // Optimistic local update to instantly recalculate and show tension colors/badges
+      const updatedScenario = { ...scenario, stages: [...scenario.stages] }
+      const updatedStage = { ...updatedScenario.stages[stageIndex] }
+      updatedStage.replies = [...updatedStage.replies]
+      updatedStage.replies[replyIndex] = { ...updatedStage.replies[replyIndex], nextStage: params.target }
+      updatedScenario.stages[stageIndex] = updatedStage
+      
+      setScenario(updatedScenario)
+      rebuildGraph(updatedScenario, nodes)
 
       try {
         await client
@@ -461,7 +489,7 @@ export function BranchEditorTool() {
         console.error('Failed to patch nextStage', err)
       }
     },
-    [client, scenario],
+    [client, scenario, nodes, rebuildGraph],
   )
 
   const handleNodeClick = useCallback(
@@ -528,12 +556,7 @@ export function BranchEditorTool() {
           <Controls />
           <Panel position="top-right">
             <Flex align="center" gap={3}>
-              <Button
-                text="+ Crisis Ending Node"
-                tone="critical"
-                onClick={handleAddCrisisStage}
-                style={{ borderColor: 'rgba(239, 68, 68, 0.6)', background: 'rgba(239, 68, 68, 0.15)' }}
-              />
+
               <Button
                 text="New Stage Node"
                 icon={AddIcon}
@@ -592,17 +615,15 @@ export function BranchEditorTool() {
       </Box>
 
       {/* Modals */}
-      <AddScenarioDialog
-        isOpen={isAddScenarioOpen}
-        onClose={() => setIsAddScenarioOpen(false)}
-        newScenarioTitle={newScenarioTitle}
-        setNewScenarioTitle={setNewScenarioTitle}
-        batches={batches}
-        selectedBatchId={selectedBatchId}
-        setSelectedBatchId={setSelectedBatchId}
-        isCreating={isCreating}
-        onCreate={handleCreateScenario}
-      />
+        <AddScenarioDialog
+          isOpen={isAddScenarioOpen}
+          onClose={() => setIsAddScenarioOpen(false)}
+          newScenarioData={newScenarioData}
+          setNewScenarioData={setNewScenarioData}
+          batches={batches}
+          isCreating={isCreating}
+          onCreate={handleCreateScenario}
+        />
 
       <EditStageDialog
         isOpen={isEditStageOpen}

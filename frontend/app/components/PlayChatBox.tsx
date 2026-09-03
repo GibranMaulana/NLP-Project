@@ -424,7 +424,7 @@ export default function PlayChatBox({ scenario, onRestart }: Props) {
       {scenario.mainQuest && (
         <div className="relative z-15 w-full border-b border-[#292477]/40 bg-[#161622]/95 px-4 py-2 sm:px-6 backdrop-blur-sm shadow-sm">
           <div className="mx-auto flex max-w-3xl items-center gap-2.5 text-xs">
-            <span className="text-sm shrink-0">🎯</span>
+
             <span className="font-bold uppercase tracking-wider text-[#F46B3C] shrink-0 text-[10px] sm:text-xs">
               Misi Utama:
             </span>
@@ -548,7 +548,7 @@ export default function PlayChatBox({ scenario, onRestart }: Props) {
           {isCompleted && (
             <div className="flex flex-col sm:flex-row items-center justify-between gap-3 py-1">
               <div className="flex items-center gap-2">
-                <span className="text-lg">{isEarlyTerminated ? '🛑' : '✅'}</span>
+
                 <p className={`text-sm font-semibold ${isEarlyTerminated ? 'text-rose-400' : 'text-[#a0a0b0]'}`}>
                   {isEarlyTerminated
                     ? 'Percakapan Terhenti: Tensi emosi memuncak (Walkout)!'

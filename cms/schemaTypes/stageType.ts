@@ -33,13 +33,12 @@ export const stage = defineType({
     defineField({
       name: 'phaseType',
       title: 'Fase Type',
-      description: 'Apakah fase ini bertujuan meredam emosi (Pacing), membedah logika (Leading), atau titik ending krisis/walkout (Crisis)?',
+      description: 'Apakah fase ini bertujuan meredam emosi atau membedah logika?',
       type: 'string',
       options: {
         list: [
-          { title: 'Pacing (Meredam Emosi)', value: 'Pacing' },
-          { title: 'Leading (Membedah Logika)', value: 'Leading' },
-          { title: 'Crisis (Titik Ending Krisis / Walkout)', value: 'Crisis' },
+          { title: 'Pacing', value: 'Pacing' },
+          { title: 'Leading', value: 'Leading' },
         ],
       },
       initialValue: 'Pacing',
