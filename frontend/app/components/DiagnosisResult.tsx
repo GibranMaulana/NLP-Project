@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import Link from "next/link";
 import { useParams } from "next/navigation";
 import type { PlayScenario } from "@/lib/types";
@@ -19,31 +19,29 @@ export default function DiagnosisResult({
 }: Props) {
   const params = useParams();
   const batchId = params.batchId as string;
-  const [selectedPatterns, setSelectedPatterns] = useState<string[]>([]);
-  const [currentTension, setCurrentTension] = useState<number | null>(null);
-  const [chosenReplies, setChosenReplies] = useState<ChosenReplyDetail[]>([]);
-  const [isLoaded, setIsLoaded] = useState(false);
 
-  useEffect(() => {
+  const loadSavedState = () => {
+    if (typeof window === "undefined") return null;
     try {
       const saved = sessionStorage.getItem(`nlp_chat_state_${slug}`);
-      if (saved) {
-        const parsed = JSON.parse(saved);
-        if (parsed && Array.isArray(parsed.selectedPatterns)) {
-          setSelectedPatterns(parsed.selectedPatterns);
-        }
-        if (parsed && typeof parsed.currentTension === "number") {
-          setCurrentTension(parsed.currentTension);
-        }
-        if (parsed && Array.isArray(parsed.chosenReplies)) {
-          setChosenReplies(parsed.chosenReplies);
-        }
-      }
+      if (saved) return JSON.parse(saved);
     } catch {
       // ignore parse error
     }
-    setIsLoaded(true);
-  }, [slug]);
+    return null;
+  };
+
+  const [savedState] = useState(loadSavedState);
+  const [selectedPatterns] = useState<string[]>(() =>
+    Array.isArray(savedState?.selectedPatterns) ? savedState.selectedPatterns : []
+  );
+  const [currentTension] = useState<number | null>(() =>
+    typeof savedState?.currentTension === "number" ? savedState.currentTension : null
+  );
+  const [chosenReplies] = useState<ChosenReplyDetail[]>(() =>
+    Array.isArray(savedState?.chosenReplies) ? savedState.chosenReplies : []
+  );
+  const [isLoaded] = useState(true);
 
   // Count exact pattern choices made by user across chat stages
   let distortionCount = 0;
@@ -76,11 +74,6 @@ export default function DiagnosisResult({
   if (distortionCount === countsArr[0] && distortionCount > 0) userTopPatterns.push("distortion");
   if (generalizationCount === countsArr[0] && generalizationCount > 0) userTopPatterns.push("generalization");
   if (deletionCount === countsArr[0] && deletionCount > 0) userTopPatterns.push("deletion");
-  if (userCondition === "tie_2") {
-    if (distortionCount === countsArr[1] && !userTopPatterns.includes("distortion") && distortionCount > 0) userTopPatterns.push("distortion");
-    if (generalizationCount === countsArr[1] && !userTopPatterns.includes("generalization") && generalizationCount > 0) userTopPatterns.push("generalization");
-    if (deletionCount === countsArr[1] && !userTopPatterns.includes("deletion") && deletionCount > 0) userTopPatterns.push("deletion");
-  }
 
   const matchedDiag =
     scenario.diagnoses?.find((d) => {
@@ -93,13 +86,14 @@ export default function DiagnosisResult({
       if (cond) {
         if (cond === "tie_3" && userCondition === "tie_3") return true;
         if (cond === "tie_2" && userCondition === "tie_2") {
-          if (dValueTypes.length >= 2) {
+          if (dValueTypes.length >= 2 && userTopPatterns.length >= 2) {
             return userTopPatterns.every((tp) => dValueTypes.some((dvt) => dvt.includes(tp)));
           }
           return true;
         }
         if (cond === "dominant" && userCondition === "dominant") {
           const domWinner = userTopPatterns[0];
+          if (!domWinner) return false;
           if (dValueTypes.length > 0) {
             return dValueTypes.some((dvt) => dvt.includes(domWinner));
           }
@@ -227,7 +221,7 @@ export default function DiagnosisResult({
                     </div>
 
                     <p className="text-sm font-medium text-white italic pl-2 border-l-2 border-[#F46B3C]/60">
-                      "{choice.replyText}"
+                      &quot;{choice.replyText}&quot;
                     </p>
 
                     {choice.systemFeedback && (
