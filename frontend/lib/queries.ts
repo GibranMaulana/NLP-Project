@@ -29,17 +29,20 @@ export const SCENARIO_PLAY_QUERY = `
       title,
       speaker,
       phaseType,
+      topicFocus,
       botPrompt,
       replies[]{
         _key,
         text,
         nextStage,
+        nextStageKey,
         tensionEffect,
         systemFeedback,
         npcReaction,
         "valueType": valueType->{
           title,
-          description
+          description,
+          topic
         }
       }
     },
@@ -70,17 +73,20 @@ export const DEFAULT_SCENARIO_PLAY_QUERY = `
       title,
       speaker,
       phaseType,
+      topicFocus,
       botPrompt,
       replies[]{
         _key,
         text,
         nextStage,
+        nextStageKey,
         tensionEffect,
         systemFeedback,
         npcReaction,
         "valueType": valueType->{
           title,
-          description
+          description,
+          topic
         }
       }
     },
