@@ -239,6 +239,59 @@ steps.push(async () => { /* show next stage */ });
 
 ---
 
+## CMS Branching Editor — Workflow
+
+Workflow data entry di CMS untuk setup branching:
+
+### 1. Buka Sanity Studio
+```bash
+cd cms
+npm run dev
+# Akses http://localhost:3333
+```
+
+### 2. Edit Scenario → Stages
+- Buka scenario pilihan (misal: "Scenario: Crisis Handling")
+- Expand "Stages" array
+- Setiap stage = 1 conversational turn
+
+### 3. Set Reply → nextStage
+Untuk tiap reply dalam stage:
+- Field: **"Next Stage"** → dropdown list semua stages di scenario itu
+- Nilai: Select stage target (bukan auto-increment lagi)
+- Contoh:
+  - Stage 1 Reply A → Next Stage: "Stage 3 (confrontation)" 
+  - Stage 1 Reply B → Next Stage: "Stage 2 (clarify)" 
+  - Jika kosong/null → fallback ke stage berikutnya (linear)
+
+### 4. Add System Feedback (Aha Moment)
+- Field: **"System Feedback"** → text area
+- Diisi: insight/realisasi yang muncul saat user pilih reply itu
+- Display: Muncul di chat sebagai "💡 Refleksi Reframing" sebelum NPC response
+- Contoh: "Kamu tadi melakukan distorsi — mengasumsikan motif orang tanpa data. Tanya balik untuk validasi dulu."
+
+### 5. Track Tension Effect
+- Field: **"Tension Effect"** → dropdown [-1, 0, +1, +2]
+- Effect:
+  - `-1` = Defuse (pilihan baik, turunkan ketegangan)
+  - `0` = Neutral
+  - `+1` = Escalate (pilihan berisiko)
+  - `+2` = Crisis (pilihan fatal)
+- Contoh: Aggressive reply → +2, compromise → -1
+
+### 6. Set Max Tension Threshold
+Di scenario level:
+- Field: **"Max Tension"** → value (default: 3)
+- Field: **"Max Tension Dialogue"** → stage key
+- Effect: Kalau tension reach 3, langsung jump ke max tension stage (crisis resolution)
+
+### 7. Publish & Test
+- Click "Publish"
+- Frontend refresh → branching live
+- Trace: Browser DevTools → Network → verify `queries.ts` fetch `nextStage`, `systemFeedback`, `tensionEffect`
+
+---
+
 ## Files Modified in fe-branching
 
 ```
