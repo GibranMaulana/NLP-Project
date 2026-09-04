@@ -46,7 +46,11 @@ export interface PlayScenario {
   title: string;
   slug: string;
   prologue?: PortableTextBlock[];
+  mainQuest?: string;
+  initialTension?: number;
   maxTension?: number;
+  maxTensionDialogue?: string;
+  maxTensionTargetStage?: string;
   stages: Stage[];
   diagnoses?: Diagnosis[];
 }
