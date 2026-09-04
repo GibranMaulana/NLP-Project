@@ -17,6 +17,19 @@
       "norm_label": "addscenariodialogprops"
     },
     {
+      "label": "DeleteStageDialogProps",
+      "file_type": "code",
+      "source_file": "plugins/branchEditor/components/DeleteStageDialog.tsx",
+      "source_location": "L6",
+      "_callable": true,
+      "_callable_class": true,
+      "_origin": "ast",
+      "id": "plugins_brancheditor_components_deletestagedialog_deletestagedialogprops",
+      "community": 3,
+      "community_name": "BranchEditorTool.tsx",
+      "norm_label": "deletestagedialogprops"
+    },
+    {
       "label": "EditStageDialogProps",
       "file_type": "code",
       "source_file": "plugins/branchEditor/components/EditStageDialog.tsx",
@@ -43,30 +56,6 @@
       "norm_label": "managediagnosesdialogprops"
     },
     {
-      "label": "attachAllDiagnosesAction()",
-      "file_type": "code",
-      "source_file": "actions/attachDiagnosesAction.ts",
-      "source_location": "L4",
-      "_callable": true,
-      "_origin": "ast",
-      "id": "actions_attachdiagnosesaction_attachalldiagnosesaction",
-      "community": 0,
-      "community_name": "sanity",
-      "norm_label": "attachalldiagnosesaction()"
-    },
-    {
-      "label": "publishBatchWithScenariosAction()",
-      "file_type": "code",
-      "source_file": "actions/publishBatchAction.ts",
-      "source_location": "L4",
-      "_callable": true,
-      "_origin": "ast",
-      "id": "actions_publishbatchaction_publishbatchwithscenariosaction",
-      "community": 0,
-      "community_name": "sanity",
-      "norm_label": "publishbatchwithscenariosaction()"
-    },
-    {
       "label": "BatchUrlDisplay()",
       "file_type": "code",
       "source_file": "components/UrlDisplay.tsx",
@@ -75,7 +64,7 @@
       "_origin": "ast",
       "id": "components_urldisplay_batchurldisplay",
       "community": 0,
-      "community_name": "sanity",
+      "community_name": "schemaTypes/index.ts",
       "norm_label": "batchurldisplay()"
     },
     {
@@ -87,7 +76,7 @@
       "_origin": "ast",
       "id": "components_urldisplay_copyurlcard",
       "community": 0,
-      "community_name": "sanity",
+      "community_name": "schemaTypes/index.ts",
       "norm_label": "copyurlcard()"
     },
     {
@@ -99,7 +88,7 @@
       "_origin": "ast",
       "id": "components_urldisplay_getbaseurl",
       "community": 0,
-      "community_name": "sanity",
+      "community_name": "schemaTypes/index.ts",
       "norm_label": "getbaseurl()"
     },
     {
@@ -111,32 +100,80 @@
       "_origin": "ast",
       "id": "components_urldisplay_scenariourldisplay",
       "community": 0,
-      "community_name": "sanity",
+      "community_name": "schemaTypes/index.ts",
       "norm_label": "scenariourldisplay()"
+    },
+    {
+      "label": "attachAllDiagnosesAction()",
+      "file_type": "code",
+      "source_file": "actions/attachDiagnosesAction.ts",
+      "source_location": "L4",
+      "_callable": true,
+      "_origin": "ast",
+      "id": "actions_attachdiagnosesaction_attachalldiagnosesaction",
+      "community": 10,
+      "community_name": "sanity",
+      "norm_label": "attachalldiagnosesaction()"
+    },
+    {
+      "label": "publishBatchWithScenariosAction()",
+      "file_type": "code",
+      "source_file": "actions/publishBatchAction.ts",
+      "source_location": "L4",
+      "_callable": true,
+      "_origin": "ast",
+      "id": "actions_publishbatchaction_publishbatchwithscenariosaction",
+      "community": 10,
+      "community_name": "sanity",
+      "norm_label": "publishbatchwithscenariosaction()"
     },
     {
       "label": "BranchEditorTool()",
       "file_type": "code",
       "source_file": "plugins/branchEditor/BranchEditorTool.tsx",
-      "source_location": "L22",
+      "source_location": "L713",
       "_callable": true,
       "_origin": "ast",
       "id": "plugins_brancheditor_brancheditortool_brancheditortool",
+      "community": 10,
+      "community_name": "sanity",
+      "norm_label": "brancheditortool()"
+    },
+    {
+      "label": "BranchEditorToolContent()",
+      "file_type": "code",
+      "source_file": "plugins/branchEditor/BranchEditorTool.tsx",
+      "source_location": "L25",
+      "_callable": true,
+      "_origin": "ast",
+      "id": "plugins_brancheditor_brancheditortool_brancheditortoolcontent",
       "community": 3,
       "community_name": "BranchEditorTool.tsx",
-      "norm_label": "brancheditortool()"
+      "norm_label": "brancheditortoolcontent()"
     },
     {
       "label": "AddScenarioDialog()",
       "file_type": "code",
       "source_file": "plugins/branchEditor/components/AddScenarioDialog.tsx",
-      "source_location": "L16",
+      "source_location": "L14",
       "_callable": true,
       "_origin": "ast",
       "id": "plugins_brancheditor_components_addscenariodialog_addscenariodialog",
       "community": 3,
       "community_name": "BranchEditorTool.tsx",
       "norm_label": "addscenariodialog()"
+    },
+    {
+      "label": "DeleteStageDialog()",
+      "file_type": "code",
+      "source_file": "plugins/branchEditor/components/DeleteStageDialog.tsx",
+      "source_location": "L15",
+      "_callable": true,
+      "_origin": "ast",
+      "id": "plugins_brancheditor_components_deletestagedialog_deletestagedialog",
+      "community": 3,
+      "community_name": "BranchEditorTool.tsx",
+      "norm_label": "deletestagedialog()"
     },
     {
       "label": "EditStageDialog()",
@@ -175,28 +212,6 @@
       "norm_label": "stagenode()"
     },
     {
-      "label": "attachDiagnosesAction.ts",
-      "file_type": "code",
-      "source_file": "actions/attachDiagnosesAction.ts",
-      "source_location": "L1",
-      "_origin": "ast",
-      "id": "actions_attachdiagnosesaction",
-      "community": 0,
-      "community_name": "sanity",
-      "norm_label": "attachdiagnosesaction.ts"
-    },
-    {
-      "label": "publishBatchAction.ts",
-      "file_type": "code",
-      "source_file": "actions/publishBatchAction.ts",
-      "source_location": "L1",
-      "_origin": "ast",
-      "id": "actions_publishbatchaction",
-      "community": 0,
-      "community_name": "sanity",
-      "norm_label": "publishbatchaction.ts"
-    },
-    {
       "label": "UrlDisplay.tsx",
       "file_type": "code",
       "source_file": "components/UrlDisplay.tsx",
@@ -204,19 +219,8 @@
       "_origin": "ast",
       "id": "components_urldisplay",
       "community": 0,
-      "community_name": "sanity",
+      "community_name": "schemaTypes/index.ts",
       "norm_label": "urldisplay.tsx"
-    },
-    {
-      "label": "sanity.config.ts",
-      "file_type": "code",
-      "source_file": "sanity.config.ts",
-      "source_location": "L1",
-      "_origin": "ast",
-      "id": "sanity_config",
-      "community": 0,
-      "community_name": "sanity",
-      "norm_label": "sanity.config.ts"
     },
     {
       "label": "schemaTypes/batchType.ts",
@@ -226,7 +230,7 @@
       "_origin": "ast",
       "id": "schematypes_batchtype",
       "community": 0,
-      "community_name": "sanity",
+      "community_name": "schemaTypes/index.ts",
       "norm_label": "schematypes/batchtype.ts"
     },
     {
@@ -237,7 +241,7 @@
       "_origin": "ast",
       "id": "schematypes_batchtype_batch",
       "community": 0,
-      "community_name": "sanity",
+      "community_name": "schemaTypes/index.ts",
       "norm_label": "batch"
     },
     {
@@ -248,7 +252,7 @@
       "_origin": "ast",
       "id": "schematypes_businesslinktype",
       "community": 0,
-      "community_name": "sanity",
+      "community_name": "schemaTypes/index.ts",
       "norm_label": "businesslinktype.ts"
     },
     {
@@ -259,7 +263,7 @@
       "_origin": "ast",
       "id": "schematypes_businesslinktype_business",
       "community": 0,
-      "community_name": "sanity",
+      "community_name": "schemaTypes/index.ts",
       "norm_label": "business"
     },
     {
@@ -270,7 +274,7 @@
       "_origin": "ast",
       "id": "schematypes_diagnosistype",
       "community": 0,
-      "community_name": "sanity",
+      "community_name": "schemaTypes/index.ts",
       "norm_label": "schematypes/diagnosistype.ts"
     },
     {
@@ -281,7 +285,7 @@
       "_origin": "ast",
       "id": "schematypes_diagnosistype_diagnosis",
       "community": 0,
-      "community_name": "sanity",
+      "community_name": "schemaTypes/index.ts",
       "norm_label": "diagnosis"
     },
     {
@@ -292,7 +296,7 @@
       "_origin": "ast",
       "id": "schematypes_index",
       "community": 0,
-      "community_name": "sanity",
+      "community_name": "schemaTypes/index.ts",
       "norm_label": "schematypes/index.ts"
     },
     {
@@ -303,7 +307,7 @@
       "_origin": "ast",
       "id": "schematypes_index_schematypes",
       "community": 0,
-      "community_name": "sanity",
+      "community_name": "schemaTypes/index.ts",
       "norm_label": "schematypes"
     },
     {
@@ -314,7 +318,7 @@
       "_origin": "ast",
       "id": "schematypes_replytype",
       "community": 0,
-      "community_name": "sanity",
+      "community_name": "schemaTypes/index.ts",
       "norm_label": "schematypes/replytype.ts"
     },
     {
@@ -325,7 +329,7 @@
       "_origin": "ast",
       "id": "schematypes_replytype_reply",
       "community": 0,
-      "community_name": "sanity",
+      "community_name": "schemaTypes/index.ts",
       "norm_label": "reply"
     },
     {
@@ -336,7 +340,7 @@
       "_origin": "ast",
       "id": "schematypes_scenariotype",
       "community": 0,
-      "community_name": "sanity",
+      "community_name": "schemaTypes/index.ts",
       "norm_label": "schematypes/scenariotype.ts"
     },
     {
@@ -347,7 +351,7 @@
       "_origin": "ast",
       "id": "schematypes_scenariotype_scenario",
       "community": 0,
-      "community_name": "sanity",
+      "community_name": "schemaTypes/index.ts",
       "norm_label": "scenario"
     },
     {
@@ -358,7 +362,7 @@
       "_origin": "ast",
       "id": "schematypes_settingstype",
       "community": 0,
-      "community_name": "sanity",
+      "community_name": "schemaTypes/index.ts",
       "norm_label": "settingstype.ts"
     },
     {
@@ -369,7 +373,7 @@
       "_origin": "ast",
       "id": "schematypes_settingstype_settings",
       "community": 0,
-      "community_name": "sanity",
+      "community_name": "schemaTypes/index.ts",
       "norm_label": "settings"
     },
     {
@@ -380,7 +384,7 @@
       "_origin": "ast",
       "id": "schematypes_stagetype",
       "community": 0,
-      "community_name": "sanity",
+      "community_name": "schemaTypes/index.ts",
       "norm_label": "schematypes/stagetype.ts"
     },
     {
@@ -391,7 +395,7 @@
       "_origin": "ast",
       "id": "schematypes_stagetype_stage",
       "community": 0,
-      "community_name": "sanity",
+      "community_name": "schemaTypes/index.ts",
       "norm_label": "stage"
     },
     {
@@ -402,7 +406,7 @@
       "_origin": "ast",
       "id": "schematypes_valuetype",
       "community": 0,
-      "community_name": "sanity",
+      "community_name": "schemaTypes/index.ts",
       "norm_label": "schematypes/valuetype.ts"
     },
     {
@@ -413,19 +417,8 @@
       "_origin": "ast",
       "id": "schematypes_valuetype_valuetype",
       "community": 0,
-      "community_name": "sanity",
+      "community_name": "schemaTypes/index.ts",
       "norm_label": "valuetype"
-    },
-    {
-      "label": "sanity",
-      "file_type": "concept",
-      "source_file": "package.json",
-      "source_location": "L14",
-      "_origin": "ast",
-      "id": "ref_sanity",
-      "community": 0,
-      "community_name": "sanity",
-      "norm_label": "sanity"
     },
     {
       "label": "tsconfig.json",
@@ -659,6 +652,72 @@
       "norm_label": "**/*.tsx"
     },
     {
+      "label": "attachDiagnosesAction.ts",
+      "file_type": "code",
+      "source_file": "actions/attachDiagnosesAction.ts",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "actions_attachdiagnosesaction",
+      "community": 10,
+      "community_name": "sanity",
+      "norm_label": "attachdiagnosesaction.ts"
+    },
+    {
+      "label": "publishBatchAction.ts",
+      "file_type": "code",
+      "source_file": "actions/publishBatchAction.ts",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "actions_publishbatchaction",
+      "community": 10,
+      "community_name": "sanity",
+      "norm_label": "publishbatchaction.ts"
+    },
+    {
+      "label": "branchEditor/index.ts",
+      "file_type": "code",
+      "source_file": "plugins/branchEditor/index.ts",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "plugins_brancheditor_index",
+      "community": 10,
+      "community_name": "sanity",
+      "norm_label": "brancheditor/index.ts"
+    },
+    {
+      "label": "branchEditorTool",
+      "file_type": "code",
+      "source_file": "plugins/branchEditor/index.ts",
+      "source_location": "L4",
+      "_origin": "ast",
+      "id": "plugins_brancheditor_index_brancheditortool",
+      "community": 10,
+      "community_name": "sanity",
+      "norm_label": "brancheditortool"
+    },
+    {
+      "label": "sanity.config.ts",
+      "file_type": "code",
+      "source_file": "sanity.config.ts",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "sanity_config",
+      "community": 10,
+      "community_name": "sanity",
+      "norm_label": "sanity.config.ts"
+    },
+    {
+      "label": "sanity",
+      "file_type": "concept",
+      "source_file": "package.json",
+      "source_location": "L14",
+      "_origin": "ast",
+      "id": "ref_sanity",
+      "community": 10,
+      "community_name": "sanity",
+      "norm_label": "sanity"
+    },
+    {
       "label": "package.json",
       "file_type": "code",
       "source_file": "package.json",
@@ -879,6 +938,17 @@
       "norm_label": "addscenariodialog.tsx"
     },
     {
+      "label": "DeleteStageDialog.tsx",
+      "file_type": "code",
+      "source_file": "plugins/branchEditor/components/DeleteStageDialog.tsx",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "plugins_brancheditor_components_deletestagedialog",
+      "community": 3,
+      "community_name": "BranchEditorTool.tsx",
+      "norm_label": "deletestagedialog.tsx"
+    },
+    {
       "label": "EditStageDialog.tsx",
       "file_type": "code",
       "source_file": "plugins/branchEditor/components/EditStageDialog.tsx",
@@ -910,28 +980,6 @@
       "community": 3,
       "community_name": "BranchEditorTool.tsx",
       "norm_label": "stagenode.tsx"
-    },
-    {
-      "label": "branchEditor/index.ts",
-      "file_type": "code",
-      "source_file": "plugins/branchEditor/index.ts",
-      "source_location": "L1",
-      "_origin": "ast",
-      "id": "plugins_brancheditor_index",
-      "community": 3,
-      "community_name": "BranchEditorTool.tsx",
-      "norm_label": "brancheditor/index.ts"
-    },
-    {
-      "label": "branchEditorTool",
-      "file_type": "code",
-      "source_file": "plugins/branchEditor/index.ts",
-      "source_location": "L4",
-      "_origin": "ast",
-      "id": "plugins_brancheditor_index_brancheditortool",
-      "community": 3,
-      "community_name": "BranchEditorTool.tsx",
-      "norm_label": "brancheditortool"
     },
     {
       "label": "backup/batchType.ts",
@@ -1644,7 +1692,7 @@
       "context": "import",
       "confidence": "EXTRACTED",
       "source_file": "plugins/branchEditor/BranchEditorTool.tsx",
-      "source_location": "L17",
+      "source_location": "L19",
       "weight": 1.0,
       "_origin": "ast",
       "source": "plugins_brancheditor_brancheditortool",
@@ -1656,7 +1704,7 @@
       "context": "import",
       "confidence": "EXTRACTED",
       "source_file": "plugins/branchEditor/BranchEditorTool.tsx",
-      "source_location": "L18",
+      "source_location": "L20",
       "weight": 1.0,
       "_origin": "ast",
       "source": "plugins_brancheditor_brancheditortool",
@@ -1668,7 +1716,7 @@
       "context": "import",
       "confidence": "EXTRACTED",
       "source_file": "plugins/branchEditor/BranchEditorTool.tsx",
-      "source_location": "L19",
+      "source_location": "L21",
       "weight": 1.0,
       "_origin": "ast",
       "source": "plugins_brancheditor_brancheditortool",
@@ -1680,11 +1728,23 @@
       "context": "import",
       "confidence": "EXTRACTED",
       "source_file": "plugins/branchEditor/BranchEditorTool.tsx",
-      "source_location": "L20",
+      "source_location": "L22",
       "weight": 1.0,
       "_origin": "ast",
       "source": "plugins_brancheditor_brancheditortool",
       "target": "plugins_brancheditor_components_managediagnosesdialog_managediagnosesdialog",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "plugins/branchEditor/BranchEditorTool.tsx",
+      "source_location": "L23",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "plugins_brancheditor_brancheditortool",
+      "target": "plugins_brancheditor_components_deletestagedialog_deletestagedialog",
       "confidence_score": 1.0
     },
     {
@@ -1956,35 +2016,11 @@
       "context": "import",
       "confidence": "EXTRACTED",
       "source_file": "plugins/branchEditor/BranchEditorTool.tsx",
-      "source_location": "L17",
-      "weight": 1.0,
-      "_origin": "ast",
-      "source": "plugins_brancheditor_brancheditortool",
-      "target": "plugins_brancheditor_components_stagenode",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "imports_from",
-      "context": "import",
-      "confidence": "EXTRACTED",
-      "source_file": "plugins/branchEditor/BranchEditorTool.tsx",
-      "source_location": "L18",
-      "weight": 1.0,
-      "_origin": "ast",
-      "source": "plugins_brancheditor_brancheditortool",
-      "target": "plugins_brancheditor_components_addscenariodialog",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "imports_from",
-      "context": "import",
-      "confidence": "EXTRACTED",
-      "source_file": "plugins/branchEditor/BranchEditorTool.tsx",
       "source_location": "L19",
       "weight": 1.0,
       "_origin": "ast",
       "source": "plugins_brancheditor_brancheditortool",
-      "target": "plugins_brancheditor_components_editstagedialog",
+      "target": "plugins_brancheditor_components_stagenode",
       "confidence_score": 1.0
     },
     {
@@ -2008,7 +2044,43 @@
       "weight": 1.0,
       "_origin": "ast",
       "source": "plugins_brancheditor_brancheditortool",
+      "target": "plugins_brancheditor_components_addscenariodialog",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "plugins/branchEditor/BranchEditorTool.tsx",
+      "source_location": "L21",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "plugins_brancheditor_brancheditortool",
+      "target": "plugins_brancheditor_components_editstagedialog",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "plugins/branchEditor/BranchEditorTool.tsx",
+      "source_location": "L22",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "plugins_brancheditor_brancheditortool",
       "target": "plugins_brancheditor_components_managediagnosesdialog",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "plugins/branchEditor/BranchEditorTool.tsx",
+      "source_location": "L23",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "plugins_brancheditor_brancheditortool",
+      "target": "plugins_brancheditor_components_deletestagedialog",
       "confidence_score": 1.0
     },
     {
@@ -2855,7 +2927,18 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "plugins/branchEditor/BranchEditorTool.tsx",
-      "source_location": "L22",
+      "source_location": "L25",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "plugins_brancheditor_brancheditortool",
+      "target": "plugins_brancheditor_brancheditortool_brancheditortoolcontent",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "plugins/branchEditor/BranchEditorTool.tsx",
+      "source_location": "L713",
       "weight": 1.0,
       "_origin": "ast",
       "source": "plugins_brancheditor_brancheditortool",
@@ -2866,7 +2949,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "plugins/branchEditor/components/AddScenarioDialog.tsx",
-      "source_location": "L16",
+      "source_location": "L14",
       "weight": 1.0,
       "_origin": "ast",
       "source": "plugins_brancheditor_components_addscenariodialog",
@@ -2882,6 +2965,28 @@
       "_origin": "ast",
       "source": "plugins_brancheditor_components_addscenariodialog",
       "target": "plugins_brancheditor_components_addscenariodialog_addscenariodialogprops",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "plugins/branchEditor/components/DeleteStageDialog.tsx",
+      "source_location": "L15",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "plugins_brancheditor_components_deletestagedialog",
+      "target": "plugins_brancheditor_components_deletestagedialog_deletestagedialog",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "plugins/branchEditor/components/DeleteStageDialog.tsx",
+      "source_location": "L6",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "plugins_brancheditor_components_deletestagedialog",
+      "target": "plugins_brancheditor_components_deletestagedialog_deletestagedialogprops",
       "confidence_score": 1.0
     },
     {
@@ -3297,10 +3402,10 @@
       "confidence": "INFERRED",
       "confidence_score": 0.8,
       "source_file": "plugins/branchEditor/BranchEditorTool.tsx",
-      "source_location": "L48",
+      "source_location": "L59",
       "weight": 1.0,
       "_origin": "ast",
-      "source": "plugins_brancheditor_brancheditortool_brancheditortool",
+      "source": "plugins_brancheditor_brancheditortool_brancheditortoolcontent",
       "target": "plugins_brancheditor_components_stagenode_stagenode"
     },
     {
@@ -3341,5 +3446,5 @@
     }
   ],
   "hyperedges": [],
-  "built_at_commit": "565ea5985f063d31bdf76a2b8ec6e9fa43f38ac9"
+  "built_at_commit": "6ef4e63f64cb8de79f23315b271fcd2e4a00f5d6"
 }
