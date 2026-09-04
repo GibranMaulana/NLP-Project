@@ -39,84 +39,22 @@ export default function DiagnosisResult({
   );
   const [isLoaded] = useState(true);
 
-  // Count exact pattern choices made by user across chat stages
-  let distortionCount = 0;
-  let generalizationCount = 0;
-  let deletionCount = 0;
-
-  selectedPatterns.forEach((p) => {
-    if (!p) return;
-    const lower = p.toLowerCase();
-    if (lower.includes("distortion") || lower.includes("distorsi")) distortionCount++;
-    else if (lower.includes("generalization") || lower.includes("generalisasi")) generalizationCount++;
-    else if (lower.includes("deletion") || lower.includes("delesi") || lower.includes("penghapusan")) deletionCount++;
-  });
-
-  // Determine user result type:
-  // - "tie_3" if all 3 are equal (and > 0)
-  // - "tie_2" if 2 top counts are equal (and > 0)
-  // - "dominant" if 1 clear max
-  let userCondition: "dominant" | "tie_2" | "tie_3" = "dominant";
-  const countsArr = [distortionCount, generalizationCount, deletionCount].sort((a, b) => b - a);
-
-  if (countsArr[0] > 0 && countsArr[0] === countsArr[1] && countsArr[1] === countsArr[2]) {
-    userCondition = "tie_3";
-  } else if (countsArr[0] > 0 && countsArr[0] === countsArr[1] && countsArr[0] > countsArr[2]) {
-    userCondition = "tie_2";
+  // Determine user condition based on final tension
+  let userCondition = "optimal";
+  if (currentTension !== null) {
+    const maxTension = scenario.maxTension || 3;
+    if (currentTension >= maxTension) {
+      userCondition = "game_over";
+    } else if (currentTension >= maxTension - 1) {
+      userCondition = "fragile";
+    } else {
+      userCondition = "optimal";
+    }
   }
 
-  // Active top pattern titles
-  const userTopPatterns: string[] = [];
-  if (distortionCount === countsArr[0] && distortionCount > 0) userTopPatterns.push("distortion");
-  if (generalizationCount === countsArr[0] && generalizationCount > 0) userTopPatterns.push("generalization");
-  if (deletionCount === countsArr[0] && deletionCount > 0) userTopPatterns.push("deletion");
-
-  const matchedDiag =
-    scenario.diagnoses?.find((d) => {
-      const cond = d.conditionType;
-      const dValueTypes = (d.valueTypes || []).map((vt) => vt.toLowerCase());
-      const dPatternTitle = (d.patternTitle || d.dominantPattern || "").toLowerCase();
-      const title = (d.title || "").toLowerCase();
-
-      // 1. If CMS diagnosis defines conditionType explicitly
-      if (cond) {
-        if (cond === "tie_3" && userCondition === "tie_3") return true;
-        if (cond === "tie_2" && userCondition === "tie_2") {
-          if (dValueTypes.length >= 2 && userTopPatterns.length >= 2) {
-            return userTopPatterns.every((tp) => dValueTypes.some((dvt) => dvt.includes(tp)));
-          }
-          return true;
-        }
-        if (cond === "dominant" && userCondition === "dominant") {
-          const domWinner = userTopPatterns[0];
-          if (!domWinner) return false;
-          if (dValueTypes.length > 0) {
-            return dValueTypes.some((dvt) => dvt.includes(domWinner));
-          }
-          if (dPatternTitle) {
-            return dPatternTitle.includes(domWinner);
-          }
-        }
-      }
-
-      // 2. Fallback matching by document title
-      if (userCondition === "tie_3") {
-        if (title.includes("drie") || title.includes("three") || title.includes("tiga") || title.includes("gelijk") || title.includes("all")) return true;
-      }
-      if (userCondition === "tie_2") {
-        if (userTopPatterns.includes("distortion") && userTopPatterns.includes("deletion") && (title.includes("distortion + deletion") || title.includes("distorsi + delesi"))) return true;
-        if (userTopPatterns.includes("generalization") && userTopPatterns.includes("deletion") && (title.includes("generalization + deletion") || title.includes("generalisasi + delesi"))) return true;
-        if (userTopPatterns.includes("distortion") && userTopPatterns.includes("generalization") && (title.includes("distortion + generalization") || title.includes("distorsi + generalisasi"))) return true;
-      }
-      if (userCondition === "dominant") {
-        const winner = userTopPatterns[0];
-        if (winner === "distortion" && (title.includes("distortion diagnosis") || (title.includes("distortion") && !title.includes("+")))) return true;
-        if (winner === "generalization" && (title.includes("generalization diagnosis") || (title.includes("generalization") && !title.includes("+")))) return true;
-        if (winner === "deletion" && (title.includes("deletion diagnosis") || (title.includes("deletion") && !title.includes("+")))) return true;
-      }
-
-      return false;
-    }) || scenario.diagnoses?.[0];
+  const matchedDiag = scenario.diagnoses?.find(
+    (d) => d.conditionType === userCondition
+  ) || scenario.diagnoses?.[0];
 
   if (!isLoaded) {
     return (

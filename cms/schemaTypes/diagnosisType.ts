@@ -26,6 +26,9 @@ export const diagnosis = defineType({
           { title: "Dominant", value: "dominant" },
           { title: "Gelijkstand 2 Waarden", value: "tie_2" },
           { title: "Alle drie gelijk", value: "tie_3" },
+          { title: "Game Over", value: "game_over" },
+          { title: "Fragile", value: "fragile" },
+          { title: "Optimal", value: "optimal" },
         ],
         layout: "radio",
       },
@@ -76,7 +79,10 @@ export const diagnosis = defineType({
             return "Kies eerst een Waardetoestand.";
           }
           if (!valueTypes || valueTypes.length === 0) {
-            return "Selecteer ten minste 1 Waardetype / Patroon.";
+            if (["dominant", "tie_2", "tie_3"].includes(conditionType)) {
+              return "Selecteer ten minste 1 Waardetype / Patroon.";
+            }
+            return true;
           }
 
           const refs = valueTypes.map((v: any) => v._ref).filter(Boolean);

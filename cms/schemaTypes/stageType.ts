@@ -63,11 +63,6 @@ export const stage = defineType({
           if (replies.length > 3) {
             return 'U mag maximaal 3 reacties opgeven per fase.'
           }
-          const categories = replies.map((r: any) => r.valueType?._ref).filter(Boolean)
-          const uniqueCategories = new Set(categories)
-          if (uniqueCategories.size !== categories.length) {
-            return 'Elke reactie moet een unieke Categorie / Patroontype hebben (geen duplicaten).'
-          }
           return true
         }),
     }),
