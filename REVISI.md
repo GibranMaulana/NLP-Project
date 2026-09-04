@@ -239,56 +239,119 @@ steps.push(async () => { /* show next stage */ });
 
 ---
 
-## CMS Branching Editor — Workflow
+## CMS Branching Editor — Visual Workflow
 
-Workflow data entry di CMS untuk setup branching:
+Sanity Studio punya **Branch Editor** tab untuk visualisasi branching story. Editor ini menampilkan semua stages sebagai nodes, dengan lines menunjukkan possible paths berdasarkan replies & tension.
 
-### 1. Buka Sanity Studio
-```bash
-cd cms
-npm run dev
-# Akses http://localhost:3333
+### Akses Branch Editor
+
+1. **Buka Sanity Studio**
+   ```bash
+   cd cms
+   npm run dev
+   # Akses http://localhost:3333
+   ```
+
+2. **Edit Scenario** → Tab "Branch Editor"
+   - Contoh: "Krisis Deadline Integrasi: Membongkar Asumsi & Delesi"
+   - Visual graph muncul dengan stages sebagai nodes (cards)
+   - Red lines = high tension paths
+   - Green lines = safe/neutral paths
+   - Blue lines = defuse paths
+
+### Fitur Branch Editor
+
+#### Node Structure
+Setiap stage node menampilkan:
+- **Title** (stage name)
+- **Color badge**: Indicates tone (red=crisis, blue=neutral, green=resolution)
+- **Reply options** (numbered A, B, C, dst)
+- **Outcome badge**: Each reply shows tension effect icon
+
+#### Editing Flow
+
+**Step 1: Add or Edit Stage**
+- Click **"+ New Stage Node"** untuk tambah stage baru
+- Atau double-click existing node untuk edit
+
+**Step 2: Configure Stage Content**
+- **botPrompt**: NPC dialog/pertanyaan
+- **title**: Stage internal name (untuk reference di branching)
+- **topicFocus**: Optional — mark stage untuk topik mana (meta_model, chunking, language_openness)
+
+**Step 3: Set Replies & Branching**
+Tiap reply punya fields:
+- **text**: Player option text (A, B, C, dst)
+- **valueType**: Pattern category (Deletion/Distortion/Generalization)
+- **systemFeedback**: Aha moment message (muncul di chat setelah dipilih)
+- **nextStage**: Target stage reference (drag-connect atau dropdown select)
+- **tensionEffect**: [-1, 0, +1, +2] — impact terhadap tension meter
+- **npcReaction**: Optional — bot response sebelum next stage
+
+**Step 4: Visualize Path**
+- Editor auto-draw lines antar stages based on nextStage references
+- Red line = high tension (+2), Blue line = safe (0/-1)
+- Hover path → highlight trajectory
+
+**Step 5: Set Outcomes**
+- Bottom section: **"Possible Outcomes (3)"**
+  - List semua terminal stages (nodes tanpa nextStage)
+  - Contoh: "Percakapan Buntu (Deadlock/Walk-Out)", "Sukses dengan Gesekkan", "Resolusi Optimal"
+
+**Step 6: Manage Diagnoses**
+- Button **"Manage Diagnoses"** → configure personality/pattern archetype untuk setiap outcome
+- Link outcome to `DiagnosisResult` template
+
+**Step 7: Publish**
+- Click **"Publish"** → changes deploy ke frontend instantly
+- Frontend queries fetch updated `nextStage`, `systemFeedback`, `tensionEffect` values
+
+### Example: Crisis Handling Scenario
+
+```
+Stage 0: Laptop Lockdown
+├─ Reply A: "Calm, document asumsi dulu" 
+│  └─ nextStage: Stage 2 (Constructive Ask)
+│  └─ tensionEffect: -1 (defuse)
+│  └─ systemFeedback: "Bagus — kamu validate dulu sebelum act."
+│
+├─ Reply B: "Langsung blame engineer"
+│  └─ nextStage: Stage 3 (Confrontation)
+│  └─ tensionEffect: +2 (crisis)
+│  └─ systemFeedback: "Oops — assumption tanpa data. Ini distorsi."
+│
+└─ Reply C: "Tunggu PM briefing"
+   └─ nextStage: Stage 1 (Stakeholder Huddle)
+   └─ tensionEffect: 0 (neutral)
+   └─ systemFeedback: "Safe move — tapi sementara. Tension naik kalau delay lama."
+
+[Paths branch to 3 different mids, then converge at final diagnosis]
 ```
 
-### 2. Edit Scenario → Stages
-- Buka scenario pilihan (misal: "Scenario: Crisis Handling")
-- Expand "Stages" array
-- Setiap stage = 1 conversational turn
+### Data Sync: CMS ↔ Frontend
 
-### 3. Set Reply → nextStage
-Untuk tiap reply dalam stage:
-- Field: **"Next Stage"** → dropdown list semua stages di scenario itu
-- Nilai: Select stage target (bukan auto-increment lagi)
-- Contoh:
-  - Stage 1 Reply A → Next Stage: "Stage 3 (confrontation)" 
-  - Stage 1 Reply B → Next Stage: "Stage 2 (clarify)" 
-  - Jika kosong/null → fallback ke stage berikutnya (linear)
-
-### 4. Add System Feedback (Aha Moment)
-- Field: **"System Feedback"** → text area
-- Diisi: insight/realisasi yang muncul saat user pilih reply itu
-- Display: Muncul di chat sebagai "💡 Refleksi Reframing" sebelum NPC response
-- Contoh: "Kamu tadi melakukan distorsi — mengasumsikan motif orang tanpa data. Tanya balik untuk validasi dulu."
-
-### 5. Track Tension Effect
-- Field: **"Tension Effect"** → dropdown [-1, 0, +1, +2]
-- Effect:
-  - `-1` = Defuse (pilihan baik, turunkan ketegangan)
-  - `0` = Neutral
-  - `+1` = Escalate (pilihan berisiko)
-  - `+2` = Crisis (pilihan fatal)
-- Contoh: Aggressive reply → +2, compromise → -1
-
-### 6. Set Max Tension Threshold
-Di scenario level:
-- Field: **"Max Tension"** → value (default: 3)
-- Field: **"Max Tension Dialogue"** → stage key
-- Effect: Kalau tension reach 3, langsung jump ke max tension stage (crisis resolution)
-
-### 7. Publish & Test
-- Click "Publish"
-- Frontend refresh → branching live
-- Trace: Browser DevTools → Network → verify `queries.ts` fetch `nextStage`, `systemFeedback`, `tensionEffect`
+**Flow**:
+1. Edit di Branch Editor → Save
+2. Publish scenario
+3. Frontend `queries.ts` re-fetch scenario:
+   ```typescript
+   stages {
+     _key
+     title
+     botPrompt
+     topicFocus
+     replies {
+       text
+       valueType { topic }
+       systemFeedback
+       nextStage  // ← NEW: references stage._key
+       tensionEffect
+       npcReaction
+     }
+   }
+   ```
+4. `PlayChatBox.tsx` parse nextStage & execute branching logic
+5. Tension meter, system feedback, choice history — semua reflect dari CMS data real-time
 
 ---
 
