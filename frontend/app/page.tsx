@@ -47,7 +47,7 @@ export default async function Home() {
 
         {/* Title */}
         <h1 className="title-glow mb-6 font-serif-editorial text-4xl font-normal tracking-tight text-[#E9E7F5] sm:text-6xl md:text-7xl">
-          Meta Model Gevoeligheidstraining
+          Leiderschap & Communicatie Simulator
         </h1>
 
         {/* Explanation Section */}
@@ -64,25 +64,23 @@ export default async function Home() {
             </div>
 
             <h2 className="mb-6 font-serif-editorial text-3xl font-medium tracking-tight text-[#E9E7F5] sm:text-4xl">
-              Voel het effect van uw taal, in plaats van theorie te memoriseren.
+              Ervaar de impact van uw communicatiestijl op de emotionele dynamiek van uw team.
             </h2>
 
             <div className="space-y-6 text-base leading-relaxed text-[#a0a0b0] sm:text-lg">
               <p>
                 Dit platform is een interactieve gesprekssimulatie ontworpen om uw
-                onderbewuste gevoeligheid te vergroten voor het herkennen van{" "}
+                leiderschapsvaardigheden in de praktijk te testen en uw gevoeligheid voor{" "}
                 <strong className="font-medium text-[#E9E7F5]">
-                  NLP Meta Model
+                  psychologische veiligheid
                 </strong>{" "}
-                taalpatronen.
+                te vergroten.
               </p>
               <p>
-                Via realistische managementgesprekken ervaart u direct de impact
-                van taalvervormingen zoals{" "}
-                <em className="text-[#E9E7F5]">Weglating</em>,{" "}
-                <em className="text-[#E9E7F5]">Vervorming</em> en{" "}
-                <em className="text-[#E9E7F5]">Generalisatie</em>. U ontdekt de
-                precieze vragen om helderheid te scheppen en effectief leiding te geven.
+                Gefundeerd op effectieve <strong className="font-medium text-[#E9E7F5]">NLP-principes</strong>,
+                navigeert u via dynamische scenario&apos;s door complexe managementgesprekken.
+                Uw keuzes beïnvloeden direct het stressniveau (tension) van uw gesprekspartner,
+                wat kan leiden tot een succesvolle consensus of een escalerende crisis.
               </p>
             </div>
           </div>

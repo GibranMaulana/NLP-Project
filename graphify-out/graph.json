@@ -1645,7 +1645,7 @@
       "label": "PlayScenario",
       "file_type": "code",
       "source_file": "frontend/lib/types.ts",
-      "source_location": "L46",
+      "source_location": "L45",
       "id": "lib_types_playscenario",
       "community": 1,
       "norm_label": "playscenario"
@@ -1804,10 +1804,19 @@
       "norm_label": "playchatbox.tsx"
     },
     {
-      "label": "Message",
+      "label": "ChosenReplyDetail",
       "file_type": "code",
       "source_file": "frontend/app/components/PlayChatBox.tsx",
       "source_location": "L9",
+      "id": "components_playchatbox_chosenreplydetail",
+      "community": 1,
+      "norm_label": "chosenreplydetail"
+    },
+    {
+      "label": "Message",
+      "file_type": "code",
+      "source_file": "frontend/app/components/PlayChatBox.tsx",
+      "source_location": "L18",
       "id": "components_playchatbox_message",
       "community": 1,
       "norm_label": "message"
@@ -1816,7 +1825,7 @@
       "label": "StoredChatState",
       "file_type": "code",
       "source_file": "frontend/app/components/PlayChatBox.tsx",
-      "source_location": "L18",
+      "source_location": "L28",
       "id": "components_playchatbox_storedchatstate",
       "community": 1,
       "norm_label": "storedchatstate"
@@ -1825,7 +1834,7 @@
       "label": "Props",
       "file_type": "code",
       "source_file": "frontend/app/components/PlayChatBox.tsx",
-      "source_location": "L27",
+      "source_location": "L37",
       "id": "components_playchatbox_props",
       "community": 1,
       "norm_label": "props"
@@ -1834,7 +1843,7 @@
       "label": "PlayChatBox()",
       "file_type": "code",
       "source_file": "frontend/app/components/PlayChatBox.tsx",
-      "source_location": "L32",
+      "source_location": "L42",
       "id": "components_playchatbox_playchatbox",
       "community": 1,
       "norm_label": "playchatbox()"
@@ -1897,7 +1906,7 @@
       "label": "Props",
       "file_type": "code",
       "source_file": "frontend/app/components/DiagnosisResult.tsx",
-      "source_location": "L8",
+      "source_location": "L9",
       "id": "components_diagnosisresult_props",
       "community": 1,
       "norm_label": "props"
@@ -1906,7 +1915,7 @@
       "label": "DiagnosisResult()",
       "file_type": "code",
       "source_file": "frontend/app/components/DiagnosisResult.tsx",
-      "source_location": "L14",
+      "source_location": "L15",
       "id": "components_diagnosisresult_diagnosisresult",
       "community": 1,
       "norm_label": "diagnosisresult()"
@@ -5258,9 +5267,9 @@
       "source_file": "cms/seed-mock.js",
       "source_location": "L2",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "cms_seed_mock_js",
-      "target": "cms_seed_mock_client",
-      "confidence_score": 1.0
+      "target": "cms_seed_mock_client"
     },
     {
       "relation": "contains",
@@ -5268,9 +5277,9 @@
       "source_file": "cms/seed-mock.js",
       "source_location": "L4",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "cms_seed_mock_js",
-      "target": "cms_seed_mock_mock_scenarios",
-      "confidence_score": 1.0
+      "target": "cms_seed_mock_mock_scenarios"
     },
     {
       "relation": "contains",
@@ -5278,9 +5287,9 @@
       "source_file": "cms/seed-mock.js",
       "source_location": "L825",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "cms_seed_mock_js",
-      "target": "cms_seed_mock_seed",
-      "confidence_score": 1.0
+      "target": "cms_seed_mock_seed"
     },
     {
       "relation": "contains",
@@ -5288,9 +5297,9 @@
       "source_file": "cms/delete-old.js",
       "source_location": "L2",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "cms_delete_old_js",
-      "target": "cms_delete_old_client",
-      "confidence_score": 1.0
+      "target": "cms_delete_old_client"
     },
     {
       "relation": "contains",
@@ -5298,9 +5307,9 @@
       "source_file": "cms/delete-old.js",
       "source_location": "L3",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "cms_delete_old_js",
-      "target": "cms_delete_old_run",
-      "confidence_score": 1.0
+      "target": "cms_delete_old_run"
     },
     {
       "relation": "contains",
@@ -5308,9 +5317,9 @@
       "source_file": "cms/test-fetch.js",
       "source_location": "L3",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "cms_test_fetch_js",
-      "target": "cms_test_fetch_check",
-      "confidence_score": 1.0
+      "target": "cms_test_fetch_check"
     },
     {
       "relation": "contains",
@@ -5318,9 +5327,9 @@
       "source_file": "cms/test-fetch.js",
       "source_location": "L2",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "cms_test_fetch_js",
-      "target": "cms_test_fetch_client",
-      "confidence_score": 1.0
+      "target": "cms_test_fetch_client"
     },
     {
       "relation": "contains",
@@ -5328,9 +5337,9 @@
       "source_file": "cms/check-vt.js",
       "source_location": "L2",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "cms_check_vt_js",
-      "target": "cms_check_vt_client",
-      "confidence_score": 1.0
+      "target": "cms_check_vt_client"
     },
     {
       "relation": "contains",
@@ -8684,6 +8693,27 @@
       "target": "next"
     },
     {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "frontend/app/components/DiagnosisResult.tsx",
+      "source_location": "L7",
+      "weight": 1.0,
+      "source": "frontend_app_components_diagnosisresult_tsx",
+      "target": "frontend_app_components_playchatbox_tsx",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "frontend/app/components/PlayChatBox.tsx",
+      "source_location": "L9",
+      "weight": 1.0,
+      "source": "frontend_app_components_playchatbox_tsx",
+      "target": "components_playchatbox_chosenreplydetail",
+      "confidence_score": 1.0
+    },
+    {
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "frontend/app/components/PlayChatBox.tsx",
@@ -8746,14 +8776,25 @@
       "target": "frontend_app_components_playchatbox_tsx"
     },
     {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "frontend/app/components/DiagnosisResult.tsx",
+      "source_location": "L7",
+      "weight": 1.0,
+      "source": "frontend_app_components_diagnosisresult_tsx",
+      "target": "components_playchatbox_chosenreplydetail",
+      "confidence_score": 1.0
+    },
+    {
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "frontend/app/components/LanguageToggle.tsx",
       "source_location": "L11",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "frontend_app_components_languagetoggle_tsx",
-      "target": "components_languagetoggle_emptysubscribe",
-      "confidence_score": 1.0
+      "target": "components_languagetoggle_emptysubscribe"
     },
     {
       "relation": "contains",
@@ -12253,5 +12294,5 @@
     }
   ],
   "hyperedges": [],
-  "built_at_commit": "835270e3b5b8f9fbe25d85c1f1bd035b480fa1bb"
+  "built_at_commit": "5818786d49fcda5b551b8edf62e4d0e9c2bbd8ec"
 }
