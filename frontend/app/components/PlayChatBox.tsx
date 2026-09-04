@@ -496,7 +496,7 @@ export default function PlayChatBox({ scenario, onRestart }: Props) {
           <div 
             className="relative flex h-32 sm:h-40 w-3.5 sm:w-4 flex-col items-center rounded-full border border-[#292477]/80 bg-[#0d0d12] p-0.5 overflow-hidden shadow-inner cursor-pointer"
             onClick={() => setShowQuestTooltip(!showQuestTooltip)}
-            title={`Tension: ${tensionValuePercent}% (${currentTension}/${maxTension})`}
+            title={`Tension: ${currentTension}/${maxTension}`}
           >
             {/* Ticks on background */}
             <div className="absolute inset-y-1 left-0.5 right-0.5 flex flex-col justify-between pointer-events-none opacity-40 z-10">
@@ -518,13 +518,6 @@ export default function PlayChatBox({ scenario, onRestart }: Props) {
               style={{ height: `${tensionPercent}%` }}
             />
           </div>
-
-          {/* Tension Percentage % Label */}
-          <span className={`text-[11px] font-extrabold mt-2 ${
-            isHappyEndingPath ? "text-emerald-400" : isCriticalTension ? "text-rose-400" : "text-amber-400"
-          }`}>
-            {tensionValuePercent}%
-          </span>
         </div>
 
         {/* Messages List Area */}
