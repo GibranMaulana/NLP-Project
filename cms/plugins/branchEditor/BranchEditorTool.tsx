@@ -4,6 +4,8 @@ import {Box, Card, Stack, Text, Flex, Select, Spinner, Button} from '@sanity/ui'
 import {AddIcon} from '@sanity/icons/Add'
 import {
   ReactFlow,
+  ReactFlowProvider,
+  useReactFlow,
   Background,
   Controls,
   applyNodeChanges,
@@ -18,8 +20,10 @@ import {StageNode} from './components/StageNode'
 import {AddScenarioDialog} from './components/AddScenarioDialog'
 import {EditStageDialog} from './components/EditStageDialog'
 import {ManageDiagnosesDialog} from './components/ManageDiagnosesDialog'
+import {DeleteStageDialog} from './components/DeleteStageDialog'
 
-export function BranchEditorTool() {
+function BranchEditorToolContent() {
+  const {screenToFlowPosition, getViewport} = useReactFlow()
   const client = useClient({apiVersion: '2024-01-01'})
   const [scenarios, setScenarios] = useState<any[]>([])
   const [selectedScenarioId, setSelectedScenarioId] = useState('')
@@ -48,6 +52,7 @@ export function BranchEditorTool() {
 
   const [isEditStageOpen, setIsEditStageOpen] = useState(false)
   const [editingStage, setEditingStage] = useState<any>(null)
+  const [stageToDelete, setStageToDelete] = useState<any>(null)
 
   const [isManageDiagnosesOpen, setIsManageDiagnosesOpen] = useState(false)
 
@@ -185,7 +190,9 @@ export function BranchEditorTool() {
         .fetch(`*[_type == "batch" && !(_id in path("drafts.**"))]{ _id, title }`)
         .then((res) => {
           setBatches(res)
-          if (res.length > 0) setSelectedBatchId(res[0]._id)
+          if (res.length > 0) {
+            setNewScenarioData((prev) => ({...prev, batchId: prev.batchId || res[0]._id}))
+          }
         })
     }
   }, [isAddScenarioOpen, batches, client])
@@ -238,12 +245,37 @@ export function BranchEditorTool() {
 
   const handleAddStage = async () => {
     if (!scenario) return
+
+    let posX = 100
+    let posY = 100
+
+    try {
+      const reactFlowEl = document.querySelector('.react-flow')
+      if (reactFlowEl && screenToFlowPosition) {
+        const bounds = reactFlowEl.getBoundingClientRect()
+        const centerScreenX = bounds.left + bounds.width / 2
+        const centerScreenY = bounds.top + bounds.height / 2
+        const flowPos = screenToFlowPosition({ x: centerScreenX, y: centerScreenY })
+        posX = Math.round(flowPos.x - 190)
+        posY = Math.round(flowPos.y - 100)
+      } else if (getViewport) {
+        const vp = getViewport()
+        const zoom = vp.zoom || 1
+        posX = Math.round((window.innerWidth / 2 - vp.x) / zoom - 190)
+        posY = Math.round((window.innerHeight / 2 - vp.y) / zoom - 100)
+      }
+    } catch (err) {
+      console.warn('Could not calculate viewport center for new stage', err)
+    }
+
     const newStage = {
       _key: `stage-${Date.now()}`,
       _type: 'stage',
       title: 'New Stage',
       botPrompt: '',
       replies: [],
+      x: posX,
+      y: posY,
     }
     try {
       await client
@@ -285,49 +317,54 @@ export function BranchEditorTool() {
     }
   }
 
-  const handleDeleteStage = useCallback(
-    async (stageKey: string) => {
+  const requestDeleteStage = useCallback(
+    (stageKey: string) => {
       if (!scenario || !stageKey) return
-      const stageToDelete = scenario.stages?.find((s: any) => s._key === stageKey)
-      const stageName = stageToDelete?.title || 'item ini'
-      if (!window.confirm(`Apakah Anda yakin ingin menghapus "${stageName}" beserta seluruh sambungannya?`)) {
-        return
-      }
-      setIsCreating(true)
-      try {
-        const remainingStages = (scenario.stages || [])
-          .filter((s: any) => s._key !== stageKey)
-          .map((s: any) => {
-            if (!s.replies) return s
-            const cleanedReplies = s.replies.map((r: any) => {
-              if (r.nextStage === stageKey) {
-                const { nextStage, ...rest } = r
-                return rest
-              }
-              return r
-            })
-            return { ...s, replies: cleanedReplies }
-          })
-
-        await client
-          .patch(scenario._id)
-          .set({ stages: remainingStages })
-          .commit()
-
-        const updatedScenario = { ...scenario, stages: remainingStages }
-        setScenario(updatedScenario)
-        rebuildGraph(updatedScenario, nodes)
-        setIsEditStageOpen(false)
-      } catch (err) {
-        console.error('Failed to delete stage', err)
-      } finally {
-        setIsCreating(false)
+      const stage = scenario.stages?.find((s: any) => s._key === stageKey)
+      if (stage) {
+        setStageToDelete(stage)
       }
     },
-    [client, scenario, nodes, rebuildGraph]
+    [scenario]
   )
 
-  handleDeleteStageRef.current = handleDeleteStage
+  const handleConfirmDeleteStage = useCallback(async () => {
+    if (!scenario || !stageToDelete) return
+    const stageKey = stageToDelete._key
+    setIsCreating(true)
+    try {
+      const remainingStages = (scenario.stages || [])
+        .filter((s: any) => s._key !== stageKey)
+        .map((s: any) => {
+          if (!s.replies) return s
+          const cleanedReplies = s.replies.map((r: any) => {
+            if (r.nextStage === stageKey) {
+              const { nextStage, ...rest } = r
+              return rest
+            }
+            return r
+          })
+          return { ...s, replies: cleanedReplies }
+        })
+
+      await client
+        .patch(scenario._id)
+        .set({ stages: remainingStages })
+        .commit()
+
+      const updatedScenario = { ...scenario, stages: remainingStages }
+      setScenario(updatedScenario)
+      rebuildGraph(updatedScenario, nodes)
+      setStageToDelete(null)
+      setIsEditStageOpen(false)
+    } catch (err) {
+      console.error('Failed to delete stage', err)
+    } finally {
+      setIsCreating(false)
+    }
+  }, [client, scenario, stageToDelete, nodes, rebuildGraph])
+
+  handleDeleteStageRef.current = requestDeleteStage
 
   const onEdgesDelete = useCallback(
     async (deletedEdges: any[]) => {
@@ -429,7 +466,22 @@ export function BranchEditorTool() {
     }
   }
 
-  const onNodesChange = useCallback((changes: any) => setNodes((nds) => applyNodeChanges(changes, nds)), [])
+  const onNodesChange = useCallback(
+    (changes: any) => {
+      const removeChanges = changes.filter((c: any) => c.type === 'remove')
+      if (removeChanges.length > 0 && scenario) {
+        const stage = scenario.stages?.find((s: any) => s._key === removeChanges[0].id)
+        if (stage) {
+          setStageToDelete(stage)
+        }
+        const safeChanges = changes.filter((c: any) => c.type !== 'remove')
+        setNodes((nds) => applyNodeChanges(safeChanges, nds))
+        return
+      }
+      setNodes((nds) => applyNodeChanges(changes, nds))
+    },
+    [scenario]
+  )
   const onEdgesChange = useCallback((changes: any) => setEdges((eds) => applyEdgeChanges(changes, eds)), [])
 
   const onNodeDragStop = useCallback(
@@ -633,7 +685,7 @@ export function BranchEditorTool() {
         valueTypes={valueTypes}
         isSaving={isCreating}
         onSave={handleSaveStage}
-        onDelete={() => handleDeleteStage(editingStage?._key)}
+        onDelete={() => requestDeleteStage(editingStage?._key)}
         allStages={scenario?.stages || []}
       />
 
@@ -645,6 +697,23 @@ export function BranchEditorTool() {
         isSaving={isCreating}
         onSave={handleSaveDiagnoses}
       />
+
+      <DeleteStageDialog
+        isOpen={Boolean(stageToDelete)}
+        onClose={() => setStageToDelete(null)}
+        stage={stageToDelete}
+        allStages={scenario?.stages || []}
+        isDeleting={isCreating}
+        onConfirm={handleConfirmDeleteStage}
+      />
     </Flex>
+  )
+}
+
+export function BranchEditorTool() {
+  return (
+    <ReactFlowProvider>
+      <BranchEditorToolContent />
+    </ReactFlowProvider>
   )
 }

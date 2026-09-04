@@ -101,7 +101,7 @@ export default async function BatchPage({ params }: PageProps) {
             ))
           ) : (
             <div className="col-span-full rounded-2xl border border-[#292477]/40 bg-[#1a1a24]/60 p-8 text-center text-[#a0a0b0]">
-              Geen scenario's gevonden in deze batch.
+              Geen scenario&apos;s gevonden in deze batch.
             </div>
           )}
         </div>

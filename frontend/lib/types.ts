@@ -19,7 +19,7 @@ export interface Stage {
   _key?: string;
   title: string;
   speaker?: string;
-  phaseType?: string;
+  phaseType?: "Pacing" | "Leading" | string;
   botPrompt: string;
   replies: Reply[];
 }
@@ -40,7 +40,6 @@ export interface Scenario {
   title: string;
   slug: string;
   prologue?: PortableTextBlock[];
-  mainQuest?: string;
 }
 
 export interface PlayScenario {
@@ -55,3 +54,4 @@ export interface PlayScenario {
   stages: Stage[];
   diagnoses?: Diagnosis[];
 }
+

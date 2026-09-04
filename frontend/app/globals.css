@@ -179,7 +179,11 @@ body:has(.prologue-shimmer) .global-floating-lang {
 @keyframes chat-user-enter {
   0% {
     opacity: 0;
-    transform: translateY(12px) scale(0.96);
+    transform: translateY(20px) scale(0.86);
+  }
+  65% {
+    opacity: 1;
+    transform: translateY(-2px) scale(1.02);
   }
   100% {
     opacity: 1;
@@ -190,7 +194,11 @@ body:has(.prologue-shimmer) .global-floating-lang {
 @keyframes chat-npc-enter {
   0% {
     opacity: 0;
-    transform: translateY(12px) scale(0.96);
+    transform: translateY(20px) scale(0.86);
+  }
+  65% {
+    opacity: 1;
+    transform: translateY(-2px) scale(1.02);
   }
   100% {
     opacity: 1;
@@ -201,18 +209,22 @@ body:has(.prologue-shimmer) .global-floating-lang {
 @keyframes chat-options-enter {
   0% {
     opacity: 0;
-    transform: translateY(8px);
+    transform: translateY(14px) scale(0.96);
   }
   100% {
     opacity: 1;
-    transform: translateY(0);
+    transform: translateY(0) scale(1);
   }
 }
 
 @keyframes chat-typing-fade {
   0% {
     opacity: 0;
-    transform: translateY(6px) scale(0.98);
+    transform: translateY(12px) scale(0.88);
+  }
+  65% {
+    opacity: 1;
+    transform: translateY(-1px) scale(1.02);
   }
   100% {
     opacity: 1;
@@ -221,17 +233,21 @@ body:has(.prologue-shimmer) .global-floating-lang {
 }
 
 .chat-animate-user {
-  animation: chat-user-enter 380ms cubic-bezier(0.16, 1, 0.3, 1) both;
+  animation: chat-user-enter 480ms cubic-bezier(0.34, 1.56, 0.64, 1) both;
+  will-change: transform, opacity;
 }
 
 .chat-animate-npc {
-  animation: chat-npc-enter 420ms cubic-bezier(0.16, 1, 0.3, 1) both;
+  animation: chat-npc-enter 520ms cubic-bezier(0.34, 1.56, 0.64, 1) both;
+  will-change: transform, opacity;
 }
 
 .chat-animate-options {
-  animation: chat-options-enter 320ms cubic-bezier(0.16, 1, 0.3, 1) both;
+  animation: chat-options-enter 420ms cubic-bezier(0.16, 1, 0.3, 1) both;
+  will-change: transform, opacity;
 }
 
 .chat-animate-typing {
-  animation: chat-typing-fade 300ms cubic-bezier(0.16, 1, 0.3, 1) both;
+  animation: chat-typing-fade 380ms cubic-bezier(0.34, 1.56, 0.64, 1) both;
+  will-change: transform, opacity;
 }

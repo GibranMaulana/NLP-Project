@@ -112,12 +112,12 @@ export default async function Home() {
                         </span>
                         {batch.scenariosCount !== undefined && (
                           <span className="rounded-full border border-[#292477]/50 bg-[#292477]/20 px-2.5 py-0.5 text-[10px] font-medium text-[#a0a0b0]">
-                            {batch.scenariosCount} {batch.scenariosCount === 1 ? "Scenario" : "Scenario's"}
+                            {batch.scenariosCount} {batch.scenariosCount === 1 ? "Scenario" : "Scenario&apos;s"}
                           </span>
                         )}
                       </div>
 
-                      <h2 className="mb-3 font-serif-editorial text-2xl font-medium text-[#E9E7F5] group-hover:text-white">
+                      <h2 className="mb-3 font-serif-editorial text-2xl font-medium text-[#E9E7F5] group-hover:text-[#fff]">
                         {batch.title}
                       </h2>
                     </div>
@@ -127,7 +127,7 @@ export default async function Home() {
                         href={`/b/${batch.slug}`}
                         className="inline-flex flex-1 items-center justify-center gap-2 rounded-full bg-[#F46B3C] px-4 py-2.5 text-xs font-medium text-white shadow transition hover:bg-[#E0592B]"
                       >
-                        <span>Bekijk Scenario's</span>
+                        <span>Bekijk Scenario&apos;s</span>
                         <span>→</span>
                       </Link>
                     </div>

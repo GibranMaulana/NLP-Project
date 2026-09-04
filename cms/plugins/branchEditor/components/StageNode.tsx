@@ -6,15 +6,70 @@ import { Handle, Position } from '@xyflow/react'
 export function StageNode({ data, id }: any) {
   const [isHovered, setIsHovered] = useState(false)
   const nodeKey = id || data?.id
-  const isMaxTensionNode = data?.isMaxTensionTarget || (data?.tensionRange?.min !== Infinity && data?.tensionRange?.min >= data?.maxTension)
+  const maxTension = data?.maxTension || 5
+
+  const hasTension = data?.tensionRange && data.tensionRange.min !== Infinity
+  const minTension = data?.tensionRange?.min ?? 0
+  const maxTensionReached = data?.tensionRange?.max ?? minTension
+
+  // Node Tension Status:
+  // - Max tension (e.g. 5 when max is 5): Red
+  // - 50% - 99% (e.g. 2 - 4 when max is 5): Yellow
+  // - 0% - 49% (e.g. 0 - 1 when max is 5): Green
+  const effectiveTension = maxTensionReached
+  const isMaxTensionNode = data?.isMaxTensionTarget || (hasTension && effectiveTension >= maxTension)
+  const ratio = maxTension > 0 ? effectiveTension / maxTension : 0
+  const isYellowTension = hasTension && !isMaxTensionNode && (ratio >= 0.4 || effectiveTension >= Math.round(maxTension * 0.5))
+  const isGreenTension = hasTension && !isMaxTensionNode && !isYellowTension
+
   const isNaturalEnding = !data?.replies || data.replies.length === 0
   const isEndingNode = isMaxTensionNode || isNaturalEnding
-  
-  const accentColor = isMaxTensionNode ? '#ef4444' : isNaturalEnding ? '#10b981' : '#3b82f6'
-  const shadowColor = isMaxTensionNode ? 'rgba(239, 68, 68, 0.35)' : 'rgba(16, 185, 129, 0.35)'
-  const bgAccentColor = isMaxTensionNode ? 'rgba(239, 68, 68, 0.15)' : 'rgba(16, 185, 129, 0.15)'
-  const borderAccentColor = isMaxTensionNode ? 'rgba(239, 68, 68, 0.4)' : 'rgba(16, 185, 129, 0.4)'
-  const textAccentColor = isMaxTensionNode ? '#fca5a5' : '#6ee7b7'
+
+  let theme = {
+    accentColor: '#3b82f6',
+    shadowColor: 'rgba(59, 130, 246, 0.25)',
+    bgAccentColor: 'rgba(59, 130, 246, 0.15)',
+    borderAccentColor: 'rgba(59, 130, 246, 0.4)',
+    textAccentColor: '#93c5fd',
+    badgeBg: '#0f172a',
+    badgeBorder: '#334155',
+    badgeText: '#94a3b8',
+  }
+
+  if (isMaxTensionNode) {
+    theme = {
+      accentColor: '#ef4444', // Red
+      shadowColor: 'rgba(239, 68, 68, 0.35)',
+      bgAccentColor: 'rgba(239, 68, 68, 0.15)',
+      borderAccentColor: 'rgba(239, 68, 68, 0.4)',
+      textAccentColor: '#fca5a5',
+      badgeBg: 'rgba(239, 68, 68, 0.2)',
+      badgeBorder: 'rgba(239, 68, 68, 0.5)',
+      badgeText: '#fca5a5',
+    }
+  } else if (isYellowTension) {
+    theme = {
+      accentColor: '#eab308', // Yellow
+      shadowColor: 'rgba(234, 179, 8, 0.35)',
+      bgAccentColor: 'rgba(234, 179, 8, 0.15)',
+      borderAccentColor: 'rgba(234, 179, 8, 0.4)',
+      textAccentColor: '#fde047',
+      badgeBg: 'rgba(234, 179, 8, 0.2)',
+      badgeBorder: 'rgba(234, 179, 8, 0.5)',
+      badgeText: '#fde047',
+    }
+  } else if (isGreenTension || isNaturalEnding) {
+    theme = {
+      accentColor: '#10b981', // Green
+      shadowColor: 'rgba(16, 185, 129, 0.35)',
+      bgAccentColor: 'rgba(16, 185, 129, 0.15)',
+      borderAccentColor: 'rgba(16, 185, 129, 0.4)',
+      textAccentColor: '#6ee7b7',
+      badgeBg: 'rgba(16, 185, 129, 0.2)',
+      badgeBorder: 'rgba(16, 185, 129, 0.5)',
+      badgeText: '#6ee7b7',
+    }
+  }
 
   return (
     <Card
@@ -27,13 +82,9 @@ export function StageNode({ data, id }: any) {
         width: 380,
         background: isHovered ? '#1e293b' : '#0f172a',
         color: '#f8fafc',
-        border: isEndingNode
-          ? `1.5px solid ${accentColor}`
-          : isHovered
-          ? '1px solid #3b82f6'
-          : '1px solid #1e293b',
-        boxShadow: isEndingNode
-          ? `0 0 16px ${shadowColor}`
+        border: `1.5px solid ${hasTension || isEndingNode ? theme.accentColor : isHovered ? '#3b82f6' : '#1e293b'}`,
+        boxShadow: hasTension || isEndingNode
+          ? `0 0 16px ${theme.shadowColor}`
           : isHovered
           ? '0 12px 24px -4px rgba(59, 130, 246, 0.25)'
           : '0 4px 12px rgba(0, 0, 0, 0.3)',
@@ -46,7 +97,7 @@ export function StageNode({ data, id }: any) {
         type="target"
         position={Position.Left}
         style={{
-          background: isHovered && !isEndingNode ? '#60a5fa' : accentColor,
+          background: theme.accentColor,
           border: '2px solid #ffffff',
           width: 13,
           height: 13,
@@ -55,8 +106,8 @@ export function StageNode({ data, id }: any) {
       />
       <Flex direction="column" gap={4}>
         {isEndingNode && (
-          <Box style={{ background: bgAccentColor, border: `1px solid ${borderAccentColor}`, borderRadius: '4px', padding: '4px 8px' }}>
-            <Text size={0} weight="bold" style={{ color: textAccentColor }}>
+          <Box style={{ background: theme.bgAccentColor, border: `1px solid ${theme.borderAccentColor}`, borderRadius: '4px', padding: '4px 8px' }}>
+            <Text size={0} weight="bold" style={{ color: theme.textAccentColor }}>
               {isMaxTensionNode ? 'Titik Akhir (Max Tension Walkout)' : 'Titik Akhir (Percakapan Sukses / Berakhir)'}
             </Text>
           </Box>
@@ -66,12 +117,12 @@ export function StageNode({ data, id }: any) {
             {data.title}
           </Text>
           <Flex align="center" gap={2}>
-            {data.tensionRange && data.tensionRange.min !== Infinity && (
-              <Box paddingX={2} paddingY={1} style={{ background: '#0f172a', border: '1px solid #334155', borderRadius: '4px' }}>
-                <Text size={0} weight="bold" style={{ color: '#94a3b8' }}>
-                  {data.tensionRange.min === data.tensionRange.max 
-                    ? `Tension: ${data.tensionRange.min}`
-                    : `Tension: ${data.tensionRange.min}-${data.tensionRange.max}`}
+            {hasTension && (
+              <Box paddingX={2} paddingY={1} style={{ background: theme.badgeBg, border: `1px solid ${theme.badgeBorder}`, borderRadius: '4px' }}>
+                <Text size={0} weight="bold" style={{ color: theme.badgeText }}>
+                  {minTension === maxTensionReached 
+                    ? `Tension: ${minTension}`
+                    : `Tension: ${minTension}-${maxTensionReached}`}
                 </Text>
               </Box>
             )}
@@ -145,13 +196,13 @@ export function StageNode({ data, id }: any) {
             <Box
               padding={3}
               style={{
-                border: isEndingNode ? `1px dashed ${borderAccentColor}` : '1px dashed #334155',
-                background: isEndingNode ? bgAccentColor : 'transparent',
+                border: isEndingNode ? `1px dashed ${theme.borderAccentColor}` : '1px dashed #334155',
+                background: isEndingNode ? theme.bgAccentColor : 'transparent',
                 borderRadius: '6px',
                 textAlign: 'center',
               }}
             >
-              <Text size={0} style={{ color: isEndingNode ? textAccentColor : '#64748b' }}>
+              <Text size={0} style={{ color: isEndingNode ? theme.textAccentColor : '#64748b' }}>
                 {isMaxTensionNode
                   ? 'Tidak ada opsi (Otomatis Walkout)'
                   : 'Percakapan Terhenti di Sini'}

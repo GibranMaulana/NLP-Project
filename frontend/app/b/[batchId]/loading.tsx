@@ -50,7 +50,7 @@ export default function BatchLoading() {
           ))}
         </div>
       </main>
-      <span className="sr-only">Batch scenario's laden…</span>
+      <span className="sr-only">Batch scenario&apos;s laden…</span>
     </div>
   );
 }
