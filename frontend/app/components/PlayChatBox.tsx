@@ -213,6 +213,9 @@ export default function PlayChatBox({ scenario, onRestart }: Props) {
   const handleSelectReply = (reply: Reply) => {
     if (isTyping || isCompleted) return;
 
+    console.log("Selected reply:", reply); // DEBUG
+    console.log("System feedback:", reply.systemFeedback); // DEBUG
+
     const timeStr = getFormattedTime();
     const patternTitle = reply.valueType?.title;
 
